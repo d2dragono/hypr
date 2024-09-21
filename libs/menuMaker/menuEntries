@@ -1,0 +1,5 @@
+title="Add_entry" desc="Script_to_quickly_add_an_entry" script="./createEntry.sh"
+title="Remove_entry" desc="Script_to_remove_an_entry" script="./removeEntry.sh"
+title="update" desc="to_update_your_system" script="sudo pacman -Syu"
+title="toto" desc="will_echo_toto" script="echo toto"
+title="fred" desc="will_echo_fred" script="echo fred"

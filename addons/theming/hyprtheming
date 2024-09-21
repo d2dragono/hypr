@@ -1,0 +1,57 @@
+#!/bin/bash
+#  _   _                  _   _                    _             
+# | | | |_   _ _ __  _ __| |_| |__   ___ _ __ ___ (_)_ __   __ _ 
+# | |_| | | | | '_ \| '__| __| '_ \ / _ \ '_ ` _ \| | '_ \ / _` |
+# |  _  | |_| | |_) | |  | |_| | | |  __/ | | | | | | | | | (_| |
+# |_| |_|\__, | .__/|_|   \__|_| |_|\___|_| |_| |_|_|_| |_|\__, |
+#        |___/|_|                                          |___/ 
+# 
+# by DRAGONO
+
+# Accord your system colors to your wallpaper.
+# Use python-pywal package and a few commands to work
+
+# hyprtheming take an image as only argument
+[ $# -lt 1 ] && zenity --warning --text="[FATAL]: No wallpaper given.\nUsage: hyprtheming {path/to/wallpaper}" && exit 1
+
+# Is the given argument a valid image ?
+identify $1 || { zenity --warning --text="[FATAL]: The given path does not lead to a valid image.\nUsage: hyprtheming {path/to/wallpaper}" && exit 1; }
+# Valid image given. Now doing the magic :)
+imagePath=$1
+
+# First retreiving few datas for proper theming
+wal -i $imagePath # This create and apply the new color scheme
+# The new color scheme is created. We can extract a few datas from it
+activeBorderColor=`cat $HOME/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g'`
+inactiveBorderColor=`cat $HOME/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g'`
+
+# 1 - Changing wallpaper with swww
+swww img $imagePath
+
+# 2 - hyprland theming
+# Border colors
+sed -i "s/    col\.active_border = .*/    col\.active_border = rgba\(${activeBorderColor}ee\)/g" $hyprPath/config/style.conf
+sed -i "s/    col\.inactive_border = .*/    col\.inactive_border = rgba\(${inactiveBorderColor}aa\)/g" $hyprPath/config/style.conf
+
+# 3 - waybar theming
+# Border color
+sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" $hyprPath/addons/waybar/templates/style.css
+
+# 4 - hyprlock theming
+# Just editing background image
+sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" $hyprPath/addons/lock/hyprlock.conf
+
+
+# 5 - sddm theming
+
+
+# 6 - dolphin theming
+
+
+# 7 - wofi theming
+sed -i "s/.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
+sed -i "s/.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
+
+
+# Done
+exit 0

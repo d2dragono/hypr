@@ -1,0 +1,6 @@
+[Unit]
+Description=Load alsa configuration stored at $HOME/.config/alsa/asound.state
+[Service]
+ExecStart=alsactl --file $HOME/.config/hypr/addons/audio/alsa/asound.state restore
+[Install]
+WantedBy=multi-user.target

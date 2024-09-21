@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Brightness value goes from 0 to your monitor nits
+# We go from 50 nits by 50 nits unless we are between 0 and 50 nits : we go 10 nits by 10 nits
+current=`cat /sys/class/backlight/intel_backlight/brightness`
+if [ $current -le 50 ]
+then
+    echo $(($(cat /sys/class/backlight/intel_backlight/brightness) - 10)) > /sys/class/backlight/intel_backlight/brightness
+else
+    echo $(($(cat /sys/class/backlight/intel_backlight/brightness) - 50)) > /sys/class/backlight/intel_backlight/brightness
+fi
+
+# Case where the user increase brightness on lock screen : when exiting lock screen, the brightness in Hyprland/addons/timeout/saved-brightness.conf will be restored. Which will erase the user wish to increase brightness. So we save the new brightness in this file too.
+cat /sys/class/backlight/intel_backlight/brightness > $hyprPath/addons/timeout/saved-brightness.conf
+
+# Done
+exit 0
