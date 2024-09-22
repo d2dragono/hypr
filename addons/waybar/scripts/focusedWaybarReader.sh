@@ -32,6 +32,6 @@ do
         fi
     done
 
-    # Waiting x milliseconds
-    sleep 0.1
+    # Waiting x seconds
+    sleep 1
 done
