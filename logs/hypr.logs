@@ -1,1 +1,116 @@
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-22-2024][17:51:52]: alsactl: alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-22-2024][17:51:52]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-22-2024][17:51:52]: wal: No error occured. Success.
+[✘][09-22-2024][17:54:14]: kitty: [0.264] [glfw error 65544]: Notify: Failed to get server capabilities error: [org.freedesktop.DBus.Error.ServiceUnknown] The name is not activatable
+[✘][09-22-2024][17:55:30]: swww-daemon: 15:51:52 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+15:51:52 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+15:51:52 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+15:51:52 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+15:51:52 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+15:55:30 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][09-22-2024][17:55:30]: nm-applet: (nm-applet:442108): Gtk-CRITICAL **: 17:51:52.352: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 17:55:30.776: Error reading events from display: Broken pipe
 
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-22-2024][17:55:39]: alsactl: alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-22-2024][17:55:39]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-22-2024][17:55:39]: wal: No error occured. Success.
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-23-2024][08:18:38]: alsactl: alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-23-2024][08:18:39]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-23-2024][08:18:39]: wal: No error occured. Success.
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-23-2024][08:24:06]: alsactl: alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-23-2024][08:24:07]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-23-2024][08:24:07]: wal: No error occured. Success.
+[✔][09-23-2024][08:28:14]: librewolf: No error occured. Success.
+[✔][09-23-2024][08:33:09]: librewolf: No error occured. Success.
+[✔][09-23-2024][08:43:52]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✔][09-23-2024][08:43:53]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:43:53]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:43:53]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:43:53]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:43:53]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:43:53]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✘][09-23-2024][08:43:56]: kitty: [0.348] [glfw error 65544]: Notify: Failed to get server capabilities error: [org.freedesktop.DBus.Error.ServiceUnknown] The name is not activatable
+[0.601] [PARSE ERROR] Unknown OSC escape code: 13;#c79f92
+[0.602] [PARSE ERROR] Unknown OSC escape code: 708;#0d090c
+[0.602] [PARSE ERROR] Unknown OSC escape code: 13;#c79f92
+[0.602] [PARSE ERROR] Unknown OSC escape code: 708;#0d090c
+[493.683] [PARSE ERROR] Unknown DCS escape code: zz
+[493.683] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[504.581] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[504.581] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[504.581] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1171.582] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[1171.582] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[✔][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✘][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✘][09-23-2024][08:48:58]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: line 8: echo: write error: Invalid argument
+[✔][09-23-2024][09:01:49]: librewolf: No error occured. Success.
+[✔][09-23-2024][09:04:05]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:04:05]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:04:05]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:04:06]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-23-2024][09:17:11]: hypridle: cat: /home/DRAGONO/Hyprland/addons/timeout/saved-brightness.conf: No such file or directory
+/home/DRAGONO/.config/hypr/addons/lock/dim-on.sh: line 11: [: -eq: unary operator expected
+/bin/sh: line 1: /home/DRAGONO/.config/hypr/Hyprland/addons/lock/monitor-on.sh: No such file or directory
+Terminated
+cat: /home/DRAGONO/Hyprland/addons/timeout/saved-brightness.conf: No such file or directory
+/home/DRAGONO/.config/hypr/addons/lock/dim-on.sh: line 11: [: -eq: unary operator expected
+/bin/sh: line 1: /home/DRAGONO/.config/hypr/Hyprland/addons/lock/monitor-on.sh: No such file or directory
+Terminated
+Terminated
+[✘][09-23-2024][09:17:14]: kitty: [0.153] [glfw error 65544]: Notify: Failed to get server capabilities error: [org.freedesktop.DBus.Error.ServiceUnknown] The name is not activatable
+[0.333] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[0.333] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[0.334] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[0.334] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[✔][09-23-2024][09:20:28]: librewolf: No error occured. Success.
+[✘][09-23-2024][09:20:46]: kitty: [0.197] [glfw error 65544]: Notify: Failed to get server capabilities error: [org.freedesktop.DBus.Error.ServiceUnknown] The name is not activatable
+[0.396] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[0.397] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[0.397] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[0.397] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[✔][09-23-2024][09:44:38]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:44:38]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:44:38]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:44:38]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:44:38]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-23-2024][09:44:38]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.

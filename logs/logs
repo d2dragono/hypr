@@ -57,7 +57,7 @@ do
 
             if [ ! "$stderr" = "" ]
 	    then
-	        # An error occured
+		# First line of the error (may be the only one)
                 echo "[✘][$date][$time]: $1: $stderr" >> $logfile
             else
                 # No error occured
@@ -94,7 +94,7 @@ do
 	    if [ $1 = "failure" ]
 	    then
 		# Print only failure logs
-		cat $logfile | grep "[✘]"
+		cat $logfile | grep -v "^\[✔\].*" | grep -v "^=======.*" | grep -v "^$"
 		exit 0
 	    fi
 
@@ -103,6 +103,16 @@ do
 	    exit 1     
 
         ;;
+
+        --new-session|n)
+            echo "" >> $logfile
+	    echo "" >> $logfile
+	    echo "" >> $logfile
+	    echo "===========================" >> $logfile
+	    echo "=======[NEW SESSION]=======" >> $logfile
+	    echo "===========================" >> $logfile
+	    exit 0
+	;;
 
         --help|-h)
 	    show_help
