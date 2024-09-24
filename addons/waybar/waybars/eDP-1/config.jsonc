@@ -31,6 +31,7 @@
 
 
     "modules-right": [
+	"custom/caffeine",
         //"mpd",
         //"idle_inhibitor",
         "pulseaudio",
@@ -172,6 +173,13 @@
         "spacing": 10
     },
 
+   
+    "custom/caffeine": {
+        "format" : "Caffeine",
+	   "tooltip": false,
+	   //"menu": "on-click",
+	   "on-click": "$hyprPath/addons/caffeine/caffeine.sh"
+    },
 
 
     "clock": {
