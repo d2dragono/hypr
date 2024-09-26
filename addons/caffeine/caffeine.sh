@@ -5,7 +5,7 @@ if [ "$status" = "off" ]
 then
     pkill hypridle
     $hyprPath/libs/filecfg $hyprPath/addons/caffeine/status.conf --set-option status = on
-    $notif "Caffeine has been turned on." -t 3000
+    dunstify "Caffeine has been turned on." -t 3000 -r 33
     for monitor in `$hyprPath/addons/caffeine/getWaybarsOn.sh`
     do
         sed -i "s/\(.*\/\* caffeine \*\/ color:\).*/\1green/g" $hyprPath/addons/waybar/waybars/$monitor/style.css
@@ -13,7 +13,7 @@ then
 else
     hypridle -c $hyprPath/addons/timeout/hypridle-timeout-countdown.conf &
     $hyprPath/libs/filecfg $hyprPath/addons/caffeine/status.conf --set-option status = off
-    $notif "Caffeine has been turned off." -t 3000
+    dunstify "Caffeine has been turned off." -t 3000 -r 33
     for monitor in `$hyprPath/addons/caffeine/getWaybarsOn.sh`
     do
         sed -i "s/\(.*\/\* caffeine \*\/ color:\).*/\1white/g" $hyprPath/addons/waybar/waybars/$monitor/style.css

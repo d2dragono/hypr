@@ -18,8 +18,12 @@ pkill hypridle
 # Restauring pre-dim timeout brightness
 $hyprPath/addons/timeout/dim-off.sh
 
-# Launching timeout hypridle
-hypridle -c $hyprPath/addons/timeout/hypridle-timeout-countdown.conf
+# Launching timeout hypridle if caffeine is not enable
+status=`$hyprPath/libs/filecfg $hyprPath/addons/caffeine/status.conf --get-option status =`
+if [ "$status" = "off" ]
+then
+    hypridle -c $hyprPath/addons/timeout/hypridle-timeout-countdown.conf
+fi
 
 # Done
 exit 0

@@ -1,0 +1,23 @@
+# Before 1.0
+
+2 - Add a user avatar system and make it show in the lock screen
+3 - Screenshots tools (and also record video tool)
+3 - Rice les notifications et ajouter les modification des notifs avec hyprtheming
+4 - Ricing de wofi : gnome like search
+5 - Ricing de waybar : intégration de certains scripts + scripts juste pour waybar
+6 - Gui pour modifier hyprland : workspaces, waybar, bordures, border-radius, gap, ombres, etc.
+7 - HyprMonitoring : monitoring de la ram, disque, batterie, logs, etc. Utile pour améliorer les performances du système
+8 - 3 modes : eco, normal, performances
+9 - Optimisation des scripts, gestion des erreurs, rangement des dossiers, nettoyage, etc. Simplifier le plus possible les interactions entre les differents composants.
+10 - Rice de sddm
+11 - Revision de l'interface : tout est parfait ? pas besoin de trop de temps/clique pour modifier une variable dans le systeme ? Pas de petit défauts ? 
+12 - Make animated wallpaper display on lock screen
+13 - Add wifi, battery, and a few more things to the lock screen
+13 - install.sh
+14 - Documentation
+
+# After V1.0
+1 - Custom theme : create a custom, none automatic theme from the colors to every single image and save it to load it later
+2 - Waybar editor : create custom elements in waybar, set waybar size, placement, etc.
+3 - Updater : download latest dragono's hyprland release without destroying your custom keybinds
+4 - Always on top mini waybar for basic info (can be disabled)

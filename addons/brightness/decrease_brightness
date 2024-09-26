@@ -13,5 +13,8 @@ fi
 # Case where the user increase brightness on lock screen : when exiting lock screen, the brightness in Hyprland/addons/timeout/saved-brightness.conf will be restored. Which will erase the user wish to increase brightness. So we save the new brightness in this file too.
 cat /sys/class/backlight/intel_backlight/brightness > $hyprPath/addons/timeout/saved-brightness.conf
 
+# Notifying the brightness
+$hyprPath/addons/brightness/notifier.sh
+
 # Done
 exit 0

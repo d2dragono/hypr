@@ -2,8 +2,8 @@ state.sofhdadsp {
 	control.1 {
 		iface MIXER
 		name 'Headphone Playback Volume'
-		value.0 82
-		value.1 82
+		value.0 52
+		value.1 52
 		comment {
 			access 'read write'
 			type INTEGER
@@ -11,8 +11,8 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -375
-			dbvalue.1 -375
+			dbvalue.0 -2625
+			dbvalue.1 -2625
 		}
 	}
 	control.2 {
@@ -29,8 +29,8 @@ state.sofhdadsp {
 	control.3 {
 		iface MIXER
 		name 'Speaker Playback Volume'
-		value.0 0
-		value.1 0
+		value.0 52
+		value.1 52
 		comment {
 			access 'read write'
 			type INTEGER
@@ -38,8 +38,8 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -6525
-			dbvalue.1 -6525
+			dbvalue.0 -2625
+			dbvalue.1 -2625
 		}
 	}
 	control.4 {
@@ -68,8 +68,8 @@ state.sofhdadsp {
 	control.6 {
 		iface MIXER
 		name 'Capture Volume'
-		value.0 63
-		value.1 63
+		value.0 38
+		value.1 38
 		comment {
 			access 'read write'
 			type INTEGER
@@ -77,8 +77,8 @@ state.sofhdadsp {
 			range '0 - 63'
 			dbmin -1725
 			dbmax 3000
-			dbvalue.0 3000
-			dbvalue.1 3000
+			dbvalue.0 1125
+			dbvalue.1 1125
 		}
 	}
 	control.7 {
@@ -111,7 +111,7 @@ state.sofhdadsp {
 	control.9 {
 		iface MIXER
 		name 'Master Playback Volume'
-		value 87
+		value 52
 		comment {
 			access 'read write'
 			type INTEGER
@@ -119,7 +119,7 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 0
+			dbvalue.0 -2625
 		}
 	}
 	control.10 {
@@ -445,7 +445,7 @@ state.sofhdadsp {
 	control.40 {
 		iface MIXER
 		name 'Post Mixer Analog Playback DRC switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
