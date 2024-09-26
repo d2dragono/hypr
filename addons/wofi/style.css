@@ -1,29 +1,46 @@
 *
 {
     font:JetBrains Mono;
-    font-size:16px;
+    font-size:20px;
 }
 
 window
 {
-    background-color:rgba(0,0,0,0);
+    
+    background-color:#01579D; /*hyprtheming:secondary*/
+    border-style:solid;
+    border-width:2px;
+    border-color:#78dbcc; /*hyprtheming:primary*/
+    border-radius:10px;
+    opacity:0.88;
 }
 
 #input
 {
-    margin: 5px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:5px;
+    margin-bottom:-5px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+    background-color:rgba(44,44,44,0.4);
     border-style:solid;
     border-width:2px;
-    border-color:#2C960E; /*hyprtheming:secondary*/
-    border-radius:10px;
-    background-color:#c0da96; /*hyprtheming:primary*/
-    opacity:0.85;
+    border-color:#01579D; /*hyprtheming:secondary*/
+    border-bottom:solid 0px red;
+    padding-top:2px;
 }
 
 #inner-box
 {
     padding:4px;
-    background-color:rgba(0,0,0,0)
+    background-color:rgba(0,0,0,0);
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 
 #outer-box
@@ -33,28 +50,35 @@ window
 
 #scroll
 {
-    margin: 5px;
+    margin:5px;
+    background-color:rgba(44,44,44,0.4);
     border-style:solid;
     border-width:2px;
-    border-color:#2C960E; /*hyprtheming:secondary*/
-    border-radius:10px;
-    background-color:#c0da96; /*hyprtheming:primary*/
-    opacity:0.85;
+    border-color:#01579D; /*hyprtheming:secondary*/
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top:solid 0px rgba(0,0,0,0);
+
 }
 
-/*
+
 #text
 {
-    margin: 5px;
-    border: 2px solid cyan;
-    background-color: cyan;
+    margin-left:10px;
 }
-*/
+
 
 #entry:selected
 {
-    background-color: rgba(0,0,0,0);
+    background-color:#78dbcc; /*hyprtheming:primary*/
     border-color: rgba(0,0,0,0);
+    border-radius:10px;
+}
+
+#entry
+{
+    background-color: rgba(0,0,0,0);
+    margin-top:4px;
 }
 
 #text:selected

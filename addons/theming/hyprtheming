@@ -49,9 +49,11 @@ sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" $hy
 
 
 # 7 - wofi theming
-sed -i "s/.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
-sed -i "s/.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
+sed -i "s/.*border.*primary.*/    border-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
+sed -i "s/.*background.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
 
+sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
+sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
 
 # Done
 exit 0

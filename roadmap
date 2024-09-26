@@ -1,9 +1,7 @@
 # Before 1.0
 
 2 - Add a user avatar system and make it show in the lock screen
-3 - Screenshots tools (and also record video tool)
 3 - Rice les notifications et ajouter les modification des notifs avec hyprtheming
-4 - Ricing de wofi : gnome like search
 5 - Ricing de waybar : intégration de certains scripts + scripts juste pour waybar
 6 - Gui pour modifier hyprland : workspaces, waybar, bordures, border-radius, gap, ombres, etc.
 7 - HyprMonitoring : monitoring de la ram, disque, batterie, logs, etc. Utile pour améliorer les performances du système
