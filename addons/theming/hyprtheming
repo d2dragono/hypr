@@ -58,8 +58,13 @@ sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}
 sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
 sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
 sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+# Killing dunst to actualize the colors
 pkill dunst
 dunst -conf $hyprPath/addons/dunst/dunstrc
+
+# 9 - Dunst notifications icons
+convert $hyprPath/addons/brightness/brightness.png xc:"#${activeBorderColor}" -channel RGB -clut  $hyprPath/addons/brightness/brightness.png
+convert $hyprPath/addons/caffeine/coffee.svg xc:"#${activeBorderColor}" -channel RGB -clut $hyprPath/addons/caffeine/coffee.svg
 
 # Done
 exit 0

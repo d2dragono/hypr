@@ -1,12 +1,11 @@
 # Before 1.0
 
-2 - Add a user avatar system and make it show in the lock screen
+2 - Add a user avatar system and make it show in the lock screen (make both avater change on lock screen and on gdm, later on the hyprsettings app)
 5 - Ricing de waybar : intégration de certains scripts + scripts juste pour waybar
 6 - Gui pour modifier hyprland : workspaces, waybar, bordures, border-radius, gap, ombres, etc.
 7 - HyprMonitoring : monitoring de la ram, disque, batterie, logs, etc. Utile pour améliorer les performances du système
 8 - 3 modes : eco, normal, performances
 9 - Optimisation des scripts, gestion des erreurs, rangement des dossiers, nettoyage, etc. Simplifier le plus possible les interactions entre les differents composants.
-10 - Rice de sddm
 11 - Revision de l'interface : tout est parfait ? pas besoin de trop de temps/clique pour modifier une variable dans le systeme ? Pas de petit défauts ? 
 12 - Make animated wallpaper display on lock screen
 13 - Add wifi, battery, and a few more things to the lock screen

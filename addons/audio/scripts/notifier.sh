@@ -11,5 +11,5 @@ else
     printStatus="(Muted)"
 fi
 
-dunstify "Volume: $percentage% $printStatus" -t 3000 -h int:value:$percentage -r 34
+dunstify "Volume: $percentage% $printStatus" -t 3000 -h int:value:$percentage -r 34 --icon $hyprPath/addons/audio/scripts/volume.icon
 exit 0
