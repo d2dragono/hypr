@@ -37868,3 +37868,1092 @@ alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.con
 [285.371] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
 [285.371] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
 [✔][09-26-2024][19:03:12]: librewolf: No error occured. Success.
+[✔][09-26-2024][19:06:03]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:04]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:05]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:05]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:05]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:05]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:05]: /home/DRAGONO/.config/hypr/addons/audio/scripts/toggle_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:07]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:07]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:07]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:07]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-26-2024][19:06:10]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✔][09-26-2024][19:06:12]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✔][09-26-2024][19:06:12]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✔][09-26-2024][19:06:13]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✔][09-26-2024][19:06:19]: librewolf: No error occured. Success.
+[✘][09-26-2024][19:06:21]: kitty: [0.408] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.408] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.409] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.409] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[52.795] [PARSE ERROR] Unknown DCS escape code: zz
+[52.795] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[106.038] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[106.039] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[106.039] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[113.618] [PARSE ERROR] Unknown DCS escape code: zz
+[113.618] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[127.790] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[127.871] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[127.871] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-26-2024][19:06:36]: kitty: [0.403] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.403] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.403] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.403] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[✘][09-26-2024][19:08:41]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+[✔][09-26-2024][19:09:04]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✔][09-26-2024][19:09:21]: kooha: No error occured. Success.
+[✘][09-26-2024][19:09:27]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+[✔][09-26-2024][19:09:36]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✔][09-26-2024][19:09:52]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✔][09-26-2024][19:10:37]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✔][09-26-2024][19:10:50]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✘][09-26-2024][19:16:13]: kitty: [0.469] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.469] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.469] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.469] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[130.901] [PARSE ERROR] Unknown OSC escape code: 13;#81d8f5
+[130.901] [PARSE ERROR] Unknown OSC escape code: 708;#1e0c1f
+[154.338] [PARSE ERROR] Unknown OSC escape code: 13;#c0da96
+[154.339] [PARSE ERROR] Unknown OSC escape code: 708;#010800
+[176.463] [PARSE ERROR] Unknown OSC escape code: 13;#b0c8c9
+[176.463] [PARSE ERROR] Unknown OSC escape code: 708;#0a0f0f
+[186.034] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[186.034] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[202.282] [PARSE ERROR] Unknown OSC escape code: 13;#e598ce
+[202.282] [PARSE ERROR] Unknown OSC escape code: 708;#0c0a1e
+[247.249] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[247.249] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[260.224] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[260.224] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][07:28:14]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][07:28:14]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][07:28:14]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][07:28:14]: wal: No error occured. Success.
+[✔][09-27-2024][07:28:17]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✘][09-27-2024][07:28:29]: kitty: [0.527] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.527] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.527] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.527] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✔][09-27-2024][07:28:33]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:34]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:34]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:34]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:34]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:34]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:35]: /home/DRAGONO/.config/hypr/addons/audio/scripts/toggle_volume.sh: No error occured. Success.
+[✔][09-27-2024][07:28:39]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][07:28:40]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][07:28:40]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][07:28:41]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][07:35:40]: kitty: [0.835] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.835] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.835] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.835] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:35:40]: kitty: [0.481] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.481] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.481] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.481] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:36:43]: dolphin: qt.dbus.integration: QDBusConnection: name 'org.freedesktop.UDisks2' had owner '' but we thought it was ':1.44'
+qt.dbus.integration: QDBusConnection: name 'org.freedesktop.UPower' had owner '' but we thought it was ':1.45'
+"applications.menu"  not found in  QList("/etc/xdg/menus")
+The cached device pixel ratio value was stale on window update.  Please file a QTBUG which explains how to reproduce.
+[✔][09-27-2024][07:38:36]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][07:38:42]: hypridle: No error occured. Success.
+[✔][09-27-2024][07:38:43]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: No error occured. Success.
+[✘][09-27-2024][07:39:26]: kitty: [0.441] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.441] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.442] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.442] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:39:28]: kitty: [0.430] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.430] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.431] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.431] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:39:28]: kitty: [0.426] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.427] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.427] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.427] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:39:30]: kitty: [0.457] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.457] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:39:31]: kitty: [0.436] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.436] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.437] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.437] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:39:33]: kitty: [0.424] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.425] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.425] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.425] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:40:03]: kitty: [0.432] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.432] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.432] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.432] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][07:40:05]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: (zenity:47534): Gtk-CRITICAL **: 07:40:04.421: GtkBox 0x5a0d17390910 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:47534): Gtk-CRITICAL **: 07:40:04.421: AdwBin 0x5a0d173c7a90 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][08:47:50]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][08:47:50]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][08:47:50]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][08:47:50]: wal: No error occured. Success.
+[✘][09-27-2024][08:49:48]: kitty: [0.429] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.429] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.430] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.430] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][08:49:53]: kitty: [0.577] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.577] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.578] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.578] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[61.642] [PARSE ERROR] Unknown DCS escape code: zz
+[61.642] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[71.698] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[71.698] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[71.698] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[94.973] [PARSE ERROR] Unknown DCS escape code: zz
+[94.973] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[114.659] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[114.659] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[114.659] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-27-2024][08:53:22]: kitty: [0.399] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.399] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.400] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.400] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:08:46]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:08:46]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:08:47]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:08:47]: wal: No error occured. Success.
+[✔][09-27-2024][09:08:47]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][09:10:24]: kitty: [0.556] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.556] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.556] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.556] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✔][09-27-2024][09:10:25]: hypridle: No error occured. Success.
+[✘][09-27-2024][09:11:53]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: cat: /home/DRAGONO/Hyprland/addons/timeout/saved-brightness.conf: No such file or directory
+/home/DRAGONO/.config/hypr/addons/lock/dim-on.sh: line 11: [: -eq: unary operator expected
+Terminated
+[✔][09-27-2024][09:11:53]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:12:02]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:03]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:03]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:03]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:06]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:06]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-27-2024][09:12:08]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][09:12:18]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:19]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:19]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:20]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:12:21]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:15:29]: librewolf: No error occured. Success.
+[✘][09-27-2024][09:23:34]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][09-27-2024][09:28:20]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✔][09-27-2024][09:28:27]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: No error occured. Success.
+[✘][09-27-2024][09:28:55]: kitty: [0.411] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.411] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.411] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.411] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][09:32:15]: nm-applet: (nm-applet:1767): Gtk-CRITICAL **: 09:08:47.486: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:32:15.648: Error reading events from display: Broken pipe
+[✘][09-27-2024][09:32:15]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:32:15]: swww-daemon: 07:08:47 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:08:47 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:08:47 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:08:47 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:08:47 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:32:15 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][09-27-2024][09:32:15]: kitty: [0.448] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.448] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.449] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.449] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[73.616] [PARSE ERROR] Unknown DCS escape code: zz
+[73.616] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[197.618] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[197.635] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[197.635] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[199.058] [glfw error 65544]: Wayland: fatal display error: Connection reset by peer
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:32:24]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:32:24]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:32:24]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:32:24]: wal: No error occured. Success.
+[✘][09-27-2024][09:35:41]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][09:35:41]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][09:35:41]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][09:35:42]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:35:42]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:35:42]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:35:43]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:35:43]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:37:17]: librewolf: No error occured. Success.
+[✘][09-27-2024][09:37:48]: kitty: [0.423] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.423] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.424] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.424] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][09:39:51]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:39:51]: nm-applet: (nm-applet:72303): Gtk-CRITICAL **: 09:32:24.772: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:39:51.761: Error reading events from display: Broken pipe
+[✘][09-27-2024][09:39:51]: swww-daemon: 07:32:24 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:32:24 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:32:24 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:32:24 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:32:24 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:39:51 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:40:01]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:40:01]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:40:01]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:40:01]: wal: No error occured. Success.
+[✔][09-27-2024][09:40:08]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][09:40:08]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][09:40:09]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:10]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:10]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:10]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:10]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:10]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:11]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][09:40:11]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][09:40:52]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:40:52]: swww-daemon: 07:40:01 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:40:01 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:40:01 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:40:01 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:40:01 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:40:52 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][09-27-2024][09:40:52]: nm-applet: (nm-applet:100835): Gtk-CRITICAL **: 09:40:01.634: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:40:52.504: Error reading events from display: Broken pipe
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:41:01]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:41:01]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:41:01]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:41:01]: wal: No error occured. Success.
+[✘][09-27-2024][09:41:11]: kitty: [0.479] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.479] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.480] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.480] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✔][09-27-2024][09:43:04]: hypridle: No error occured. Success.
+[✔][09-27-2024][09:43:04]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: No error occured. Success.
+[✘][09-27-2024][09:45:42]: nm-applet: (nm-applet:104765): Gtk-CRITICAL **: 09:41:01.610: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:45:42.554: Error reading events from display: Broken pipe
+[✘][09-27-2024][09:45:42]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:45:42]: swww-daemon: 07:41:01 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:41:01 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:41:01 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:41:01 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:41:01 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:45:42 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][09-27-2024][09:45:42]: kitty: [0.450] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.451] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.451] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.451] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[4.537] [PARSE ERROR] Unknown DCS escape code: zz
+[4.537] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[267.378] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[267.416] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[267.416] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[269.695] [glfw error 65544]: Wayland: fatal display error: Broken pipe
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:45:51]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:45:51]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:45:51]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:45:51]: wal: No error occured. Success.
+[✘][09-27-2024][09:46:22]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:47:13]: nm-applet: (nm-applet:122485): Gtk-CRITICAL **: 09:45:51.769: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:47:13.944: Error reading events from display: Broken pipe
+[✘][09-27-2024][09:47:13]: swww-daemon: 07:45:51 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:45:51 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:45:51 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:45:51 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:45:51 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:47:13 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:47:23]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:47:23]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:47:23]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:47:23]: wal: No error occured. Success.
+[✘][09-27-2024][09:48:04]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:48:04]: swww-daemon: 07:47:23 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:47:23 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:47:23 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:47:24 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:47:24 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:48:04 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][09-27-2024][09:48:04]: nm-applet: (nm-applet:128211): Gtk-CRITICAL **: 09:47:24.062: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:48:04.154: Error reading events from display: Broken pipe
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:48:13]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:48:13]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:48:13]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:48:13]: wal: No error occured. Success.
+[✘][09-27-2024][09:48:32]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][09:48:32]: nm-applet: (nm-applet:131333): Gtk-CRITICAL **: 09:48:13.694: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:48:32.801: Error reading events from display: Broken pipe
+[✘][09-27-2024][09:48:32]: swww-daemon: 07:48:13 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:48:13 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:48:13 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:48:13 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:13 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:48:32 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][09:48:42]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][09:48:42]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][09:48:42]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][09:48:42]: wal: No error occured. Success.
+[✘][09-27-2024][09:48:46]: kitty: [0.440] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.440] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.440] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.440] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✔][09-27-2024][09:48:53]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✘][09-27-2024][09:49:31]: kitty: [0.475] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.476] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.476] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.476] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[2.244] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[2.244] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[✘][09-27-2024][09:49:31]: kitty: [0.443] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[0.443] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[0.443] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[0.443] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[✔][09-27-2024][09:50:24]: hypridle: No error occured. Success.
+[✔][09-27-2024][09:50:24]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: No error occured. Success.
+[✘][09-27-2024][09:56:32]: kitty: [0.411] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[0.411] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[0.411] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[0.411] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[2.062] [PARSE ERROR] Unknown DCS escape code: zz
+[2.062] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[19.738] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[19.771] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[19.771] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[20.548] [PARSE ERROR] Unknown DCS escape code: zz
+[20.548] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[136.276] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[136.276] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[136.276] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-27-2024][10:00:00]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: cat: /home/DRAGONO/Hyprland/addons/timeout/saved-brightness.conf: No such file or directory
+/home/DRAGONO/.config/hypr/addons/lock/dim-on.sh: line 11: [: -eq: unary operator expected
+[✘][09-27-2024][10:00:06]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: sed: can't read /home/DRAGONO/.config/hypr/addons/dunst/config: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/addons/dunst/config: No such file or directory
+[✔][09-27-2024][10:03:10]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:10]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:10]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:11]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:11]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:11]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:11]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:12]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:29]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:29]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:29]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:29]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][10:03:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][10:03:32]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:32]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][10:03:33]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][10:12:53]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: cat: /home/DRAGONO/Hyprland/addons/timeout/saved-brightness.conf: No such file or directory
+/home/DRAGONO/.config/hypr/addons/lock/dim-on.sh: line 11: [: -eq: unary operator expected
+[✘][09-27-2024][10:21:57]: kitty: [0.432] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.432] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.432] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.432] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][10:23:13]: kitty: [0.399] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.399] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.400] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.400] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][10:24:59]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: sed: can't read /home/DRAGONO/.config/hypr/addons/dunst/config: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/addons/dunst/config: No such file or directory
+[✔][09-27-2024][10:25:45]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✘][09-27-2024][10:25:51]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][10:25:51]: nm-applet: (nm-applet:133186): Gtk-CRITICAL **: 09:48:42.544: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 10:25:51.221: Error reading events from display: Broken pipe
+[✘][09-27-2024][10:25:51]: swww-daemon: 07:48:42 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:48:42 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:48:42 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:48:42 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:42 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:53 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:48:53 [0m[34m[INFO] [0m(transition) BumpPool with: 2 buffers. Size: 40500Kb
+07:48:53 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:53 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:55 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:56 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:57 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:48:58 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:06 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:06 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:06 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:06 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:07 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:08 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:09 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:10 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:00:11 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:24:59 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+08:25:45 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+08:25:51 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+
+
+
+===========================
+=======[NEW SESSION]=======
+===========================
+[✘][09-27-2024][10:26:01]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][09-27-2024][10:26:01]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✔][09-27-2024][10:26:01]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: No error occured. Success.
+[✔][09-27-2024][10:26:01]: wal: No error occured. Success.
+[✘][09-27-2024][10:26:21]: kitty: [0.479] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.479] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.479] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.479] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✔][09-27-2024][10:26:22]: hypridle: No error occured. Success.
+[✘][09-27-2024][10:26:25]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][09-27-2024][10:41:02]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][09-27-2024][10:41:14]: kitty: [0.431] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.431] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.432] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.432] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][10:41:20]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: Terminated
+[✔][09-27-2024][10:41:20]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: No error occured. Success.
+[✘][09-27-2024][10:42:05]: kitty: [0.408] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.408] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.409] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.409] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✘][09-27-2024][10:42:59]: kitty: [0.457] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.458] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.458] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[✔][09-27-2024][10:43:18]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✔][09-27-2024][10:46:16]: librewolf: No error occured. Success.
+[✘][09-27-2024][10:46:25]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][09-27-2024][10:47:22]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✔][09-27-2024][10:47:36]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: No error occured. Success.
+[✘][09-27-2024][10:50:57]: kitty: [0.402] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.403] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.403] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.403] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[✘][09-27-2024][10:51:10]: freetube: [307662:0927/105103.026400:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 1 times!
+[307662:0927/105105.709707:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 2 times!
+[307662:0927/105107.190518:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 3 times!
+[✔][09-27-2024][10:51:24]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: No error occured. Success.
+[✔][09-27-2024][10:53:30]: librewolf: No error occured. Success.
+[✘][09-27-2024][10:53:35]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][09-27-2024][11:27:30]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✔][09-27-2024][11:27:35]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: No error occured. Success.
+[✘][09-27-2024][11:30:24]: kitty: [0.401] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.401] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[0.401] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[0.401] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[7.832] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[7.832] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[598.086] [PARSE ERROR] Unknown DCS escape code: zz
+[598.086] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[747.303] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[747.313] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[747.313] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✔][09-27-2024][11:31:37]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: No error occured. Success.
+[✘][09-27-2024][11:32:51]: dunst: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:33:15]: kitty: [0.468] [PARSE ERROR] Unknown OSC escape code: 13;#cacfe5
+[0.468] [PARSE ERROR] Unknown OSC escape code: 708;#1b1021
+[0.468] [PARSE ERROR] Unknown OSC escape code: 13;#cacfe5
+[0.469] [PARSE ERROR] Unknown OSC escape code: 708;#1b1021
+[3.776] [PARSE ERROR] Unknown DCS escape code: zz
+[3.776] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[29.788] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[29.796] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[29.796] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[32.724] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[32.724] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[✘][09-27-2024][11:33:16]: kitty: [0.485] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.485] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.486] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.486] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[4.976] [PARSE ERROR] Unknown DCS escape code: zz
+[4.976] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[94.774] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[94.784] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[94.784] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[99.605] [PARSE ERROR] Unknown OSC escape code: 13;#cacfe5
+[99.605] [PARSE ERROR] Unknown OSC escape code: 708;#1b1021
+[107.542] [PARSE ERROR] Unknown DCS escape code: zz
+[107.542] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[111.405] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[111.442] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[111.442] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[122.779] [PARSE ERROR] Unknown DCS escape code: zz
+[122.779] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[138.128] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[138.138] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[138.138] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[140.301] [PARSE ERROR] Unknown DCS escape code: zz
+[140.301] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[173.469] [PARSE ERROR] Unknown OSC escape code: 13;#eec7c4
+[173.469] [PARSE ERROR] Unknown OSC escape code: 708;#0b0201
+[183.710] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[183.710] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[183.710] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-27-2024][11:33:18]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:33:29]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✔][09-27-2024][11:33:43]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:33:43]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:33:43]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:44]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:44]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:44]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:44]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:44]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:45]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:33:45]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:33:45]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:33:46]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✘][09-27-2024][11:38:23]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:38:47]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+
+WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:40:03]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:40:11]: kitty: [0.509] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[0.509] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[0.509] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[0.509] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[9.433] [PARSE ERROR] Unknown OSC escape code: 13;#e1b3ba
+[9.433] [PARSE ERROR] Unknown OSC escape code: 708;#0f1016
+[303.392] [PARSE ERROR] Unknown OSC escape code: 13;#a7a9bb
+[303.392] [PARSE ERROR] Unknown OSC escape code: 708;#090709
+[315.089] [PARSE ERROR] Unknown DCS escape code: zz
+[315.089] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[322.484] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[322.495] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[322.495] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[327.967] [PARSE ERROR] Unknown OSC escape code: 13;#c79f92
+[327.967] [PARSE ERROR] Unknown OSC escape code: 708;#0d090c
+[372.882] [PARSE ERROR] Unknown DCS escape code: zz
+[372.882] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[395.076] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[395.089] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[395.089] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[403.443] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[403.443] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[✘][09-27-2024][11:44:12]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:44:49]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:45:05]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:45:37]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:45:42]: kitty: [0.428] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.428] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.428] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.429] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[3.082] [PARSE ERROR] Unknown DCS escape code: zz
+[3.082] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[235.087] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[235.169] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[235.169] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[237.593] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[237.593] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[244.343] [PARSE ERROR] Unknown DCS escape code: zz
+[244.343] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[251.730] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[251.741] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[251.741] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[266.030] [PARSE ERROR] Unknown DCS escape code: zz
+[266.030] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[270.057] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[270.068] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[270.068] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[275.085] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[275.085] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[279.867] [PARSE ERROR] Unknown DCS escape code: zz
+[279.867] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[285.730] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[285.743] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[285.743] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[290.415] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[290.415] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[313.126] [PARSE ERROR] Unknown DCS escape code: zz
+[313.126] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[318.250] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[318.331] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[318.331] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[323.017] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[323.017] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[✔][09-27-2024][11:45:48]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:45:48]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:45:49]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:49]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:49]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:50]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:50]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:50]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:50]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:50]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:51]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:45:52]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:46:09]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:46:23]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][11:46:38]: kitty: [0.445] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.445] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.446] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.446] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[13.808] [PARSE ERROR] Unknown DCS escape code: zz
+[13.808] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[21.389] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[21.399] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[21.399] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[26.077] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[26.077] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[29.978] [PARSE ERROR] Unknown DCS escape code: zz
+[29.978] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[36.268] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[36.279] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[36.279] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[39.530] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[39.530] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[40.493] [PARSE ERROR] Unknown DCS escape code: zz
+[40.493] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[46.381] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[46.381] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[46.381] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-27-2024][11:46:42]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:46:43]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:46:43]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:46:43]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:46:43]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:46:44]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:46:44]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:46:44]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:50:07]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][09-27-2024][11:53:33]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✔][09-27-2024][11:53:37]: /home/DRAGONO/.config/hypr/addons/lock/locking.sh: No error occured. Success.
+[✔][09-27-2024][11:53:56]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:53:56]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:53:56]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:53:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:53:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:53:57]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:53:58]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:53:58]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:53:58]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:53:58]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:54:04]: kitty: [0.444] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.444] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.445] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.445] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[✘][09-27-2024][11:54:06]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:54:06]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:54:07]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:54:08]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:54:08]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:54:15]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][11:54:15]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No error occured. Success.
+[✔][09-27-2024][11:54:16]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][11:54:16]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][11:54:16]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✔][09-27-2024][11:58:32]: librewolf: No error occured. Success.
+[✘][09-27-2024][11:58:41]: kitty: [0.426] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.426] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.427] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.427] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[✘][09-27-2024][11:59:01]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:59:01]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][11:59:02]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:59:03]: /home/DRAGONO/.config/hypr/addons/brightness/decrease_brightness: No error occured. Success.
+[✔][09-27-2024][11:59:04]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✔][09-27-2024][11:59:04]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: No error occured. Success.
+[✘][09-27-2024][11:59:04]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:59:04]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:59:05]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][11:59:42]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✔][09-27-2024][12:00:09]: librewolf: No error occured. Success.
+[✘][09-27-2024][12:00:13]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: (zenity:428621): Gtk-CRITICAL **: 12:00:12.217: GtkBox 0x611aabfce100 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:428621): Gtk-CRITICAL **: 12:00:12.217: AdwBin 0x611aac0bece0 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+[✘][09-27-2024][12:00:20]: kitty: [0.440] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.441] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.441] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.442] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[36.621] [PARSE ERROR] Unknown DCS escape code: zz
+[36.621] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[56.367] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[56.378] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[56.378] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[59.156] [PARSE ERROR] Unknown OSC escape code: 13;#cacfe5
+[59.156] [PARSE ERROR] Unknown OSC escape code: 708;#1b1021
+[✘][09-27-2024][12:00:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✘][09-27-2024][12:00:30]: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: /home/DRAGONO/.config/hypr/addons/brightness/increase_brightness: line 10: echo: write error: Invalid argument
+[✔][09-27-2024][12:00:32]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No error occured. Success.
+[✘][09-27-2024][12:00:46]: kitty: [0.429] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.429] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[0.430] [PARSE ERROR] Unknown OSC escape code: 13;#78dbcc
+[0.430] [PARSE ERROR] Unknown OSC escape code: 708;#010410
+[331.854] [PARSE ERROR] Unknown OSC escape code: 13;#cacfe5
+[331.854] [PARSE ERROR] Unknown OSC escape code: 708;#1b1021
+[✘][09-27-2024][12:01:08]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][12:01:24]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.
+[✘][09-27-2024][12:01:33]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: WARNING: 'keyboard': No digits found.

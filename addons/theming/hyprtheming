@@ -51,9 +51,15 @@ sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" $hy
 # 7 - wofi theming
 sed -i "s/.*border.*primary.*/    border-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
 sed -i "s/.*background.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
-
 sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
 sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
+
+# 8 - dunst theming
+sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+pkill dunst
+dunst -conf $hyprPath/addons/dunst/dunstrc
 
 # Done
 exit 0
