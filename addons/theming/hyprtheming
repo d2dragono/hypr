@@ -55,12 +55,19 @@ sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hy
 sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
 
 # 8 - dunst theming
-sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:primary\*\//@define-color \1 #${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/swaync/style.css
-sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:secondary\*\//@define-color \1 #${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/swaync/style.css
+#sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:primary\*\//@define-color \1 #${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/swaync/style.css
+#sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:secondary\*\//@define-color \1 #${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/swaync/style.css
+sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+
 
 # Killing dunst to actualize the colors
-pkill swaync
-swaync -c $hyprPath/addons/swaync/config.json -s $hyprPath/addons/swaync/style.css
+pkill dunst
+dunst -conf $hyprPath/addons/dunst/dunstrc
+
+#pkill swaync
+#swaync -c $hyprPath/addons/swaync/config.json -s $hyprPath/addons/swaync/style.css
 
 # 9 - Dunst notifications icons
 #convert $hyprPath/addons/brightness/brightness.png xc:"#${activeBorderColor}" -channel RGB -clut  $hyprPath/addons/brightness/brightness.png

@@ -205,7 +205,7 @@ state.sofhdadsp {
 	control.18 {
 		iface MIXER
 		name 'IEC958 Playback Switch'
-		value true
+		value false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -216,7 +216,7 @@ state.sofhdadsp {
 		iface PCM
 		device 3
 		name ELD
-		value '1000070067140001000000000000000006b38f275647323739514d0907070000'
+		value '100007006712000100000000000000004c2d440e433234464737780907070000'
 		comment {
 			access 'read volatile'
 			type BYTES
@@ -281,7 +281,7 @@ state.sofhdadsp {
 		iface PCM
 		device 4
 		name ELD
-		value '100007006712000100000000000000004c2d440e433234464737780907070000'
+		value '1000070067140001000000000000000006b38f275647323739514d0907070000'
 		comment {
 			access 'read volatile'
 			type BYTES
@@ -376,8 +376,8 @@ state.sofhdadsp {
 		iface PCM
 		device 4
 		name 'Playback Channel Map'
-		value.0 3
-		value.1 4
+		value.0 0
+		value.1 0
 		value.2 0
 		value.3 0
 		value.4 0
@@ -452,7 +452,50 @@ state.sofhdadsp {
 			count 1
 		}
 	}
-	control.42 {
+	control.43 {
+		iface MIXER
+		name 'Dmic0 Capture TDFB beam switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'Dmic0 Capture TDFB angle set enum'
+		value '-90'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '-90'
+			item.1 '-75'
+			item.2 '-60'
+			item.3 '-45'
+			item.4 '-30'
+			item.5 '-15'
+			item.6 '0'
+			item.7 '15'
+			item.8 '30'
+			item.9 '45'
+			item.10 '60'
+			item.11 '75'
+			item.12 '90'
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'Dmic0 Capture DRC switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.48 {
 		iface MIXER
 		name 'Dmic0 Capture Volume'
 		value.0 45
@@ -468,7 +511,7 @@ state.sofhdadsp {
 			dbvalue.1 0
 		}
 	}
-	control.43 {
+	control.49 {
 		iface MIXER
 		name 'Dmic0 Capture Switch'
 		value.0 true
@@ -481,7 +524,7 @@ state.sofhdadsp {
 			count 4
 		}
 	}
-	control.45 {
+	control.50 {
 		iface MIXER
 		name 'Pre Mixer Deepbuffer HDA Analog Volume'
 		value.0 45

@@ -1,0 +1,211 @@
+#!/bin/bash
+
+# Script to control volume via alsa
+# Made by DRAGONO
+
+show_help()
+{
+    echo
+    echo "Usage: $0 [option]" 
+    echo "Options:"
+    echo
+    echo "    -i, --increase [int%] [path/to/alsa/cfg/file]       Increase the volume by the given percentage. The given value must be an integer."
+    echo "    -d, --decrease [int%] [path/to/alsa/cfg/file]       Decrease the volume by the given percentage. The given value must be an integer."
+    echo "    -t, --toggle [path/to/alsa/cfg/file]       	        Toggle either ON or OFF the volume output."
+    echo "    -s, --setup [absolute/path/to/new/alsa/cfg/file]    To setup the sound on a fresh arch system. Need to be launched the first time you want to use this script."
+    echo "    -h, --help                                          Show help."
+    echo
+    echo "Note: --setup requires sudo privileges"
+}
+
+edit_volume()
+{
+    local percentage="$1"
+    local alsacfg="$2"
+    local sign="$3"
+
+    # Is the percentage valid (between 0 and 100)
+    if ((percentage < 0 || percentage > 100))
+    then
+	>&2 echo "[ERROR]: the percentage ($1) is not valid."
+        return 1
+    fi
+
+    # Is the alsa config file valid
+    if [ ! -f $alsacfg ]
+    then
+        >&2 echo "[ERROR]: $alsacfg is not a valid configuration file."
+	return 1
+    fi
+
+    # Editing current volume
+    amixer set Master $percentage%$sign;
+    # Saving it to load the new volume when starting computer
+    alsactl --file $alsacfg store
+    # Done
+    return 0
+}
+
+toggle_volume()
+{
+    local alsacfg="$1"	
+    # Is the alsa config file valid
+    if [ ! -f $alsacfg ]
+    then
+        >&2 echo "[ERROR]: $alsacfg is not a valid configuration file."
+	return 1
+    fi
+
+    # Toggling current volume
+    amixer set Master toggle
+    # Saving it to load the new volume when starting computer
+    alsactl --file $alsacfg store
+    # Done
+    return 0
+}
+
+setup()
+{
+    local alsacfg="$1"
+    # Extracting the path and the file name
+    cfgPath=`echo $alsacfg | sed "s/^\(.*\)\/.*$/\1/"`
+    cfgFile=`echo $alsacfg | sed "s/^.*\/\(.*\)$/\1/"`
+
+    # Is the path valid
+    if [ ! -d $cfgPath ]
+    then
+        >&2 echo "[ERROR]: the path $cfgPath does not exist, cannot create $cfgFile."
+	return 1
+    fi
+
+    # Creating the file
+    touch $alsacfg
+
+    # Creating a systemd service in order to use Volume.sh --load $alsacfg because it requires sudo and the use dont want to have to sudo everytime he start his session
+    sudo cat << END > /etc/systemd/system/load-audio.service
+[Unit]
+Description=Load saved alsa configuration (saved at: $alsacfg)
+[Service]
+ExecStart=alsactl --file $alsacfg
+[Install]
+WantedBy=multi-user.target
+END
+    
+    # Enabling load-volume.service in order to have the sounds settings resotred at startup
+    sudo systemctl enable load-audio
+
+    # Done
+    return 0
+}
+
+# === Main script ===
+if [ $# -eq 0 ]
+then
+    >&2 echo "[ERROR]: No given arguments."
+    show_help
+    exit 1
+fi
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+
+        -i|--increase)
+	    # Verifying passed arguments
+	    if [ $# -lt 3 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
+		echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
+	        show_help
+	        exit 1
+	    fi
+
+            if [ ! `edit_volume $2 $3 +` ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 3	   
+        ;;
+
+	-d|--decrease)
+	    # Verifying passed arguments
+	    if [ $# -lt 3 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
+	        echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
+	        show_help
+	        exit 1
+	    fi
+
+            if [ ! `edit_volume $2 $3 -` ]
+	    then
+		>&2 echo "[ERROR]: $1 $2 $3: an error occured."
+		show_help
+		exit 1
+	    fi
+
+	    shift 3
+	;;
+
+	-t|--toggle)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 path/to/alsa/config/file"
+	        echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
+	        show_help
+	        exit 1
+	    fi
+
+            if [ ! `toggle_volume $2` ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+		show_help
+		exit 1
+            fi
+
+	    shift 2
+        ;;
+
+	-s|--setup)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 path/to/new/alsa/config/file"
+	        show_help
+	        exit 1
+	    fi
+
+            if [ ! `setup $2` ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+		show_help
+		exit 1
+	    fi
+
+	    shift 2
+	;;
+
+        -h|--help)
+            show_help
+            shift 1
+        ;;
+
+        *)
+            echo "[ERROR]: Unknown option: $1"
+            show_help
+            exit 1
+        ;;
+
+    esac
+done
+
+# Done
+exit 0

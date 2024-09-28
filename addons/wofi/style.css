@@ -7,10 +7,10 @@
 window
 {
     
-    background-color:#505071; /*hyprtheming:secondary*/
+    background-color:#684754; /*hyprtheming:secondary*/
     border-style:solid;
     border-width:2px;
-    border-color:#e1b3ba; /*hyprtheming:primary*/
+    border-color:#f2d382; /*hyprtheming:primary*/
     border-radius:10px;
     opacity:0.88;
 }
@@ -28,7 +28,7 @@ window
     background-color:rgba(44,44,44,0.4);
     border-style:solid;
     border-width:2px;
-    border-color:#505071; /*hyprtheming:secondary*/
+    border-color:#684754; /*hyprtheming:secondary*/
     border-bottom:solid 0px red;
     padding-top:2px;
 }
@@ -54,7 +54,7 @@ window
     background-color:rgba(44,44,44,0.4);
     border-style:solid;
     border-width:2px;
-    border-color:#505071; /*hyprtheming:secondary*/
+    border-color:#684754; /*hyprtheming:secondary*/
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
     border-top:solid 0px rgba(0,0,0,0);
@@ -70,7 +70,7 @@ window
 
 #entry:selected
 {
-    background-color:#e1b3ba; /*hyprtheming:primary*/
+    background-color:#f2d382; /*hyprtheming:primary*/
     border-color: rgba(0,0,0,0);
     border-radius:10px;
 }
