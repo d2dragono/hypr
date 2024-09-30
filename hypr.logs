@@ -192,3 +192,1572 @@ WARNING: Screen 'keyboard' not found, using focused monitor
 [0.397] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
 [0.397] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
 [0.397] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][09-30-2024][21:13:24]: kitty: [0.395] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.395] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.395] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.395] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][09-30-2024][21:16:17]: kitty: [0.468] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.468] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.469] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.469] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:28]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:28]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:28]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:28]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:28]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:28]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:29]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:29]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][21:19:29]: brightnessctl: No error occured. Success.
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:30]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:31]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:32]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:32]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:32]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:19:32]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✔][09-30-2024][21:21:27]: brightnessctl: No error occured. Success.
+[✘][09-30-2024][21:21:36]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:23:11]: kitty: [0.456] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.456] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.456] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.456] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[5.745] [PARSE ERROR] Unknown DCS escape code: zz
+[5.745] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[36.710] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[36.784] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[36.784] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✔][09-30-2024][21:23:12]: kitty: No error occured. Success.
+[✔][09-30-2024][21:23:20]: librewolf: No error occured. Success.
+[✘][09-30-2024][21:33:56]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:33:56]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:33:56]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:33:56]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:33:56]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:33:56]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✘][09-30-2024][21:35:07]: kitty: [0.440] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.440] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.440] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.440] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[12.593] [PARSE ERROR] Unknown DCS escape code: zz
+[12.593] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[183.046] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[183.186] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[183.186] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-30-2024][21:36:04]: /home/DRAGONO/.config/hypr/scripts/audiocfg: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/scripts/audiocfg: No such file or directory
+[✔][09-30-2024][21:38:16]: kitty: No error occured. Success.
+[✘][09-30-2024][21:38:42]: kitty: [0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.447] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.447] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][09-30-2024][21:39:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:39:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][21:52:41]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:52:41]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:52:42]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:52:42]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✔][09-30-2024][21:53:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:53:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:54:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:54:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:55:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][21:56:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:56:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:56:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✘][09-30-2024][21:56:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: [ERROR]: -u: this is not an integer.
+[✔][09-30-2024][21:56:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:56:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:05]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:05]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:05]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:57:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][21:58:59]: kitty: No error occured. Success.
+[✔][09-30-2024][22:00:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:00:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:00:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:00:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:00:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:00:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:02:53]: kitty: No error occured. Success.
+[✔][09-30-2024][22:05:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:18]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:05:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:06:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][22:11:42]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Cannot parse integer value “-h int:value:35” for -r
+[✘][09-30-2024][22:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Cannot parse integer value “-h int:value:30” for -r
+[✘][09-30-2024][22:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Cannot parse integer value “-h int:value:25” for -r
+[✔][09-30-2024][22:11:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:11:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:15:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:05]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:16:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:09]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:09]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:09]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:09]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:09]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:18:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:19:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][22:20:13]: kitty: [0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.447] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.448] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.448] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][09-30-2024][22:20:39]: librewolf: No error occured. Success.
+[✔][09-30-2024][22:23:48]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:48]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:48]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:48]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:48]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:49]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:50]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][22:23:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:23:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][22:24:28]: kitty: [0.448] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.448] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.449] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.449] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][09-30-2024][22:26:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:26:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][22:29:26]: kitty: [0.500] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.500] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.501] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.501] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][09-30-2024][22:32:21]: kitty: No error occured. Success.
+[✔][09-30-2024][22:32:24]: librewolf: No error occured. Success.
+[✔][09-30-2024][22:34:33]: librewolf: No error occured. Success.
+[✘][09-30-2024][22:38:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 55: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 50: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 55: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 65: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 70: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: syntax error near unexpected token `fi'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 253: `fi'
+[✘][09-30-2024][22:38:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 65: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 261: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 261: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 55: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 261: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 261: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 65: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 261: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 55: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 50: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 55: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:38:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 65: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:39:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:39:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 65: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:39:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:39:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 55: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:40:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 60: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:40:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 235: [: missing `]'
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 235: 65: command not found
+/home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: /home/DRAGONO/.config/hypr/scripts/audioctl: line 260: syntax error: unexpected end of file
+[✘][09-30-2024][22:42:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:42:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-high.svg
+[✘][09-30-2024][22:42:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-high.svg
+[✘][09-30-2024][22:42:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-high.svg
+[✘][09-30-2024][22:42:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:42:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:43:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✔][09-30-2024][22:44:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:44:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:44:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:44:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][22:45:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: identify: unable to open image 'toto': No such file or directory @ error/blob.c/OpenBlob/3596.
+identify: no decode delegate for this image format `' @ error/constitute.c/ReadImage/746.
+Invalid commandline: Unknown option --icon toto
+[✘][09-30-2024][22:45:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: identify: unable to open image 'toto': No such file or directory @ error/blob.c/OpenBlob/3596.
+identify: no decode delegate for this image format `' @ error/constitute.c/ReadImage/746.
+Invalid commandline: Unknown option --icon toto
+[✘][09-30-2024][22:45:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: identify: unable to open image 'toto': No such file or directory @ error/blob.c/OpenBlob/3596.
+identify: no decode delegate for this image format `' @ error/constitute.c/ReadImage/746.
+Invalid commandline: Unknown option --icon toto
+[✘][09-30-2024][22:45:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: identify: unable to open image 'toto': No such file or directory @ error/blob.c/OpenBlob/3596.
+identify: no decode delegate for this image format `' @ error/constitute.c/ReadImage/746.
+Invalid commandline: Unknown option --icon toto
+[✘][09-30-2024][22:45:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:45:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:45:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:46:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:46:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:46:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:46:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option --icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:48:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon /home/DRAGONO/.config/hypr/ressources/volume-medium.svg
+[✘][09-30-2024][22:50:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:50:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:50:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:50:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:50:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:50:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:51:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:51:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:51:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✘][09-30-2024][22:51:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: Invalid commandline: Unknown option -icon
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:14]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:18]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:18]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:18]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:18]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:51:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:19]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:20]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:21]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:40]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:52:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:07]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:08]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:15]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:16]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:53:17]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:54:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:00]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:22]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:23]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:24]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:25]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:26]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:27]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:28]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:29]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:30]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:31]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:32]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:33]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:34]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][22:55:35]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:36]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:37]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:38]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: alsactl: save_state:1663: rename failed: Operation not permitted (/home/DRAGONO/.config/hypr/configs/alsa/asound.state)
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:05:39]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:01]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:06:02]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:08:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:46]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: alsactl: save_state:1663: rename failed: Operation not permitted (/home/DRAGONO/.config/hypr/configs/alsa/asound.state)
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:09:58]: librewolf: No error occured. Success.

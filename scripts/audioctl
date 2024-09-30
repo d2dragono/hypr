@@ -18,11 +18,104 @@ show_help()
     echo "Note: --setup requires sudo privileges"
 }
 
+# Will say if the current sound output is muted or not
+get_status()
+{
+    status=`amixer get Master | grep "Left.*%" | cut -d" " -f8 | sed "s/\[\(.*\)\]/\1/"`
+    if [ ! $? ]
+    then
+        >&2 echo "[ERROR]: amixer: could not retreive output mute status."
+        return 1
+    fi
+
+    if [ "$status" = "on" ]
+    then
+        echo " "
+    else
+        echo "(Muted)"
+    fi
+    return 0
+}
+
+# Volume percentage
+get_percentage()
+{
+    percentage=`amixer get Master | grep "Left.*%" | cut -d" " -f7 | sed "s/\[\(.*\)\%]/\1/"`
+    if [ ! $? ]
+    then
+        >&2 echo "[ERROR]: amixer: could not retreive the volume percentage."
+        return 1
+    fi
+    echo $percentage
+    return 0
+}
+
+# Notification icon depending of volume
+get_icon()
+{
+    percentage=`get_percentage`
+    if ((percentage == 0))
+    then
+        identify $hyprPath/ressources/volume-off.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-off.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/volume-off.svg"
+    fi
+
+    if ((percentage > 0 && percentage < 34))
+    then
+        identify $hyprPath/ressources/volume-low.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-low.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/volume-low.svg"
+    fi
+
+    if ((percentage > 33 && percentage < 67))
+    then
+        identify $hyprPath/ressources/volume-medium.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-medium.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/volume-medium.svg"
+    fi
+
+    if ((percentage > 66))
+    then
+        identify $hyprPath/ressources/volume-high.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-high.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/volume-high.svg"
+    fi
+
+    echo $icon
+    return 0
+}
+
+
+
 edit_volume()
 {
     local percentage="$1"
     local alsacfg="$2"
     local sign="$3"
+
+    # Is the percentage an integer ?
+    if [[ -n ${percentage//[0-9]/} ]]
+    then
+        >&2 echo "[ERROR]: $percentage: this is not an integer."
+        return 1 
+    fi
 
     # Is the percentage valid (between 0 and 100)
     if ((percentage < 0 || percentage > 100))
@@ -121,7 +214,8 @@ do
 	        exit 1
 	    fi
 
-            if [ ! `edit_volume $2 $3 +` ]
+	    edit_volume $2 $3 +
+	    if [ ! $? ]
 	    then
 	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 	        show_help	
@@ -142,7 +236,8 @@ do
 	        exit 1
 	    fi
 
-            if [ ! `edit_volume $2 $3 -` ]
+	    edit_volume $2 $3 -
+            if [ ! $? ]
 	    then
 		>&2 echo "[ERROR]: $1 $2 $3: an error occured."
 		show_help
@@ -163,7 +258,8 @@ do
 	        exit 1
 	    fi
 
-            if [ ! `toggle_volume $2` ]
+	    toggle_volume $2
+            if [ ! $? ]
 	    then
 	        >&2 echo "[ERROR]: $1 $2: an error occured."
 		show_help
@@ -183,7 +279,8 @@ do
 	        exit 1
 	    fi
 
-            if [ ! `setup $2` ]
+	    setup $2
+            if [ ! $? ]
 	    then
 	        >&2 echo "[ERROR]: $1 $2: an error occured."
 		show_help
@@ -206,6 +303,43 @@ do
 
     esac
 done
+
+
+
+# === Notifying ===
+dunstctl -h > /dev/null
+if [ ! $? ]
+then
+    echo "Dunst is not installed. Install it if you wish to see sound notifications."
+else
+    # Mute status
+    muted=`get_status`
+    if [ ! $? ]
+    then
+        echo "[ERROR]: Could not retreive volume mute status."
+        show_help
+        exit 1
+    fi
+    # Percentage
+    percentage=`get_percentage`
+    if [ ! $? ]
+    then
+        echo "[ERROR]: Could not retreive volume percentage."
+        show_help
+        exit 1
+    fi
+    # Icon
+    icon=`get_icon`
+    if [ ! $? ]
+    then
+        echo "[ERROR]: Could not retreive notification icon."
+        show_help
+        exit 1
+    fi
+
+    # Notifying
+    $hyprPath/scripts/notifyctl -p $percentage -c 20 -t "System" -m "Volume : $percentage% $muted" -u 1 -e 3000 -i "$icon"
+fi
 
 # Done
 exit 0

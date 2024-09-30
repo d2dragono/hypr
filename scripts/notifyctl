@@ -15,6 +15,7 @@ show_help()
     echo "    -t, --title [string]         Title of the notification."
     echo "    -m, --message [string]       Text inside the notification."
     echo "    -u, --urgency [1|2|3]        Urgency of the notification. 1 is low, 2 is normal and 3 is urgent."
+    echo "    -e, --expiration [int]       Duration of the notification."
     echo "    -h, --help                   Show help."
 }
 
@@ -27,10 +28,11 @@ code=" "
 title="System"
 message=" "
 urgency=" "
+expiration=" "
 
 while [ $# -gt 0 ]
 do
-    case $1 in
+    case "$1" in
 
         -i|--icon)
             # Verifying passed arguments
@@ -44,7 +46,8 @@ do
             fi
 
             # Does the icon exist ?
-            if [ ! `identify $2` ]
+            identify "$2" > /dev/null
+            if [ ! "$?" ]
             then
                 echo
                 >&2 echo "[ERROR]: $2: the given file is not a valid icon."
@@ -164,10 +167,10 @@ do
             fi
 
             # Is the given value an int ?
-            if [[ -n ${input//[0-9]/} ]]
+            if [[ -n ${2//[0-9]/} ]]
             then
                 echo
-                >&2 echo "[ERROR]: $1: this is not an integer."
+                >&2 echo "[ERROR]: $2: this is not an integer."
                 echo "Usage: $0 $1 [1|2|3]"
                 show_help
                 exit 1 
@@ -201,6 +204,32 @@ do
             shift 2
         ;;
 
+        -e|--expiration)
+            # Verifying passed arguments
+            if [ $# -lt 2 ]
+            then
+                echo
+                >&2 echo "[ERROR]: $1: not enough arguments."
+                echo "Usage: $0 $1 [int]"
+                show_help
+                exit 1
+            fi
+
+            # Is the given value an int ?
+            if [[ -n ${input//[0-9]/} ]]
+            then
+                echo
+                >&2 echo "[ERROR]: $1: this is not an integer."
+                echo "Usage: $0 $1 [int]"
+                show_help
+                exit 1 
+            fi
+
+            # Else we are good to go
+            expiration="-t $2"
+            shift 2
+        ;;
+
         -h|--help)
             show_help
             shift 1
@@ -217,7 +246,7 @@ do
 done
 
 # Launching the notification
-dunstify $title $message $iconPath $code $progressBar $urgency
+dunstify "$title" "$message" $iconPath $code $progressBar $urgency $expiration
 
 # Done
 exit 0
