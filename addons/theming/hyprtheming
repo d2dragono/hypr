@@ -39,7 +39,7 @@ sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" $hyprPa
 
 # 4 - hyprlock theming
 # Just editing background image
-sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" $hyprPath/addons/lock/hyprlock.conf
+sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" $hyprPath/hyprlock.conf
 
 
 # 5 - sddm theming

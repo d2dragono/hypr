@@ -10,7 +10,7 @@ window#waybar
 { 
     border-style:solid;
     border-width:2px;
-    border-color:#f2d382;
+    border-color:#a9c2ea;
     border-radius:10px;
 
     background-color:rgba(15,15,15,0.4);
@@ -141,7 +141,7 @@ button:hover {
 
 
 #custom-caffeine {
-    /* caffeine */ color:green
+    /* caffeine */ color:white;
 }
 
 

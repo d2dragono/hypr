@@ -1,0 +1,194 @@
+[✔][09-30-2024][19:54:25]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][19:54:25]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][19:54:26]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][19:54:26]: brightnessctl: No error occured. Success.
+[✘][09-30-2024][19:54:26]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No such file or directory
+[✘][09-30-2024][19:54:27]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No such file or directory
+[✘][09-30-2024][19:54:27]: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/addons/audio/scripts/increase_volume.sh: No such file or directory
+[✘][09-30-2024][19:54:27]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No such file or directory
+[✘][09-30-2024][19:54:27]: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: /home/DRAGONO/.config/hypr/scripts/logs: line 42: /home/DRAGONO/.config/hypr/addons/audio/scripts/decrease_volume.sh: No such file or directory
+[✔][09-30-2024][20:03:16]: hyprlock: No error occured. Success.
+[✘][09-30-2024][20:05:38]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+WARNING: 'keyboard': No digits found.
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+WARNING: Screen 'keyboard' not found, using focused monitor
+[✘][09-30-2024][20:10:49]: kitty: [0.488] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.488] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.489] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.489] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[341.003] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[341.003] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[493.296] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[493.296] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][09-30-2024][20:15:30]: kitty: [0.482] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.482] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.482] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.482] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][09-30-2024][20:22:51]: kitty: [0.520] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.520] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.521] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.521] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[7.679] [PARSE ERROR] Unknown DCS escape code: zz
+[7.679] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[29.062] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[29.110] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[29.110] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[33.316] [PARSE ERROR] Unknown OSC escape code: 13;#c5dae1
+[33.316] [PARSE ERROR] Unknown OSC escape code: 708;#0e333c
+[79.375] [PARSE ERROR] Unknown DCS escape code: zz
+[79.375] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[95.589] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[95.590] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[95.590] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[96.438] [PARSE ERROR] Unknown DCS escape code: zz
+[96.438] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[105.592] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[105.640] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[105.640] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[108.629] [PARSE ERROR] Unknown DCS escape code: zz
+[108.629] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[170.310] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[170.358] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[170.358] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[185.610] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[185.610] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][09-30-2024][20:31:33]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:31:33]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:31:33]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:35:24]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:35:27]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:45:16]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:45:16]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:45:16]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:45:16]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][20:45:17]: brightnessctl: No error occured. Success.
+[✘][09-30-2024][20:49:01]: kitty: [0.397] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.397] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.397] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.397] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
