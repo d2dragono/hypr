@@ -2574,3 +2574,763 @@ alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.con
 [✘][10-01-2024][13:01:54]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
 /home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
 [✔][10-01-2024][13:16:36]: kitty: No error occured. Success.
+[✘][10-01-2024][13:22:04]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][10-01-2024][13:25:12]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✔][10-01-2024][13:25:19]: hyprlock: No error occured. Success.
+[✔][10-01-2024][13:33:31]: librewolf: No error occured. Success.
+[✘][10-01-2024][13:37:43]: kitty: [0.355] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.355] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.355] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.355] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[245.039] [PARSE ERROR] Unknown DCS escape code: zz
+[245.039] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[265.223] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[265.269] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[265.269] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[270.265] [PARSE ERROR] Unknown DCS escape code: zz
+[270.265] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[278.092] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[278.144] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[278.144] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[291.380] [PARSE ERROR] Unknown DCS escape code: zz
+[291.380] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[308.848] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[308.858] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[308.859] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[313.872] [PARSE ERROR] Unknown DCS escape code: zz
+[313.872] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[729.855] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[729.908] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[729.908] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[756.680] [PARSE ERROR] Unknown DCS escape code: zz
+[756.680] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[2293.193] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2293.241] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2293.241] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2306.165] [PARSE ERROR] Unknown DCS escape code: zz
+[2306.165] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[2366.292] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2366.339] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2366.339] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2382.576] [PARSE ERROR] Unknown DCS escape code: zz
+[2382.576] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[2661.256] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2661.265] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2661.265] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[2707.366] [PARSE ERROR] Unknown DCS escape code: zz
+[2707.366] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[3030.296] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3030.343] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3030.343] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3194.783] [PARSE ERROR] Unknown DCS escape code: zz
+[3194.783] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[3335.420] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3335.467] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3335.467] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3417.410] [PARSE ERROR] Unknown DCS escape code: zz
+[3417.410] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[3427.677] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3427.689] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3427.689] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3542.190] [PARSE ERROR] Unknown DCS escape code: zz
+[3542.190] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[3692.701] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3692.749] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3692.749] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[3705.993] [PARSE ERROR] Unknown DCS escape code: zz
+[3705.993] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[4198.274] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[4198.321] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[4198.321] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[4208.880] [PARSE ERROR] Unknown DCS escape code: zz
+[4208.880] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[4264.382] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[4264.392] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[4264.392] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][13:37:44]: kitty: [0.332] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.333] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.333] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.333] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][13:39:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][13:39:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][10-01-2024][13:52:09]: kitty: [0.412] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.412] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.412] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.412] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][13:55:45]: kitty: [0.442] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.442] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.442] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.442] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][14:03:29]: nautilus: ** Message: 14:02:52.862: Connecting to org.freedesktop.Tracker3.Miner.Files
+nautilus-application-Message: 14:02:52.864: Failed to initialize display server connection: Cannot invoke method; proxy is for the well-known name org.gnome.Mutter.ServiceChannel without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+** (org.gnome.Nautilus:258339): WARNING **: 14:02:53.117: Unable to get contents of the bookmarks file: Error opening file /home/DRAGONO/.config/gtk-3.0/bookmarks: No such file or directory
+[✔][10-01-2024][14:05:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][14:05:11]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][14:05:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][14:05:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][14:06:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:51]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:51]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:51]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:06:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:07:01]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:07:01]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:07:01]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:12]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:13]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:13]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:30]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][14:20:30]: brightnessctl: No error occured. Success.
+[✘][10-01-2024][14:39:03]: kitty: [0.457] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.457] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][14:59:17]: kitty: [0.428] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.429] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.429] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.430] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][15:11:03]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][15:11:03]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][15:11:03]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][15:11:04]: brightnessctl: No error occured. Success.
+[✘][10-01-2024][15:24:28]: nautilus: ** Message: 15:23:37.781: Connecting to org.freedesktop.Tracker3.Miner.Files
+nautilus-application-Message: 15:23:37.783: Failed to initialize display server connection: Cannot invoke method; proxy is for the well-known name org.gnome.Mutter.ServiceChannel without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+** (org.gnome.Nautilus:454946): WARNING **: 15:23:38.064: Unable to get contents of the bookmarks file: Error opening file /home/DRAGONO/.config/gtk-3.0/bookmarks: No such file or directory
+[✘][10-01-2024][15:24:58]: nautilus: ** Message: 15:24:29.196: Connecting to org.freedesktop.Tracker3.Miner.Files
+nautilus-application-Message: 15:24:29.197: Failed to initialize display server connection: Cannot invoke method; proxy is for the well-known name org.gnome.Mutter.ServiceChannel without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+** (org.gnome.Nautilus:457122): WARNING **: 15:24:29.459: Unable to get contents of the bookmarks file: Error opening file /home/DRAGONO/.config/gtk-3.0/bookmarks: No such file or directory
+[✘][10-01-2024][15:43:44]: kitty: [0.416] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.416] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.416] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.416] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[191.320] [PARSE ERROR] Unknown DCS escape code: zz
+[191.320] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[204.907] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[205.019] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[205.019] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[241.621] [PARSE ERROR] Unknown DCS escape code: zz
+[241.621] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[248.049] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[248.102] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[248.102] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[346.038] [PARSE ERROR] Unknown DCS escape code: zz
+[346.038] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[356.566] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[356.566] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[356.566] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[380.481] [PARSE ERROR] Unknown DCS escape code: zz
+[380.481] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[387.582] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[387.582] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[387.582] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[484.497] [PARSE ERROR] Unknown DCS escape code: zz
+[484.497] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[505.590] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[505.638] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[505.638] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[640.957] [PARSE ERROR] Unknown DCS escape code: zz
+[640.957] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[657.207] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[657.254] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[657.254] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[746.531] [PARSE ERROR] Unknown DCS escape code: zz
+[746.531] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[770.913] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[770.959] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[770.959] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1080.106] [PARSE ERROR] Unknown DCS escape code: zz
+[1080.106] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1083.740] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1083.789] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1083.789] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][15:44:32]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✘][10-01-2024][15:47:10]: hyprlock: terminate called after throwing an instance of 'char const*'
+[✔][10-01-2024][15:47:23]: hyprlock: No error occured. Success.
+[✔][10-01-2024][16:03:24]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:25]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:25]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:37]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:38]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:38]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:39]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:03:39]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:49]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:49]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:37:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:38:42]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:38:43]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:49:29]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:49:29]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][16:49:30]: brightnessctl: No error occured. Success.
+[✘][10-01-2024][17:07:50]: kitty: [0.457] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.457] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.457] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[71.143] [PARSE ERROR] Unknown DCS escape code: zz
+[71.143] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[87.568] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[87.613] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[87.613] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:08:25]: kitty: [0.527] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.527] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.527] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.527] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[13.272] [PARSE ERROR] Unknown DCS escape code: zz
+[13.272] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[34.061] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[34.109] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[34.109] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:08:48]: kitty: [6.939] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[6.939] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[6.939] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[6.939] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[9.077] [PARSE ERROR] Unknown DCS escape code: zz
+[9.077] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[21.901] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[21.950] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[21.950] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:09:03]: kitty: [0.577] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.577] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.577] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.577] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[9.059] [PARSE ERROR] Unknown DCS escape code: zz
+[9.059] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[14.694] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[14.742] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[14.742] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:10:30]: kitty: [0.518] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.519] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.519] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.519] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[72.067] [PARSE ERROR] Unknown DCS escape code: zz
+[72.067] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[84.988] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[85.066] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[85.066] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:10:40]: kitty: [0.616] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.616] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.616] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.616] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:11:07]: kitty: [0.599] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.600] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.600] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.600] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:11:49]: kitty: [0.557] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.557] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.558] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.558] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[6.059] [PARSE ERROR] Unknown DCS escape code: zz
+[6.059] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[40.557] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[40.638] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[40.638] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:12:19]: kitty: [12.127] [PARSE ERROR] Unknown DCS escape code: zz
+[12.127] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[29.308] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[29.356] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[29.356] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:13:37]: kitty: [0.600] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.600] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.600] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.600] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:14:35]: kitty: [0.588] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.588] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.588] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.588] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:14:38]: kitty: [0.621] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.622] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.622] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.622] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:16:00]: kitty: [0.598] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.598] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.599] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.599] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:33:01]: kitty: [0.591] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.591] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.592] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.592] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[5.328] [PARSE ERROR] Unknown DCS escape code: zz
+[5.328] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[20.984] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[21.035] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[21.035] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:33:47]: kitty: [2.956] [PARSE ERROR] Unknown DCS escape code: zz
+[2.956] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[25.008] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[25.008] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[25.008] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:34:21]: kitty: [12.946] [PARSE ERROR] Unknown DCS escape code: zz
+[12.946] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[32.134] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[32.183] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[32.183] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:34:45]: kitty: [0.555] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.555] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.555] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.555] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[2.012] [PARSE ERROR] Unknown DCS escape code: zz
+[2.012] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[23.856] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[23.866] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[23.866] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:34:57]: kitty: [0.512] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.513] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.513] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.514] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[2.840] [PARSE ERROR] Unknown DCS escape code: zz
+[2.840] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[10.187] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[10.397] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[10.397] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:35:13]: kitty: [0.504] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.504] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.505] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.505] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[2.528] [PARSE ERROR] Unknown DCS escape code: zz
+[2.528] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[14.010] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[14.020] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[14.020] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:35:31]: kitty: [2.243] [PARSE ERROR] Unknown DCS escape code: zz
+[2.243] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[16.868] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[17.009] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[17.009] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:35:42]: kitty: [0.463] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.463] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.464] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.464] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[3.597] [PARSE ERROR] Unknown DCS escape code: zz
+[3.597] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[9.665] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[9.712] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[9.712] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:37:13]: kitty: [0.483] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.483] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.484] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.484] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[79.097] [PARSE ERROR] Unknown DCS escape code: zz
+[79.097] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[90.470] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[90.521] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[90.521] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:37:15]: kitty: [0.597] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.597] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.597] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.597] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:37:50]: kitty: [0.590] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.590] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.590] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.590] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[12.639] [PARSE ERROR] Unknown DCS escape code: zz
+[12.639] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[34.415] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[34.555] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[34.555] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:38:03]: kitty: [0.587] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.587] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.588] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.588] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[2.110] [PARSE ERROR] Unknown DCS escape code: zz
+[2.110] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[✘][10-01-2024][17:38:21]: kitty: [0.587] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.587] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.587] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.587] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[7.212] [PARSE ERROR] Unknown DCS escape code: zz
+[7.212] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[17.143] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[17.152] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[17.152] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:38:38]: kitty: [0.608] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.608] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.608] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.608] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[2.734] [PARSE ERROR] Unknown DCS escape code: zz
+[2.734] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[16.214] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[16.328] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[16.328] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:39:07]: kitty: [0.617] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.617] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.617] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.617] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[3.353] [PARSE ERROR] Unknown DCS escape code: zz
+[3.353] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[27.507] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[27.584] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[27.584] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:39:17]: kitty: [0.442] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.442] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.442] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.442] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[3.229] [PARSE ERROR] Unknown DCS escape code: zz
+[3.229] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[9.851] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[9.861] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[9.861] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:40:16]: kitty: [0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.447] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.447] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[1.732] [PARSE ERROR] Unknown DCS escape code: zz
+[1.732] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[57.777] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[57.787] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[57.787] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:40:36]: kitty: [1.637] [PARSE ERROR] Unknown DCS escape code: zz
+[1.637] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[19.256] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[19.304] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[19.304] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:41:04]: kitty: [1.576] [PARSE ERROR] Unknown DCS escape code: zz
+[1.576] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[27.413] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[27.554] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[27.554] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:42:04]: kitty: [1.318] [PARSE ERROR] Unknown DCS escape code: zz
+[1.318] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[36.217] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[36.217] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[36.217] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[37.509] [PARSE ERROR] Unknown DCS escape code: zz
+[37.509] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[59.307] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[59.355] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[59.355] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:42:38]: kitty: [0.406] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.406] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.407] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.407] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][17:42:46]: kitty: [0.423] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.423] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.424] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.424] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[45.339] [PARSE ERROR] Unknown DCS escape code: zz
+[45.339] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[54.351] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[54.398] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[54.398] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[99.907] [PARSE ERROR] Unknown DCS escape code: zz
+[99.907] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[104.551] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[104.600] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[104.600] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[131.226] [PARSE ERROR] Unknown DCS escape code: zz
+[131.226] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[157.403] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[157.451] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[157.451] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1149.547] [PARSE ERROR] Unknown DCS escape code: zz
+[1149.547] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1160.011] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1160.125] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1160.125] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1235.529] [PARSE ERROR] Unknown DCS escape code: zz
+[1235.529] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1261.351] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1261.398] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1261.398] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1316.694] [PARSE ERROR] Unknown DCS escape code: zz
+[1316.694] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1319.530] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1319.530] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1319.530] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1358.701] [PARSE ERROR] Unknown DCS escape code: zz
+[1358.701] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1413.474] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1413.520] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1413.520] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1470.568] [PARSE ERROR] Unknown DCS escape code: zz
+[1470.568] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1493.379] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1493.495] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1493.495] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1508.446] [PARSE ERROR] Unknown DCS escape code: zz
+[1508.446] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1512.248] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1512.295] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1512.295] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1554.836] [PARSE ERROR] Unknown DCS escape code: zz
+[1554.836] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1561.979] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1562.027] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1562.027] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1593.004] [PARSE ERROR] Unknown DCS escape code: zz
+[1593.004] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[1600.137] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1600.185] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[1600.185] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][17:42:53]: nautilus: ** Message: 16:50:37.920: Connecting to org.freedesktop.Tracker3.Miner.Files
+nautilus-application-Message: 16:50:37.922: Failed to initialize display server connection: Cannot invoke method; proxy is for the well-known name org.gnome.Mutter.ServiceChannel without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+** (org.gnome.Nautilus:662511): WARNING **: 16:50:38.200: Unable to get contents of the bookmarks file: Error opening file /home/DRAGONO/.config/gtk-3.0/bookmarks: No such file or directory
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:51:57.692: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:52:55.823: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:54:29.814: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:55:49.789: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:56:08.589: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:56:58.320: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:57:36.478: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 16:59:39.045: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:00:08.574: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:01:04.542: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:01:53.681: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:05:52.166: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:06:20.156: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:07:51.217: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:07:51.413: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:08:26.132: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:08:32.755: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:08:48.863: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:08:49.153: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:09:04.467: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:09:04.636: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:10:31.181: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:10:31.437: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:10:41.376: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:10:41.627: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:11:08.788: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:11:09.051: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:11:50.258: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:11:50.517: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:12:20.425: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:12:20.693: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:14:31.202: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:14:31.461: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:14:36.618: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:14:36.892: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:15:06.006: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:15:06.256: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:18:48.489: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:32:40.571: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:32:40.812: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:33:02.806: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:33:02.806: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:33:27.530: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:33:48.779: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:33:48.780: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:21.978: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:22.162: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:46.730: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:46.888: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:56.605: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:58.066: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:34:58.252: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:35:14.053: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:35:14.054: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:35:32.685: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:35:32.846: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:35:43.237: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:35:43.419: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:13.444: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:14.286: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:14.544: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:14.544: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:14.864: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:51.208: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:37:51.454: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:03.547: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:04.574: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:04.842: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:22.527: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:22.800: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:39.677: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:38:39.936: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:39:07.927: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:39:18.540: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:39:18.642: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:40:16.986: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:40:17.089: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:40:37.084: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:40:37.084: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:41:05.619: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:41:41.521: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:42:05.809: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:42:05.911: Attempted to add a non-existent file to the view.
+
+(org.gnome.Nautilus:662511): nautilus-view-WARNING **: 17:42:38.463: Attempted to add a non-existent file to the view.
+[✔][10-01-2024][17:43:29]: librewolf: No error occured. Success.
+[✘][10-01-2024][21:18:22]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✘][10-01-2024][21:18:22]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: /home/DRAGONO/.config/hypr/scripts/logctl: line 42: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No such file or directory
+[✘][10-01-2024][21:18:22]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][21:18:23]: wal: No error occured. Success.
+[✘][10-01-2024][21:19:20]: kitty: [0.459] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.459] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.460] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.460] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][21:23:40]: librewolf: No error occured. Success.
+[✔][10-01-2024][21:24:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:24:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][21:43:18]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✔][10-01-2024][21:43:19]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: No error occured. Success.
+[✘][10-01-2024][21:47:54]: kitty: [0.455] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.455] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.455] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.455] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[5.714] [PARSE ERROR] Unknown DCS escape code: zz
+[5.714] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[39.875] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[39.885] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[39.885] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[91.842] [PARSE ERROR] Unknown DCS escape code: zz
+[91.842] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[149.468] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[149.515] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[149.515] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[177.762] [PARSE ERROR] Unknown DCS escape code: zz
+[177.762] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[246.197] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[246.207] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[246.207] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[250.803] [PARSE ERROR] Unknown DCS escape code: zz
+[250.804] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[402.454] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[402.464] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[402.464] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[555.636] [PARSE ERROR] Unknown DCS escape code: zz
+[555.636] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[585.499] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[585.509] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[585.509] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[598.257] [PARSE ERROR] Unknown DCS escape code: zz
+[598.257] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[611.392] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[611.392] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[611.392] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[615.938] [PARSE ERROR] Unknown DCS escape code: zz
+[615.938] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[794.100] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[794.148] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[794.148] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[845.676] [PARSE ERROR] Unknown DCS escape code: zz
+[845.676] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[861.131] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[861.177] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[861.177] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✔][10-01-2024][21:52:07]: librewolf: No error occured. Success.
