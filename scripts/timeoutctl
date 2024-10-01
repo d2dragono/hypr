@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# Script to manage timeout of the system
+# Made by DRAGONO
+
+show_help()
+{
+    echo
+    echo "Usage: $0 [option]                                                                                                         " 
+    echo "Options:                                                                                                                   "
+    echo
+    echo "    To disable/enable caffeine for a duration:                                                                             "
+    echo
+    echo "    -d, --disable-caffeine                         Turn off caffeine.                                                      "
+    echo "    -e, --enable-caffeine [int(seconds)]           Enable caffeine for a duration of x seconds.                            "
+    echo "    -t, --toggle-caffeine [int(seconds)]           Enable/Disable caffeine. If enabled, will be for x seconds.             "
+    echo "    -l, --get-time-left                            Get the time left before caffeine will turn off.                        "
+    echo "    --startup-disabled-on                          Enable caffeine at computer startup. You will have to lock manually.    "
+    echo "    --startup-disabled-off                         Disable caffeine at startup.                                            "
+    echo "    --startup-disabled-toggle                      Turn on/off caffeine enabled at startup.                                "
+    echo "    --get-startup-disabled                         Display if this feature is on or off.                                   "
+    echo
+    echo "    To edit/get desktop dimming/timeout:                                                                                   "
+    echo
+    echo "    --set-desktop-dim-time [int(seconds)]          Set the desktop time before dimming.                                    "
+    echo "    --set-desktop-timeout-time [int(seconds)]      Set the desktop time before locking.                                    "
+    echo "    --get-desktop-dim-time                         Display the current set dim time.                                       "
+    echo "    --get-desktop-timeout-time                     Display the current set lock time.                                      "
+    echo "    --desktop-dim-on                               Turn off the dimming on the desktop.                                    "
+    echo "    --desktop-dim-off                              Turn on the dimming on the desktop.                                     "
+    echo "    --desktop-dim-toggle                           Toggle on/off the dimming on the desktop.                               "
+    echo "    --get-desktop-dim-toggle                       Display if the dim is toggled or not.                                   "
+    echo
+    echo "    To edit/get lockscreen dimming/timeout:                                                                                "
+    echo
+    echo "   --set-lockscreen-dim-time [int(seconds)]        Set the lockscreen time before dimming.                                 "
+    echo "   --set-lockscreen-timeout-time [int(seconds)]    Set the lockscreen time before screen turn off.                         "
+    echo "   --get-lockscreen-dim-time                       Display the current set dim time.                                       "
+    echo "   --get-lockscreen-timeout-time                   Display the current set screen off time.                                "
+    echo "   --lockscreen-dim-on                             Turn off the dimming on the lockscreen.                                 "
+    echo "   --lockscreen-dim-off                            Turn on the dimming on the lockscreen.                                  "
+    echo "   --lockscreen-dim-toggle                         Toggle on/off the dimming on the lock screen.                           "
+    echo "   --get-lockscreen-dim-toggle                     Display if the dim is toggled or not.                                   "
+    echo
+    echo "    To show this message:                                                                                                  "
+    echo
+    echo "    -h, --help                              Show help.                                                                     "
+}
+
+
+
+
+# === MAIN SCRIPT ===
+
+# === Main script ===
+if [ $# -eq 0 ]
+then
+    >&2 echo "[ERROR]: No given arguments."
+    show_help
+    exit 1
+fi
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+
+        -h|--help)
+            show_help
+            shift 1
+        ;;
+
+        *)
+            echo "[ERROR]: Unknown option: $1"
+            show_help
+            exit 1
+        ;;
+
+    esac
+done
+
+

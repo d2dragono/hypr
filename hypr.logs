@@ -1761,3 +1761,816 @@ Invalid commandline: Unknown option --icon toto
 [✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
 [✔][09-30-2024][23:09:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
 [✔][09-30-2024][23:09:58]: librewolf: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: alsactl: save_state:1663: rename failed: Operation not permitted (/home/DRAGONO/.config/hypr/configs/alsa/asound.state)
+[✔][09-30-2024][23:11:43]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:44]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:11:45]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:49]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:51]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:52]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:53]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:54]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:55]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:56]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:57]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:58]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:12:59]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:05]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:08]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:09]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:09]: brightnessctl: No error occured. Success.
+[✔][09-30-2024][23:13:37]: librewolf: No error occured. Success.
+[✘][09-30-2024][23:15:07]: kitty: [0.382] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.382] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.382] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.382] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[4.080] [PARSE ERROR] Unknown DCS escape code: zz
+[4.080] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[5.912] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[5.992] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[5.992] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[5.992] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][09-30-2024][23:15:15]: kitty: [0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.447] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.447] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.448] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][09:06:30]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][09:06:30]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][09:06:30]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/workspaces.conf: No such file or directory
+[✔][10-01-2024][09:06:30]: wal: No error occured. Success.
+[✘][10-01-2024][09:06:56]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: grep: /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+[✘][10-01-2024][09:07:00]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: grep: /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+[✘][10-01-2024][09:07:02]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: grep: /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+[✘][10-01-2024][09:07:06]: kitty: [0.639] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.639] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.639] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.639] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][09:07:06]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:07:07]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: (zenity:4424): Gtk-CRITICAL **: 09:07:05.759: GtkBox 0x63647a35d590 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:4424): Gtk-CRITICAL **: 09:07:05.759: AdwBin 0x63647a3160e0 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+identify: missing required argument  @ error/identify.c/IdentifyImageCommand/245.
+
+(zenity:4498): Gtk-CRITICAL **: 09:07:06.092: GtkBox 0x6191b5b55c20 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:4498): Gtk-CRITICAL **: 09:07:06.092: AdwBin 0x6191b5bd26d0 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+usage: wal [-h] [-a "alpha"] [-b background] [--backend [backend]]
+           [--theme [/path/to/file or theme_name]] [--iterative]
+           [--saturate 0.0-1.0] [--preview] [--vte] [-c]
+           [-i "/path/to/img.jpg"] [-l] [-n] [-o "script_name"] [-q] [-r] [-R]
+           [-s] [-t] [-v] [-e]
+wal: error: argument -i: expected one argument
+error: the following required arguments were not provided:
+  <PATH>
+
+Usage: swww img <PATH>
+
+For more information, try '--help'.
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:07:07]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: (zenity:4387): Gtk-CRITICAL **: 09:07:05.456: GtkBox 0x5ebb177f7090 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:4387): Gtk-CRITICAL **: 09:07:05.456: AdwBin 0x5ebb17703370 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+identify: missing required argument  @ error/identify.c/IdentifyImageCommand/245.
+
+(zenity:4577): Gtk-CRITICAL **: 09:07:06.823: GtkBox 0x61fd793a1070 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:4577): Gtk-CRITICAL **: 09:07:06.823: AdwBin 0x61fd794612e0 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+usage: wal [-h] [-a "alpha"] [-b background] [--backend [backend]]
+           [--theme [/path/to/file or theme_name]] [--iterative]
+           [--saturate 0.0-1.0] [--preview] [--vte] [-c]
+           [-i "/path/to/img.jpg"] [-l] [-n] [-o "script_name"] [-q] [-r] [-R]
+           [-s] [-t] [-v] [-e]
+wal: error: argument -i: expected one argument
+error: the following required arguments were not provided:
+  <PATH>
+
+Usage: swww img <PATH>
+
+For more information, try '--help'.
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:07:08]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: grep: /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+[✘][10-01-2024][09:07:11]: /home/DRAGONO/.config/hypr/addons/layout/quickChange.sh: grep: /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/inputs.conf: No such file or directory
+[✘][10-01-2024][09:07:51]: kitty: [0.444] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.444] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.445] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.445] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[13.092] [PARSE ERROR] Unknown DCS escape code: zz
+[13.092] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[33.201] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[33.250] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[33.250] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][09:10:35]: swww-daemon: 07:06:30 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:06:30 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:06:30 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:06:30 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:06:30 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:10:35 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][09:10:35]: nm-applet: (nm-applet:2336): Gtk-CRITICAL **: 09:06:30.541: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:33.497: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:33.497: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:34.983: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:34.983: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:40.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:40.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:52.985: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:52.985: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:58.985: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:06:58.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:04.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:04.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:22.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:22.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:28.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:28.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:40.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:07:40.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:04.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:04.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:10.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:10.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:16.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:16.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:22.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:22.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:28.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:28.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:58.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:08:58.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:04.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:04.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:10.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:10.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:16.983: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:16.983: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:22.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:22.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:40.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:40.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:46.984: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:46.984: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:52.988: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:2336): Gtk-CRITICAL **: 09:09:52.988: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:10:35.895: Error reading events from display: Broken pipe
+[✘][10-01-2024][09:10:35]: /home/DRAGONO/.config/hypr/addons/theming/hyprtheming: (zenity:4562): Gtk-CRITICAL **: 09:07:06.695: GtkBox 0x5ad01627dfe0 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:4562): Gtk-CRITICAL **: 09:07:06.695: AdwBin 0x5ad0162635d0 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+identify: missing required argument  @ error/identify.c/IdentifyImageCommand/245.
+
+(zenity:4665): Gtk-CRITICAL **: 09:07:07.140: GtkBox 0x6205d6c92560 reports a minimum height of 149, but minimum height for width of 1048576 is 160. Expect overlapping widgets.
+
+(zenity:4665): Gtk-CRITICAL **: 09:07:07.140: AdwBin 0x6205d6d3b7c0 reports a minimum height of 60, but minimum height for width of 1048576 is 71. Expect overlapping widgets.
+usage: wal [-h] [-a "alpha"] [-b background] [--backend [backend]]
+           [--theme [/path/to/file or theme_name]] [--iterative]
+           [--saturate 0.0-1.0] [--preview] [--vte] [-c]
+           [-i "/path/to/img.jpg"] [-l] [-n] [-o "script_name"] [-q] [-r] [-R]
+           [-s] [-t] [-v] [-e]
+wal: error: argument -i: expected one argument
+error: the following required arguments were not provided:
+  <PATH>
+
+Usage: swww img <PATH>
+
+For more information, try '--help'.
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/style.conf: No such file or directory
+WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:10:46]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][09:10:46]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][09:10:46]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+sed: can't read /home/DRAGONO/.config/hypr/config/workspaces.conf: No such file or directory
+[✔][10-01-2024][09:10:46]: wal: No error occured. Success.
+[✘][10-01-2024][09:12:27]: kitty: [0.454] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.454] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.455] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.455] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[20.757] [PARSE ERROR] Unknown DCS escape code: zz
+[20.757] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[62.459] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[62.469] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[62.469] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[67.699] [PARSE ERROR] Unknown DCS escape code: zz
+[67.699] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[73.657] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[73.657] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[73.657] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][09:12:28]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:12:28]: nm-applet: (nm-applet:14466): Gtk-CRITICAL **: 09:10:46.386: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:10:49.897: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:10:49.897: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:10:52.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:10:52.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:26.912: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:26.912: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:28.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:28.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:34.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:34.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:40.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:40.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:46.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:46.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:52.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:11:52.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:12:04.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:12:04.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:12:16.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:14466): Gtk-CRITICAL **: 09:12:16.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:12:28.917: Error reading events from display: Broken pipe
+[✘][10-01-2024][09:12:28]: swww-daemon: 07:10:46 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:10:46 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:10:46 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:10:46 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:10:46 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:12:28 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][09:12:28]: kitty: [0.449] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.449] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.449] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.449] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[100.123] [glfw error 65544]: Wayland: fatal display error: Broken pipe
+[✘][10-01-2024][09:12:38]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][09:12:38]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][09:12:38]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][09:12:38]: wal: No error occured. Success.
+[✘][10-01-2024][09:12:45]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:12:45]: nm-applet: (nm-applet:19636): Gtk-CRITICAL **: 09:12:39.042: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:19636): Gtk-CRITICAL **: 09:12:41.735: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:19636): Gtk-CRITICAL **: 09:12:41.735: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:12:45.945: Error reading events from display: Broken pipe
+[✘][10-01-2024][09:12:45]: swww-daemon: 07:12:38 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:12:38 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:12:39 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:12:39 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:12:39 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:12:45 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][09:12:54]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][09:12:54]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][09:12:54]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][09:12:54]: wal: No error occured. Success.
+[✘][10-01-2024][09:13:28]: kitty: [0.458] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.458] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.458] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.458] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[13.140] [PARSE ERROR] Unknown DCS escape code: zz
+[13.140] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[25.536] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[25.584] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[25.584] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][09:13:29]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][09:13:29]: nm-applet: (nm-applet:20470): Gtk-CRITICAL **: 09:12:54.586: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:12:57.313: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:12:57.314: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:12:58.984: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:12:58.984: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:04.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:04.987: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:22.988: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:22.988: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:28.390: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:28.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(nm-applet:20470): Gtk-CRITICAL **: 09:13:28.986: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 09:13:29.232: Error reading events from display: Broken pipe
+[✘][10-01-2024][09:13:29]: swww-daemon: 07:12:54 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:12:54 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:12:54 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:12:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:12:54 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+07:13:29 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][09:13:39]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][09:13:39]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][09:13:39]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][09:13:39]: wal: No error occured. Success.
+[✔][10-01-2024][09:15:03]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:04]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:05]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:15:06]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][09:18:53]: librewolf: No error occured. Success.
+[✘][10-01-2024][09:23:15]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][09:23:15]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][09:23:16]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][09:23:16]: wal: No error occured. Success.
+[✘][10-01-2024][09:23:23]: kitty: [0.592] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.592] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.593] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.593] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][09:33:59]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:33:59]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:33:59]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:33:59]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:33:59]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:33:59]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:00]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:01]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:02]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:02]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:02]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:34:03]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][09:51:21]: kitty: No error occured. Success.
+[✘][10-01-2024][10:11:55]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 15: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+[✘][10-01-2024][10:11:55]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/bin/sh: line 1: Device: command not found
+/home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 15: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+[✘][10-01-2024][10:11:55]: hypridle: /bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+/bin/sh: line 1: Device: command not found
+[✔][10-01-2024][10:12:03]: kitty: No error occured. Success.
+[✔][10-01-2024][10:45:24]: kitty: No error occured. Success.
+[✘][10-01-2024][10:45:27]: kitty: [0.687] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.687] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.688] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.688] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][10:48:19]: kitty: No error occured. Success.
+[✘][10-01-2024][10:51:57]: nautilus: ** Message: 10:51:26.909: Connecting to org.freedesktop.Tracker3.Miner.Files
+nautilus-application-Message: 10:51:26.912: Failed to initialize display server connection: Cannot invoke method; proxy is for the well-known name org.gnome.Mutter.ServiceChannel without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+** (org.gnome.Nautilus:244900): WARNING **: 10:51:27.223: Unable to get contents of the bookmarks file: Error opening file /home/DRAGONO/.config/gtk-3.0/bookmarks: No such file or directory
+[✔][10-01-2024][10:52:48]: librewolf: No error occured. Success.
+[✘][10-01-2024][10:52:56]: kitty: [0.466] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.467] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.467] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.467] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][10:53:10]: kitty: [0.484] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.484] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.484] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.484] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][10:53:13]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][10:53:13]: swww-daemon: 07:23:16 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+07:23:16 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+07:23:16 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+07:23:16 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+07:23:16 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+08:53:13 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][10:53:13]: nm-applet: (nm-applet:2346): Gtk-CRITICAL **: 09:23:16.446: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 10:53:13.617: Error reading events from display: Broken pipe
+[✘][10-01-2024][10:53:23]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][10:53:23]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][10:53:23]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][10:53:23]: wal: No error occured. Success.
+[✘][10-01-2024][10:55:54]: kitty: [0.433] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.433] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.434] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.434] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][11:02:08]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][11:02:08]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][11:02:08]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][11:02:08]: wal: No error occured. Success.
+[✘][10-01-2024][11:02:14]: kitty: [0.563] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.563] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.564] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.564] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][11:02:14]: kitty: [0.480] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.481] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.481] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.481] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][11:13:49]: librewolf: No error occured. Success.
+[✘][10-01-2024][12:20:00]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][12:20:00]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][12:20:00]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][12:20:01]: wal: No error occured. Success.
+[✘][10-01-2024][12:21:04]: kitty: [0.470] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.470] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.470] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.470] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[7.789] [PARSE ERROR] Unknown DCS escape code: zz
+[7.789] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[51.752] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[51.760] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[51.760] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[✘][10-01-2024][12:21:04]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][12:21:04]: nm-applet: (nm-applet:2424): Gtk-CRITICAL **: 12:20:01.246: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 12:21:04.620: Error reading events from display: Broken pipe
+[✘][10-01-2024][12:21:04]: swww-daemon: 10:20:00 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+10:20:00 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+10:20:01 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+10:20:01 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+10:20:01 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+10:21:04 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][12:21:13]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][12:21:13]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][12:21:13]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][12:21:13]: wal: No error occured. Success.
+[✘][10-01-2024][12:23:13]: dunst: WARNING: 'keyboard': No digits found.
+[✘][10-01-2024][12:23:13]: nm-applet: (nm-applet:6236): Gtk-CRITICAL **: 12:21:13.884: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+Gdk-Message: 12:23:13.871: Error reading events from display: Broken pipe
+[✘][10-01-2024][12:23:13]: swww-daemon: 10:21:13 [0m[34m[INFO] [0m(main) Selected wl_shm format: Xbgr8888
+10:21:13 [0m[34m[INFO] [0m(main) Initialization succeeded! Starting main loop...
+10:21:14 [0m[34m[INFO] [0m(transition) BumpPool with: 1 buffers. Size: 20250Kb
+10:21:14 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+10:21:14 [0m[33m[WARN] [0m(main) Received transform. We currently ignore those
+Io error: Broken pipe (os error 32)
+thread 'main' panicked at daemon/src/main.rs:191:30:
+Io error when reading wayland events: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+10:23:13 [0m[34m[INFO] [0m(main) Removed socket at "/run/user/1000/swww-wayland-1.socket"
+[✘][10-01-2024][12:23:13]: kitty: [0.335] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.335] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.336] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.336] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[39.267] [PARSE ERROR] Unknown DCS escape code: zz
+[39.267] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[46.375] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[46.386] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[46.386] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[57.002] [PARSE ERROR] Unknown DCS escape code: zz
+[57.002] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[109.314] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[109.323] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[109.323] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[112.692] [PARSE ERROR] Unknown DCS escape code: zz
+[112.692] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[115.992] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[116.003] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[116.003] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[118.820] [glfw error 65544]: Wayland: fatal display error: Broken pipe
+[✘][10-01-2024][12:23:23]: alsactl: alsactl: load_state:1689: Cannot open /home/DRAGONO/.config/hypr/addons/audio/alsa/asound.state for reading: No such file or directory
+alsa-lib main.c:846:(execute_sequence) exec '/bin/rm -rf /var/lib/alsa/card0.conf.d' failed (exit code 1)
+[✔][10-01-2024][12:23:23]: /home/DRAGONO/.config/hypr/addons/caffeine/init-caffeine.sh: No error occured. Success.
+[✘][10-01-2024][12:23:23]: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: /home/DRAGONO/.config/hypr/addons/workspaces/scripts/set-configurations.sh: line 9: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][12:23:23]: wal: No error occured. Success.
+[✘][10-01-2024][12:23:30]: kitty: [0.370] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.370] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.370] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.370] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][12:23:31]: librewolf: No error occured. Success.
+[✔][10-01-2024][12:24:47]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:24:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:24:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:24:48]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:24:50]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:10]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:12]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✔][10-01-2024][12:25:13]: /home/DRAGONO/.config/hypr/scripts/audioctl: No error occured. Success.
+[✘][10-01-2024][12:26:02]: kitty: [0.358] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.358] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.358] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.358] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✘][10-01-2024][12:26:04]: kitty: [0.371] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.371] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[0.371] [PARSE ERROR] Unknown OSC escape code: 13;#a9c2ea
+[0.371] [PARSE ERROR] Unknown OSC escape code: 708;#02030A
+[✔][10-01-2024][12:31:01]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:01]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:06]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:06]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:06]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:07]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:07]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:08]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:08]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:08]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:09]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:09]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:09]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:10]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:11]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:11]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:12]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:12]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:12]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:13]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:13]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:13]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:14]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:15]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:15]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:15]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:16]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:16]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:16]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:16]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:17]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:17]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:17]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:17]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:17]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:17]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:18]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:19]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:19]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:19]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:19]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:19]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:19]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:20]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:21]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:31:21]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:37:00]: kitty: No error occured. Success.
+[✔][10-01-2024][12:37:13]: librewolf: No error occured. Success.
+[✔][10-01-2024][12:51:49]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:49]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:50]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:52]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:53]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:54]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:55]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✔][10-01-2024][12:51:56]: brightnessctl: No error occured. Success.
+[✘][10-01-2024][13:01:54]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][13:01:54]: hypridle: No error occured. Success.
+[✘][10-01-2024][13:01:54]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✘][10-01-2024][13:01:54]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✘][10-01-2024][13:01:54]: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: /home/DRAGONO/.config/hypr/addons/caffeine/caffeine.sh: line 3: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+/home/DRAGONO/.config/hypr/addons/caffeine/getWaybarsOn.sh: line 6: /home/DRAGONO/.config/hypr/libs/filecfg: No such file or directory
+[✔][10-01-2024][13:16:36]: kitty: No error occured. Success.

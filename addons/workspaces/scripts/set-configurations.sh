@@ -17,20 +17,20 @@ do
     if [ "$value" = "primary" ]
     then
 	    # Editing every workspace monitor appareance
-	    sed -i "s/\(workspace = .\{1,2\}, monitor:\).*/\1${monitor}/g" $hyprPath/config/workspaces.conf
+	    sed -i "s/\(workspace = .\{1,2\}, monitor:\).*/\1${monitor}/g" $hyprPath/configs/hyprland/workspaces.conf
 	    # In case new main monitor used to be secondary, removing its special workspace
-	    sed -i "s/.*special:${monitor}-workspace.*//g" $hyprPath/config/workspaces.conf
+	    sed -i "s/.*special:${monitor}-workspace.*//g" $hyprPath/configs/hyprland/workspaces.conf
     else
 	# If not existing, adding the special workspace for this secondary monitor
 	grep ".*special:${monitor}-workspace" $hyprPath/config/workspaces.conf >> /dev/null
 	if [ ! $? -eq 0 ]
 	then
-	   echo "workspace = special:${monitor}-workspace, monitor:${monitor}" >> $hyprPath/config/workspaces.conf
+	   echo "workspace = special:${monitor}-workspace, monitor:${monitor}" >> $hyprPath/configs/hyprland/workspaces.conf
 	fi
     fi
 done
 
 # Remove empty lines
-sed -i '/^[[:space:]]*$/d' $hyprPath/config/workspaces.conf
+sed -i '/^[[:space:]]*$/d' $hyprPath/configs/hyprland/workspaces.conf
 
 exit 0

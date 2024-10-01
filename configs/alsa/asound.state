@@ -2,8 +2,8 @@ state.sofhdadsp {
 	control.1 {
 		iface MIXER
 		name 'Headphone Playback Volume'
-		value.0 70
-		value.1 70
+		value.0 52
+		value.1 52
 		comment {
 			access 'read write'
 			type INTEGER
@@ -11,15 +11,15 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -1275
-			dbvalue.1 -1275
+			dbvalue.0 -2625
+			dbvalue.1 -2625
 		}
 	}
 	control.2 {
 		iface MIXER
 		name 'Headphone Playback Switch'
-		value.0 true
-		value.1 true
+		value.0 false
+		value.1 false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -29,8 +29,8 @@ state.sofhdadsp {
 	control.3 {
 		iface MIXER
 		name 'Speaker Playback Volume'
-		value.0 56
-		value.1 56
+		value.0 0
+		value.1 0
 		comment {
 			access 'read write'
 			type INTEGER
@@ -38,8 +38,8 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -2325
-			dbvalue.1 -2325
+			dbvalue.0 -6525
+			dbvalue.1 -6525
 		}
 	}
 	control.4 {
@@ -68,8 +68,8 @@ state.sofhdadsp {
 	control.6 {
 		iface MIXER
 		name 'Capture Volume'
-		value.0 63
-		value.1 63
+		value.0 38
+		value.1 38
 		comment {
 			access 'read write'
 			type INTEGER
@@ -77,8 +77,8 @@ state.sofhdadsp {
 			range '0 - 63'
 			dbmin -1725
 			dbmax 3000
-			dbvalue.0 3000
-			dbvalue.1 3000
+			dbvalue.0 1125
+			dbvalue.1 1125
 		}
 	}
 	control.7 {
@@ -111,7 +111,7 @@ state.sofhdadsp {
 	control.9 {
 		iface MIXER
 		name 'Master Playback Volume'
-		value 87
+		value 0
 		comment {
 			access 'read write'
 			type INTEGER
@@ -119,13 +119,13 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 0
+			dbvalue.0 -6525
 		}
 	}
 	control.10 {
 		iface MIXER
 		name 'Master Playback Switch'
-		value true
+		value false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -226,7 +226,7 @@ state.sofhdadsp {
 	control.20 {
 		iface CARD
 		name 'HDMI/DP,pcm=4 Jack'
-		value true
+		value false
 		comment {
 			access read
 			type BOOLEAN
@@ -270,7 +270,7 @@ state.sofhdadsp {
 		iface MIXER
 		name 'IEC958 Playback Switch'
 		index 1
-		value true
+		value false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -281,11 +281,11 @@ state.sofhdadsp {
 		iface PCM
 		device 4
 		name ELD
-		value '1000070067140001000000000000000006b38f275647323739514d0907070000'
+		value ''
 		comment {
 			access 'read volatile'
 			type BYTES
-			count 32
+			count 0
 		}
 	}
 	control.26 {
@@ -445,7 +445,7 @@ state.sofhdadsp {
 	control.40 {
 		iface MIXER
 		name 'Post Mixer Analog Playback DRC switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -498,8 +498,8 @@ state.sofhdadsp {
 	control.48 {
 		iface MIXER
 		name 'Dmic0 Capture Volume'
-		value.0 45
-		value.1 45
+		value.0 32
+		value.1 32
 		comment {
 			access 'read write'
 			type INTEGER
@@ -507,8 +507,8 @@ state.sofhdadsp {
 			range '0 - 45'
 			dbmin -9999999
 			dbmax 0
-			dbvalue.0 0
-			dbvalue.1 0
+			dbvalue.0 -2600
+			dbvalue.1 -2600
 		}
 	}
 	control.49 {
