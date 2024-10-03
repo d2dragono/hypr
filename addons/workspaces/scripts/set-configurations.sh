@@ -6,7 +6,7 @@
 options=`$hyprPath/addons/workspaces/scripts/pluggedMonitorList.sh | sed "s/ /,/g" | sed "s/:.//g"`
 
 # Retreiving the saved status (primary/secondary) of each monitor in the configuration
-config=`$hyprPath/libs/filecfg $hyprPath/addons/workspaces/configurations --get-option-all $options , =`
+config=`$hyprPath/scripts/filectl $hyprPath/addons/workspaces/configurations --get-option-all $options , =`
 
 # Loading the configuration
 for conf in `echo $config`
@@ -22,7 +22,7 @@ do
 	    sed -i "s/.*special:${monitor}-workspace.*//g" $hyprPath/configs/hyprland/workspaces.conf
     else
 	# If not existing, adding the special workspace for this secondary monitor
-	grep ".*special:${monitor}-workspace" $hyprPath/config/workspaces.conf >> /dev/null
+	grep ".*special:${monitor}-workspace" $hyprPath/configs/hyprland/workspaces.conf >> /dev/null
 	if [ ! $? -eq 0 ]
 	then
 	   echo "workspace = special:${monitor}-workspace, monitor:${monitor}" >> $hyprPath/configs/hyprland/workspaces.conf

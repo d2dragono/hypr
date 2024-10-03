@@ -1,0 +1,581 @@
+#!/bin/bash
+
+# Script to manage monitors on hyprland
+# Made by DRAGONO
+
+show_help()
+{
+    echo
+    echo "Usage: $0 [option]" 
+    echo "Options:"
+    echo
+    echo "    Managing the configurations:"
+    echo
+    echo "    -u, --update [path/to/config]                                    Apply the current monitor configuration to the system. If one does not exist, create one before."
+    echo "    -l, --list [path/to/config]                                      List the existing configurations."
+    echo "    -v, --list-verbose [path/to/config]                              List the existing configurations with details."
+    echo "    -c, --current [path/to/config]                                   Show the configuration in use."
+    echo "    -d, --focus-daemon [path/to/config]                              Launch the waybar focus daemon."
+    echo
+    echo "    Editing the configurations:"
+    echo
+    echo "    -r, --rename [path/to/config] [id] [newName]                     Rename the configuration matching the given id."
+    echo "    -m, --set-main [path/to/config] [id] [monitorName]               Set the main monitor of the choosed configuration."
+    echo "    -t, --toggle-main [path/to/config] [id]                          Toggle on/off the main monitor principle."
+    echo "    -g, --get-main [path/to/config] [id]                             Display the main monitor principle status."
+    echo "    -o, --set-order [path/to/config] [id] [order]                    Set the monitor order from right to left. [order] is the same as [id] but with the order of your choice."
+    echo "    --get-order [path/to/config/file] [id]                           Display the monitors's order of the given id."
+    echo "    --set-waybar [path/to/config] [id] [monitorName] [on/off]    Put to on/off a waybar on the monitor given (within the id)."
+    echo "    --set-waybars [path/to/config] [id] [(on,|off,)*monitors]        Set all waybars status at once on a configuration."
+    echo "    --get-waybars [path/to/config] [id]                              Display the waybar setup of a configuration."
+    echo
+    echo "    Other:"
+    echo
+    echo "    -g, --gui [path/to/config]                                       Show a GUI to help the user edit configurations."
+    echo "    -h, --help                                                       Show help."
+}
+
+# === SUBFUNCTIONS ===
+get_plugged_monitors()
+{
+    monitors=`hyprctl monitors | grep 'Monitor' | sed "s/Monitor //g" | sed "s/ (ID //g" | sed "s/.)://g"`
+    if [ ! $? ]
+    then
+    	>&2 echo "[ERROR]: get_plugged_monitors: could not parse."
+    	return 1
+    fi
+    
+    final=""
+    for monitor in $(echo $monitors)
+    do
+    	final="${final}${monitor},"
+    done
+    
+    echo $final | sed "s/,$//"
+    return 0
+}
+
+
+
+
+
+
+
+
+
+
+# === FUNCTIONS ===
+update()
+{
+    local configPath="$1"
+    echo "update"
+    return 0
+}
+
+list()
+{
+    local configPath="$1"
+    # Does the given config file exist ?
+    if [ ! -f $1 ]
+    then
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+        
+    cat $configPath
+    
+    return 0
+}
+
+list_verbose()
+{
+    local configPath="$1"
+    # Does the given config file exist ?
+    if [ ! -f $1 ]
+    then
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+
+    echo
+    cat $configPath | sed "s/id=/ID = /g" | sed "s/name=/NAME = /g" | sed "s/order=/ORDER = /g" | sed "s/waybars(on)=/WAYBARS(ON) = /g" | sed "s/waybars(off)=/WAYBARS(OFF) = /g" | sed "s/main(on)=/MAIN(ON) = /g" | sed "s/main(off)=/MAIN(OFF) = /g"
+    return 0
+}
+
+current()
+{
+    local configPath="$1"
+    
+    # Does the given config file exist ?
+    if [ ! -f $1 ]
+    then
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Retreiving plugged monitor list
+    plugged=$(get_plugged_monitors)
+    if [ ! -f $1 ]
+    then
+    	>&2 echo "[ERROR]: Could not retreive the plugged monitors."
+    	return 1
+    fi
+    
+    $hyprPath/scripts/filectl $configPath --get-lines-below "id=$plugged" 5
+    return 0
+}
+
+focus_daemon()
+{
+    local configPath="$1"
+    echo "focus_daemon"
+    return 0
+}
+
+rename()
+{
+    local configPath="$1"
+    local id="$2"
+    local newName="$3"
+    
+    # Does the given config file exist ?
+    if [ ! -f $1 ]
+    then
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    echo $configPath | grep "id=$id" > /dev/null
+    if [ ! -f $1 ]
+    then
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+    
+    # Else changing the name
+    sed '/^id=${id}$/{n;s/name=.*/name=${newname}/;}' $configPath
+    
+    # Done
+    return 0
+}
+
+set_main()
+{
+    local configPath="$1"
+    local id="$2"
+    local monitorMain="$3"
+    echo "set main"
+    return 0
+}
+
+toggle_main()
+{
+    local configPath="$1"
+    local id="$2"
+    echo "toggle main"
+    return 0
+}
+
+get_main()
+{
+    local configPath="$1"
+    local id="$2"
+    echo "get main"
+    return 0
+}
+
+set_order()
+{
+    local configPath="$1"
+    local id="$2"
+    local order="$3"
+    echo "set order"
+    return 0
+}
+
+get_order()
+{
+    local configPath="$1"
+    local id="$2"
+    echo "get order"
+    return 0
+}
+
+set_waybar()
+{
+    local configPath="$1"
+    local id="$2"
+    local monitorName="$3"
+    local status="$4"
+    echo "set waybar"
+    return 0
+}
+
+set_waybars()
+{
+    local configPath="$1"
+    local id="$2"
+    local statusList="$3"
+    echo "set waybars"
+    return 0
+}
+
+get_waybars()
+{
+    local configPath="$1"
+    local id="$2"
+    echo "get waybars"
+    return 0
+}
+
+gui()
+{
+    local configPath="$1"
+    echo "gui"
+    return 0
+}
+
+
+
+
+
+
+
+
+
+
+# === MAIN SCRIPT ===
+if [ $# -eq 0 ]
+then
+    >&2 echo "[ERROR]: No given arguments."
+    show_help
+    exit 1
+fi
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+    
+        -u|--update)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config/file]"
+	        show_help
+	        exit 1
+	    fi
+
+	    update $2
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2	   
+        ;;
+
+	-l|--list)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config/file]"
+	        show_help
+	        exit 1
+	    fi
+
+	    list $2
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2
+        ;;
+
+	-v|--list-verbose)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config/file]"
+	        show_help
+	        exit 1
+	    fi
+
+	    list_verbose $2
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2
+	;;
+
+        -c|--current)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config/file]"
+	        show_help
+	        exit 1
+	    fi
+
+	    current $2
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2
+        ;;
+        
+        -d|--focus-daemon)
+	    # Verifying passed arguments
+	    if [ $# -lt 2 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config/file]"
+	        show_help
+	        exit 1
+	    fi
+
+	    focus_daemon $2
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2
+        ;;
+        
+        -r|--rename)
+	    # Verifying passed arguments
+	    if [ $# -lt 4 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id] [newName]"
+	        show_help
+	        exit 1
+	    fi
+
+	    rename
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        -m|--set-main)
+	    # Verifying passed arguments
+	    if [ $# -lt 4 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id] [monitorName]"
+	        show_help
+	        exit 1
+	    fi
+
+	    set_main
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        -t|--toggle-main)
+	    # Verifying passed arguments
+	    if [ $# -lt 3 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id]"
+	        show_help
+	        exit 1
+	    fi
+
+	    toggle_main
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 3	
+	;;
+        
+        -g|--get-main)
+	    # Verifying passed arguments
+	    if [ $# -lt 3 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_main
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 3
+        ;;
+        
+        -o|--set-order)
+	    # Verifying passed arguments
+	    if [ $# -lt 4 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id] [order]"
+	        show_help
+	        exit 1
+	    fi
+
+	    set_order
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        --get-order)
+	    # Verifying passed arguments
+	    if [ $# -lt 3 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_order
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 3
+        ;;
+        
+        --set-waybar)
+	    # Verifying passed arguments
+	    if [ $# -lt 5 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id] [monitorName] [on/off]"
+	        show_help
+	        exit 1
+	    fi
+
+	    set_waybar
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 5
+        ;;
+        
+        --set-waybars)
+	    # Verifying passed arguments
+	    if [ $# -lt 4 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id] [(on,|off,)*monitors]"
+	        show_help
+	        exit 1
+	    fi
+
+	    rename
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        --get-waybars)
+	    # Verifying passed arguments
+	    if [ $# -lt 3 ]
+	    then
+	        >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [path/to/config] [id]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_waybars
+	    if [ ! $? ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+                exit 1
+	    fi
+
+	    shift 3
+        ;;
+        
+        -g|--gui)
+	   gui
+	   if [ ! $? ]
+	   then
+	       >&2 echo "[FATAL]: $1: an error occured."
+	       show_help	
+	       exit 1
+	   fi
+
+	   shift 1
+        ;;
+
+        -h|--help)
+            show_help
+            shift 1
+        ;;
+
+        *)
+            echo "[ERROR]: Unknown option: $1"
+            show_help
+            exit 1
+        ;;
+
+    esac
+done
+
+# Done
+exit 0

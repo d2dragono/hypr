@@ -366,7 +366,7 @@ state.sofhdadsp {
 		value.6 0
 		value.7 0
 		comment {
-			access 'read write'
+			access 'read write volatile'
 			type INTEGER
 			count 8
 			range '0 - 36'
@@ -385,7 +385,7 @@ state.sofhdadsp {
 		value.6 0
 		value.7 0
 		comment {
-			access 'read write'
+			access 'read write volatile'
 			type INTEGER
 			count 8
 			range '0 - 36'
@@ -404,7 +404,7 @@ state.sofhdadsp {
 		value.6 0
 		value.7 0
 		comment {
-			access 'read write'
+			access 'read write volatile'
 			type INTEGER
 			count 8
 			range '0 - 36'

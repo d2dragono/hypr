@@ -7,10 +7,10 @@
 window
 {
     
-    background-color:#2D54A6; /*hyprtheming:secondary*/
+    background-color:#55312E; /*hyprtheming:secondary*/
     border-style:solid;
     border-width:2px;
-    border-color:#a9c2ea; /*hyprtheming:primary*/
+    border-color:#c79f92; /*hyprtheming:primary*/
     border-radius:10px;
     opacity:0.88;
 }
@@ -70,7 +70,7 @@ window
 
 #entry:selected
 {
-    background-color:#a9c2ea; /*hyprtheming:primary*/
+    background-color:#c79f92; /*hyprtheming:primary*/
     border-color: rgba(0,0,0,0);
     border-radius:10px;
 }

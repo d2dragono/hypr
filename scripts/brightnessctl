@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# This script is a placeholder. It does not check for any error and will be replaced.
+
+# Notification icon depending of brightness
+get_icon()
+{
+    # Getting %
+    max=$(brightnessctl max)
+    current=$(brightnessctl get)
+    percentage=$((current * 100 / max))
+
+    if ((percentage == 0))
+    then
+        identify $hyprPath/ressources/brightness-off.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/brightness-off.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/brightness-off.svg"
+    fi
+
+    if ((percentage > 0 && percentage < 34))
+    then
+        identify $hyprPath/ressources/brightness-low.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/brightness-low.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/brightness-low.svg"
+    fi
+
+    if ((percentage > 33 && percentage < 67))
+    then
+        identify $hyprPath/ressources/brightness-medium.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/brightness-medium.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/brightness-medium.svg"
+    fi
+
+    if ((percentage > 66))
+    then
+        identify $hyprPath/ressources/brightness-high.svg > /dev/null
+        if [ ! $? ]
+        then
+            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/brightness-high.svg."
+            return 1
+        fi
+        icon="$hyprPath/ressources/brightness-high.svg"
+    fi
+
+    echo $icon
+    return 0
+}
+
+# Since we already use the package "brightnessctl", this brightnessctl will simply be used for notification
+# purposes. I will write my own brightnessctl later tho, just that for now i must work on other stuff on hyprland
+
+# Getting %
+max=$(brightnessctl max)
+current=$(brightnessctl get)
+percentage=$((current * 100 / max))
+
+# Icon
+icon=`get_icon`
+if [ ! $? ]
+then
+    echo "[ERROR]: Could not retreive notification icon."
+    show_help
+    exit 1
+fi
+
+$hyprPath/scripts/notifierctl -p $percentage -c 35 -t "System" -m "Brightness : $percentage%" -u 1 -e 3000 -i "$icon"

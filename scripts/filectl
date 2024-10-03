@@ -1,33 +1,84 @@
 #!/bin/bash
-#  _____ ___ _     _____ ____ _____ ____ 
-# |  ___|_ _| |   | ____/ ___|  ___/ ___|
-# | |_   | || |   |  _|| |   | |_ | |  _ 
-# |  _|  | || |___| |__| |___|  _|| |_| |
-# |_|   |___|_____|_____\____|_|   \____|
-#
-# by DRAGONO
 
-# filecfg is a command to manipulate text file.
+# filectl is a tool to manipulate text file.
+# Made by DRAGONO
 
 show_help()
 {
-    echo "Usage: $0 [file] [option]"
-    echo ""
+    echo 
+    echo "Usage: $0 [option]"
     echo "Options:"
-    echo "  --search-string {string}							Search for a corresponding string in a file."
-    echo "  --search-line {string}							Search for a corresponding string in a file. The string need to be a whole line."
-    echo "  --replace-string {original-string} {new-string}				Search for a corresponding string and replace it."
-    echo "  --get-option {option} {delimiter} 						Look for something like : option[DELIMITER]value and return the value where option and delimiter match."
-    echo "  --set-option {option} {delimiter} {value}					Look for something like : option[DELIMITER]value and replace value with the new value."
-    echo "  --get-option-multiple {options} {del1} {del2}                               Look for opt1[del1]opt2[del1]...[del1]optn[del2]val1[del1]val2[del1]...[del1]valn and will return the according value"
-    echo "  --set-option-multiple {set of option} {option} {del1} {del2} {value}        Basically --set-option + --get-option-multiple. set of option is a string of options to match (ex: opt1,opt2,opt3, useful in case you may also have opt1,opt2 in the same file!), option is the option you want to edit."
-    echo "  --get-option-all {options} {del1} {del2}                                    Return a list like option1=value1 ... optionN=valueN"
-    echo "  -h, --help      					                        Show help."
+    echo 
+    echo "    --search-string [file] [string]						   Search for a corresponding string in a file."
+    echo "    --search-line [file] [string]						   Search for a corresponding string in a file. The string need to be a whole line."
+    echo "    --replace-string [file] [original-string] [new-string]			   Search for a corresponding string and replace it."
+    echo "    --set-empty-lines [file] [int]                                                 Will make it so that there will be [int] empty line everytime there is an empty line in the file. 0 will remove every empty line."
+    echo "    --get-option [file] [option] [delimiter] 				           Look for something like : option[DELIMITER]value and return the value where option and delimiter match."
+    echo "    --set-option [file] [option] [delimiter] [value]			           Look for something like : option[DELIMITER]value and replace value with the new value."
+    echo "    --get-option-multiple [file] [options] [option] [del1] [del2]                  Look for [option] in [options] and will return the according value."
+    echo
+    echo "    --set-option-multiple [file] [set of option] [option] [del1] [del2] [value]    Basically --set-option + --get-option-multiple. set of option is a string of options to match (ex: opt1,opt2,opt3, useful"
+    echo "                                                                                   in case you may also have opt1,opt2 in the same file), option is the option you want to edit."
+    echo
+    echo "    --get-another-line [file] [string] [-|+int]                                    Search for the line [string] and echo the [-|+int] line in relation to [string]."
+    echo "    --get-option-all [file] [options] [del1] [del2]                                Return a list like option1=value1 ... optionN=valueN."
+    echo "    --get-lines-below [file] [line(text)] [number of line]                         Will print the searched line and the [number of line] following it. The initial line count in the line number."
+    echo "    --insert-above [file] [string1] [string2]                                      Insert [string2] above [string1]."
+    echo "    --insert-below [file] [string1] [string2]                                      Insert [string2] below [string1]."
+    echo "    --insert-line [file] [string] [int]                                            Insert [string] at line [int]."
+    echo "    --delete-line [file] [string]                                                  Delete the line matching [string]."
+    echo "    --rgb-to-hex [rgbvalue]                                                        Convert an RGB value to an hexadecimal value."
+    echo "    --hex-to-rgb [hexvalue]                                                        Convert an hexadecimal value to an RGB value."
+    echo "    -h, --help      					                           Show help."
 }
 
 
 
 
+
+# === SUBFUNCTIONS ===
+valid_hex()
+{
+    local hexvalue="$1"    
+    # Now verifying if the hexadecimal value is correct
+    echo $hexvalue | grep -qE '^[0-9a-fA-F]{6}$'
+    return $?
+}
+
+valid_rgb()
+{
+    local rgbvalue="$1"
+    
+    # Do we have 3 values ?
+    numbers=`echo $rgbvalue | sed "s/,/ /g" | wc -w`
+    if [ ! $numbers -eq 3 ]
+    then
+        return 1
+    fi
+    
+    for value in `echo $rgbvalue | sed "s/,/ /g"`
+    do
+        digits=${#value}
+        if [ $digits -gt 3 ]
+        then
+            return 1
+        fi
+        
+	if ((value < 0 || value > 255))
+	then
+	    return 1
+	fi
+    done
+    
+    # Valid number
+    return 0
+}
+
+
+
+
+
+# === FUNCTIONS ===
 search_string()
 {
     local file="$1"
@@ -36,9 +87,9 @@ search_string()
     grep "$str" $file > /dev/null
     if [ $? -eq 0 ]
     then
-	echo "true"
+        echo "TRUE"
     else
-	echo "false"
+        echo "FALSE"
     fi
 }
 
@@ -50,9 +101,9 @@ search_line()
     grep -x "$str" $file > /dev/null
     if [ $? -eq 0 ]
     then
-	echo "true"
+	echo "TRUE"
     else
-	echo "false"
+	echo "FALSE"
     fi
 }
 
@@ -62,14 +113,21 @@ replace_string()
     local str1="$2"
     local str2="$3"
 
-    exist=`search_string $file $str1`
-    if [ "$exist" = "true" ]
+    bool=`search_string $file $str1`
+    if [ "$bool" = "TRUE" ]
     then
 	sed -i "s/${str1}/${str2}/g" $file
+	return 0
     else
-	echo "[ERROR]: Could not find pattern $str1 in file $file."
-	exit 1
+        echo 
+	>&2 echo "[ERROR]: Could not find pattern $str1 in file $file."
+	return 1
     fi
+}
+
+set_empty_lines()
+{
+    echo "set emtpy lines"
 }
 
 get_option()
@@ -78,15 +136,16 @@ get_option()
     local option="$2"
     local delim="$3"
 
-    line=`grep "^${option}${delim}" $file`
-
+    line=$(grep "^${option}${delim}" $file)
+    
     if [ $? -eq 0 ]
     then
-        value=`echo $line | sed "s/^${option}${delim}//"`
-        echo $value
+        echo $line | sed "s/^${option}${delim}//"
+        return 0
     else
-	echo "[ERROR]: Could not find option $option in file $file."
-	exit 1
+        echo 
+	>&2 echo "[ERROR]: Could not find option $option in file $file."
+	return 1
     fi
 }
 
@@ -101,44 +160,58 @@ set_option()
 
     if [ $? -eq 0 ]
     then
-	    sed -i "s/^\(${option}${delim}\).*/\1${value}/" $file	
+	sed -i "s/^\(${option}${delim}\).*/\1${value}/" $file
+	return 0
     else
-	echo "[ERROR]: Could not find option $option in file $file."
-	exit 1
+        echo
+	>&2 echo "[ERROR]: Could not find option $option in file $file."
+	return 1
     fi
 }
 
 get_option_multiple()
 {
     local file="$1"
-    local option="$2"
-    local del1="$3"
-    local del2="$4"
+    local options="$2"
+    local option="$3"
+    local del1="$4"
+    local del2="$5"
 
-    line=`grep ".*${option}.*${del2}.*" $file`
-    if [ $? -eq 0 ]
+    line=$(grep "${options}${del2}.*" $file)
+    if [ ! $? -eq 0 ]
     then
-        # We count which option number is it in order to retreive value number
-        options=`echo $line | cut -d${del2} -f1 | sed "s/${del1}/ /g"`
-        values=`echo $line | cut -d${del2} -f2 | sed "s/${del1}/ /g"`
-
-	nmbr=1
-	for opt in $options
-	do
-	    if [ "$opt" = "$option" ]
-            then
-		break;
-	   else
-		nmbr=$(($nmbr+1))
-	    fi
-	done
-
-	# Now that we know which option number it is, we return the value number
-	echo $values | sed "s/ /${del1}/g" | cut -d${del1} -f${nmbr}
-    else
-        echo "[ERROR]: Could not find option $option in file $file."
-	exit 1
+        echo
+        >&2 echo "[ERROR]: Could not find $options in $file."
+        return 1
     fi
+    
+    # Is the option in options list ?
+    echo $line | grep "${option}"
+    if [ ! $? -eq 0 ]
+    then
+        echo
+        >&2 echo "[ERROR]: Could not find $option in $options."
+        return 1
+    fi
+    
+    # We count which option number is it in order to retreive value number
+    options=`echo $line | cut -d${del2} -f1 | sed "s/${del1}/ /g"`
+    values=`echo $line | cut -d${del2} -f2 | sed "s/${del1}/ /g"`
+
+    nmbr=1
+    for opt in $options
+    do
+        if [ "$opt" = "$option" ]
+        then
+            break;
+        else
+	    nmbr=$(($nmbr+1))
+	fi
+    done
+
+    # Now that we know which option number it is, we return the value number
+    echo $values | sed "s/ /${del1}/g" | cut -d${del1} -f${nmbr}
+    return 0
 }
 
 set_option_multiple()
@@ -184,14 +257,20 @@ set_option_multiple()
 	done
 	# Removing extra del2
 	newline=`echo $newline | sed "s/\(.*\)${del1}$/\1/"`
-	echo newline: $newline
 
 	# 3 - Replacing old line with the new one
 	sed -i "s/^${setOfOpt}${del2}.*$/${newline}/" $file
+	return 0
     else
-	echo "[ERROR]: Could not find option $setOfOpt in $file."
-	exit 1
+        echo
+	>&2 echo "[ERROR]: Could not find option $setOfOpt in $file."
+	return 1
     fi
+}
+
+get_another_line()
+{
+    echo "get_another_line"
 }
 
 get_option_all()
@@ -202,8 +281,7 @@ get_option_all()
     local del2="$4"
 
     line=`grep "^$setOfOpt$del2.*" $file`
-
-    if [ ! $line = "" ]
+    if [ $? -eq 0 ]
     then
         options=`echo $line | sed "s/${del2}.*//g"`
         values=`echo $line | sed "s/.*${del2}//g"`
@@ -213,31 +291,128 @@ get_option_all()
 	do
             currentOpt=`echo $options | cut -d${del1} -f${i}`
 	    currentVal=`echo $values | cut -d${del1} -f${i}`
-            echo $currentOpt=$currentVal 
+            echo $currentOpt=$currentVal
         done
+        return 0
     else
-        echo "[ERROR]: Could not find option $setOfOpt in $file."
-	exit 1	    
+        echo
+        >&2 echo "[ERROR]: Could not find option $setOfOpt in $file."
+	return 1	    
     fi
 }
 
+get_lines_below()
+{
+    local file="$1"
+    local text="$2"
+    local nmbr="$3"
+
+    flag="FALSE"
+    result=""
+    cpt=0
+
+    while read line
+    do
+        echo $line | grep "$text" > /dev/null
+        if [ $? -eq 0 ]
+        then
+            flag="TRUE"
+        fi
+        
+        if [ "$flag"="TRUE" ]
+        then
+            result="$result $line"
+            cpt=$((cpt + 1))
+            
+            if ((cpt == nmbr))
+            then
+                echo $result | sed "s/ /\n/g"
+                return 0
+            fi
+        fi       
+    done < $file
+    
+    # Either not enough lines OR did not found the line
+    if [ "$flag" = "TRUE" ] # We found the line but reached the end of the file
+    then
+        echo $result | sed "s/ /\n/g"
+        return 0
+    else
+        # Reach the end without finding the matching pattern
+        echo
+        >&2 echo "[ERROR]: Could not find option $text in $file."
+	return 1
+    fi
+}
+
+insert_above()
+{
+    echo "insert above"
+}
+
+insert_below()
+{
+    echo "insert below"
+}
+
+insert_line()
+{
+    echo "insert line"
+}
+
+delete_line()
+{
+    echo "delete line"
+}
+
+hex_to_rgb()
+{
+    local hexvalue="$1"
+    # First we remove the eventual # before the hex value.
+    hexvalue=`echo $hexvalue | sed "s/#//"`
+    
+    valid_hex $hexvalue
+    if [ ! $? -eq 0 ]
+    then
+        echo
+        >&2 echo "[ERROR]: $hexvalue is not a valid hexadecimal value."
+        exit 1
+    fi
+    
+    # Conversion
+    printf "%d,%d,%d\n" 0x${hexvalue:0:2} 0x${hexvalue:2:2} 0x${hexvalue:4:2}
+}
+
+rgb_to_hex()
+{
+    local rgbvalue="$1"
+    valid_rgb $rgbvalue
+    if [ ! $? -eq 0 ]
+    then
+        echo
+        >&2 echo "[ERROR]: $rgbvalue is not a valid RGB value."
+        exit 1
+    fi
+    
+    # Conversion
+    r=`echo $rgbvalue | cut -d, -f1`
+    g=`echo $rgbvalue | cut -d, -f2`
+    b=`echo $rgbvalue | cut -d, -f3`
+    printf '#%02x%02x%02x\n' $r $g $b
+}
+
+
+
+
+
 # === Reading Arguments ===
-# Need at least three arguments (file, option, string)
-if [ $# -lt 3 ]
+# Require at least one argument
+if [ $# -eq 0 ]
 then
+    >&2 echo "[ERROR]: No given arguments."
     show_help
     exit 1
 fi
-
-# Does the file exist
-if [ ! -f $1 ]
-then
-    echo "[FATAL]: $1 does not exist or isn't a file."
-    exit 1
-fi
-
-file=$1
-shift 1
 
 # Else we can start reading args
 while [ $# -gt 0 ]
@@ -245,52 +420,481 @@ do
     case $1 in
 
         --search-string)
-	    if test $# -lt 2; then echo "[ERROR]: --search-string: not enough arguments."; show_help; exit 1; fi;
-            search_string $file $2
-	    shift 2	    
+            # Verifying passed arguments
+            if [ $# -lt 3 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string]"
+	        show_help
+	        exit 1
+	    fi
+
+	    search_string $2 $3
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 3    
         ;;
 
         --search-line)
-	    if test $# -lt 2; then echo "[ERROR]: --search-line: not enough arguments."; show_help; exit 1; fi;    
-            search_line $file $2
-	    shift 2
+            # Verifying passed arguments
+            if [ $# -lt 3 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string]"
+	        show_help
+	        exit 1
+	    fi
+
+	    search_line $2 $3
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 3  
         ;;
 
         --replace-string)
-	    if test $# -lt 3; then echo "[ERROR]: --replace-string: not enough arguments."; show_help; exit 1; fi;
-            replace_string $file $2 $3
-	    shift 3
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [original-string] [new-string]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [original-string] [new-string]"
+	        show_help
+	        exit 1
+	    fi
+
+	    replace_string $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
         ;;
 
+	--set-empty-lines)
+            # Verifying passed arguments
+            if [ $# -lt 3 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [int]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [int]"
+	        show_help
+	        exit 1
+	    fi
+
+	    set_empty_line $2 $3
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 3  
+	;;
+
 	--get-option)
-	    if test $# -lt 3; then echo "[ERROR]: --get-option: not enough arguments."; show_help; exit 1; fi;
-            get_option $file $2 $3
-	    shift 3
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [option] [delimiter]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [option] [delimiter]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_option $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
 	;;
 
 	--set-option)
-	    if test $# -lt 4; then echo "[ERROR]: --set-option: not enough arguments."; show_help; exit 1; fi;
-	    set_option $file $2 $3 $4
-	    shift 4
+            # Verifying passed arguments
+            if [ $# -lt 5 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [option] [delimiter] [value]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [option] [delimiter] [value]"
+	        show_help
+	        exit 1
+	    fi
+
+	    set_option $2 $3 $4 $5
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 5
 	;;
 
 	--get-option-multiple)
-            if test $# -lt 4; then echo "[ERROR]: --get-option-number: not enough arguments."; show_help; exit 1; fi
-            get_option_multiple $file $2 $3 $4
-            shift 4	    
+            # Verifying passed arguments
+            if [ $# -lt 6 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [options] [option] [del1] [del2]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [options] [option] [del1] [del2]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_option_multiple $2 $3 $4 $5 $6
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4 $5 $6: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 6    
 	;;
 
 	--set-option-multiple)
-            if test $# -lt 6; then echo "[ERROR]: --set-option-number: not enough arguments."; show_help; exit 1; fi
-	    set_option_multiple $file $2 $3 $4 $5 $6
-	    shift 6
+            # Verifying passed arguments
+            if [ $# -lt 7 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [set of option] [option] [del1] [del2] [value]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [set of option] [option] [del1] [del2] [value]"
+	        show_help
+	        exit 1
+	    fi
+
+	    set_option_multiple $2 $3 $4 $5 $6 $7
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4 $5 $6 $7: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 7
+	;;
+
+	--get-another-line)
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string] [-|+int]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string] [-|+int]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_another_line $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
 	;;
 
 	--get-option-all)
-            if test $# -lt 4; then echo "[ERORR]: --get-option-all: not enough arguments."; show_help; exit 1; fi
-	    get_option_all $file $2 $3 $4
-	    shift 4
+            # Verifying passed arguments
+            if [ $# -lt 5 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [option] [del1] [del2]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [option] [del1] [del2]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_option_all $2 $3 $4 $5
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 5
 	;;
+
+        --get-lines-below)
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [line(text)] [number of line]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [line(text)] [number of line]"
+	        show_help
+	        exit 1
+	    fi
+
+	    get_lines_below $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
+        ;;
+
+        --insert-above)
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string1] [string2]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string1] [string2]"
+	        show_help
+	        exit 1
+	    fi
+
+	    insert_above $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        --insert-below)
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string1] [string2]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string1] [string2]"
+	        show_help
+	        exit 1
+	    fi
+
+	    insert_below $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        --insert-line)
+            # Verifying passed arguments
+            if [ $# -lt 4 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string] [int]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string] [int]"
+	        show_help
+	        exit 1
+	    fi
+
+	    insert_line $2 $3 $4
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 4
+        ;;
+        
+        --delete-line)
+            # Verifying passed arguments
+            if [ $# -lt 3 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [file] [string]"
+	        show_help
+                exit 1
+	    fi
+
+            if [ ! -f $2 ]
+            then
+	        >&2 echo "[ERROR]: $2: invalid file."
+	        echo "Usage: $0 $1 [file] [string]"
+	        show_help
+	        exit 1
+	    fi
+
+	    delete_line $2 $3
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 3  
+        ;;
+
+        --rgb-to-hex)
+            # Verifying passed arguments
+            if [ $# -lt 2 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [rgbvalue]"
+	        show_help
+                exit 1
+	    fi
+	    
+	    rgb_to_hex $2
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2  
+        ;;
+
+        --hex-to-rgb)
+            # Verifying passed arguments
+            if [ $# -lt 2 ]
+            then
+                >&2 echo "[ERROR]: $1: not enough arguments."
+	        echo "Usage: $0 $1 [hexvalue]"
+	        show_help
+                exit 1
+	    fi
+	    
+	    hex_to_rgb $2
+	    if [ ! $? -eq 0 ]
+	    then
+	        >&2 echo "[ERROR]: $1 $2: an error occured."
+	        show_help	
+		exit 1
+	    fi
+
+	    shift 2  
+        ;;
 
         --help|-h)
             show_help

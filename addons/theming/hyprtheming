@@ -30,8 +30,8 @@ swww img $imagePath
 
 # 2 - hyprland theming
 # Border colors
-sed -i "s/    col\.active_border = .*/    col\.active_border = rgba\(${activeBorderColor}ee\)/g" $hyprPath/config/style.conf
-sed -i "s/    col\.inactive_border = .*/    col\.inactive_border = rgba\(${inactiveBorderColor}aa\)/g" $hyprPath/config/style.conf
+sed -i "s/    col\.active_border = .*/    col\.active_border = rgba\(${activeBorderColor}ee\)/g" $hyprPath/configs/hyprland/style.conf
+sed -i "s/    col\.inactive_border = .*/    col\.inactive_border = rgba\(${inactiveBorderColor}aa\)/g" $hyprPath/configs/hyprland/style.conf
 
 # 3 - waybar theming
 # Border color
@@ -49,22 +49,22 @@ sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" $hy
 
 
 # 7 - wofi theming
-sed -i "s/.*border.*primary.*/    border-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
-sed -i "s/.*background.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/wofi/style.css
-sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
-sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/wofi/style.css
+sed -i "s/.*border.*primary.*/    border-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/configs/wofi/style.css
+sed -i "s/.*background.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/configs/wofi/style.css
+sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/configs/style.css
+sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/configs/wofi/style.css
 
 # 8 - dunst theming
 #sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:primary\*\//@define-color \1 #${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/swaync/style.css
 #sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:secondary\*\//@define-color \1 #${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/swaync/style.css
-sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
-sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
-sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/addons/dunst/dunstrc
+sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" $hyprPath/configs/dunst/dunstrc
+sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/configs/dunst/dunstrc
+sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" $hyprPath/configs/dunst/dunstrc
 
 
 # Killing dunst to actualize the colors
 pkill dunst
-dunst -conf $hyprPath/addons/dunst/dunstrc
+dunst -conf $hyprPath/configs/dunst/dunstrc
 
 #pkill swaync
 #swaync -c $hyprPath/addons/swaync/config.json -s $hyprPath/addons/swaync/style.css
