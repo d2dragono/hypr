@@ -127,7 +127,11 @@ replace_string()
 
 set_empty_lines()
 {
-    echo "set emtpy lines"
+    local file="$1"
+    local int="$2"
+    
+    echo "NOT IMPLEMENTED YET."
+    return 1
 }
 
 get_option()
@@ -270,7 +274,28 @@ set_option_multiple()
 
 get_another_line()
 {
-    echo "get_another_line"
+    local file="$1"
+    local str1="$2"
+    local int="$3"
+    
+    # Is str1 in the file
+    bool=`search_string $file $str1`
+    if [ ! "$bool" = "TRUE" ]
+    then
+        echo 
+	>&2 echo "[ERROR]: Could not find pattern $str1 in file $file."
+	return 1
+    fi
+    
+    # Is int an integer
+    if [[ -n ${int//[0-9]/} ]]
+    then
+        >&2 echo "[ERROR]: $int: this is not an integer."
+        return 1 
+    fi
+    
+    # Doing the stuff
+    
 }
 
 get_option_all()
@@ -306,63 +331,89 @@ get_lines_below()
     local file="$1"
     local text="$2"
     local nmbr="$3"
-
-    flag="FALSE"
-    result=""
-    cpt=0
-
-    while read line
-    do
-        echo $line | grep "$text" > /dev/null
-        if [ $? -eq 0 ]
-        then
-            flag="TRUE"
-        fi
-        
-        if [ "$flag"="TRUE" ]
-        then
-            result="$result $line"
-            cpt=$((cpt + 1))
-            
-            if ((cpt == nmbr))
-            then
-                echo $result | sed "s/ /\n/g"
-                return 0
-            fi
-        fi       
-    done < $file
+    nmbr=$((nmbr-1))
     
-    # Either not enough lines OR did not found the line
-    if [ "$flag" = "TRUE" ] # We found the line but reached the end of the file
+    grep -C $nmbr "$text" $file | tail -n $((nmbr+1))
+    if [ ! $? -eq 0 ]
     then
-        echo $result | sed "s/ /\n/g"
-        return 0
-    else
-        # Reach the end without finding the matching pattern
+        # Pattern not found
         echo
         >&2 echo "[ERROR]: Could not find option $text in $file."
 	return 1
+    else
+        #echo $res
+        return 0
     fi
 }
 
 insert_above()
 {
-    echo "insert above"
+    local file="$1"
+    local str1="$2"
+    local str2="$3"
+    
+    bool=`search_string $file $str1`
+    if [ "$bool" = "TRUE" ]
+    then
+	sed -i "/${str1}/i ${str2}" $file
+	return 0
+    else
+        echo 
+	>&2 echo "[ERROR]: Could not find pattern $str1 in file $file."
+	return 1
+    fi
 }
 
 insert_below()
 {
-    echo "insert below"
+    local file="$1"
+    local str1="$2"
+    local str2="$3"
+    
+    bool=`search_string $file $str1`
+    if [ "$bool" = "TRUE" ]
+    then
+	sed -i "/${str1}/a ${str2}" $file
+	return 0
+    else
+        echo 
+	>&2 echo "[ERROR]: Could not find pattern $str1 in file $file."
+	return 1
+    fi
 }
 
 insert_line()
 {
-    echo "insert line"
+    local file="$1"
+    local str1="$2"
+    local int="$3"
+    
+    # Is the line number a valid integer ?
+    if [[ -n ${int//[0-9]/} ]]
+    then
+        >&2 echo "[ERROR]: $int: this is not an integer."
+        return 1 
+    fi
+    
+    sed -i "${int}i\\${str1}" $file
+    return 0
 }
 
 delete_line()
 {
-    echo "delete line"
+    local file="$1"
+    local str1="$2"
+    
+    grep "^${str1}$" $file
+    if [ ! $? -eq 0 ]
+    then
+        >&2 echo "[ERROR]: Could not find $str1 in $file."
+        return 1 
+    fi
+    
+    # We suppress the output
+    sed -i "/^${str1}$/d" $file
+    return 0
 }
 
 hex_to_rgb()
@@ -524,7 +575,7 @@ do
 	        exit 1
 	    fi
 
-	    set_empty_line $2 $3
+	    set_empty_lines $2 $3
 	    if [ ! $? -eq 0 ]
 	    then
 	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
