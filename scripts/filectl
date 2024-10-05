@@ -368,9 +368,8 @@ get_lines_below()
         # Pattern not found
         echo
         >&2 echo "[ERROR]: Could not find option $text in $file."
-		return 1
+	return 1
     else
-    		echo "NOT IMPLEMENTED YET"
         return 0
     fi
 }
