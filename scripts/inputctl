@@ -1,0 +1,12 @@
+#!/bin/bash
+if grep -q ".*kb_variant = us" "$hyprPath"/configs/hyprland/inputs.conf
+then
+    sed -i "s/\(.*kb_variant = \).*/\1/" "$hyprPath"/configs/hyprland/inputs.conf
+    dunstify "New layout: AZERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
+else
+    sed -i "s/\(.*kb_variant = \)/\1us/" "$hyprPath"/configs/hyprland/inputs.conf
+    dunstify "New layout: QWERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
+fi
+
+# Success
+exit 0

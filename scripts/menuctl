@@ -28,7 +28,12 @@ show_help()
 parse_file()
 {
 	local menuEntries="$1"
-	if [ ! -f $menuEntries ] # Is it a regular file
+	local second
+	local title
+	local desc
+	local line
+	
+	if [ ! -f "$menuEntries" ] # Is it a regular file
 	then
 	    echo
 		echo "[ERROR]: $1 is not a valid file."
@@ -46,10 +51,10 @@ parse_file()
 
 	while IFS= read -r line
 	do
-		title=`echo -e $line | sed 's/title="\(.*\)" desc.*/\1/'`
+		title=$(echo -e "$line" | sed 's/title="\(.*\)" desc.*/\1/')
 		echo -n "$title "
 
-		desc=`echo -e $line | sed 's/title.* desc="\(.*\)" script.*/\1/'`
+		desc=$(echo -e "$line" | sed 's/title.* desc="\(.*\)" script.*/\1/')
 		echo "$desc$second"
 
 	done < "$menuEntries"
@@ -61,8 +66,10 @@ launch_menu()
 {
 	local menuEntries="$1"
 	local title="$2"
+	local menu
+	local answer
 	
-	if [ ! -f $menuEntries ] # Is it a regular file
+	if [ ! -f "$menuEntries" ] # Is it a regular file
 	then
 		echo
 		>&2 echo "[ERROR]: $1 is not a valid file."
@@ -73,28 +80,27 @@ launch_menu()
 	while true
 	do
 		# Building menu everytime in case the user added an entry while the menu is launched already
-		menu=(`parse_file $menuEntries`) || \
+		menu=($(parse_file "$menuEntries")) || \
 		     { echo; >&2 echo "[ERROR]: --launch-menu: could not parse file." && return 1; }
 
 		# Replacing _ with spaces
 		for((i=0;i<${#menu[@]};i++))
 		do
-		    menu[$i]=`echo ${menu[$i]} | sed 's/_/ /g'`
+		    menu[$i]=$(echo "${menu[$i]}" | sed 's/_/ /g')
 		done
 
 		# Reading user choice
-		answer=`whiptail --title "$2" --menu "Choose an option." 32 128 10 3>&1 1>&2 2>&3 "<== Back" "" "${menu[@]}"`
+		answer=$(whiptail --title "$2" --menu "Choose an option." 32 128 10 3>&1 1>&2 2>&3 "<== Back" "" "${menu[@]}")
 
 		# Replacing spaces with _
-		answer=`echo $answer | sed 's/ /_/g'`
+		answer=$(echo "$answer" | sed 's/ /_/g')
 
 		# Launch associated script
 		if [ "$answer" == "<==_Back" ]
 		then
 		    return 0
 		else
-		    launch_script $menuEntries $answer
-			if [ ! $? -eq 0 ]
+			if ! launch_script "$menuEntries" "$answer"
 			then
 				>&2 echo "[ERROR]: --launch-menu: $answer entry returned an error."
 				return 1
@@ -108,8 +114,11 @@ browse_files()
     local title="$1"
     local desc="$2"
 	local startPath="$3"
+	local files
+	local name
+	
 	# Is the given path valid ?
-	if [ ! -d $startPath ]
+	if [ ! -d "$startPath" ]
 	then
 		echo
 		>&2 echo "[ERROR]: $startPath isn't a valid path."
@@ -135,7 +144,6 @@ browse_files()
 		    fi
 		done
 		
-		currentDir=$(pwd)
 		# Use whiptail to display the menu
 		answer=$(whiptail --title "$title" --menu "$desc" 24 64 16 3>&1 1>&2 2>&3 "${files[@]}")
 
@@ -143,11 +151,10 @@ browse_files()
 		# If the answer is a file we are done, else we dive into the directory
 		if [ -f "$startPath/$answer" ]
 		then
-			realpath $startPath/$answer
+			realpath "$startPath"/"$answer"
 			return 0
 		else
-			browse_files "$title" "$desc" "$startPath/$answer"
-			if [ ! $? -eq 0 ]
+			if ! browse_files "$title" "$desc" "$startPath/$answer"
 			then
 				>&2 echo "[ERROR]: --browse-files: $answer entry returned an error."
 				return 1
@@ -162,8 +169,9 @@ launch_script()
 {
 	local menuEntries="$1"
 	local entry="$2"
+	local line
 	
-	if [ ! -f $menuEntries ] # Is it a regular file
+	if [ ! -f "$menuEntries" ] # Is it a regular file
 	then
 		echo
 		>&2 echo "[ERROR]: $1 is not a valid file."
@@ -172,10 +180,9 @@ launch_script()
 
 	while IFS= read -r line
 	do
-		echo "$line" | grep $entry > /dev/null # We are interested in the exit status
-		if [ $? -eq 0 ] # If the line contains the researched entry
+		if echo "$line" | grep -q "$entry"
 		then
-		    scriptPath=`echo $line | sed "s/title=\"\${entry}\".*script=\"\(.*\)\"/\1/"`
+		    scriptPath=$(echo "$line" | sed "s/title=\"\${entry}\".*script=\"\(.*\)\"/\1/")
 		    $scriptPath # Will launch the script
 		    return 0
 		fi
@@ -193,17 +200,17 @@ add_entry()
     local desc="$3"
     local script="$4"
     
-	if [ ! -f $menuEntries ] # Is it a regular file
+	if [ ! -f "$menuEntries" ] # Is it a regular file
 	then
 		echo
 		>&2 echo "[ERROR]: $1 is not a valid file."
 		return 1
 	fi
 	
-	entry=$(echo $entry | sed "s/ /_/g")
-	desc=$(echo $entry | sed "s/ /_/g")
+	entry=$(echo "$entry" | sed "s/ /_/g")
+	desc=$(echo "$entry" | sed "s/ /_/g")
 	
-	echo "title=\"$entry\" desc=\"$desc\" script=\"$script\"" >> $menuEntries
+	echo "title=\"$entry\" desc=\"$desc\" script=\"$script\"" >> "$menuEntries"
 	return 0
 }
 
@@ -212,31 +219,37 @@ add_entry_gui()
 	# Script to create an entry.
 	# The entry will either be added to an existing menuEntries file or
 	# will become the first entry of a brand new menuEntries file.
+	
+	local title
+	local desc
+	local choice
+	local script
+	local saveAt
 
 	# Asking the user entry name
-	title=`whiptail --title "Create entry" --inputbox "Name of the new entry ?" 8 39 3>&1 1>&2 2>&3`
-	title=`echo "$title" | sed 's/ /_/g'`
+	title=$(whiptail --title "Create entry" --inputbox "Name of the new entry ?" 8 39 3>&1 1>&2 2>&3)
+	title=$(echo "$title" | sed 's/ /_/g')
 
 	# Asking the user entry description
-	desc=`whiptail --title "Create entry" --inputbox "Description of the new entry ?" 8 39 3>&1 1>&2 2>&3`
-	desc=`echo "$desc" | sed 's/ /_/g'`
+	desc=$(whiptail --title "Create entry" --inputbox "Description of the new entry ?" 8 39 3>&1 1>&2 2>&3)
+	desc=$(echo "$desc" | sed 's/ /_/g')
 
 	# Asking the user path the script to launch
 	choice=$(whiptail --title "Script choosing method" --menu "How to you want to choose your script ?" 10 64 2 3>&1 1>&2 2>&3 "[File Browser]" "Will prompt you a file chooser." "[Write it]" "You will write your script/command.")
 	if [ ! "$choice" = "[File Browser]" ]
 	then
-	    script=`whiptail --title "Create entry" --inputbox "Script to launch from this entry ?" 8 39 3>&1 1>&2 2>&3`
+	    script=$(whiptail --title "Create entry" --inputbox "Script to launch from this entry ?" 8 39 3>&1 1>&2 2>&3)
 	else
-		script=`browse_files "Add Entry : Script" "Please choose the script the entry will launch." .`
+		script=$(browse_files "Add Entry : Script" "Please choose the script the entry will launch." .)
 	fi
 
 	# Asking the user where to save this entry
 	choice=$(whiptail --title "Save file choosing method" --menu "How to you want to save your script ?" 10 64 2 3>&1 1>&2 2>&3 "[File Browser]" "Will prompt you a file chooser." "[Write it]" "You will write your save file path.")
 	if [ "$choice" = "[File Browser]" ]
 	then
-		saveAt=`browse_files "Add Entry : Save At" "Please choose where to save the new entry." .`
+		saveAt=$(browse_files "Add Entry : Save At" "Please choose where to save the new entry." .)
 	else
-		script=`whiptail --title "Save file" --inputbox "Where to save the new entry ?" 8 39 3>&1 1>&2 2>&3`
+		script=$(whiptail --title "Save file" --inputbox "Where to save the new entry ?" 8 39 3>&1 1>&2 2>&3)
 	fi
 
 	# Making the entry
@@ -251,27 +264,31 @@ remove_entry()
     local menuEntries="$1" 
     local entry="$2"
     
-	if [ ! -f $menuEntries ] # Is it a regular file
+	if [ ! -f "$menuEntries" ] # Is it a regular file
 	then
 		echo
 		>&2 echo "[ERROR]: $1 is not a valid file."
 		return 1
 	fi
 	
-	sed -i "/title=\"${entry}\".*/d" $menuEntries
+	sed -i "/title=\"${entry}\".*/d" "$menuEntries"
 	return 0
 }
 
 remove_entry_gui()
 {
 	# Script to quickly remove an entry from a menuEntries file
+	
+	local path
+	local menu
+	local answer
+	local formattedAnswer
 
 	# Asking user path to a menu entry file
-	path=`browse_files "Path to menu file" "What is the menu you want to remove entries from ?" .`
+	path=$(browse_files "Path to menu file" "What is the menu you want to remove entries from ?" .)
 
 	# Using whiptail checklist option to select multiples entries to remove
-	menu=`parse_file $path off`
-	if [ ! $? -eq 0 ]
+	if ! menu=$(parse_file "$path" off)
 	then
 		>&2 echo "[FATAL]: --remove-entry: parse_file returned an error."
 		return 0
@@ -280,16 +297,16 @@ remove_entry_gui()
 	# Replacing _ with spaces
 	for((i=0;i<${#menu[@]};i++))
 	do
-		menu[$i]=`echo ${menu[$i]} | sed 's/_/ /g'`
+		menu[$i]=$(echo "${menu[$i]}" | sed 's/_/ /g')
 	done
 
 	answer=$(whiptail --title "Remove entries" --checklist "Choose an option." 32 128 10 3>&1 1>&2 2>&3 "${menu[@]}")
 
 	# Replacing spaces with _
-	answer=`echo $answer | sed 's/ /_/g'`
+	answer=$(echo "$answer" | sed 's/ /_/g')
 
 	# We must "format" the answer
-	formattedAnswer=`echo $answer | sed 's/"//g'`
+	formattedAnswer=$(echo "$answer" | sed 's/"//g')
 
 	# Removing the selected entries from the given file
 	while IFS= read -r line
@@ -297,10 +314,10 @@ remove_entry_gui()
 		for entry in $formattedAnswer
 		do
 		    # Do we find title=$entry. If so, we remove the line
-		    echo "$line" | grep "title=\"$entry\"" > /dev/null # We are interested in the exit status
-		    if [ $? -eq 0 ] # If the line contains the researched entry
+		    echo "$line" | grep -q "title=\"$entry\""
+		    if echo "$line" | grep -q "title=\"$entry\""
 		    then
-		        sed -i "/title=\"${entry}\".*/d" $path
+		        sed -i "/title=\"${entry}\".*/d" "$path"
 		        break;
 		    fi
 		done
@@ -310,7 +327,8 @@ remove_entry_gui()
 
 tutorial()
 {
-    while [ true ]
+	local answer
+    while true
     do
         answer=$(whiptail --title "Whiptail tutorial"\
                 --radiolist "ArchUtils use whiptail to display text, choices, menus, etc. to the user. Here are the keybinds for navigations :\n\
@@ -351,20 +369,19 @@ do
             if [ $# -lt 3 ]
             then
                 >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/menu] [title]"
-	        show_help
+			    echo "Usage: $0 $1 [path/to/menu] [title]"
+			    show_help
                 exit 1
 	   		fi
 	    
-			launch_menu $2 $3
-			if [ ! $? -eq 0 ]
+			if ! launch_menu "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
-			exit 1
+				exit 1
 			fi
 
-	    shift 3  
+	    		shift 3  
         ;;
         
         --launch-script)
@@ -372,17 +389,16 @@ do
             if [ $# -lt 3 ]
             then
                 >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/menu] [entryName]"
-	        show_help
+			    echo "Usage: $0 $1 [path/to/menu] [entryName]"
+			    show_help
                 exit 1
 			fi
 			
-			launch_menu $2 $3
-			if [ ! $? -eq 0 ]
+			if ! launch_menu "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
-			exit 1
+				exit 1
 			fi
 
 			shift 3  
@@ -396,14 +412,13 @@ do
 			    echo "Usage: $0 $1 [title] [desc] [start/path]"
 			    show_help
                 exit 1
-	    	fi
+	    		fi
 	    
-			browse_files "$2" "$3" "$4"
-			if [ ! $? -eq 0 ]
+			if ! browse_files "$2" "$3" "$4"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
 			    show_help	
-			exit 1
+				exit 1
 			fi
 
 			shift 4  
@@ -414,17 +429,16 @@ do
             if [ $# -lt 5 ]
             then
                 >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/menu] [entryName] [desc] [script]"
-	        show_help
+			    echo "Usage: $0 $1 [path/to/menu] [entryName] [desc] [script]"
+			    show_help
                 exit 1
 			fi
 			
-			add_entry "$2" "$3" "$4" "$5"
-			if [ ! $? -eq 0 ]
+			if ! add_entry "$2" "$3" "$4" "$5"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
 			    show_help	
-			exit 1
+				exit 1
 			fi
 
 			shift 5
@@ -440,8 +454,7 @@ do
                 exit 1
 			fi
 			
-			add_entry_gui
-			if [ ! $? -eq 0 ]
+			if ! add_entry_gui
 			then
 			    >&2 echo "[ERROR]: $1: an error occured."
 			    show_help	
@@ -461,8 +474,7 @@ do
                 exit 1
 			fi
 			
-			remove_entry "$2" "$3"
-			if [ ! $? -eq 0 ]
+			if ! remove_entry "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
@@ -482,21 +494,20 @@ do
                 exit 1
 			fi
 			
-			remove_entry_gui
-			if [ ! $? -eq 0 ]
+			if ! remove_entry_gui
 			then
 			    >&2 echo "[ERROR]: $1: an error occured."
 			    show_help	
-			exit 1
+				exit 1
 			fi
 
 			shift 1  
         ;;
 
-	--tutorial)
-	    tutorial
-	    shift 1
-	;;
+		--tutorial)
+			tutorial
+			shift 1
+		;;
 
         --help|-h)
             show_help

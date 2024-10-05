@@ -35,39 +35,44 @@ show_help()
     echo
     echo "    Other:"
     echo
-    echo "    -g, --gui [path/to/config]                                                   Show a GUI to help the user edit configurations."
+    echo "    --gui [path/to/config]                                                       Show a GUI to help the user edit configurations."
     echo "    -h, --help                                                                   Show help."
 }
 
 # === SUBFUNCTIONS ===
 get_plugged_monitors()
 {
-    monitors=`hyprctl monitors | grep 'Monitor' | sed "s/Monitor //g" | sed "s/ (ID //g" | sed "s/.)://g"`
-    if [ ! $? ]
+	local monitors
+	local final
+
+    if ! monitors=$(hyprctl monitors | grep 'Monitor' | sed "s/Monitor //g" | sed "s/ (ID //g" | sed "s/.)://g")
     then
-    	>&2 echo "[ERROR]: get_plugged_monitors: could not parse."
-    	return 1
+			>&2 echo "[ERROR]: get_plugged_monitors: could not parse."
+			return 1
     fi
     
     final=""
-    for monitor in $(echo $monitors)
+    for monitor in $(echo "$monitors")
     do
-    	final="${final}${monitor},"
+		final="${final}${monitor},"
     done
     
-    echo $final | sed "s/,$//"
+    echo "$final" | sed "s/,$//"
     return 0
 }
 
 get_monitor_focus()
 {
+	local monitors
+	local status
+
     monitors=$(get_plugged_monitors)
-    for monitor in $(echo $monitors | sed "s/,/ /g")
+    for monitor in $(echo "$monitors" | sed "s/,/ /g")
     do
-        status=$(hyprctl monitors | grep -C 11 $monitor | tail -n 1 | sed "s/\tfocused: //g")
+        status=$(hyprctl monitors | grep -C 11 "$monitor" | tail -n 1 | sed "s/\tfocused: //g")
         if [ "$status" = "yes" ]
         then
-            echo $monitor
+            echo "$monitor"
             return 0
         fi
     done
@@ -80,24 +85,30 @@ get_monitor_focus()
 update_order()
 {
     local order="$1"
-    order=$(echo $order | sed "s/.*=//g")
+    local shifting
+    local raw_monitor
+    local res
+    local scale
+    local x_axis
+    
+    order=$(echo "$order" | sed "s/.*=//g")
     shifting=0
     
     # Destroying current configuration
-    echo "" > $hyprPath/configs/hyprland/monitors.conf
+    echo "" > "$hyprPath"/configs/hyprland/monitors.conf
     
-    for monitor in $(echo $order | sed "s/,/ /g")
+    for monitor in $(echo "$order" | sed "s/,/ /g")
     do
         # Removing the scale from monitor name
-        raw_monitor=$(echo $monitor | sed "s/:.*//g")
+        raw_monitor=$(echo "$monitor" | sed "s/:.*//g")
         # Reading the total resolution of the current screen
-        res=$(hyprctl monitors all | grep -C 1 $raw_monitor | tail -n 1 | sed "s/\(.*\)@.*/\1/g" | sed "s/\t//g")
+        res=$(hyprctl monitors all | grep -C 1 "$raw_monitor" | tail -n 1 | sed "s/\(.*\)@.*/\1/g" | sed "s/\t//g")
         # Reading the scale
-        scale=$(echo $monitor | sed "s/.*://g")
+        scale=$(echo "$monitor" | sed "s/.*://g")
         # Writing...
-        echo "${final}monitor=$raw_monitor,preferred,${shifting}x0,$scale" >> $hyprPath/configs/hyprland/monitors.conf
+        echo "${final}monitor=$raw_monitor,preferred,${shifting}x0,$scale" >> "$hyprPath"/configs/hyprland/monitors.conf
         # Calculating the next shifting
-        x_axis=$(echo $res | sed "s/x.*//g")
+        x_axis=$(echo "$res" | sed "s/x.*//g")
         shifting=$((shifting + x_axis / scale))
     done
     
@@ -108,16 +119,21 @@ update_waybars()
 {
 	local waybars="$1"
 	local monitors="$2"
-	waybars_status=$(echo $waybars | sed "s/.*=//g")
+	local waybars_status
+	local cpt
+	local current_id
+	local current_status
+	
+	waybars_status=$(echo "$waybars" | sed "s/.*=//g")
 	
 	# Step 1 : Creating waybar config for each monitors (if not existing already).
-	for monitor in $(echo $monitors | sed "s/,/ /g")
+	for monitor in $(echo "$monitors" | sed "s/,/ /g")
 	do
-	    if [ ! -d $hyprPath/configs/waybar/waybars/$monitor ]
+	    if [ ! -d "$hyprPath"/configs/waybar/waybars/"$monitor" ]
 	    then
-	        mkdir -p $hyprPath/configs/waybar/waybars/$monitor
-	        cp $hyprPath/configs/waybar/templates/* $hyprPath/configs/waybar/waybars/$monitor/
-	        sed -i "s/\(.*\"output\": \).*/\1\"${monitor}\",/g" $hyprPath/configs/waybar/waybars/$monitor/config.jsonc
+	        mkdir -p "$hyprPath"/configs/waybar/waybars/"$monitor"
+	        cp "$hyprPath"/configs/waybar/templates/* "$hyprPath"/configs/waybar/waybars/"$monitor"/
+	        sed -i "s/\(.*\"output\": \).*/\1\"${monitor}\",/g" "$hyprPath"/configs/waybar/waybars/"$monitor"/config.jsonc
 	    fi
 	done
 	
@@ -125,15 +141,15 @@ update_waybars()
 	pidof waybar && pkill waybar
 	# Launching waybars
 	cpt=1
-	for monitor in $(echo $monitors | sed "s/,/ /g")
+	for monitor in $(echo "$monitors" | sed "s/,/ /g")
 	do
-	    current_id=$(echo $monitors | cut -d, -f$cpt)
-	    current_status=$(echo $waybars_status | cut -d, -f$cpt)
+	    current_id=$(echo "$monitors" | cut -d, -f$cpt)
+	    current_status=$(echo "$waybars_status" | cut -d, -f$cpt)
 	    
-	    echo $current_status $current_id
+	    echo "$current_status" "$current_id"
 	    if [ "$current_status" = "on" ]
 	    then
-	        waybar -c $hyprPath/configs/waybar/waybars/$current_id/config.jsonc -s $hyprPath/configs/waybar/waybars/$current_id/style.css &
+	        waybar -c "$hyprPath"/configs/waybar/waybars/"$current_id"/config.jsonc -s "$hyprPath"/configs/waybar/waybars/"$current_id"/style.css &
 	    fi
 	    
 	    # Next monitor/status
@@ -147,11 +163,14 @@ update_workspaces()
 {
 	local main="$1"
 	local monitors="$2"
-	main_status=$(echo $main | sed "s/main(\(.*\))=.*/\1/g")
-	main_monitor=$(echo $main | sed "s/.*=//g")
+	local main_status
+	local main_monitor
+	
+	main_status=$(echo "$main" | sed "s/main(\(.*\))=.*/\1/g")
+	main_monitor=$(echo "$main" | sed "s/.*=//g")
 	
 	# Erasing current workspace configuration and rewriting the new one
-	echo "" > $hyprPath/configs/hyprland/workspaces.conf
+	echo "" > "$hyprPath"/configs/hyprland/workspaces.conf
 	
 	# Configuration erased. If status if off we leave.
 	if [ "$main_status" = "off" ]
@@ -159,23 +178,23 @@ update_workspaces()
 	    return 0
 	fi
 	
-	for monitor in $(echo $monitors | sed "s/,/ /g")
+	for monitor in $(echo "$monitors" | sed "s/,/ /g")
 	do
 		# Is the readen monitor the main one ?
 		if [ "$monitor" = "$main_monitor" ]
 		then
-			echo "workspace = 1, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 2, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 3, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 4, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 5, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 6, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 7, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 8, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 9, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
-			echo "workspace = 10, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 1, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 2, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 3, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 4, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 5, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 6, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 7, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 8, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 9, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
+			echo "workspace = 10, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
 		else
-		    echo "workspace = special:$monitor-workspace, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+		    echo "workspace = special:$monitor-workspace, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
 		fi
 	done
 	return 0
@@ -186,23 +205,30 @@ update_workspaces()
 update()
 {
     local configPath="$1"
+    local id
+    local statusList
+    local cpt
+    local mainMonitor
+    local order
+    local main
+    local waybars
+    
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
     	>&2 echo "[ERROR]: The config file $configPath does not exist."
     	return 1
     fi
     
-    id=$(get_plugged_monitors $configPath)
+    id=$(get_plugged_monitors "$configPath")
     # Does the current configuration exist ? If not, creating a new one
-    grep -q "^id=${id}$" $configPath
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" "$configPath"
     then
         # Creating new configuration...
         # Generating waybar status
         statusList=""
-        cpt=$(echo ${id} | sed "s/,/ /g" | wc -w)
+        cpt=$(echo "${id}" | sed "s/,/ /g" | wc -w)
         for((i=0; i<cpt; i++))
         do
             statusList=${statusList}on,
@@ -210,12 +236,12 @@ update()
         statusList=$(echo $statusList | sed "s/^\(.*\),$/\1/g")
         
         # Main monitor
-        mainMonitor=$(echo $id | cut -d, -f1) 
+        mainMonitor=$(echo "$id" | cut -d, -f1) 
         
         # Order
-        order=$(echo ${id} | sed "s/,/:1,/g" | sed "s/\(.*\)/\1:1/")
+        order=$(echo "${id}" | sed "s/,/:1,/g" | sed "s/\(.*\)/\1:1/")
         
-        cat << TAG >> $configPath
+        cat << TAG >> "$configPath"
 [NEW CONFIGURATION]        
 id=${id}
 name=${id}-config
@@ -229,18 +255,18 @@ TAG
     # We will update, setting by setting, our system to reflect the configuration.
     # We have 3 settings to set up : order of the monitors, waybar and workspaces.
     # Lets first retreive the config, line by line for ease of use.
-    main=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 1)
-    waybars=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 2 | head -n 1)
-    order=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 3 | head -n 1)
+    main=$("$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$id" 5 | tail -n 1)
+    waybars=$("$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$id" 5 | tail -n 2 | head -n 1)
+    order=$("$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$id" 5 | tail -n 3 | head -n 1)
     
     # 1 - order
-    update_order $order
+    update_order "$order"
     
     # 2 - waybars
-    update_waybars $waybars $id
+    update_waybars "$waybars" "$id"
     
     # 3 - workspaces
-    update_workspaces $main $id
+    update_workspaces "$main" "$id"
     
     return 0
 }
@@ -249,13 +275,13 @@ list()
 {
     local configPath="$1"
     # Does the given config file exist ?
-    if [ ! -f $1 ]
+    if [ ! -f "$1" ]
     then
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+			>&2 echo "[ERROR]: The config file $1 does not exist."
+			return 1
     fi
         
-    cat $configPath
+    cat "$configPath"
     
     return 0
 }
@@ -264,37 +290,38 @@ list_verbose()
 {
     local configPath="$1"
     # Does the given config file exist ?
-    if [ ! -f $1 ]
+    if [ ! -f "$1" ]
     then
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+			>&2 echo "[ERROR]: The config file $1 does not exist."
+			return 1
     fi
 
     echo
-    cat $configPath | sed "s/id=/ID = /g" | sed "s/name=/NAME = /g" | sed "s/order=/ORDER = /g" | sed "s/waybars(on)=/WAYBARS(ON) = /g" | sed "s/waybars(off)=/WAYBARS(OFF) = /g" | sed "s/main(on)=/MAIN(ON) = /g" | sed "s/main(off)=/MAIN(OFF) = /g"
+    cat "$configPath" | sed "s/id=/ID = /g" | sed "s/name=/NAME = /g" | sed "s/order=/ORDER = /g" | sed "s/waybars(on)=/WAYBARS(ON) = /g" | sed "s/waybars(off)=/WAYBARS(OFF) = /g" | sed "s/main(on)=/MAIN(ON) = /g" | sed "s/main(off)=/MAIN(OFF) = /g"
     return 0
 }
 
 current()
 {
     local configPath="$1"
+    local plugged
     
     # Does the given config file exist ?
-    if [ ! -f $1 ]
+    if [ ! -f "$1" ]
     then
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+			>&2 echo "[ERROR]: The config file $1 does not exist."
+			return 1
     fi
     
     # Retreiving plugged monitor list
     plugged=$(get_plugged_monitors)
-    if [ ! -f $1 ]
+    if [ ! -f "$1" ]
     then
-    	>&2 echo "[ERROR]: Could not retreive the plugged monitors."
-    	return 1
+			>&2 echo "[ERROR]: Could not retreive the plugged monitors."
+			return 1
     fi
     
-    $hyprPath/scripts/filectl --get-lines-below $configPath "id=$plugged" 5
+    "$hyprPath"/scripts/filectl --get-lines-below "$configPath" "id=$plugged" 5
     return 0
 }
 
@@ -302,13 +329,23 @@ waybar_daemon()
 {
     local configPath="$1"
     local time="$2"
+    local cpt
+    local monitors
+    local waybars
+    local waybars_status
+    local current_id
+    local current_status
+    local last_focus
+    local current_focus
+    local activeBorderColor
+    local inactiveBorderColor
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+			>&2 echo "[ERROR]: The config file $1 does not exist."
+			return 1
     fi
     
     # Is the given time a valid integer ?
@@ -323,19 +360,19 @@ waybar_daemon()
 	pidof waybar && pkill waybar
 	# Launching waybars
 	cpt=1
-	monitors=$(get_plugged_monitors $configPath)
-	waybars=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$monitors 5 | tail -n 2 | head -n 1)
-	waybars_status=$(echo $waybars | sed "s/.*=//g")
+	monitors=$(get_plugged_monitors "$configPath")
+	waybars=$("$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$monitors" 5 | tail -n 2 | head -n 1)
+	waybars_status=$(echo "$waybars" | sed "s/.*=//g")
 	
-	for monitor in $(echo $monitors | sed "s/,/ /g")
+	for monitor in $(echo "$monitors" | sed "s/,/ /g")
 	do
-	    current_id=$(echo $monitors | cut -d, -f$cpt)
-	    current_status=$(echo $waybars_status | cut -d, -f$cpt)
+	    current_id=$(echo "$monitors" | cut -d, -f$cpt)
+	    current_status=$(echo "$waybars_status" | cut -d, -f$cpt)
 	    
-	    echo $current_status $current_id
+	    echo "$current_status" "$current_id"
 	    if [ "$current_status" = "on" ]
 	    then
-	        waybar -c $hyprPath/configs/waybar/waybars/$current_id/config.jsonc -s $hyprPath/configs/waybar/waybars/$current_id/style.css &
+	        waybar -c "$hyprPath"/configs/waybar/waybars/"$current_id"/config.jsonc -s "$hyprPath"/configs/waybar/waybars/"$current_id"/style.css &
 	    fi
 	    
 	    # Next monitor/status
@@ -351,14 +388,14 @@ waybar_daemon()
         current_focus=$(get_monitor_focus)
     	if [ ! "$current_focus" = "$last_focus" ]
     	then
-			activeBorderColor=$(cat $HOME/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
-			inactiveBorderColor=$(cat $HOME/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
-			sed -i "s/    border-color:.*/    border-color:#${inactiveBorderColor};/g" $hyprPath/configs/waybar/waybars/*/style.css
-			sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" $hyprPath/configs/waybar/waybars/$current_focus/style.css
+			activeBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
+			inactiveBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
+			sed -i "s/    border-color:.*/    border-color:#${inactiveBorderColor};/g" "$hyprPath"/configs/waybar/waybars/*/style.css
+			sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/configs/waybar/waybars/"$current_focus"/style.css
 			last_focus=$current_focus
     	fi
     	
-        sleep $time
+        sleep "$time"
     done
     
     return 0
@@ -371,24 +408,23 @@ rename()
     local newName="$3"
     
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
     
     # Else changing the name
-    sed -i "/^id=${id}$/{n;s/.*/name=${newName}/;}" $configPath
+    sed -i "/^id=${id}$/{n;s/.*/name=${newName}/;}" "$configPath"
     
     # Done
     return 0
@@ -401,33 +437,31 @@ set_main()
     local monitorMain="$3"
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
     
     # Is the given new monitor main valid
-    echo $id | grep -qE "(^|,)$monitorMain(,|$)"
-    if [ ! $? -eq 0 ]
+    if ! echo "$id" | grep -qE "(^|,)$monitorMain(,|$)"
     then
         echo
-    	>&2 echo "[ERROR]: The monitor $monitorMain does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The monitor $monitorMain does not exist."
+		return 1
     fi
 
 	# Setting the new monitor as main monitor.
-	sed -i "/^id=${id}$/{n;n;n;n;s/\(main.*\)=.*/\1=${monitorMain}/;}" $configPath
+	sed -i "/^id=${id}$/{n;n;n;n;s/\(main.*\)=.*/\1=${monitorMain}/;}" "$configPath"
 
     return 0
 }
@@ -438,29 +472,27 @@ toggle_main()
     local id="$2"
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
     
 	# Toggling main monitor system
-	$hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 1 | grep -q "main(on)=.*"
-	if [ $? -eq 0 ]
+	if "$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$id" 5 | tail -n 1 | grep -q "main(on)=.*"
 	then
-		sed -i "/^id=${id}$/{n;n;n;n;s/main(on)=\(.*\)/main(off)=\1/;}" $configPath
+		sed -i "/^id=${id}$/{n;n;n;n;s/main(on)=\(.*\)/main(off)=\1/;}" "$configPath"
 	else
-		sed -i "/^id=${id}$/{n;n;n;n;s/main(off)=\(.*\)/main(on)=\1/;}" $configPath
+		sed -i "/^id=${id}$/{n;n;n;n;s/main(off)=\(.*\)/main(on)=\1/;}" "$configPath"
 	fi
 
     return 0
@@ -472,23 +504,22 @@ get_main()
     local id="$2"
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
 
-    $hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 1 | sed "s/main\(.*\)=//"
+    "$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$id" 5 | tail -n 1 | sed "s/main\(.*\)=//"
 
     return 0
 }
@@ -498,28 +529,30 @@ set_order()
     local configPath="$1"
     local id="$2"
     local order="$3"
+    local cptOrder
+    local cptId
+    local duplicates
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
 
 	# Is the order valide ? i.e it contains all monitor once.
 	# Good number of monitors in order
-	cptOrder=$(echo $order | sed "s/,/ /g" | wc -w)
-	cptId=$(echo $id | sed "s/,/ /g" | wc -w)
+	cptOrder=$(echo "$order" | sed "s/,/ /g" | wc -w)
+	cptId=$(echo "$id" | sed "s/,/ /g" | wc -w)
 	if ((cptOrder != cptId))
 	then
 	    echo
@@ -528,12 +561,11 @@ set_order()
 	fi
 	
 	# Monitors name are valid
-	for monitor in $(echo $order | sed "s/,/ /g")
+	for monitor in $(echo "$order" | sed "s/,/ /g")
 	do
-	    echo $id | grep -qE "(^|,)$monitor(,|$)"
-	    if [ ! $? -eq 0 ]
+	    if ! echo "$id" | grep -qE "(^|,)$monitor(,|$)"
 	    then
-	    	echo
+	    		echo
 			>&2 echo "[ERROR]: The given order $order contains an invalid monitor name ($monitor)."
 			return 1
 	    fi
@@ -549,7 +581,7 @@ set_order()
 	fi
 	
 	# We can replace the order for the new one
-    sed -i "/^id=${id}$/{n;n;s/order=.*/order=${order}/;}" $configPath
+    sed -i "/^id=${id}$/{n;n;s/order=.*/order=${order}/;}" "$configPath"
     return 0
 }
 
@@ -559,23 +591,22 @@ get_order()
     local id="$2"
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
 
-    $hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 3 | head -n 1 | sed "s/order=//"
+    "$hyprPath"/scripts/filectl --get-lines-below "$configPath" id="$id" 5 | tail -n 3 | head -n 1 | sed "s/order=//"
 
     return 0
 }
@@ -595,28 +626,29 @@ set_waybars()
     local configPath="$1"
     local id="$2"
     local statusList="$3"
+    local cptStatus
+    local cptId
 
     # Does the given config file exist ?
-    if [ ! -f $configPath ]
+    if [ ! -f "$configPath" ]
     then
         echo
-    	>&2 echo "[ERROR]: The config file $1 does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Does the ID exist ?
-    grep "^id=${id}$" < $configPath > /dev/null
-    if [ ! $? -eq 0 ]
+    if ! grep -q "^id=${id}$" < "$configPath"
     then
         echo
-    	>&2 echo "[ERROR]: The ID $id does not exist."
-    	return 1
+		>&2 echo "[ERROR]: The ID $id does not exist."
+		return 1
     fi
 
 	# Is the status list valid ?
 	# Good number of status
-	cptStatus=$(echo $statusList | sed "s/,/ /g" | wc -w)
-	cptId=$(echo $id | sed "s/,/ /g" | wc -w)
+	cptStatus=$(echo "$statusList" | sed "s/,/ /g" | wc -w)
+	cptId=$(echo "$id" | sed "s/,/ /g" | wc -w)
 	if ((cptStatus != cptId))
 	then
 	    echo
@@ -625,10 +657,9 @@ set_waybars()
 	fi
 	
 	# Status must contains only either on or off
-	for stat in $(echo $statusList | sed "s/,/ /g")
+	for stat in $(echo "$statusList" | sed "s/,/ /g")
 	do
-        echo $stat | grep -Eq "^(on|off)$"
-	    if [ ! $? -eq 0 ]
+	    if ! echo "$stat" | grep -Eq "^(on|off)$"
 	    then
 	    	echo
 			>&2 echo "[ERROR]: The given status list ($statusList) contains an invalid status ($stat)."
@@ -637,7 +668,7 @@ set_waybars()
 	done
 
 	# We can replace the order for the new one
-    sed -i "/^id=${id}$/{n;n;n;s/waybars\(.*\)=.*/waybars\1=${statusList}/;}" $configPath
+    sed -i "/^id=${id}$/{n;n;n;s/waybars\(.*\)=.*/waybars\1=${statusList}/;}" "$configPath"
     return 0
 }
 
@@ -655,8 +686,6 @@ gui()
     echo "gui"
     return 0
 }
-
-
 
 
 
@@ -682,8 +711,7 @@ do
 			    exit 1
 			fi
 
-			update $2
-			if [ ! $? -eq 0 ]
+			if ! update "$2"
 			then
 			    >&2 echo "[ERROR]: $1 $2: an error occured."
 			    show_help	
@@ -703,8 +731,7 @@ do
 			    exit 1
 			fi
 
-			list $2
-			if [ ! $? -eq 0 ]
+			if ! list "$2"
 			then
 			    >&2 echo "[ERROR]: $1 $2: an error occured."
 			    show_help	
@@ -724,8 +751,7 @@ do
 			    exit 1
 			fi
 
-			list_verbose $2
-			if [ ! $? -eq 0 ]
+			if ! list_verbose "$2"
 			then
 			    >&2 echo "[ERROR]: $1 $2: an error occured."
 			    show_help	
@@ -745,8 +771,7 @@ do
 			    exit 1
 			fi
 
-			current $2
-			if [ ! $? -eq 0 ]
+			if current "$2"
 			then
 			    >&2 echo "[ERROR]: $1 $2: an error occured."
 			    show_help	
@@ -766,8 +791,7 @@ do
 			    exit 1
 			fi
 
-			waybar_daemon $2 $3
-			if [ ! $? -eq 0 ]
+			if ! waybar_daemon "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
@@ -787,8 +811,7 @@ do
 			    exit 1
 			fi
 
-			rename $2 $3 $4
-			if [ ! $? -eq 0  ]
+			if ! rename "$2" "$3" "$4"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
 			    show_help	
@@ -808,8 +831,7 @@ do
 			    exit 1
 			fi
 
-			set_main $2 $3 $4
-			if [ ! $? -eq 0 ]
+			if ! set_main "$2" "$3" "$4"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
 			    show_help	
@@ -829,8 +851,7 @@ do
 			    exit 1
 			fi
 
-			toggle_main $2 $3
-			if [ ! $? -eq 0 ]
+			if ! toggle_main "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
@@ -850,8 +871,7 @@ do
 			    exit 1
 			fi
 
-			get_main $2 $3
-			if [ ! $? -eq 0 ]
+			if ! get_main "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
@@ -871,8 +891,7 @@ do
 			    exit 1
 			fi
 
-			set_order $2 $3 $4
-			if [ ! $? -eq 0 ]
+			if ! set_order "$2" "$3" "$4"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
 			    show_help	
@@ -892,8 +911,7 @@ do
 			    exit 1
 			fi
 
-			get_order $2 $3
-			if [ ! $? -eq 0 ]
+			if ! get_order "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
@@ -913,8 +931,7 @@ do
 			    exit 1
 			fi
 
-			set_waybar $2 $3 $4 $5
-			if [ ! $? -eq 0 ]
+			if ! set_waybar "$2" "$3" "$4" "$5"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
 			    show_help	
@@ -934,8 +951,7 @@ do
 			    exit 1
 			fi
 
-			set_waybars $2 $3 $4
-			if [ ! $? -eq 0 ]
+			if ! set_waybars "$2" "$3" "$4"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
 			    show_help	
@@ -955,8 +971,7 @@ do
 			    exit 1
 			fi
 
-			get_waybars $2 $3
-			if [ ! $? -eq 0 ]
+			if ! get_waybars "$2" "$3"
 			then
 			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
 			    show_help	
@@ -966,9 +981,8 @@ do
 			shift 3
         ;;
         
-        -g|--gui)
-		   gui
-		   if [ ! $? -eq 0 ]
+        --gui)
+		   if ! gui
 		   then
 			   >&2 echo "[FATAL]: $1: an error occured."
 			   show_help	

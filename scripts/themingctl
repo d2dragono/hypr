@@ -1,0 +1,70 @@
+#!/bin/bash
+#  _   _                  _   _                    _             
+# | | | |_   _ _ __  _ __| |_| |__   ___ _ __ ___ (_)_ __   __ _ 
+# | |_| | | | | '_ \| '__| __| '_ \ / _ \ '_ ` _ \| | '_ \ / _` |
+# |  _  | |_| | |_) | |  | |_| | | |  __/ | | | | | | | | | (_| |
+# |_| |_|\__, | .__/|_|   \__|_| |_|\___|_| |_| |_|_|_| |_|\__, |
+#        |___/|_|                                          |___/ 
+# 
+# by DRAGONO
+
+# Accord your system colors to your wallpaper.
+# Use python-pywal package and a few commands to work
+
+# hyprtheming take an image as only argument
+[ $# -lt 1 ] && zenity --warning --text="[FATAL]: No wallpaper given.\nUsage: hyprtheming {path/to/wallpaper}" && exit 1
+
+# Is the given argument a valid image ?
+identify "$1" || { zenity --warning --text="[FATAL]: The given path does not lead to a valid image.\nUsage: hyprtheming {path/to/wallpaper}" && exit 1; }
+# Valid image given. Now doing the magic :)
+imagePath=$1
+
+# First retreiving few datas for proper theming
+wal -i "$imagePath" # This create and apply the new color scheme
+# The new color scheme is created. We can extract a few datas from it
+activeBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
+inactiveBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
+
+# 1 - Changing wallpaper with swww
+swww img "$imagePath"
+
+# 2 - hyprland theming
+# Border colors
+sed -i "s/    col\.active_border = .*/    col\.active_border = rgba\(${activeBorderColor}ee\)/g" "$hyprPath"/configs/hyprland/style.conf
+sed -i "s/    col\.inactive_border = .*/    col\.inactive_border = rgba\(${inactiveBorderColor}aa\)/g" "$hyprPath"/configs/hyprland/style.conf
+
+# 3 - waybar theming
+# Border color
+sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/addons/waybar/templates/style.css
+
+# 4 - hyprlock theming
+# Just editing background image
+sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" "$hyprPath"/hyprlock.conf
+
+
+# 5 - sddm theming
+
+
+# 6 - dolphin theming
+
+
+# 7 - wofi theming
+sed -i "s/.*border.*primary.*/    border-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" "$hyprPath"/configs/wofi/style.css
+sed -i "s/.*background.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" "$hyprPath"/configs/wofi/style.css
+sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" "$hyprPath"/addons/configs/style.css
+sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" "$hyprPath"/configs/wofi/style.css
+
+# 8 - dunst theming
+#sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:primary\*\//@define-color \1 #${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/swaync/style.css
+#sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:secondary\*\//@define-color \1 #${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/swaync/style.css
+sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" "$hyprPath"/configs/dunst/dunstrc
+sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" "$hyprPath"/configs/dunst/dunstrc
+sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" "$hyprPath"/configs/dunst/dunstrc
+
+
+# Killing dunst to actualize the colors
+pkill dunst
+dunst -conf "$hyprPath"/configs/dunst/dunstrc
+
+# Done
+exit 0

@@ -43,29 +43,29 @@ do
 
         --catch|-c)
 
-            # Shift once to delete the arg --cache|-c and only have the commands and its args remaining
-	    shift 1
+		    # Shift once to delete the arg --cache|-c and only have the commands and its args remaining
+			shift 1
 
-	    # Catching stdout and stderr
-            {
-                IFS=$'\n' read -r -d '' stderr;
-                IFS=$'\n' read -r -d '' stdout;
-            } < <((printf '\0%s\0' "$($@)" 1>&2) 2>&1)
+			# Catching stdout and stderr
+		        {
+		            IFS=$'\n' read -r -d '' stderr;
+		            IFS=$'\n' read -r -d '' stdout;
+		        } < <((printf '\0%s\0' "$($@)" 1>&2) 2>&1)
 
-	    date=`date +"%m-%d-%Y"`
-	    time=`date +"%H:%M:%S"`
+			date=$(date +"%m-%d-%Y")
+			time=$(date +"%H:%M:%S")
 
-            if [ ! "$stderr" = "" ]
-	    then
-		# First line of the error (may be the only one)
-                echo "[✘][$date][$time]: $1: $stderr" >> $logfile
-            else
-                # No error occured
-		echo "[✔][$date][$time]: $1: No error occured. Success." >> $logfile
-		echo "$stdout"
-	    fi
+		    if [ ! "$stderr" = "" ]
+			then
+			# First line of the error (may be the only one)
+		            echo "[✘][$date][$time]: $1: $stderr" >> "$logfile"
+		    else
+		         # No error occured
+				echo "[✔][$date][$time]: $1: No error occured. Success." >> "$logfile"
+				echo "$stdout"
+			fi
 
-	    # Success
+			# Success
             exit 0	 
 
         ;;
@@ -78,23 +78,23 @@ do
 	    # No search option passed
 	    if [ $# -eq 0 ]
             then
-		cat $logfile
+		cat "$logfile"
 		exit 0
 	    fi
 
 	    # Success
-            if [ $1 = "success" ]
+            if [ "$1" = "success" ]
 	    then
 		# Print only success logs
-		cat $logfile | grep "[✔]"
+		cat "$logfile" | grep "[✔]"
 		exit 0
 	    fi
 
             # Failure
-	    if [ $1 = "failure" ]
+	    if [ "$1" = "failure" ]
 	    then
 		# Print only failure logs
-		cat $logfile | grep -v "^\[✔\].*" | grep -v "^=======.*" | grep -v "^$"
+		cat "$logfile" | grep -v "^\[✔\].*" | grep -v "^=======.*" | grep -v "^$"
 		exit 0
 	    fi
 
@@ -105,12 +105,12 @@ do
         ;;
 
         --new-session|n)
-            echo "" >> $logfile
-	    echo "" >> $logfile
-	    echo "" >> $logfile
-	    echo "===========================" >> $logfile
-	    echo "=======[NEW SESSION]=======" >> $logfile
-	    echo "===========================" >> $logfile
+            echo "" >> "$logfile"
+	    echo "" >> "$logfile"
+	    echo "" >> "$logfile"
+	    echo "===========================" >> "$logfile"
+	    echo "=======[NEW SESSION]=======" >> "$logfile"
+	    echo "===========================" >> "$logfile"
 	    exit 0
 	;;
 

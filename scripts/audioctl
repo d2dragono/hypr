@@ -12,7 +12,10 @@ show_help()
     echo "    -i, --increase [int%] [path/to/alsa/cfg/file]       Increase the volume by the given percentage. The given value must be an integer."
     echo "    -d, --decrease [int%] [path/to/alsa/cfg/file]       Decrease the volume by the given percentage. The given value must be an integer."
     echo "    -t, --toggle [path/to/alsa/cfg/file]       	        Toggle either ON or OFF the volume output."
-    echo "    -s, --setup [absolute/path/to/new/alsa/cfg/file]    To setup the sound on a fresh arch system. Need to be launched the first time you want to use this script."
+    echo
+    echo "    -s, --setup [absolute/path/to/new/alsa/cfg/file]    To setup the sound on a fresh arch system. Need to be"
+    echo "                                                        launched the first time you want to use this script."
+    echo
     echo "    -h, --help                                          Show help."
     echo
     echo "Note: --setup requires sudo privileges"
@@ -21,9 +24,10 @@ show_help()
 # Will say if the current sound output is muted or not
 get_status()
 {
-    status=`amixer get Master | grep "Left.*%" | cut -d" " -f8 | sed "s/\[\(.*\)\]/\1/"`
-    if [ ! $? ]
+	local status
+    if ! status=$(amixer get Master | grep "Left.*%" | cut -d" " -f8 | sed "s/\[\(.*\)\]/\1/")
     then
+        echo
         >&2 echo "[ERROR]: amixer: could not retreive output mute status."
         return 1
     fi
@@ -40,69 +44,54 @@ get_status()
 # Volume percentage
 get_percentage()
 {
-    percentage=`amixer get Master | grep "Left.*%" | cut -d" " -f7 | sed "s/\[\(.*\)\%]/\1/"`
-    if [ ! $? ]
+	local percentage
+    if ! percentage=$(amixer get Master | grep "Left.*%" | cut -d" " -f7 | sed "s/\[\(.*\)\%]/\1/")
     then
+        echo
         >&2 echo "[ERROR]: amixer: could not retreive the volume percentage."
         return 1
     fi
-    echo $percentage
+    echo "$percentage"
     return 0
 }
 
 # Notification icon depending of volume
 get_icon()
 {
-    percentage=`get_percentage`
+	local percentage
+	local icon
+	
+    percentage=$(get_percentage)
     if ((percentage == 0))
     then
-        identify $hyprPath/ressources/volume-off.svg > /dev/null
-        if [ ! $? ]
-        then
-            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-off.svg."
-            return 1
-        fi
         icon="$hyprPath/ressources/volume-off.svg"
     fi
 
     if ((percentage > 0 && percentage < 34))
     then
-        identify $hyprPath/ressources/volume-low.svg > /dev/null
-        if [ ! $? ]
-        then
-            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-low.svg."
-            return 1
-        fi
         icon="$hyprPath/ressources/volume-low.svg"
     fi
 
     if ((percentage > 33 && percentage < 67))
     then
-        identify $hyprPath/ressources/volume-medium.svg > /dev/null
-        if [ ! $? ]
-        then
-            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-medium.svg."
-            return 1
-        fi
         icon="$hyprPath/ressources/volume-medium.svg"
     fi
 
     if ((percentage > 66))
     then
-        identify $hyprPath/ressources/volume-high.svg > /dev/null
-        if [ ! $? ]
-        then
-            >&2 echo "[ERROR]: icon: could not retreive the icon at $hyprPath/ressources/volume-high.svg."
-            return 1
-        fi
         icon="$hyprPath/ressources/volume-high.svg"
     fi
 
-    echo $icon
+    if ! identify "$icon" > /dev/null
+    then
+        echo
+        >&2 echo "[ERROR]: icon: could not retreive the icon at $icon."
+        return 1
+    fi
+
+    echo "$icon"
     return 0
 }
-
-
 
 edit_volume()
 {
@@ -113,6 +102,7 @@ edit_volume()
     # Is the percentage an integer ?
     if [[ -n ${percentage//[0-9]/} ]]
     then
+        echo
         >&2 echo "[ERROR]: $percentage: this is not an integer."
         return 1 
     fi
@@ -120,21 +110,23 @@ edit_volume()
     # Is the percentage valid (between 0 and 100)
     if ((percentage < 0 || percentage > 100))
     then
-	>&2 echo "[ERROR]: the percentage ($1) is not valid."
+    	echo
+    	>&2 echo "[ERROR]: the percentage ($1) is not valid."
         return 1
     fi
 
     # Is the alsa config file valid
-    if [ ! -f $alsacfg ]
+    if [ ! -f "$alsacfg" ]
     then
+        echo
         >&2 echo "[ERROR]: $alsacfg is not a valid configuration file."
-	return 1
+	    return 1
     fi
 
     # Editing current volume
-    amixer set Master $percentage%$sign;
+    amixer set Master "$percentage"%"$sign"
     # Saving it to load the new volume when starting computer
-    alsactl --file $alsacfg store
+    alsactl --file "$alsacfg" store
     # Done
     return 0
 }
@@ -143,16 +135,17 @@ toggle_volume()
 {
     local alsacfg="$1"	
     # Is the alsa config file valid
-    if [ ! -f $alsacfg ]
+    if [ ! -f "$alsacfg" ]
     then
+    	echo
         >&2 echo "[ERROR]: $alsacfg is not a valid configuration file."
-	return 1
+		return 1
     fi
 
     # Toggling current volume
     amixer set Master toggle
     # Saving it to load the new volume when starting computer
-    alsactl --file $alsacfg store
+    alsactl --file "$alsacfg" store
     # Done
     return 0
 }
@@ -160,22 +153,26 @@ toggle_volume()
 setup()
 {
     local alsacfg="$1"
+    local cfgPath
+    local cfgFile
+    
     # Extracting the path and the file name
-    cfgPath=`echo $alsacfg | sed "s/^\(.*\)\/.*$/\1/"`
-    cfgFile=`echo $alsacfg | sed "s/^.*\/\(.*\)$/\1/"`
+    cfgPath=$(echo "$alsacfg" | sed "s/^\(.*\)\/.*$/\1/")
+    cfgFile=$(echo "$alsacfg" | sed "s/^.*\/\(.*\)$/\1/")
 
     # Is the path valid
-    if [ ! -d $cfgPath ]
+    if [ ! -d "$cfgPath" ]
     then
+    	echo
         >&2 echo "[ERROR]: the path $cfgPath does not exist, cannot create $cfgFile."
-	return 1
+		return 1
     fi
 
     # Creating the file
-    touch $alsacfg
+    touch "$alsacfg"
 
     # Creating a systemd service in order to use Volume.sh --load $alsacfg because it requires sudo and the use dont want to have to sudo everytime he start his session
-    sudo cat << END > /etc/systemd/system/load-audio.service
+    sudo tee /etc/systemd/system/load-audio.service > /dev/null << END
 [Unit]
 Description=Load saved alsa configuration (saved at: $alsacfg)
 [Service]
@@ -194,6 +191,7 @@ END
 # === Main script ===
 if [ $# -eq 0 ]
 then
+	echo
     >&2 echo "[ERROR]: No given arguments."
     show_help
     exit 1
@@ -202,93 +200,88 @@ fi
 while [ $# -gt 0 ]
 do
     case $1 in
-
         -i|--increase)
-	    # Verifying passed arguments
-	    if [ $# -lt 3 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
-		echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
+				echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
+			    show_help
+			    exit 1
+			fi
 
-	    edit_volume $2 $3 +
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
-	        show_help	
-		exit 1
-	    fi
+			if ! edit_volume "$2" "$3" "+"
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
+				exit 1
+			fi
 
-	    shift 3	   
+			shift 3	   
         ;;
 
-	-d|--decrease)
-	    # Verifying passed arguments
-	    if [ $# -lt 3 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
-	        echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
-	        show_help
-	        exit 1
-	    fi
+		-d|--decrease)
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
+			    echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
+			    show_help
+			    exit 1
+			fi
 
-	    edit_volume $2 $3 -
-            if [ ! $? ]
-	    then
-		>&2 echo "[ERROR]: $1 $2 $3: an error occured."
-		show_help
-		exit 1
-	    fi
+		    if ! edit_volume "$2" "$3" "-"
+				then
+				>&2 echo "[ERROR]: $1 $2 $3: an error occured."
+				show_help
+				exit 1
+			fi
 
-	    shift 3
-	;;
+			shift 3
+		;;
 
-	-t|--toggle)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 path/to/alsa/config/file"
-	        echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
-	        show_help
-	        exit 1
-	    fi
+		-t|--toggle)
+			# Verifying passed arguments
+			if [ $# -lt 2 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 path/to/alsa/config/file"
+			    echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
+			    show_help
+			    exit 1
+			fi
 
-	    toggle_volume $2
-            if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-		show_help
-		exit 1
-            fi
+		    if ! toggle_volume "$2"
+			then
+			    >&2 echo "[ERROR]: $1 $2: an error occured."
+				show_help
+				exit 1
+		    fi
 
-	    shift 2
-        ;;
+			shift 2
+		;;
 
-	-s|--setup)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 path/to/new/alsa/config/file"
-	        show_help
-	        exit 1
-	    fi
+		-s|--setup)
+			# Verifying passed arguments
+			if [ $# -lt 2 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 path/to/new/alsa/config/file"
+			    show_help
+			    exit 1
+			fi
 
-	    setup $2
-            if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-		show_help
-		exit 1
-	    fi
+		    if ! setup "$2"
+			then
+			    >&2 echo "[ERROR]: $1 $2: an error occured."
+				show_help
+				exit 1
+			fi
 
-	    shift 2
-	;;
+			shift 2
+		;;
 
         -h|--help)
             show_help
@@ -304,33 +297,27 @@ do
     esac
 done
 
-
-
 # === Notifying ===
-dunstctl -h > /dev/null
-if [ ! $? ]
+if ! dunstctl -h > /dev/null
 then
     echo "Dunst is not installed. Install it if you wish to see sound notifications."
 else
     # Mute status
-    muted=`get_status`
-    if [ ! $? ]
+    if ! muted=$(get_status)
     then
         echo "[ERROR]: Could not retreive volume mute status."
         show_help
         exit 1
     fi
     # Percentage
-    percentage=`get_percentage`
-    if [ ! $? ]
+    if ! percentage=$(get_percentage)
     then
         echo "[ERROR]: Could not retreive volume percentage."
         show_help
         exit 1
     fi
     # Icon
-    icon=`get_icon`
-    if [ ! $? ]
+    if ! icon=$(get_icon)
     then
         echo "[ERROR]: Could not retreive notification icon."
         show_help
@@ -338,7 +325,7 @@ else
     fi
 
     # Notifying
-    $hyprPath/scripts/notifierctl -p $percentage -c 20 -t "System" -m "Volume : $percentage% $muted" -u 1 -e 3000 -i "$icon"
+    "$hyprPath"/scripts/notifierctl -p "$percentage" -c 20 -t "System" -m "Volume : $percentage% $muted" -u 1 -e 3000 -i "$icon"
 fi
 
 # Done
