@@ -11,28 +11,32 @@ show_help()
     echo
     echo "    Managing the configurations:"
     echo
-    echo "    -u, --update [path/to/config]                                    Apply the current monitor configuration to the system. If one does not exist, create one before."
-    echo "    -l, --list [path/to/config]                                      List the existing configurations."
-    echo "    -v, --list-verbose [path/to/config]                              List the existing configurations with details."
-    echo "    -c, --current [path/to/config]                                   Show the configuration in use."
-    echo "    -d, --focus-daemon [path/to/config]                              Launch the waybar focus daemon."
+    echo "    -u, --update [path/to/config]                                                Apply the current monitor configuration to the system. If one does not exist, create one before."
+    echo "    -l, --list [path/to/config] NEED REWORK                                      List the existing configurations."
+    echo "    -v, --list-verbose [path/to/config] NEED REWORK                              List the existing configurations with details."
+    echo "    -c, --current [path/to/config]                                               Show the configuration in use."
+    echo "    -d, --waybar-daemon [path/to/config] [int]"
+    echo "    --update-daemon [path/to/config] [int]"
     echo
     echo "    Editing the configurations:"
     echo
-    echo "    -r, --rename [path/to/config] [id] [newName]                     Rename the configuration matching the given id."
-    echo "    -m, --set-main [path/to/config] [id] [monitorName]               Set the main monitor of the choosed configuration."
-    echo "    -t, --toggle-main [path/to/config] [id]                          Toggle on/off the main monitor principle."
-    echo "    -g, --get-main [path/to/config] [id]                             Display the main monitor principle status."
-    echo "    -o, --set-order [path/to/config] [id] [order]                    Set the monitor order from right to left. [order] is the same as [id] but with the order of your choice."
-    echo "    --get-order [path/to/config/file] [id]                           Display the monitors's order of the given id."
-    echo "    --set-waybar [path/to/config] [id] [monitorName] [on/off]    Put to on/off a waybar on the monitor given (within the id)."
-    echo "    --set-waybars [path/to/config] [id] [(on,|off,)*monitors]        Set all waybars status at once on a configuration."
-    echo "    --get-waybars [path/to/config] [id]                              Display the waybar setup of a configuration."
+    echo "    -r, --rename [path/to/config] [id] [newName]                                 Rename the configuration matching the given id."
+    echo "    -m, --set-main [path/to/config] [id] [monitorName]                           Set the main monitor of the choosed configuration."
+    echo "    -t, --toggle-main [path/to/config] [id]                                      Toggle on/off the main monitor principle."
+    echo "    -g, --get-main [path/to/config] [id]                                         Display the main monitor principle status."
+    echo "    -o, --set-order [path/to/config] [id] [order]                                Set the monitor order from right to left. [order] is the same as [id] but with the order of your choice."
+    echo "    --get-order [path/to/config/file] [id]                                       Display the monitors's order of the given id."
+    echo "    --toggle-order [path/to/config/file] [id] NOT IMPLEMENTED"
+    echo "    --set-waybar [path/to/config] [id] [monitorName] [on/off] NOT IMPLEMENTED    Put to on/off a waybar on the monitor given (within the id)."
+    echo "    --get-waybar [path/to/config] [id] [monitorName] NOT IMPLEMENTED"
+    echo "    --set-waybars [path/to/config] [id] [(on,|off,)*monitors]                    Set all waybars status at once on a configuration."
+    echo "    --get-waybars [path/to/config] [id] NOT IMPLEMENTED                          Display the waybar setup of a configuration."
+    echo "    --toggle-waybar [path/to/config/file] [id] NOT IMPLEMENTED"
     echo
     echo "    Other:"
     echo
-    echo "    -g, --gui [path/to/config]                                       Show a GUI to help the user edit configurations."
-    echo "    -h, --help                                                       Show help."
+    echo "    -g, --gui [path/to/config]                                                   Show a GUI to help the user edit configurations."
+    echo "    -h, --help                                                                   Show help."
 }
 
 # === SUBFUNCTIONS ===
@@ -55,20 +59,189 @@ get_plugged_monitors()
     return 0
 }
 
+get_monitor_focus()
+{
+    monitors=$(get_plugged_monitors)
+    for monitor in $(echo $monitors | sed "s/,/ /g")
+    do
+        status=$(hyprctl monitors | grep -C 11 $monitor | tail -n 1 | sed "s/\tfocused: //g")
+        if [ "$status" = "yes" ]
+        then
+            echo $monitor
+            return 0
+        fi
+    done
+    
+    echo
+    >&2 echo "[ERROR]: Could not retreive focused monitor."
+    return 1
+}
 
+update_order()
+{
+    local order="$1"
+    order=$(echo $order | sed "s/.*=//g")
+    shifting=0
+    
+    # Destroying current configuration
+    echo "" > $hyprPath/configs/hyprland/monitors.conf
+    
+    for monitor in $(echo $order | sed "s/,/ /g")
+    do
+        # Removing the scale from monitor name
+        raw_monitor=$(echo $monitor | sed "s/:.*//g")
+        # Reading the total resolution of the current screen
+        res=$(hyprctl monitors all | grep -C 1 $raw_monitor | tail -n 1 | sed "s/\(.*\)@.*/\1/g" | sed "s/\t//g")
+        # Reading the scale
+        scale=$(echo $monitor | sed "s/.*://g")
+        # Writing...
+        echo "${final}monitor=$raw_monitor,preferred,${shifting}x0,$scale" >> $hyprPath/configs/hyprland/monitors.conf
+        # Calculating the next shifting
+        x_axis=$(echo $res | sed "s/x.*//g")
+        shifting=$((shifting + x_axis / scale))
+    done
+    
+    return 0
+}
 
+update_waybars()
+{
+	local waybars="$1"
+	local monitors="$2"
+	waybars_status=$(echo $waybars | sed "s/.*=//g")
+	
+	# Step 1 : Creating waybar config for each monitors (if not existing already).
+	for monitor in $(echo $monitors | sed "s/,/ /g")
+	do
+	    if [ ! -d $hyprPath/configs/waybar/waybars/$monitor ]
+	    then
+	        mkdir -p $hyprPath/configs/waybar/waybars/$monitor
+	        cp $hyprPath/configs/waybar/templates/* $hyprPath/configs/waybar/waybars/$monitor/
+	        sed -i "s/\(.*\"output\": \).*/\1\"${monitor}\",/g" $hyprPath/configs/waybar/waybars/$monitor/config.jsonc
+	    fi
+	done
+	
+	# Killing every waybars and launching ones that are "on"
+	pidof waybar && pkill waybar
+	# Launching waybars
+	cpt=1
+	for monitor in $(echo $monitors | sed "s/,/ /g")
+	do
+	    current_id=$(echo $monitors | cut -d, -f$cpt)
+	    current_status=$(echo $waybars_status | cut -d, -f$cpt)
+	    
+	    echo $current_status $current_id
+	    if [ "$current_status" = "on" ]
+	    then
+	        waybar -c $hyprPath/configs/waybar/waybars/$current_id/config.jsonc -s $hyprPath/configs/waybar/waybars/$current_id/style.css &
+	    fi
+	    
+	    # Next monitor/status
+	    cpt=$((cpt+1))
+	done
+	
+	return 0
+}
 
-
-
-
-
+update_workspaces()
+{
+	local main="$1"
+	local monitors="$2"
+	main_status=$(echo $main | sed "s/main(\(.*\))=.*/\1/g")
+	main_monitor=$(echo $main | sed "s/.*=//g")
+	
+	# Erasing current workspace configuration and rewriting the new one
+	echo "" > $hyprPath/configs/hyprland/workspaces.conf
+	
+	# Configuration erased. If status if off we leave.
+	if [ "$main_status" = "off" ]
+	then
+	    return 0
+	fi
+	
+	for monitor in $(echo $monitors | sed "s/,/ /g")
+	do
+		# Is the readen monitor the main one ?
+		if [ "$monitor" = "$main_monitor" ]
+		then
+			echo "workspace = 1, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 2, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 3, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 4, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 5, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 6, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 7, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 8, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 9, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+			echo "workspace = 10, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+		else
+		    echo "workspace = special:$monitor-workspace, monitor:$monitor" >> $hyprPath/configs/hyprland/workspaces.conf
+		fi
+	done
+	return 0
+}
 
 
 # === FUNCTIONS ===
 update()
 {
     local configPath="$1"
-    echo "update"
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $configPath does not exist."
+    	return 1
+    fi
+    
+    id=$(get_plugged_monitors $configPath)
+    # Does the current configuration exist ? If not, creating a new one
+    grep -q "^id=${id}$" $configPath
+    if [ ! $? -eq 0 ]
+    then
+        # Creating new configuration...
+        # Generating waybar status
+        statusList=""
+        cpt=$(echo ${id} | sed "s/,/ /g" | wc -w)
+        for((i=0; i<cpt; i++))
+        do
+            statusList=${statusList}on,
+        done
+        statusList=$(echo $statusList | sed "s/^\(.*\),$/\1/g")
+        
+        # Main monitor
+        mainMonitor=$(echo $id | cut -d, -f1) 
+        
+        # Order
+        order=$(echo ${id} | sed "s/,/:1,/g" | sed "s/\(.*\)/\1:1/")
+        
+        cat << TAG >> $configPath
+[NEW CONFIGURATION]        
+id=${id}
+name=${id}-config
+order=${order}
+waybars(on)=${statusList}
+main(on)=${mainMonitor}
+
+TAG
+    fi
+    
+    # We will update, setting by setting, our system to reflect the configuration.
+    # We have 3 settings to set up : order of the monitors, waybar and workspaces.
+    # Lets first retreive the config, line by line for ease of use.
+    main=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 1)
+    waybars=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 2 | head -n 1)
+    order=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 3 | head -n 1)
+    
+    # 1 - order
+    update_order $order
+    
+    # 2 - waybars
+    update_waybars $waybars $id
+    
+    # 3 - workspaces
+    update_workspaces $main $id
+    
     return 0
 }
 
@@ -121,14 +294,73 @@ current()
     	return 1
     fi
     
-    $hyprPath/scripts/filectl $configPath --get-lines-below "id=$plugged" 5
+    $hyprPath/scripts/filectl --get-lines-below $configPath "id=$plugged" 5
     return 0
 }
 
-focus_daemon()
+waybar_daemon()
 {
     local configPath="$1"
-    echo "focus_daemon"
+    local time="$2"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Is the given time a valid integer ?
+    if [[ -n ${time//[0-9]/} ]]
+    then
+        >&2 echo "[ERROR]: $time: this is not an integer."
+        return 1 
+    fi
+    
+    # Launching waybars
+	# Killing every waybars and launching ones that are "on"
+	pidof waybar && pkill waybar
+	# Launching waybars
+	cpt=1
+	monitors=$(get_plugged_monitors $configPath)
+	waybars=$($hyprPath/scripts/filectl --get-lines-below $configPath id=$monitors 5 | tail -n 2 | head -n 1)
+	waybars_status=$(echo $waybars | sed "s/.*=//g")
+	
+	for monitor in $(echo $monitors | sed "s/,/ /g")
+	do
+	    current_id=$(echo $monitors | cut -d, -f$cpt)
+	    current_status=$(echo $waybars_status | cut -d, -f$cpt)
+	    
+	    echo $current_status $current_id
+	    if [ "$current_status" = "on" ]
+	    then
+	        waybar -c $hyprPath/configs/waybar/waybars/$current_id/config.jsonc -s $hyprPath/configs/waybar/waybars/$current_id/style.css &
+	    fi
+	    
+	    # Next monitor/status
+	    cpt=$((cpt+1))
+	done    
+
+    # Last focused monitor
+    last_focus=""
+
+    while true
+    do   	
+    	# Focused monitor, for waybar recoloring
+        current_focus=$(get_monitor_focus)
+    	if [ ! "$current_focus" = "$last_focus" ]
+    	then
+			activeBorderColor=$(cat $HOME/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
+			inactiveBorderColor=$(cat $HOME/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
+			sed -i "s/    border-color:.*/    border-color:#${inactiveBorderColor};/g" $hyprPath/configs/waybar/waybars/*/style.css
+			sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" $hyprPath/configs/waybar/waybars/$current_focus/style.css
+			last_focus=$current_focus
+    	fi
+    	
+        sleep $time
+    done
+    
     return 0
 }
 
@@ -139,22 +371,24 @@ rename()
     local newName="$3"
     
     # Does the given config file exist ?
-    if [ ! -f $1 ]
+    if [ ! -f $configPath ]
     then
+        echo
     	>&2 echo "[ERROR]: The config file $1 does not exist."
     	return 1
     fi
     
     # Does the ID exist ?
-    echo $configPath | grep "id=$id" > /dev/null
-    if [ ! -f $1 ]
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
     then
+        echo
     	>&2 echo "[ERROR]: The ID $id does not exist."
     	return 1
     fi
     
     # Else changing the name
-    sed '/^id=${id}$/{n;s/name=.*/name=${newname}/;}' $configPath
+    sed -i "/^id=${id}$/{n;s/.*/name=${newName}/;}" $configPath
     
     # Done
     return 0
@@ -165,7 +399,36 @@ set_main()
     local configPath="$1"
     local id="$2"
     local monitorMain="$3"
-    echo "set main"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+    
+    # Is the given new monitor main valid
+    echo $id | grep -qE "(^|,)$monitorMain(,|$)"
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The monitor $monitorMain does not exist."
+    	return 1
+    fi
+
+	# Setting the new monitor as main monitor.
+	sed -i "/^id=${id}$/{n;n;n;n;s/\(main.*\)=.*/\1=${monitorMain}/;}" $configPath
+
     return 0
 }
 
@@ -173,7 +436,33 @@ toggle_main()
 {
     local configPath="$1"
     local id="$2"
-    echo "toggle main"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+    
+	# Toggling main monitor system
+	$hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 1 | grep -q "main(on)=.*"
+	if [ $? -eq 0 ]
+	then
+		sed -i "/^id=${id}$/{n;n;n;n;s/main(on)=\(.*\)/main(off)=\1/;}" $configPath
+	else
+		sed -i "/^id=${id}$/{n;n;n;n;s/main(off)=\(.*\)/main(on)=\1/;}" $configPath
+	fi
+
     return 0
 }
 
@@ -181,7 +470,26 @@ get_main()
 {
     local configPath="$1"
     local id="$2"
-    echo "get main"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+
+    $hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 1 | sed "s/main\(.*\)=//"
+
     return 0
 }
 
@@ -190,7 +498,58 @@ set_order()
     local configPath="$1"
     local id="$2"
     local order="$3"
-    echo "set order"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+
+	# Is the order valide ? i.e it contains all monitor once.
+	# Good number of monitors in order
+	cptOrder=$(echo $order | sed "s/,/ /g" | wc -w)
+	cptId=$(echo $id | sed "s/,/ /g" | wc -w)
+	if ((cptOrder != cptId))
+	then
+	    echo
+	    >&2 echo "[ERROR]: The given order $order an an invalid number of monitor."
+	    return 1
+	fi
+	
+	# Monitors name are valid
+	for monitor in $(echo $order | sed "s/,/ /g")
+	do
+	    echo $id | grep -qE "(^|,)$monitor(,|$)"
+	    if [ ! $? -eq 0 ]
+	    then
+	    	echo
+			>&2 echo "[ERROR]: The given order $order contains an invalid monitor name ($monitor)."
+			return 1
+	    fi
+	done
+
+	# Each names are unique
+	duplicates=$(echo "$order" | tr ',' '\n' | sort | uniq -d)
+	if [ -n "$duplicates" ]
+	then
+    	echo
+		>&2 echo "[ERROR]: The given order $order contains duplicatas."
+		return 1
+	fi
+	
+	# We can replace the order for the new one
+    sed -i "/^id=${id}$/{n;n;s/order=.*/order=${order}/;}" $configPath
     return 0
 }
 
@@ -198,7 +557,26 @@ get_order()
 {
     local configPath="$1"
     local id="$2"
-    echo "get order"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+
+    $hyprPath/scripts/filectl --get-lines-below $configPath id=$id 5 | tail -n 3 | head -n 1 | sed "s/order=//"
+
     return 0
 }
 
@@ -217,7 +595,49 @@ set_waybars()
     local configPath="$1"
     local id="$2"
     local statusList="$3"
-    echo "set waybars"
+
+    # Does the given config file exist ?
+    if [ ! -f $configPath ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The config file $1 does not exist."
+    	return 1
+    fi
+    
+    # Does the ID exist ?
+    grep "^id=${id}$" < $configPath > /dev/null
+    if [ ! $? -eq 0 ]
+    then
+        echo
+    	>&2 echo "[ERROR]: The ID $id does not exist."
+    	return 1
+    fi
+
+	# Is the status list valid ?
+	# Good number of status
+	cptStatus=$(echo $statusList | sed "s/,/ /g" | wc -w)
+	cptId=$(echo $id | sed "s/,/ /g" | wc -w)
+	if ((cptStatus != cptId))
+	then
+	    echo
+	    >&2 echo "[ERROR]: The given status list ($statusList) an an invalid number of status."
+	    return 1
+	fi
+	
+	# Status must contains only either on or off
+	for stat in $(echo $statusList | sed "s/,/ /g")
+	do
+        echo $stat | grep -Eq "^(on|off)$"
+	    if [ ! $? -eq 0 ]
+	    then
+	    	echo
+			>&2 echo "[ERROR]: The given status list ($statusList) contains an invalid status ($stat)."
+			return 1
+	    fi
+	done
+
+	# We can replace the order for the new one
+    sed -i "/^id=${id}$/{n;n;n;s/waybars\(.*\)=.*/waybars\1=${statusList}/;}" $configPath
     return 0
 }
 
@@ -240,11 +660,6 @@ gui()
 
 
 
-
-
-
-
-
 # === MAIN SCRIPT ===
 if [ $# -eq 0 ]
 then
@@ -258,309 +673,309 @@ do
     case $1 in
     
         -u|--update)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config/file]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 2 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config/file]"
+			    show_help
+			    exit 1
+			fi
 
-	    update $2
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-	        show_help	
-		exit 1
-	    fi
+			update $2
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2: an error occured."
+			    show_help	
+				exit 1
+			fi
 
-	    shift 2	   
+			shift 2	   
         ;;
 
-	-l|--list)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config/file]"
-	        show_help
-	        exit 1
-	    fi
+		-l|--list)
+			# Verifying passed arguments
+			if [ $# -lt 2 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config/file]"
+			    show_help
+			    exit 1
+			fi
 
-	    list $2
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-	        show_help	
-		exit 1
-	    fi
+			list $2
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2: an error occured."
+			    show_help	
+				exit 1
+			fi
 
-	    shift 2
-        ;;
+			shift 2
+		;;
 
-	-v|--list-verbose)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config/file]"
-	        show_help
-	        exit 1
-	    fi
+		-v|--list-verbose)
+			# Verifying passed arguments
+			if [ $# -lt 2 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config/file]"
+			    show_help
+			    exit 1
+			fi
 
-	    list_verbose $2
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-	        show_help	
-		exit 1
-	    fi
+			list_verbose $2
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2: an error occured."
+			    show_help	
+				exit 1
+			fi
 
-	    shift 2
-	;;
+			shift 2
+		;;
 
         -c|--current)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config/file]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 2 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config/file]"
+			    show_help
+			    exit 1
+			fi
 
-	    current $2
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-	        show_help	
-		exit 1
-	    fi
+			current $2
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2: an error occured."
+			    show_help	
+				exit 1
+			fi
 
-	    shift 2
+			shift 2
         ;;
         
-        -d|--focus-daemon)
-	    # Verifying passed arguments
-	    if [ $# -lt 2 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config/file]"
-	        show_help
-	        exit 1
-	    fi
+        -d|--waybar-daemon)
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config/file] [int]"
+			    show_help
+			    exit 1
+			fi
 
-	    focus_daemon $2
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2: an error occured."
-	        show_help	
-		exit 1
-	    fi
+			waybar_daemon $2 $3
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
+				exit 1
+			fi
 
-	    shift 2
+			shift 3
         ;;
         
         -r|--rename)
-	    # Verifying passed arguments
-	    if [ $# -lt 4 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id] [newName]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 4 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id] [newName]"
+			    show_help
+			    exit 1
+			fi
 
-	    rename
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
-	        show_help	
-                exit 1
-	    fi
+			rename $2 $3 $4
+			if [ ! $? -eq 0  ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+			    show_help	
+		        exit 1
+			fi
 
-	    shift 4
+			shift 4
         ;;
         
         -m|--set-main)
-	    # Verifying passed arguments
-	    if [ $# -lt 4 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id] [monitorName]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 4 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id] [monitorName]"
+			    show_help
+			    exit 1
+			fi
 
-	    set_main
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
-	        show_help	
-                exit 1
-	    fi
+			set_main $2 $3 $4
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+			    show_help	
+		        exit 1
+			fi
 
-	    shift 4
+			shift 4
         ;;
         
         -t|--toggle-main)
-	    # Verifying passed arguments
-	    if [ $# -lt 3 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id]"
+			    show_help
+			    exit 1
+			fi
 
-	    toggle_main
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
-	        show_help	
-                exit 1
-	    fi
+			toggle_main $2 $3
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
+		        exit 1
+			fi
 
-	    shift 3	
-	;;
+			shift 3	
+		;;
         
         -g|--get-main)
-	    # Verifying passed arguments
-	    if [ $# -lt 3 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id]"
+			    show_help
+			    exit 1
+			fi
 
-	    get_main
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
-	        show_help	
-                exit 1
-	    fi
+			get_main $2 $3
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
+		        exit 1
+			fi
 
-	    shift 3
+			shift 3
         ;;
         
         -o|--set-order)
-	    # Verifying passed arguments
-	    if [ $# -lt 4 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id] [order]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 4 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id] [order]"
+			    show_help
+			    exit 1
+			fi
 
-	    set_order
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
-	        show_help	
-                exit 1
-	    fi
+			set_order $2 $3 $4
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+			    show_help	
+		        exit 1
+			fi
 
-	    shift 4
+			shift 4
         ;;
         
         --get-order)
-	    # Verifying passed arguments
-	    if [ $# -lt 3 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id]"
+			    show_help
+			    exit 1
+			fi
 
-	    get_order
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
-	        show_help	
+			get_order $2 $3
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
                 exit 1
-	    fi
+			fi
 
-	    shift 3
+			shift 3
         ;;
         
         --set-waybar)
-	    # Verifying passed arguments
-	    if [ $# -lt 5 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id] [monitorName] [on/off]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 5 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id] [monitorName] [on/off]"
+			    show_help
+			    exit 1
+			fi
 
-	    set_waybar
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
-	        show_help	
+			set_waybar $2 $3 $4 $5
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3 $4 $5: an error occured."
+			    show_help	
                 exit 1
-	    fi
+			fi
 
-	    shift 5
+			shift 5
         ;;
         
         --set-waybars)
-	    # Verifying passed arguments
-	    if [ $# -lt 4 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id] [(on,|off,)*monitors]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 4 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id] [(on,|off,)*monitors]"
+			    show_help
+			    exit 1
+			fi
 
-	    rename
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
-	        show_help	
+			set_waybars $2 $3 $4
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3 $4: an error occured."
+			    show_help	
                 exit 1
-	    fi
+			fi
 
-	    shift 4
+			shift 4
         ;;
         
         --get-waybars)
-	    # Verifying passed arguments
-	    if [ $# -lt 3 ]
-	    then
-	        >&2 echo "[ERROR]: $1: not enough arguments."
-	        echo "Usage: $0 $1 [path/to/config] [id]"
-	        show_help
-	        exit 1
-	    fi
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config] [id]"
+			    show_help
+			    exit 1
+			fi
 
-	    get_waybars
-	    if [ ! $? ]
-	    then
-	        >&2 echo "[ERROR]: $1 $2 $3: an error occured."
-	        show_help	
+			get_waybars $2 $3
+			if [ ! $? -eq 0 ]
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
                 exit 1
-	    fi
+			fi
 
-	    shift 3
+			shift 3
         ;;
         
         -g|--gui)
-	   gui
-	   if [ ! $? ]
-	   then
-	       >&2 echo "[FATAL]: $1: an error occured."
-	       show_help	
-	       exit 1
-	   fi
+		   gui
+		   if [ ! $? -eq 0 ]
+		   then
+			   >&2 echo "[FATAL]: $1: an error occured."
+			   show_help	
+			   exit 1
+		   fi
 
-	   shift 1
+		   shift 1
         ;;
 
         -h|--help)

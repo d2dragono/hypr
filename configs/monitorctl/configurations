@@ -1,17 +1,35 @@
-id=eDP-1,DP-1,HDMI-A-1
-name=SetupAMIENS1
-order=eDP-1,DP-1,HDMI-A-1
-waybars(on)=off,on,off
+[NEW CONFIGURATION]        
+id=eDP-1,HDMI-A-1,DP-1
+name=eDP-1,HDMI-A-1,DP-1-config
+order=eDP-1:2,DP-1:1,HDMI-A-1:1
+waybars(on)=off,off,on
 main(on)=DP-1
 
+[NEW CONFIGURATION]        
 id=eDP-1,DP-1
-name=SetupAMIENS2
-order=eDP-1,DP-1,HDMI-A-1
-waybars(on)=off,on
-main(off)=eDP-1
+name=eDP-1,DP-1-config
+order=eDP-1:1,DP-1:1
+waybars(on)=on,on
+main(on)=eDP-1
 
+[NEW CONFIGURATION]        
+id=eDP-1,DP-1,HDMI-A-1
+name=eDP-1,DP-1,HDMI-A-1-config
+order=eDP-1:2,DP-1:1,HDMI-A-1:1
+waybars(on)=off,on,off
+main(on)=eDP-1
+
+[NEW CONFIGURATION]        
 id=eDP-1
-name=Laptop
-order=eDP-1
+name=eDP-1-config
+order=eDP-1:2
 waybars(on)=on
 main(on)=eDP-1
+
+[NEW CONFIGURATION]        
+id=eDP-1,HDMI-A-1
+name=eDP-1,HDMI-A-1-config
+order=eDP-1:2,HDMI-A-1:1
+waybars(on)=on,on
+main(on)=eDP-1
+

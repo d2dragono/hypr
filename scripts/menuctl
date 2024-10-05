@@ -17,9 +17,9 @@ show_help()
     echo "    --add-entry-gui"
     echo
     echo "    --remove-entry [path/to/menuFile] [entryName]"
-    echo "    --remove-entry-gui"
+    echo "    --remove-entry-gui NOT IMPLEMENTED"
     echo
-    echo "    --reorder-gui"
+    echo "    --reorder-gui NOT IMPLEMENTED"
     echo "    --tutorial"
     echo
     echo "    -h, --help                        Show help."
@@ -308,6 +308,31 @@ remove_entry_gui()
 	return 0
 }
 
+tutorial()
+{
+    while [ true ]
+    do
+        answer=$(whiptail --title "Whiptail tutorial"\
+                --radiolist "ArchUtils use whiptail to display text, choices, menus, etc. to the user. Here are the keybinds for navigations :\n\
+                            \n(DIRECTIONAL ARROWS) : Navigation\
+                            \n(SPACE) : Select an entry\
+                            \n(ENTER) : Confirm selection\
+                            \n(TAB) : Select between differents options\
+                            \n\
+                            \nYou need to understand that before proceeding to further installation."\
+                17 80 2\
+                3>&1 1>&2 2>&3\
+                "I don't understand" " " ON\
+                "I do understand" " " OFF)
+    
+        if [ "$answer" = "I do understand" ]
+        then
+            break;
+        fi
+    done
+    return 0
+}
+
 # Require at least one argument
 if [ $# -eq 0 ]
 then
@@ -467,6 +492,11 @@ do
 
 			shift 1  
         ;;
+
+	--tutorial)
+	    tutorial
+	    shift 1
+	;;
 
         --help|-h)
             show_help
