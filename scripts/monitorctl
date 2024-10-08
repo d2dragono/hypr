@@ -12,8 +12,8 @@ show_help()
     echo "    Managing the configurations:"
     echo
     echo "    -u, --update [path/to/config]                                                Apply the current monitor configuration to the system. If one does not exist, create one before."
-    echo "    -l, --list [path/to/config] NEED REWORK                                      List the existing configurations."
-    echo "    -v, --list-verbose [path/to/config] NEED REWORK                              List the existing configurations with details."
+    echo "    -l, --list [path/to/config]                                                  List the existing configurations."
+    echo "    -v, --list-verbose [path/to/config]                                          List the existing configurations with details."
     echo "    -c, --current [path/to/config]                                               Show the configuration in use."
     echo "    -d, --waybar-daemon [path/to/config] [int]"
     echo "    --update-daemon [path/to/config] [int]"
@@ -110,6 +110,9 @@ update_order()
         # Calculating the next shifting
         x_axis=$(echo "$res" | sed "s/x.*//g")
         shifting=$((shifting + x_axis / scale))
+
+		# debug
+		# echo monitor=$monitor raw_monitor=$raw_monitor res=$res scale=$scale x_axis=$x_axis shifting=$shifting
     done
     
     return 0
@@ -146,7 +149,6 @@ update_waybars()
 	    current_id=$(echo "$monitors" | cut -d, -f$cpt)
 	    current_status=$(echo "$waybars_status" | cut -d, -f$cpt)
 	    
-	    echo "$current_status" "$current_id"
 	    if [ "$current_status" = "on" ]
 	    then
 	        waybar -c "$hyprPath"/configs/waybar/waybars/"$current_id"/config.jsonc -s "$hyprPath"/configs/waybar/waybars/"$current_id"/style.css &
@@ -242,7 +244,7 @@ update()
         order=$(echo "${id}" | sed "s/,/:1,/g" | sed "s/\(.*\)/\1:1/")
         
         cat << TAG >> "$configPath"
-[NEW CONFIGURATION]        
+[CONFIGURATION]        
 id=${id}
 name=${id}-config
 order=${order}
@@ -268,6 +270,13 @@ TAG
     # 3 - workspaces
     update_workspaces "$main" "$id"
     
+	# 4 - Changing current conf title to [CURRENT]
+	# Removing current [CURRENT]
+	sed -i "s/\[CURRENT\]/\[CONFIGURATION\]/g" $configPath
+	# Setting new current
+	sed -i "/\[CONFIGURATION\]/{N;/id=${id}$/s/\[CONFIGURATION\]/\[CURRENT\]/;}" $configPath
+	echo id=$id
+
     return 0
 }
 
@@ -277,11 +286,11 @@ list()
     # Does the given config file exist ?
     if [ ! -f "$1" ]
     then
-			>&2 echo "[ERROR]: The config file $1 does not exist."
-			return 1
+	>&2 echo "[ERROR]: The config file $1 does not exist."
+	return 1
     fi
         
-    cat "$configPath"
+    grep "^id=.*$" $configPath | sed "s/id=//g"
     
     return 0
 }
@@ -396,6 +405,45 @@ waybar_daemon()
     	fi
     	
         sleep "$time"
+    done
+    
+    return 0
+}
+
+update_daemon()
+{
+    local configPath="$1"
+    local time="$2"
+
+    # Does the given config file exist ?
+    if [ ! -f "$configPath" ]
+    then
+        echo
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
+    fi
+    
+    # Is the given time a valid integer ?
+    if [[ -n ${time//[0-9]/} ]]
+    then
+        >&2 echo "[ERROR]: $time: this is not an integer."
+        return 1 
+    fi
+    
+	# Retreiving current loaded configuration
+	loaded=$(grep -C 1 "\[CURRENT\]" $hyprPath/configs/monitorctl/configurations | tail -n 1 | sed "s/id=//")
+	# echo $loaded
+
+    while true
+    do   	
+    	sleep "$time"
+    	current=$(get_plugged_monitors)
+		# echo $current
+		if [ ! "$current" = "$loaded" ]
+		then
+			update $1
+			loaded=$current
+		fi
     done
     
     return 0
@@ -683,7 +731,13 @@ get_waybars()
 gui()
 {
     local configPath="$1"
-    echo "gui"
+
+	# 1 - Ask the user the config he wanna edit.
+	# Retreiving the list of configurations
+	
+
+	# 2 - Ask him what he wanna edit between : name, order, waybar status, main monitor.
+
     return 0
 }
 
@@ -771,7 +825,7 @@ do
 			    exit 1
 			fi
 
-			if current "$2"
+			if ! current "$2"
 			then
 			    >&2 echo "[ERROR]: $1 $2: an error occured."
 			    show_help	
@@ -801,6 +855,26 @@ do
 			shift 3
         ;;
         
+        --update-daemon)
+			# Verifying passed arguments
+			if [ $# -lt 3 ]
+			then
+			    >&2 echo "[ERROR]: $1: not enough arguments."
+			    echo "Usage: $0 $1 [path/to/config/file] [int]"
+			    show_help
+			    exit 1
+			fi
+
+			if ! update_daemon "$2" "$3"
+			then
+			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
+			    show_help	
+				exit 1
+			fi
+
+			shift 3
+        ;;
+
         -r|--rename)
 			# Verifying passed arguments
 			if [ $# -lt 4 ]

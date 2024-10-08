@@ -68,6 +68,12 @@ launch_menu()
 	local title="$2"
 	local menu
 	local answer
+
+	# If pywal is installed : loading colors
+	if wal -v
+	then
+	     (cat ~/.cache/wal/sequences &)
+	fi
 	
 	if [ ! -f "$menuEntries" ] # Is it a regular file
 	then
@@ -235,7 +241,7 @@ add_entry_gui()
 	desc=$(echo "$desc" | sed 's/ /_/g')
 
 	# Asking the user path the script to launch
-	choice=$(whiptail --title "Script choosing method" --menu "How to you want to choose your script ?" 10 64 2 3>&1 1>&2 2>&3 "[File Browser]" "Will prompt you a file chooser." "[Write it]" "You will write your script/command.")
+	choice=$(whiptail --title "Script choosing method" --menu "How do you want to choose your script ?" 10 64 2 3>&1 1>&2 2>&3 "[File Browser]" "Will prompt you a file chooser." "[Write it]" "You will write your script/command.")
 	if [ ! "$choice" = "[File Browser]" ]
 	then
 	    script=$(whiptail --title "Create entry" --inputbox "Script to launch from this entry ?" 8 39 3>&1 1>&2 2>&3)
@@ -244,7 +250,7 @@ add_entry_gui()
 	fi
 
 	# Asking the user where to save this entry
-	choice=$(whiptail --title "Save file choosing method" --menu "How to you want to save your script ?" 10 64 2 3>&1 1>&2 2>&3 "[File Browser]" "Will prompt you a file chooser." "[Write it]" "You will write your save file path.")
+	choice=$(whiptail --title "Save file choosing method" --menu "How do you want to save your script ?" 10 64 2 3>&1 1>&2 2>&3 "[File Browser]" "Will prompt you a file chooser." "[Write it]" "You will write your save file path.")
 	if [ "$choice" = "[File Browser]" ]
 	then
 		saveAt=$(browse_files "Add Entry : Save At" "Please choose where to save the new entry." .)
