@@ -188,7 +188,8 @@ launch_script()
 	do
 		if echo "$line" | grep -q "$entry"
 		then
-		    scriptPath=$(echo "$line" | sed "s/title=\"\${entry}\".*script=\"\(.*\)\"/\1/")
+		    scriptPath=$(echo "$line" | sed "s/title=\"${entry}\".*script=\"\(.*\)\"/\1/")
+			echo $scriptPath
 		    $scriptPath # Will launch the script
 		    return 0
 		fi

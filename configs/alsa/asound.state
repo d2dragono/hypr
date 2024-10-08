@@ -29,8 +29,8 @@ state.sofhdadsp {
 	control.3 {
 		iface MIXER
 		name 'Speaker Playback Volume'
-		value.0 60
-		value.1 60
+		value.0 0
+		value.1 0
 		comment {
 			access 'read write'
 			type INTEGER
@@ -38,8 +38,8 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -2025
-			dbvalue.1 -2025
+			dbvalue.0 -6525
+			dbvalue.1 -6525
 		}
 	}
 	control.4 {
@@ -111,7 +111,7 @@ state.sofhdadsp {
 	control.9 {
 		iface MIXER
 		name 'Master Playback Volume'
-		value 87
+		value 0
 		comment {
 			access 'read write'
 			type INTEGER
@@ -119,7 +119,7 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 0
+			dbvalue.0 -6525
 		}
 	}
 	control.10 {
