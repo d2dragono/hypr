@@ -82,6 +82,29 @@ get_monitor_focus()
     return 1
 }
 
+get_monitor_app_focus()
+{
+	local focused_monitor_id
+	local monitor_id_list
+
+	focused_monitor_id=$(hyprctl activewindow | grep "monitor: [0-9]" | sed "s/.*monitor: //g")
+	monitor_id_list=$(hyprctl monitors all | grep "Monitor" | sed "s/Monitor \(.*\) (\(ID .\)):/\1:\2/g" | sed "s/ID //g")
+
+	for monitor in $monitor_id_list
+	do
+		id=$(echo $monitor | sed "s/.*://")
+		if [ "$id" = "$focused_monitor_id" ]
+		then
+			echo $monitor | sed "s/:.*//"
+			return 0
+		fi
+	done
+
+    echo
+    >&2 echo "[ERROR]: Could not retreive focused monitor."
+    return 1
+}
+
 update_order()
 {
     local order="$1"
@@ -353,8 +376,8 @@ waybar_daemon()
     if [ ! -f "$configPath" ]
     then
         echo
-			>&2 echo "[ERROR]: The config file $1 does not exist."
-			return 1
+		>&2 echo "[ERROR]: The config file $1 does not exist."
+		return 1
     fi
     
     # Is the given time a valid integer ?
@@ -364,6 +387,12 @@ waybar_daemon()
         return 1 
     fi
     
+	# Refreshing style at boot.
+	activeBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
+	inactiveBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
+	sed -i "s/    border-color:.*/    border-color:#${inactiveBorderColor};/g" "$hyprPath"/configs/waybar/waybars/*/style.css
+	sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/configs/waybar/waybars/"$current_focus"/style.css
+
     # Launching waybars
 	# Killing every waybars and launching ones that are "on"
 	pidof waybar && pkill waybar
@@ -394,7 +423,8 @@ waybar_daemon()
     while true
     do   	
     	# Focused monitor, for waybar recoloring
-        current_focus=$(get_monitor_focus)
+        # current_focus=$(get_monitor_focus)
+		current_focus=$(get_monitor_app_focus)
     	if [ ! "$current_focus" = "$last_focus" ]
     	then
 			activeBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')

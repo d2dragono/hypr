@@ -19,14 +19,14 @@ order=eDP-1:2,DP-1:1,HDMI-A-1:1
 waybars(on)=off,on,off
 main(on)=eDP-1
 
-[CURRENT]
+[CONFIGURATION]
 id=eDP-1
 name=laptop
 order=eDP-1:2
 waybars(on)=on
 main(on)=eDP-1
 
-[CONFIGURATION]        
+[CURRENT]        
 id=eDP-1,HDMI-A-1
 name=eDP-1,HDMI-A-1-config
 order=eDP-1:2,HDMI-A-1:1
