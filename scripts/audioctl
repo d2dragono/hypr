@@ -176,7 +176,7 @@ setup()
 [Unit]
 Description=Load saved alsa configuration (saved at: $alsacfg)
 [Service]
-ExecStart=alsactl --file $alsacfg
+ExecStart=alsactl --file $alsacfg restore
 [Install]
 WantedBy=multi-user.target
 END
