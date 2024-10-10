@@ -165,7 +165,7 @@ state.sofhdadsp {
 	control.14 {
 		iface CARD
 		name 'HDMI/DP,pcm=3 Jack'
-		value false
+		value true
 		comment {
 			access read
 			type BOOLEAN
@@ -205,7 +205,7 @@ state.sofhdadsp {
 	control.18 {
 		iface MIXER
 		name 'IEC958 Playback Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -216,11 +216,11 @@ state.sofhdadsp {
 		iface PCM
 		device 3
 		name ELD
-		value ''
+		value '10000600651000010000000000000000047221055232343159090707'
 		comment {
 			access 'read volatile'
 			type BYTES
-			count 0
+			count 28
 		}
 	}
 	control.20 {

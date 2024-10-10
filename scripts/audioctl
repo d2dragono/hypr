@@ -1,8 +1,16 @@
 #!/bin/bash
+#                    _ _            _   _ 
+#     __ _ _   _  __| (_) ___   ___| |_| |
+#    / _` | | | |/ _` | |/ _ \ / __| __| |
+#   | (_| | |_| | (_| | | (_) | (__| |_| |
+#    \__,_|\__,_|\__,_|_|\___/ \___|\__|_|
+# 
+# by DRAGONO                                      
 
-# Script to control volume via alsa
-# Made by DRAGONO
-
+# func : show_help
+# desc : will display to the user how to use audioctl
+# outp : The help message/usage of the script
+# rtrn : 0
 show_help()
 {
     echo
@@ -19,21 +27,121 @@ show_help()
     echo "    -h, --help                                          Show help."
     echo
     echo "Note: --setup requires sudo privileges"
+    return 0
 }
 
-# Will say if the current sound output is muted or not
-get_status()
+
+
+# func : report_error
+# desc : will echo a given message to stderr
+# arg1 : the error type : fatal, error, ... This is just and indication and do nothing much.
+# arg2 : title of the error, basically where the error occured
+# arg3 : the error message
+# outp : An error message to stderr
+# rtrn : 0
+report_error()
 {
-	local status
-    if ! status=$(amixer get Master | grep "Left.*%" | cut -d" " -f8 | sed "s/\[\(.*\)\]/\1/")
+    local error_type="$1"
+    local error_title="$2"
+    local error_message="$3"
+    >&2 echo "[${error_type}]: ${error_title}: ${error_message}"
+    return 0
+}
+
+
+
+# func : arguments_check
+# desc : will check if enough arguments are being given to an option
+# arg1 : the option being checked
+# arg2 : required number of arguments
+# arg3 : current number of arguments
+# outp : an error message if there is not enough arguments
+# rtrn : 0 if no error, else 1
+arguments_check()
+{
+    local checked_option="$1"
+    local required_arg_number="$2"
+    local current_arg_number="$3"
+    if ((current_arg_number < required_arg_number)); then
+        report_error "FATAL" "$checked_option" "Not enough arguments."
+        return 1
+    fi
+    return 0
+}
+
+
+
+# func : notify_user
+# desc : will notify the new volume status to the user
+# outp : the notification
+# rtrn : 0 if no error, else 1
+notify_user()
+{
+    local muted
+    local percentage
+    local icon
+
+    if ! dunstctl -h > /dev/null
     then
-        echo
-        >&2 echo "[ERROR]: amixer: could not retreive output mute status."
+        echo "Dunst is not installed. Install it if you wish to see sound notifications."
+        return 0
+    else
+        # Mute status, percentage, and icon
+        muted=$(get_status) && percentage=$(get_percentage) && icon=$(get_icon)
+
+        # If any of these fail, handle the error.
+        if [ -z "$muted" ] || [ -z "$percentage" ] || [ -z "$icon" ]; then
+            report_error "ERROR" "Notification" "Failed to retrieve volume status, percentage, or icon."
+            return 1
+        fi
+
+        # Notifying
+        if ! "$hyprPath"/scripts/notifierctl -p "$percentage" -c 20 -t "System" -m "Volume : $percentage% $muted" -u 1 -e 3000 -i "$icon"; then
+            report_error "ERROR" "Notification" "Failed to send the notification properly."
+            return 1
+        fi
+        return 0
+    fi
+}
+
+
+
+# func : save_alsa_config
+# desc : will save the alsa config to the given config file
+# arg1 : path to the config file
+# outp : none
+# rtrn : 0 if no error, else 1
+save_alsa_config()
+{
+    local alsacfg="$1"
+    if [ ! -f "$alsacfg" ]; then
+        report_error "ERROR" "save_alsa_config" "$alsacfg is not a valid configuration file."
+	    return 1
+    fi
+
+    if ! alsactl --file "$alsacfg" store; then
+        report_error "ERROR" "save_alsa_config" "Failed to store ALSA configuration."
         return 1
     fi
 
-    if [ "$status" = "on" ]
-    then
+    return 0
+}
+
+
+
+# func : get_status
+# desc : will check if the volume is toggled on or off
+# outp : the volume status, either " " or "(Muted)"
+# rtrn : 0 if no error, else 1
+get_status()
+{
+	local status
+    if ! status=$(amixer get Master | grep "Left.*%" | cut -d" " -f8 | sed "s/\[\(.*\)\]/\1/"); then
+        report_error "ERROR" "get_status" "Could not retreive output mute status."
+        return 1
+    fi
+
+    if [ "$status" = "on" ]; then
         echo " "
     else
         echo "(Muted)"
@@ -41,51 +149,47 @@ get_status()
     return 0
 }
 
-# Volume percentage
+
+
+# func : get_percentage
+# desc : will check the current volume percentage
+# outp : the volume percentage
+# rtrn : 0 if no error, else 1
 get_percentage()
 {
 	local percentage
-    if ! percentage=$(amixer get Master | grep "Left.*%" | cut -d" " -f7 | sed "s/\[\(.*\)\%]/\1/")
-    then
-        echo
-        >&2 echo "[ERROR]: amixer: could not retreive the volume percentage."
+    if ! percentage=$(amixer get Master | grep "Left.*%" | cut -d" " -f7 | sed "s/\[\(.*\)\%]/\1/"); then
+        report_error "ERROR" "get_percentage" "Could not retreive the volume percentage."
         return 1
     fi
     echo "$percentage"
     return 0
 }
 
-# Notification icon depending of volume
+
+
+# func : get_icon
+# desc : will check current volume percentage and retreive the associated notification icon
+# outp : the path to the icon to use
+# rtrn : 0 if no error, else 1
 get_icon()
 {
 	local percentage
 	local icon
 	
     percentage=$(get_percentage)
-    if ((percentage == 0))
-    then
+    if ((percentage == 0)); then
         icon="$hyprPath/ressources/volume-off.svg"
-    fi
-
-    if ((percentage > 0 && percentage < 34))
-    then
+    elif ((percentage > 0 && percentage < 34)); then
         icon="$hyprPath/ressources/volume-low.svg"
-    fi
-
-    if ((percentage > 33 && percentage < 67))
-    then
+    elif ((percentage > 33 && percentage < 67)); then
         icon="$hyprPath/ressources/volume-medium.svg"
-    fi
-
-    if ((percentage > 66))
-    then
+    elif ((percentage > 66)); then
         icon="$hyprPath/ressources/volume-high.svg"
     fi
 
-    if ! identify "$icon" > /dev/null
-    then
-        echo
-        >&2 echo "[ERROR]: icon: could not retreive the icon at $icon."
+    if ! identify "$icon" > /dev/null; then
+        report_error "ERROR" "get_icon" "Could not retreive the icon at $icon."
         return 1
     fi
 
@@ -93,63 +197,72 @@ get_icon()
     return 0
 }
 
+
+
+# func : edit_volume
+# desc : will either decrease or increase the current volume using alsa
+# arg1 : by how much increase/decrease
+# arg2 : path to the alsa config file, in order to save the volume configuration after editing it
+# arg3 : either "+" to increase or "-" to decrease the volume
+# outp : none
+# rtrn : 0 if no error, else 1
 edit_volume()
 {
     local percentage="$1"
     local alsacfg="$2"
     local sign="$3"
 
-    # Is the percentage an integer ?
-    if [[ -n ${percentage//[0-9]/} ]]
-    then
-        echo
-        >&2 echo "[ERROR]: $percentage: this is not an integer."
+    if [[ -n ${percentage//[0-9]/} ]]; then
+        report_error "ERROR" "edit_volume" "Invalid volume percentage: '$percentage'. Please provide an integer between 0 and 100."
         return 1 
     fi
 
-    # Is the percentage valid (between 0 and 100)
-    if ((percentage < 0 || percentage > 100))
-    then
-    	echo
-    	>&2 echo "[ERROR]: the percentage ($1) is not valid."
+    if ((percentage < 0 || percentage > 100)); then
+    	report_error "ERROR" "edit_volume" "The percentage ($1) is not valid."
         return 1
     fi
 
-    # Is the alsa config file valid
-    if [ ! -f "$alsacfg" ]
-    then
-        echo
-        >&2 echo "[ERROR]: $alsacfg is not a valid configuration file."
-	    return 1
+    if ! amixer set Master "$percentage"%"$sign"; then
+        report_error "ERROR" "edit_volume" "Could not set new volume."
+        return 1
     fi
 
-    # Editing current volume
-    amixer set Master "$percentage"%"$sign"
-    # Saving it to load the new volume when starting computer
-    alsactl --file "$alsacfg" store
-    # Done
+    if ! save_alsa_config "$alsacfg"; then
+    	report_error "ERROR" "edit_volume" "Could not save new alsa config."
+        return 1
+    fi
     return 0
 }
 
+
+
+# func : toggle_volume
+# desc : will either toggle volume on or off
+# arg1 : path to the alsa config file, to save the new volume status
+# outp : none
+# rtrn : 0 if no error, else 1
 toggle_volume()
 {
-    local alsacfg="$1"	
-    # Is the alsa config file valid
-    if [ ! -f "$alsacfg" ]
-    then
-    	echo
-        >&2 echo "[ERROR]: $alsacfg is not a valid configuration file."
-		return 1
+    local alsacfg="$1"
+    if ! amixer set Master toggle; then
+        report_error "ERROR" "toggle_volume" "Failed to toggle master volume."
+        return 1
     fi
 
-    # Toggling current volume
-    amixer set Master toggle
-    # Saving it to load the new volume when starting computer
-    alsactl --file "$alsacfg" store
-    # Done
+    if ! save_alsa_config "$alsacfg"; then
+    	report_error "ERROR" "toggle_volume" "Could not save new alsa config."
+        return 1
+    fi
     return 0
 }
 
+
+
+# func : setup
+# desc : will create a systemd service to load saved volume in the given config file.
+# arg1 : path to the alsa config file to use
+# outp : none
+# rtrn : 0 if no error, else 1
 setup()
 {
     local alsacfg="$1"
@@ -157,14 +270,12 @@ setup()
     local cfgFile
     
     # Extracting the path and the file name
-    cfgPath=$(echo "$alsacfg" | sed "s/^\(.*\)\/.*$/\1/")
-    cfgFile=$(echo "$alsacfg" | sed "s/^.*\/\(.*\)$/\1/")
+    cfgPath=$(dirname "$alsacfg")
+    cfgFile=$(basename "$alsacfg")
 
     # Is the path valid
-    if [ ! -d "$cfgPath" ]
-    then
-    	echo
-        >&2 echo "[ERROR]: the path $cfgPath does not exist, cannot create $cfgFile."
+    if [ ! -d "$cfgPath" ]; then
+    	report_error "ERROR" "setup" "The path \"$cfgPath\" does not exist, cannot create \"$cfgFile\"."
 		return 1
     fi
 
@@ -181,152 +292,91 @@ ExecStart=alsactl --file $alsacfg restore
 WantedBy=multi-user.target
 END
     
-    # Enabling load-volume.service in order to have the sounds settings resotred at startup
+    # Enabling load-volume.service in order to have the sounds settings restored at startup
     sudo systemctl enable load-audio
 
     # Done
     return 0
 }
 
-# === Main script ===
-if [ $# -eq 0 ]
-then
-	echo
-    >&2 echo "[ERROR]: No given arguments."
-    show_help
-    exit 1
-fi
 
-while [ $# -gt 0 ]
-do
-    case $1 in
+
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    if [ $# -eq 0 ]; then
+        report_error "FATAL" "$0" "No given arguments."
+        return 1
+    fi
+
+    option="$1"
+    shift 1
+
+    case $option in
         -i|--increase)
-			# Verifying passed arguments
-			if [ $# -lt 3 ]
-			then
-			    >&2 echo "[ERROR]: $1: not enough arguments."
-			    echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
-				echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
-			    show_help
-			    exit 1
-			fi
-
-			if ! edit_volume "$2" "$3" "+"
-			then
-			    >&2 echo "[ERROR]: $1 $2 $3: an error occured."
-			    show_help	
-				exit 1
-			fi
-
-			shift 3	   
+            arguments_check "increase" 2 $# || return 1
+            if ! edit_volume "$1" "$2" "+"; then
+                report_error "ERROR" "$option $1 $2" "An error occured."
+                return 1
+            fi
         ;;
 
-		-d|--decrease)
-			# Verifying passed arguments
-			if [ $# -lt 3 ]
-			then
-			    >&2 echo "[ERROR]: $1: not enough arguments."
-			    echo "Usage: $0 $1 [percentage(int) between 0 and 100] path/to/alsa/config/file"
-			    echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
-			    show_help
-			    exit 1
-			fi
+        -d|--decrease)
+            arguments_check "decrease" 2 $# || return 1
+            if ! edit_volume "$1" "$2" "-"; then
+                report_error "ERROR" "$option $1 $2" "An error occured."
+                return 1
+            fi
+        ;;
 
-		    if ! edit_volume "$2" "$3" "-"
-				then
-				>&2 echo "[ERROR]: $1 $2 $3: an error occured."
-				show_help
-				exit 1
-			fi
+        -t|--toggle)
+            arguments_check "toggle" 1 $# || return 1
+            if ! toggle_volume "$1"; then
+                report_error "ERROR" "$option $1" "An error occured."
+                return 1
+            fi
+        ;;
 
-			shift 3
-		;;
-
-		-t|--toggle)
-			# Verifying passed arguments
-			if [ $# -lt 2 ]
-			then
-			    >&2 echo "[ERROR]: $1: not enough arguments."
-			    echo "Usage: $0 $1 path/to/alsa/config/file"
-			    echo "(If no alsa config file set use $0 --setup path/to/new/alsa/config/file)"
-			    show_help
-			    exit 1
-			fi
-
-		    if ! toggle_volume "$2"
-			then
-			    >&2 echo "[ERROR]: $1 $2: an error occured."
-				show_help
-				exit 1
-		    fi
-
-			shift 2
-		;;
-
-		-s|--setup)
-			# Verifying passed arguments
-			if [ $# -lt 2 ]
-			then
-			    >&2 echo "[ERROR]: $1: not enough arguments."
-			    echo "Usage: $0 $1 path/to/new/alsa/config/file"
-			    show_help
-			    exit 1
-			fi
-
-		    if ! setup "$2"
-			then
-			    >&2 echo "[ERROR]: $1 $2: an error occured."
-				show_help
-				exit 1
-			fi
-
-			shift 2
-		;;
+        -s|--setup)
+            arguments_check "setup" 1 $# || return 1
+            if ! setup "$1"; then
+                report_error "ERROR" "$option $1" "An error occured."
+                return 1
+            fi
+        ;;
 
         -h|--help)
             show_help
-            shift 1
         ;;
 
         *)
-            echo "[ERROR]: Unknown option: $1"
-            show_help
-            exit 1
+            report_error "ERROR" "$option" "Unknown option. Use --help to see usage."
+            return 1
         ;;
-
     esac
-done
 
-# === Notifying ===
-if ! dunstctl -h > /dev/null
-then
-    echo "Dunst is not installed. Install it if you wish to see sound notifications."
+    case $option in
+        -i|--increase|-d|--decrease|-t|--toggle)
+            notify_user
+        ;;
+    esac
+
+    return 0
+}
+
+
+
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
+    exit 1
 else
-    # Mute status
-    if ! muted=$(get_status)
-    then
-        echo "[ERROR]: Could not retreive volume mute status."
-        show_help
-        exit 1
-    fi
-    # Percentage
-    if ! percentage=$(get_percentage)
-    then
-        echo "[ERROR]: Could not retreive volume percentage."
-        show_help
-        exit 1
-    fi
-    # Icon
-    if ! icon=$(get_icon)
-    then
-        echo "[ERROR]: Could not retreive notification icon."
-        show_help
-        exit 1
-    fi
-
-    # Notifying
-    "$hyprPath"/scripts/notifierctl -p "$percentage" -c 20 -t "System" -m "Volume : $percentage% $muted" -u 1 -e 3000 -i "$icon"
+    echo "[SUCCESS]: No errors detected."
+    exit 0
 fi
-
-# Done
-exit 0
