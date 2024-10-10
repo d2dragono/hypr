@@ -1,12 +1,38 @@
 #!/bin/bash
-if grep -q ".*kb_variant = us" "$hyprPath"/configs/hyprland/inputs.conf
-then
-    sed -i "s/\(.*kb_variant = \).*/\1/" "$hyprPath"/configs/hyprland/inputs.conf
-    dunstify "New layout: AZERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
-else
-    sed -i "s/\(.*kb_variant = \)/\1us/" "$hyprPath"/configs/hyprland/inputs.conf
-    dunstify "New layout: QWERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
-fi
+#    _                   _       _   _ 
+#   (_)_ __  _ __  _   _| |_ ___| |_| |
+#   | | '_ \| '_ \| | | | __/ __| __| |
+#   | | | | | |_) | |_| | || (__| |_| |
+#   |_|_| |_| .__/ \__,_|\__\___|\__|_|
+#           |_|     
+#                    
+# by DRAGONO
 
-# Success
-exit 0
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    if grep -q ".*kb_variant = us" "$hyprPath"/configs/hyprland/inputs.conf; then
+        sed -i "s/\(.*kb_variant = \).*/\1/" "$hyprPath"/configs/hyprland/inputs.conf
+        dunstify "New layout: AZERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
+    else
+        sed -i "s/\(.*kb_variant = \)/\1us/" "$hyprPath"/configs/hyprland/inputs.conf
+        dunstify "New layout: QWERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
+    fi
+}
+
+
+
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
+    exit 1
+else
+    echo "[SUCCESS]: No errors detected."
+    exit 0
+fi
