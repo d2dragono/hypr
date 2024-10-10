@@ -22,6 +22,7 @@ main()
         sed -i "s/\(.*kb_variant = \)/\1us/" "$hyprPath"/configs/hyprland/inputs.conf
         dunstify "New layout: QWERTY" -t 3000 -r 29 --icon "$hyprPath"/ressources/keyboard.icon
     fi
+    return 1
 }
 
 

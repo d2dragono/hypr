@@ -1,7 +1,68 @@
 #!/bin/bash
-grim -g "$(slurp)" - | wl-copy
-dunstify "Screenshot of the region taken" -t 3000 -r 21 --icon "$hyprPath"/ressources/snapshot.icon
-wl-paste | swappy -f - -o ~/Pictures/Screenshots/Screenshot-$(date +%F_%T | sed "s/://g" | sed "s/-//g")
-dunstify "Screenshot saved or copied to clipboard successfully." -t 3000 -r 21 --icon "$hyprPath"/ressources/saved.icon
+#                                     _           _       _   _ 
+#    ___  ___ _ __ ___  ___ _ __  ___| |__   ___ | |_ ___| |_| |
+#   / __|/ __| '__/ _ \/ _ \ '_ \/ __| '_ \ / _ \| __/ __| __| |
+#   \__ \ (__| | |  __/  __/ | | \__ \ | | | (_) | || (__| |_| |
+#   |___/\___|_|  \___|\___|_| |_|___/_| |_|\___/ \__\___|\__|_|
+#
+# by DRAGONO                                                      
+
+# func : report_error
+# desc : will echo a given message to stderr
+# arg1 : the error type : fatal, error, ... This is just and indication and do nothing much.
+# arg2 : title of the error, basically where the error occured
+# arg3 : the error message
+# outp : An error message to stderr
+# rtrn : 0
+report_error()
+{
+    local error_type="$1"
+    local error_title="$2"
+    local error_message="$3"
+    >&2 echo "[${error_type}]: ${error_title}: ${error_message}"
+    return 0
+}
 
 
+
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    if ! grim -g "$(slurp)" - | wl-copy; then
+        report_error "ERROR" "grim" "Could not take screenshot of the area."
+        return 1
+    fi
+
+    if ! dunstify "Screenshot of the region taken" -t 3000 -r 21 --icon "$hyprPath"/ressources/snapshot.icon; then
+        report_error "ERROR" "dunstify" "Could not notify \"Screenshot taken\"."
+        return 1
+    fi
+
+    if ! wl-paste | swappy -f - -o ~/Pictures/Screenshots/Screenshot-$(date +%F_%T | sed "s/://g" | sed "s/-//g"); then
+        report_error "ERROR" "swappy" "Could not manipulate the screenshot."
+        return 1
+    fi
+
+    if ! dunstify "Screenshot saved or copied to clipboard successfully." -t 3000 -r 21 --icon "$hyprPath"/ressources/saved.icon; then
+        report_error "ERROR" "dunstify" "Could not notify \"Screenshot saved/copied to clipboard\"."
+        return 1
+    fi
+    return 0
+}
+
+
+
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
+    exit 1
+else
+    echo "[SUCCESS]: No errors detected."
+    exit 0
+fi
