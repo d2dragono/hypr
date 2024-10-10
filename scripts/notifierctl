@@ -93,7 +93,7 @@ is_an_int()
 valid_percentage()
 {
     local percentage="$1"
-    if ! is_an_int $percentage; then
+    if ! is_an_int "$percentage"; then
         report_error "ERROR" "valid_percentage" "Invalid volume percentage: '$percentage'. Please provide an integer between 0 and 100."
         return 1 
     fi
@@ -150,7 +150,7 @@ main()
 
             -c|--code)
                 arguments_check "code" 1 $# || return 1
-                if ! is_an_int $1; then
+                if ! is_an_int "$1"; then
                     report_error "ERROR" "code" "The given code '$1' is not valid."
                     return 1
                 fi
@@ -172,7 +172,7 @@ main()
 
             -u|--urgency)
                 arguments_check "urgency" 1 $# || return 1
-                if ! is_an_int $1; then
+                if ! is_an_int "$1"; then
                     report_error "ERROR" "urgency" "The given urgency '$1' is not valid."
                     return 1
                 fi
@@ -194,7 +194,7 @@ main()
 
             -e|--expiration)
                 arguments_check "expiration" 1 $# || return 1
-                if ! is_an_int $1; then
+                if ! is_an_int "$1"; then
                     report_error "ERROR" "expiration" "The given expiration '$1' is not valid."
                     return 1
                 fi

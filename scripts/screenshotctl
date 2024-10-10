@@ -42,7 +42,7 @@ main()
         return 1
     fi
 
-    if ! wl-paste | swappy -f - -o ~/Pictures/Screenshots/Screenshot-$(date +%F_%T | sed "s/://g" | sed "s/-//g"); then
+    if ! wl-paste | swappy -f - -o "$HOME/Pictures/Screenshots/Screenshot-$(date +%F_%T | sed "s/://g" | sed "s/-//g")"; then
         report_error "ERROR" "swappy" "Could not manipulate the screenshot."
         return 1
     fi

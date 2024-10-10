@@ -95,12 +95,12 @@ main()
         return 1
     fi
 
-    if ! icon=$(get_icon $percentage); then
+    if ! icon=$(get_icon "$percentage"); then
         report_error "ERROR" "get_icon" "Could not retreive the icon."
         return 1
     fi
 
-    if ! "$hyprPath"/scripts/notifierctl -p $percentage -c 35 -t "System" -m "Brightness : $percentage%" -u 1 -e 3000 -i "$icon"; then
+    if ! "$hyprPath"/scripts/notifierctl -p "$percentage" -c 35 -t "System" -m "Brightness : $percentage%" -u 1 -e 3000 -i "$icon"; then
         report_error "ERROR" "notifierctl" "Could not notify the new brightness."
         return 1
     fi
