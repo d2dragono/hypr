@@ -1,8 +1,16 @@
 #!/bin/bash
+#                _   _  __ _               _   _ 
+#    _ __   ___ | |_(_)/ _(_) ___ _ __ ___| |_| |
+#   | '_ \ / _ \| __| | |_| |/ _ \ '__/ __| __| |
+#   | | | | (_) | |_| |  _| |  __/ | | (__| |_| |
+#   |_| |_|\___/ \__|_|_| |_|\___|_|  \___|\__|_|
+#
+# by DRAGONO                                            
 
-# Script used to create simple notifications
-# Made by DRAGONO
-
+# func : show_help
+# desc : will display to the user how to use notifierctl
+# outp : The help message/usage of the script
+# rtrn : 0
 show_help()
 {
     echo
@@ -21,232 +29,208 @@ show_help()
 
 
 
-# === Main script ===
-iconPath=" "
-progressBar=" "
-code=" "
-title="System"
-message=" "
-urgency=" "
-expiration=" "
+# func : report_error
+# desc : will echo a given message to stderr
+# arg1 : the error type : fatal, error, ... This is just and indication and do nothing much.
+# arg2 : title of the error, basically where the error occured
+# arg3 : the error message
+# outp : An error message to stderr
+# rtrn : 0
+report_error()
+{
+    local error_type="$1"
+    local error_title="$2"
+    local error_message="$3"
+    >&2 echo "[${error_type}]: ${error_title}: ${error_message}"
+    return 0
+}
 
-while [ $# -gt 0 ]
-do
-    case "$1" in
 
-        -i|--icon)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [path/to/icon]"
+
+# func : arguments_check
+# desc : will check if enough arguments are being given to an option
+# arg1 : the option being checked
+# arg2 : required number of arguments
+# arg3 : current number of arguments
+# outp : an error message if there is not enough arguments
+# rtrn : 0 if no error, else 1
+arguments_check()
+{
+    local checked_option="$1"
+    local required_arg_number="$2"
+    local current_arg_number="$3"
+    if ((current_arg_number < required_arg_number)); then
+        report_error "FATAL" "$checked_option" "Not enough arguments."
+        return 1
+    fi
+    return 0
+}
+
+
+
+# func : is_an_int
+# desc : will check if the given value is a valid integer
+# arg1 : the value being checked
+# outp : an error message if this is not an int
+# rtrn : 0 if no error, else 1
+is_an_int()
+{
+    local value="$1"
+    if [[ -n ${value//[0-9]/} ]]; then
+        report_error "ERROR" "is_an_int" "$value is not a valid integer."
+        return 1 
+    fi
+    return 0
+}
+
+
+
+# func : valid_percentage
+# desc : will check if the given percentage is valid
+# arg1 : the percentage being checked
+# outp : an error message if this is not a valid percentage
+# rtrn : 0 if no error, else 1
+valid_percentage()
+{
+    local percentage="$1"
+    if ! is_an_int $percentage; then
+        report_error "ERROR" "valid_percentage" "Invalid volume percentage: '$percentage'. Please provide an integer between 0 and 100."
+        return 1 
+    fi
+
+    if ((percentage < 0 || percentage > 100)); then
+        report_error "ERROR" "valid_percentage" "$percentage' not between 0 and 100."
+        return 1 
+    fi
+
+    return 0
+}
+
+
+
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    iconPath=" "
+    progressBar=" "
+    code=" "
+    title="System"
+    message=" "
+    urgency=" "
+    expiration=" "
+
+    while [ $# -gt 0 ]
+    do
+        option="$1"
+        shift 1
+        case "$option" in
+            -i|--icon)
+                arguments_check "icon" 1 $# || return 1
+                if ! identify "$1" > /dev/null; then
+                    report_error "ERROR" "icon" "The given icon $1 is not valid."
+                    return 1
+                fi
+                iconPath="--icon $1"
+                shift 1
+            ;;
+
+            -p|--progress-bar)
+                arguments_check "progress-bar" 1 $# || return 1
+                if ! valid_percentage "$1"; then
+                    report_error "ERROR" "percentage" "The given percentage '$1' is not valid."
+                    return 1
+                fi
+                progressBar="-h int:value:$1"
+                shift 1
+            ;;
+
+            -c|--code)
+                arguments_check "code" 1 $# || return 1
+                if ! is_an_int $1; then
+                    report_error "ERROR" "code" "The given code '$1' is not valid."
+                    return 1
+                fi
+                code="-r $1"
+                shift 1
+            ;;
+
+            -t|--title)
+                arguments_check "title" 1 $# || return 1
+                title="$1"
+                shift 1
+            ;;
+
+            -m|--message)
+                arguments_check "message" 1 $# || return 1
+                message="$1"
+                shift 1
+            ;;
+
+            -u|--urgency)
+                arguments_check "urgency" 1 $# || return 1
+                if ! is_an_int $1; then
+                    report_error "ERROR" "urgency" "The given urgency '$1' is not valid."
+                    return 1
+                fi
+
+                # Is the code valid (between 1 and 3)
+                if (($1 < 1 || $1 > 3)); then
+                    report_error "ERROR" "urgency" "The given urgency '$1' must be between 1 and 3."
+                    return 1
+                fi
+
+                # Else we are good to go
+                case $1 in
+                    1) urgency="-u low" ;;
+                    2) urgency="-u normal" ;;
+                    3) urgency="-u critical" ;;
+                esac
+                shift 1
+            ;;
+
+            -e|--expiration)
+                arguments_check "expiration" 1 $# || return 1
+                if ! is_an_int $1; then
+                    report_error "ERROR" "expiration" "The given expiration '$1' is not valid."
+                    return 1
+                fi
+                expiration="-t $1"
+                shift 1
+            ;;
+
+            -h|--help)
                 show_help
-                exit 1
-            fi
+                shift 1
+            ;;
 
-            # Does the icon exist ?
-            identify "$2" > /dev/null
-            if [ ! "$?" ]
-            then
-                echo
-                >&2 echo "[ERROR]: $2: the given file is not a valid icon."
-                echo "Usage: $0 $1 [path/to/icon]"
-                show_help
-                exit 1
-            fi
+            *)
+                report_error "ERROR" "$option" "Unknown option. Use --help to see usage."
+                return 1
+            ;;
+        esac
+    done
 
-            # Valid icon
-            iconPath="--icon $2"
-            shift 2
-        ;;
+    # Launching the notification
+    if ! dunstify "$title" "$message" $iconPath $code $progressBar $urgency $expiration; then
+        report_error "ERROR" "dunstify" "Could not send the notification."
+        return 1
+    fi
+    return 0
+}
 
-        -p|--progress-bar)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1
-            fi
 
-            # Is the given value an int ?
-            if [[ -n ${input//[0-9]/} ]]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: this is not an integer."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1 
-            fi
 
-            # Is the percentage valid (between 0 and 100)
-            if (($2 < 0 || $2 > 100))
-            then
-                echo
-                >&2 echo "[ERROR]: the percentage ($1) is not valid."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1 
-            fi
-
-            # Else we are good to go
-            progressBar="-h int:value:$2"
-            shift 2
-        ;;
-
-        -c|--code)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1
-            fi
-
-            # Is the given value an int ?
-            if [[ -n ${input//[0-9]/} ]]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: this is not an integer."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1 
-            fi
-
-            # Else we are good to go
-            code="-r $2"
-            shift 2
-        ;;
-
-        -t|--title)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [string]"
-                show_help
-                exit 1
-            fi
-
-            # Else we are good to go
-            title="$2"
-            shift 2
-        ;;
-
-        -m|--message)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [string]"
-                show_help
-                exit 1
-            fi
-
-            # Else we are good to go
-            message="$2"
-            shift 2
-        ;;
-
-        -u|--urgency)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [1|2|3]"
-                show_help
-                exit 1
-            fi
-
-            # Is the given value an int ?
-            if [[ -n ${2//[0-9]/} ]]
-            then
-                echo
-                >&2 echo "[ERROR]: $2: this is not an integer."
-                echo "Usage: $0 $1 [1|2|3]"
-                show_help
-                exit 1 
-            fi
-
-            # Is the percentage valid (between 1 and 3)
-            if (($2 < 1 || $2 > 3))
-            then
-                echo
-                >&2 echo "[ERROR]: the urgency level ($2) is not valid."
-                echo "Usage: $0 $1 [1|2|3]"
-                show_help
-                exit 1 
-            fi
-
-            # Else we are good to go
-            case $2 in
-                1)
-                    urgency="-u low"
-                ;;
-
-                2)
-                    urgency="-u normal"
-                ;;
-
-                3)
-                    urgency="-u critical"
-                ;;
-            esac
-            # Shifting
-            shift 2
-        ;;
-
-        -e|--expiration)
-            # Verifying passed arguments
-            if [ $# -lt 2 ]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: not enough arguments."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1
-            fi
-
-            # Is the given value an int ?
-            if [[ -n ${input//[0-9]/} ]]
-            then
-                echo
-                >&2 echo "[ERROR]: $1: this is not an integer."
-                echo "Usage: $0 $1 [int]"
-                show_help
-                exit 1 
-            fi
-
-            # Else we are good to go
-            expiration="-t $2"
-            shift 2
-        ;;
-
-        -h|--help)
-            show_help
-            shift 1
-        ;;
-
-        *)
-            echo
-            echo "[ERROR]: Unknown option: $1"
-            show_help
-            exit 1
-        ;;
-
-    esac
-done
-
-# Launching the notification
-dunstify "$title" "$message" $iconPath $code $progressBar $urgency $expiration
-
-# Done
-exit 0
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
+    exit 1
+else
+    echo "[SUCCESS]: No errors detected."
+    exit 0
+fi
