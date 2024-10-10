@@ -1,43 +1,79 @@
 #!/bin/bash
+#    _          _       _     _                            _   _ 
+#   | |__  _ __(_) __ _| |__ | |_ _ __   ___  ___ ___  ___| |_| |
+#   | '_ \| '__| |/ _` | '_ \| __| '_ \ / _ \/ __/ __|/ __| __| |
+#   | |_) | |  | | (_| | | | | |_| | | |  __/\__ \__ \ (__| |_| |
+#   |_.__/|_|  |_|\__, |_| |_|\__|_| |_|\___||___/___/\___|\__|_|
+#                 |___/    
+# by DRAGONO                                      
 
-# This script is a placeholder. It does not check for any error and will be replaced.
+# func : report_error
+# desc : will echo a given message to stderr
+# arg1 : the error type : fatal, error, ... This is just and indication and do nothing much.
+# arg2 : title of the error, basically where the error occured
+# arg3 : the error message
+# outp : An error message to stderr
+# rtrn : 0
+report_error()
+{
+    local error_type="$1"
+    local error_title="$2"
+    local error_message="$3"
+    >&2 echo "[${error_type}]: ${error_title}: ${error_message}"
+    return 0
+}
 
-# Notification icon depending of brightness
+
+
+# func : get_percentage
+# desc : will check the current volume percentage
+# outp : the volume percentage
+# rtrn : 0 if no error, else 1
+get_percentage()
+{
+	local percentage
+    local max
+    local current
+    # Getting %
+    if ! max=$(brightnessctl max); then
+        report_error "ERROR" "get_percentage" "Could not retreive monitor max brightness."
+        return 1
+    fi
+
+    if ! current=$(brightnessctl get); then
+        report_error "ERROR" "get_icon" "Could not retreive monitor current brightness."
+        return 1
+    fi
+
+    percentage=$((current * 100 / max))
+    echo "$percentage"
+    return 0
+}
+
+
+
+# func : get_icon
+# desc : will check current brightness percentage and retreive the associated notification icon
+# arg1 : the current brightness percentage
+# outp : the path to the icon to use
+# rtrn : 0 if no error, else 1
 get_icon()
 {
-	local max
-	local current
-	local percentage
+	local percentage="$1"
 	local icon
-
-    # Getting %
-    max=$(brightnessctl max)
-    current=$(brightnessctl get)
-    percentage=$((current * 100 / max))
-
-    if ((percentage == 0))
-    then
+	
+    if ((percentage == 0)); then
         icon="$hyprPath/ressources/brightness-off.svg"
-    fi
-
-    if ((percentage > 0 && percentage < 34))
-    then
+    elif ((percentage > 0 && percentage < 34)); then
         icon="$hyprPath/ressources/brightness-low.svg"
-    fi
-
-    if ((percentage > 33 && percentage < 67))
-    then
+    elif ((percentage > 33 && percentage < 67)); then
         icon="$hyprPath/ressources/brightness-medium.svg"
-    fi
-
-    if ((percentage > 66))
-    then
+    elif ((percentage > 66)); then
         icon="$hyprPath/ressources/brightness-high.svg"
     fi
 
-    if ! identify "$icon" > /dev/null
-    then
-        >&2 echo "[ERROR]: icon: could not retreive the icon at $icon."
+    if ! identify "$icon" > /dev/null; then
+        report_error "ERROR" "get_icon" "Could not retreive the icon at $icon."
         return 1
     fi
 
@@ -45,20 +81,42 @@ get_icon()
     return 0
 }
 
-# Since we already use the package "brightnessctl", this brightnessctl will simply be used for notification
-# purposes. I will write my own brightnessctl later tho, just that for now i must work on other stuff on hyprland
 
-# Getting %
-max=$(brightnessctl max)
-current=$(brightnessctl get)
-percentage=$((current * 100 / max))
 
-# Icon
-if ! icon=$(get_icon)
-then
-    echo "[ERROR]: Could not retreive notification icon."
-    show_help
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    if ! percentage=$(get_percentage); then
+        report_error "ERROR" "get_percentage" "Could not retreive the percentage."
+        return 1
+    fi
+
+    if ! icon=$(get_icon $percentage); then
+        report_error "ERROR" "get_icon" "Could not retreive the icon."
+        return 1
+    fi
+
+    if ! "$hyprPath"/scripts/notifierctl -p $percentage -c 35 -t "System" -m "Brightness : $percentage%" -u 1 -e 3000 -i "$icon"; then
+        report_error "ERROR" "notifierctl" "Could not notify the new brightness."
+        return 1
+    fi
+
+    return 0
+}
+
+
+
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
     exit 1
+else
+    echo "[SUCCESS]: No errors detected."
+    exit 0
 fi
-
-"$hyprPath"/scripts/notifierctl -p $percentage -c 35 -t "System" -m "Brightness : $percentage%" -u 1 -e 3000 -i "$icon"
