@@ -1,6 +1,0 @@
-title="Theming" desc="Helps_you_keep_an_uniform_theme" script="$hyprPath/scripts/menuctl --launch-menu $hyprPath/configs/hyprsettings/theming.menu"
-title="KBLayout" desc="Manage_keyboard_layout" script="$hyprPath/scripts/menuctl --launch-menu $hyprPath/configs/hyprsettings/kblayout.menu"
-title="Keybinds" desc="Manage_system_keybinds" script="$hyprPath/scripts/menuctl --launch-menu $hyprPath/configs/hyprsettings/keybinds.menu"
-title="Monitors" desc="Edit_monitors_settings" script="echo test"
-title="Timeouts" desc="Manage_timeout,_dimming,_etc." script="$hyprPath/scripts/menuctl --launch-menu $hyprPath/configs/hyprsettings/lock.menu"
-title="System" desc="Update,_reset_audio_system,_etc." script="$hyprPath/scripts/menuctl --launch-menu $hyprPath/configs/hyprsettings/system.menu"
