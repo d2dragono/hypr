@@ -598,7 +598,6 @@ waybar_daemon()
 {
     local configPath="$1"
     local time="$2"
-    local waybars_status
     local last_monitors
     local current_monitors
     local last_focus
@@ -689,6 +688,28 @@ update_daemon()
 
 
 
+# func : launch_option
+# desc : test if enough args if is good launch the given option fllowed by given args
+# arg1 : required number of arguments for the option to be launched
+# arg2 : option to launch
+# arg3 : option arguments
+# rtrn : 0 if no error, else 1
+launch_option()
+{
+    local required_arg_count="$1"
+    local option_name="$2"
+    shift 2
+
+    arguments_check "$option_name" $required_arg_count $# || return 1
+    if ! $option_name $@; then
+        report_error "ERROR" "$option_name $@" "An error occured."
+        return 1
+    fi
+    return 0
+}
+
+
+
 # func : main
 # desc : the core of the script. Will mostly read options and launch appropriate functions
 # args : every args given to the script
@@ -705,142 +726,16 @@ main()
 	shift 1
 	
 	case $option in
-		-u|--update)
-            arguments_check "update" 1 $# || return 1
-            if ! update "$1"; then
-                report_error "ERROR" "$option $1" "An error occured."
-                return 1
-            fi
-		;;
-
-		-l|--list)
-            arguments_check "list" 1 $# || return 1
-            if ! list "$1"; then
-                report_error "ERROR" "$option $1" "An error occured."
-                return 1
-            fi
-		;;
-
-		-v|--list-verbose)
-            arguments_check "list-verbose" 1 $# || return 1
-            if ! list_verbose "$1"; then
-                report_error "ERROR" "$option $1" "An error occured."
-                return 1
-            fi
-		;;
-
-		-c|--current)
-            arguments_check "current" 1 $# || return 1
-            if ! current "$1"; then
-                report_error "ERROR" "$option $1" "An error occured."
-                return 1
-            fi
-		;;
-		
-		-d|--waybar-daemon)
-            arguments_check "waybar-daemon" 2 $# || return 1
-            if ! waybar_daemon "$1" "$2"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-		;;
-		
-		--update-daemon)
-            arguments_check "update-daemon" 2 $# || return 1
-            if ! update_daemon "$1" "$2"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-		;;
-
-		-r|--rename)
-            arguments_check "rename" 3 $# || return 1
-            if ! rename "$1" "$2" "$3"; then
-                report_error "ERROR" "$option $1 $2 $3" "An error occured."
-                return 1
-            fi
-		;;
-		
-		-m|--set-main)
-            arguments_check "set-main" 3 $# || return 1
-            if ! set_main "$1" "$2" "$3"; then
-                report_error "ERROR" "$option $1 $2 $3" "An error occured."
-                return 1
-            fi
-		;;
-		
-		-t|--toggle-main)
-            arguments_check "toggle-main" 2 $# || return 1
-            if ! toggle_main "$1" "$2"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-		;;
-		
-		-g|--get-main)
-            arguments_check "get-main" 2 $# || return 1
-            if ! get_main "$1" "$2"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-		;;
-		
-		-o|--set-order)
-            arguments_check "set-order" 3 $# || return 1
-            if ! set_order "$1" "$2" "$3"; then
-                report_error "ERROR" "$option $1 $2 $3" "An error occured."
-                return 1
-            fi
-		;;
-		
-		--get-order)
-            arguments_check "get-order" 2 $# || return 1
-            if ! get_order "$1" "$2"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-		;;
-		
-		--set-waybar)
-            arguments_check "set-waybar" 4 $# || return 1
-            if ! set_waybar "$1" "$2" "$3" "$4"; then
-                report_error "ERROR" "$option $1 $2 $3 $4" "An error occured."
-                return 1
-            fi
-		;;
-		
-		--set-waybars)
-            arguments_check "set-waybars" 3 $# || return 1
-            if ! set_waybar "$1" "$2" "$3"; then
-                report_error "ERROR" "$option $1 $2 $3" "An error occured."
-                return 1
-            fi
-		;;
-		
-		--get-waybars)
-            arguments_check "get-waybars" 2 $# || return 1
-            if ! get_waybars "$1" "$2"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-		;;
-		
-		--gui)
-			if ! gui; then
-                report_error "ERROR" "$option" "An error occured."
-                return 1
-            fi
-		;;
-
-		-h|--help)
-			show_help
-		;;
-
-		*)
-			report_error "ERROR" "$option" "Unknown option. Use --help to see usage."
-            return 1
-		;;
+		-u|--update) launch_option 1 update $@;;
+		-l|--list) launch_option 1 list $@;;
+		-v|--list-verbose) launch_option 1 list_verbose $@;;
+		-c|--current) launch_option 1 current $@;;		
+		-d|--waybar-daemon) launch_option 2 waybar_daemon $@;;		
+		--update-daemon) launch_option 2 update_daemon $@;;
+		-h|--help) show_help ;;
+        *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;
 	esac
+    return $?
 }
 
 
@@ -852,6 +747,5 @@ if ! main "$@"; then
     report_error "FATAL" "$0" "An error occurred during $0 execution."
     exit 1
 else
-    echo "[SUCCESS]: No errors detected."
     exit 0
 fi

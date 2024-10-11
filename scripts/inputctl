@@ -34,6 +34,5 @@ if ! main "$@"; then
     report_error "FATAL" "$0" "An error occurred during $0 execution."
     exit 1
 else
-    echo "[SUCCESS]: No errors detected."
     exit 0
 fi

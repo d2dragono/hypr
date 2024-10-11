@@ -301,6 +301,28 @@ END
 
 
 
+# func : launch_option
+# desc : test if enough args if is good launch the given option fllowed by given args
+# arg1 : required number of arguments for the option to be launched
+# arg2 : option to launch
+# arg3 : option arguments
+# rtrn : 0 if no error, else 1
+launch_option()
+{
+    local required_arg_count="$1"
+    local option_name="$2"
+    shift 2
+
+    arguments_check "$option_name" $required_arg_count $# || return 1
+    if ! $option_name $@; then
+        report_error "ERROR" "$option_name $@" "An error occured."
+        return 1
+    fi
+    return 0
+}
+
+
+
 # func : main
 # desc : the core of the script. Will mostly read options and launch appropriate functions
 # args : every args given to the script
@@ -317,55 +339,14 @@ main()
     shift 1
 
     case $option in
-        -i|--increase)
-            arguments_check "increase" 2 $# || return 1
-            if ! edit_volume "$1" "$2" "+"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-        ;;
-
-        -d|--decrease)
-            arguments_check "decrease" 2 $# || return 1
-            if ! edit_volume "$1" "$2" "-"; then
-                report_error "ERROR" "$option $1 $2" "An error occured."
-                return 1
-            fi
-        ;;
-
-        -t|--toggle)
-            arguments_check "toggle" 1 $# || return 1
-            if ! toggle_volume "$1"; then
-                report_error "ERROR" "$option $1" "An error occured."
-                return 1
-            fi
-        ;;
-
-        -s|--setup)
-            arguments_check "setup" 1 $# || return 1
-            if ! setup "$1"; then
-                report_error "ERROR" "$option $1" "An error occured."
-                return 1
-            fi
-        ;;
-
-        -h|--help)
-            show_help
-        ;;
-
-        *)
-            report_error "ERROR" "$option" "Unknown option. Use --help to see usage."
-            return 1
-        ;;
+        -i|--increase) launch_option 3 edit_volume $@ + && notify_user;;
+        -d|--decrease) launch_option 3 edit_volume $@ - && notify_user;;
+        -t|--toggle) launch_option 1 toggle_volume $@ && notify_user;;
+        -s|--setup) launch_option 1 setup $@;;
+        -h|--help) show_help;;
+        *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;
     esac
-
-    case $option in
-        -i|--increase|-d|--decrease|-t|--toggle)
-            notify_user
-        ;;
-    esac
-
-    return 0
+    return $?
 }
 
 
@@ -377,6 +358,5 @@ if ! main "$@"; then
     report_error "FATAL" "$0" "An error occurred during $0 execution."
     exit 1
 else
-    echo "[SUCCESS]: No errors detected."
     exit 0
 fi
