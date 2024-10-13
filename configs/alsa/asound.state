@@ -29,8 +29,8 @@ state.sofhdadsp {
 	control.3 {
 		iface MIXER
 		name 'Speaker Playback Volume'
-		value.0 0
-		value.1 0
+		value.0 17
+		value.1 17
 		comment {
 			access 'read write'
 			type INTEGER
@@ -38,8 +38,8 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -6525
-			dbvalue.1 -6525
+			dbvalue.0 -5250
+			dbvalue.1 -5250
 		}
 	}
 	control.4 {
@@ -111,7 +111,7 @@ state.sofhdadsp {
 	control.9 {
 		iface MIXER
 		name 'Master Playback Volume'
-		value 0
+		value 87
 		comment {
 			access 'read write'
 			type INTEGER
@@ -119,13 +119,13 @@ state.sofhdadsp {
 			range '0 - 87'
 			dbmin -6525
 			dbmax 0
-			dbvalue.0 -6525
+			dbvalue.0 0
 		}
 	}
 	control.10 {
 		iface MIXER
 		name 'Master Playback Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -216,17 +216,17 @@ state.sofhdadsp {
 		iface PCM
 		device 3
 		name ELD
-		value '10000600651000010000000000000000047221055232343159090707'
+		value '100007006712000100000000000000004c2d440e433234464737780907070000'
 		comment {
 			access 'read volatile'
 			type BYTES
-			count 28
+			count 32
 		}
 	}
 	control.20 {
 		iface CARD
 		name 'HDMI/DP,pcm=4 Jack'
-		value false
+		value true
 		comment {
 			access read
 			type BOOLEAN
@@ -270,7 +270,7 @@ state.sofhdadsp {
 		iface MIXER
 		name 'IEC958 Playback Switch'
 		index 1
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -281,11 +281,11 @@ state.sofhdadsp {
 		iface PCM
 		device 4
 		name ELD
-		value ''
+		value '1000070067140001000000000000000006b38f275647323739514d0907070000'
 		comment {
 			access 'read volatile'
 			type BYTES
-			count 0
+			count 32
 		}
 	}
 	control.26 {
@@ -376,8 +376,8 @@ state.sofhdadsp {
 		iface PCM
 		device 4
 		name 'Playback Channel Map'
-		value.0 0
-		value.1 0
+		value.0 3
+		value.1 4
 		value.2 0
 		value.3 0
 		value.4 0

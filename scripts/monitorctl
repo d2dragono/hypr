@@ -19,14 +19,14 @@ show_help()
     echo
     echo "    Managing the configurations:"
     echo
-    echo "    -u, --update [path/to/config]             Apply the current monitor configuration to the system."
-    echo "    -l, --list [path/to/config]               List the existing configurations."
-    echo "    -v, --list-verbose [path/to/config]       List the existing configurations with details."
-    echo "    -c, --current [path/to/config]            Show the configuration in use."
-    echo "    --waybar-daemon [path/to/config] [int]    Launch the waybar daemon."
-    echo "    --update-daemon [path/to/config] [int]    Launch the update daemon." 
+    echo "    -u, --update [path/to/config]                                    Apply the current monitor configuration to the system."
+    echo "    -l, --list [path/to/config]                                      List the existing configurations."
+    echo "    -v, --list-verbose [path/to/config]                              List the existing configurations with details."
+    echo "    -c, --current [path/to/config]                                   Show the configuration in use."
+    echo "    --waybar-daemon [path/to/config] [waybar/colors/config] [int]    Launch the waybar daemon."
+    echo "    --update-daemon [path/to/config] [int]                           Launch the update daemon." 
     echo
-    echo "    -h, --help                                Show help."
+    echo "    -h, --help                                                       Show help."
 }
 
 
@@ -175,7 +175,7 @@ get_focused_app_monitor()
 		report_error "ERROR" "get_focused_app_monitor" "Could not retreive the list of monitors/ids."
 		return 1
 	fi
-
+    
 	for monitor_id in $monitors_ids_list
 	do
 		id=$(echo $monitor_id | sed "s/.*://")
@@ -186,8 +186,9 @@ get_focused_app_monitor()
 		fi
 	done
 
-	report_error "ERROR" "get_focused_app_monitor" "Could not retreive the focused app monitor."
-	return 1
+	# No focused app
+    echo "none"
+    return 0 
 }
 
 
@@ -554,18 +555,30 @@ is_int_valid()
 
 # func : refresh_waybars_style
 # desc : will update waybars border color based on focused app monitor location
-# arg1 : the focused monitor name
+# arg1 : the focused monitor name, none if no app is focused
+# arg2 : path to waybar color file
 # outp : none
 # rtrn : 0 if no error, else 1
 refresh_waybars_style()
 {
     local current_focus="$1"
+    local waybarColorsPath="$2"
     local activeBorderColor
     local inactiveBorderColor
-	activeBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
-	inactiveBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
+
+    # Does the color file exist ?
+    if ! is_file_valid $waybarColorsPath; then
+		report_error "ERROR" "refresh_waybars_style" "$waybarColorsPath is not a valid color file."
+		return 1
+    fi
+
+	activeBorderColor=$(cat $waybarColorsPath | grep "^focused" | sed "s/^focused=#//")
+	inactiveBorderColor=$(cat $waybarColorsPath | grep "^unfocused" | sed "s/^unfocused=#//")
+
 	sed -i "s/    border-color:.*/    border-color:#${inactiveBorderColor};/g" "$hyprPath"/configs/waybar/waybars/*/style.css
-	sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/configs/waybar/waybars/"$current_focus"/style.css
+    if [ ! "$current_focus" = "none" ]; then
+        sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/configs/waybar/waybars/"$current_focus"/style.css
+    fi
     return 0
 }
 
@@ -591,13 +604,15 @@ get_current_waybars_status()
 # func : waybar_daemon
 # desc : will launch a daemon that update the waybar border color if it is on the focused app monitor or not
 # arg1 : path to the configuration file
-# arg2 : time range to check for update
+# arg2 : path to waybar color file
+# arg3 : time range to check for update
 # outp : none
 # rtrn : 0 if no error, else 1
 waybar_daemon()
 {
     local configPath="$1"
-    local time="$2"
+    local waybarColorsPath="$2"
+    local time="$3"
     local last_monitors
     local current_monitors
     local last_focus
@@ -608,6 +623,11 @@ waybar_daemon()
     # Does the given config file exist ?
     if ! is_file_valid $configPath; then
 		report_error "ERROR" "waybar_daemon" "$configPath is not a valid configuration file."
+		return 1
+    fi
+    # Does the color file exist ?
+    if ! is_file_valid $waybarColorsPath; then
+		report_error "ERROR" "waybar_daemon" "$waybarColorsPath is not a valid color file."
 		return 1
     fi
     # Is the given time a valid integer ?
@@ -624,7 +644,10 @@ waybar_daemon()
     	# Focused monitor, for waybar recoloring
 		current_focus=$(get_focused_app_monitor)
     	if [ ! "$current_focus" = "$last_focus" ]; then
-			refresh_waybars_style $current_focus
+			if ! refresh_waybars_style $current_focus $waybarColorsPath; then
+                report_error "ERROR" "waybar_daemon" "Could not update the waybars colors."
+                return 1
+            fi
 			last_focus=$current_focus
     	fi
 
@@ -640,6 +663,7 @@ waybar_daemon()
             last_monitors=$current_monitors
     	fi
 
+        echo test
         sleep "$time"
     done
     return 0
@@ -730,7 +754,7 @@ main()
 		-l|--list) launch_option 1 list $@;;
 		-v|--list-verbose) launch_option 1 list_verbose $@;;
 		-c|--current) launch_option 1 current $@;;		
-		-d|--waybar-daemon) launch_option 2 waybar_daemon $@;;		
+		-d|--waybar-daemon) launch_option 3 waybar_daemon $@;;		
 		--update-daemon) launch_option 2 update_daemon $@;;
 		-h|--help) show_help ;;
         *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;

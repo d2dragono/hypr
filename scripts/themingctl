@@ -1,70 +1,1158 @@
 #!/bin/bash
-#  _   _                  _   _                    _             
-# | | | |_   _ _ __  _ __| |_| |__   ___ _ __ ___ (_)_ __   __ _ 
-# | |_| | | | | '_ \| '__| __| '_ \ / _ \ '_ ` _ \| | '_ \ / _` |
-# |  _  | |_| | |_) | |  | |_| | | |  __/ | | | | | | | | | (_| |
-# |_| |_|\__, | .__/|_|   \__|_| |_|\___|_| |_| |_|_|_| |_|\__, |
-#        |___/|_|                                          |___/ 
-# 
+#    _   _                    _                  _   _ 
+#   | |_| |__   ___ _ __ ___ (_)_ __   __ _  ___| |_| |
+#   | __| '_ \ / _ \ '_ ` _ \| | '_ \ / _` |/ __| __| |
+#   | |_| | | |  __/ | | | | | | | | | (_| | (__| |_| |
+#    \__|_| |_|\___|_| |_| |_|_|_| |_|\__, |\___|\__|_|
+#                                     |___/            
 # by DRAGONO
 
-# Accord your system colors to your wallpaper.
-# Use python-pywal package and a few commands to work
-
-# hyprtheming take an image as only argument
-[ $# -lt 1 ] && zenity --warning --text="[FATAL]: No wallpaper given.\nUsage: hyprtheming {path/to/wallpaper}" && exit 1
-
-# Is the given argument a valid image ?
-identify "$1" || { zenity --warning --text="[FATAL]: The given path does not lead to a valid image.\nUsage: hyprtheming {path/to/wallpaper}" && exit 1; }
-# Valid image given. Now doing the magic :)
-imagePath=$1
-
-# First retreiving few datas for proper theming
-wal -i "$imagePath" # This create and apply the new color scheme
-# The new color scheme is created. We can extract a few datas from it
-activeBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
-inactiveBorderColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
-
-# 1 - Changing wallpaper with swww
-swww img "$imagePath"
-
-# 2 - hyprland theming
-# Border colors
-sed -i "s/    col\.active_border = .*/    col\.active_border = rgba\(${activeBorderColor}ee\)/g" "$hyprPath"/configs/hyprland/style.conf
-sed -i "s/    col\.inactive_border = .*/    col\.inactive_border = rgba\(${inactiveBorderColor}aa\)/g" "$hyprPath"/configs/hyprland/style.conf
-
-# 3 - waybar theming
-# Border color
-sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/addons/waybar/templates/style.css
-
-# 4 - hyprlock theming
-# Just editing background image
-sed -i "s+    path = .* #hyprtheming+    path = ${imagePath} #hyprtheming+g" "$hyprPath"/hyprlock.conf
-
-
-# 5 - sddm theming
-
-
-# 6 - dolphin theming
-
-
-# 7 - wofi theming
-sed -i "s/.*border.*primary.*/    border-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" "$hyprPath"/configs/wofi/style.css
-sed -i "s/.*background.*primary.*/    background-color:#${activeBorderColor}; \/\*hyprtheming:primary\*\//g" "$hyprPath"/configs/wofi/style.css
-sed -i "s/.*border.*secondary.*/    border-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" "$hyprPath"/configs/wofi/style.css
-sed -i "s/.*background.*secondary.*/    background-color:#${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" "$hyprPath"/configs/wofi/style.css
-
-# 8 - dunst theming
-#sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:primary\*\//@define-color \1 #${activeBorderColor}; \/\*hyprtheming:primary\*\//g" $hyprPath/addons/swaync/style.css
-#sed -i "s/@define-color \(.*\) #.*; \/\*hyprtheming:secondary\*\//@define-color \1 #${inactiveBorderColor}; \/\*hyprtheming:secondary\*\//g" $hyprPath/addons/swaync/style.css
-sed -i "s/background = \".*\" #hyprtheming/background = \"#${inactiveBorderColor}\" #hyprtheming/" "$hyprPath"/configs/dunst/dunstrc
-sed -i "s/foreground = \".*\" #hyprtheming/foreground = \"#${activeBorderColor}\" #hyprtheming/" "$hyprPath"/configs/dunst/dunstrc
-sed -i "s/frame_color = \".*\" #hyprtheming/frame_color = \"#${activeBorderColor}\" #hyprtheming/" "$hyprPath"/configs/dunst/dunstrc
+# func : show_help
+# desc : will display to the user how to use themingctl
+# outp : The help message/usage of the script
+# rtrn : 0
+show_help()
+{
+    echo
+    echo "Usage: $0 [option]" 
+    echo "Options:"
+    echo
+    echo "    --auto-theming [path/to/wallpaper]"
+    echo "    --save-theme [save/at/themeName]"
+    echo "    --load-theme [path/to/theme/folder]"
+    echo
+    echo "    --set-app-focused-color [path/to/style.conf] [hexvalue]"
+    echo "    --get-app-focused-color [path/to/style.conf]"
+    echo
+    echo "    --set-app-unfocused-color [path/to/style.conf] [hexvalue]"
+    echo "    --get-app-unfocused-color [path/to/style.conf]"
+    echo
+    echo "    --set-waybar-focused-color [path/to/waybar/style.css] [hexvalue]"
+    echo "    --get-waybar-focused-color [path/to/waybar/style.css]"
+    echo
+    echo "    --set-waybar-unfocused-color [path/to/waybar/style.css] [hexvalue]"
+    echo "    --get-waybar-unfocused-color [path/to/waybar/style.css]"
+    echo
+    echo "    --set-desktop-wallpaper [path/to/wallpaper]"
+    echo "    --get-desktop-wallpaper"
+    echo
+    echo "    --set-lockscreen-wallpaper [path/to/hyprlock.conf] [path/to/wallpaper]"
+    echo "    --get-lockscreen-wallpaper [path/to/hyprlock.conf]"
+    echo
+    echo "    --set-wofi-primary-color [path/to/wofi/config] [hexvalue]"
+    echo "    --get-wofi-primary-color [path/to/wofi/config]"
+    echo
+    echo "    --set-wofi-secondary-color [path/to/wofi/config] [hexvalue]"
+    echo "    --get-wofi-secondary-color [path/to/wofi/config]"
+    echo
+    echo "    --set-dunst-primary-color [path/to/dunst/config] [hexvalue]"
+    echo "    --get-dunst-primary-color [path/to/dunst/config]"
+    echo
+    echo "    --set-dunst-secondary-color [path/to/dunst/config] [hexvalue]"
+    echo "    --get-dunst-secondary-color [path/to/dunst/config]"
+    echo
+    echo "    -h, --help    Show help."
+    return 0
+}
 
 
-# Killing dunst to actualize the colors
-pkill dunst
-dunst -conf "$hyprPath"/configs/dunst/dunstrc
 
-# Done
-exit 0
+# func : report_error
+# desc : will echo a given message to stderr
+# arg1 : the error type : fatal, error, ... This is just and indication and do nothing much.
+# arg2 : title of the error, basically where the error occured
+# arg3 : the error message
+# outp : An error message to stderr
+# rtrn : 0
+report_error()
+{
+    local error_type="$1"
+    local error_title="$2"
+    local error_message="$3"
+    >&2 echo "[${error_type}]: ${error_title}: ${error_message}"
+    return 0
+}
+
+
+
+# func : arguments_check
+# desc : will check if enough arguments are being given to an option
+# arg1 : the option being checked
+# arg2 : required number of arguments
+# arg3 : current number of arguments
+# outp : an error message if there is not enough arguments
+# rtrn : 0 if no error, else 1
+arguments_check()
+{
+    local checked_option="$1"
+    local required_arg_number="$2"
+    local current_arg_number="$3"
+    if ((current_arg_number < required_arg_number)); then
+        report_error "FATAL" "$checked_option" "Not enough arguments."
+        return 1
+    fi
+    return 0
+}
+
+
+
+# func : is_file_valid
+# desc : will test if the given file is valid or not
+# arg1 : path to the file
+# outp : none
+# rtrn : 0 if no error, else 1
+is_file_valid()
+{
+    local file="$1"
+    if [ ! -f "$file" ]; then
+		report_error "ERROR" "is_file_valid" "$file is not a valid file."
+		return 1
+    fi
+    return 0
+}
+
+
+
+# func : is_hexvalue_valid
+# desc : will test if the given hexadecimal color is a valid color or not
+# arg1 : hexadecimal color to test
+# outp : none
+# rtrn : 0 if no error, else 1
+is_hexvalue_valid()
+{
+    local hexValue="$1"    
+    if ! echo "$hexValue" | grep -qE '^[0-9a-fA-F]{6}$'; then
+		report_error "ERROR" "is_hexvalue_valid" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+    return 0
+}
+
+
+
+# func : auto_theming
+# desc : from a given wallpaper will create a matching system theme
+# arg1 : wallpaper path
+# outp : none
+# rtrn : 0 if no error, else 1
+auto_theming()
+{
+    local imagePath="$1"
+	imagePath=$(realpath $imagePath)
+	local primaryColor
+	local secondaryColor
+
+    # Is the given argument a valid image ?
+    if ! identify "$imagePath"; then
+		zenity --warning --text="[FATAL]: The given path does not lead to a valid image.\nUsage: hyprtheming {path/to/wallpaper}"
+		return 1
+	fi
+
+    # First retreiving few datas for proper theming
+    wal -i "$imagePath" # This create and apply the new color scheme
+    # The new color scheme is created. We can extract a few datas from it
+    primaryColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
+    secondaryColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
+
+    # Changing wallpaper with swww
+    if ! set_desktop_wallpaper $imagePath; then
+		report_error "ERROR" "auto_theming" "Could not set $imagePath as wallpaper."
+		return 1
+	fi
+
+	# Hyprlock background
+	if ! set_lockscreen_wallpaper $hyprPath/hyprlock.conf $imagePath; then
+		report_error "ERROR" "auto_theming" "Could not set $imagePath as lockscreen background."
+		return 1
+	fi
+
+    # Hyprland borders
+    if ! set_app_focused_color $hyprPath/configs/hyprland/style.conf $primaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set application focused border color."
+		return 1
+	fi
+    if ! set_app_unfocused_color $hyprPath/configs/hyprland/style.conf $secondaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set application unfocused border color."
+		return 1
+	fi	
+
+    # Waybar borders
+    if ! set_waybar_focused_color $hyprPath/configs/waybar/colors.conf $primaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set waybar focused border color."
+		return 1
+	fi
+    if ! set_waybar_unfocused_color $hyprPath/configs/waybar/colors.conf $secondaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set waybar unfocused border color."
+		return 1
+	fi	
+
+    # Wofi
+    if ! set_wofi_primary_color $hyprPath/configs/wofi/style.css $primaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set wofi primary color."
+		return 1
+	fi
+    if ! set_wofi_secondary_color $hyprPath/configs/wofi/style.css $secondaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set wofi secondary color."
+		return 1
+	fi
+
+    # Dunst
+    if ! set_dunst_primary_color $hyprPath/configs/dunst/dunstrc $primaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set dunst primary color."
+		return 1
+	fi
+    if ! set_dunst_secondary_color $hyprPath/configs/dunst/dunstrc $secondaryColor; then
+		report_error "ERROR" "auto_theming" "Could not set dunst secondary color."
+		return 1
+	fi
+
+    # Done
+    return 0
+}
+
+
+
+# func : save_theme
+# desc : save current theme into a folder that can be loaded later.
+# arg1 : path to the folder where we will save the theme
+# outp : none
+# rtrn : 0 if no error, else 1
+save_theme()
+{
+    local folderPath="$1"
+	folderPath=$(realpath $folderPath)
+
+	local desktop_wallpaper
+	local lockscreen_wallpaper
+	local focused_app_color
+	local unfocused_app_color
+	local focused_waybar_color
+	local unfocused_waybar_color
+	local wofi_primary_color
+	local wofi_secondary_color
+	local dunst_primary_color
+	local dunst_secondary_color
+
+    # 1 - Retreiving every datas to save in our theme folder
+    # Current desktop wallpaper
+    if ! desktop_wallpaper=$(get_desktop_wallpaper); then
+		report_error "ERROR" "save_theme" "Could not retreive desktop wallpaper."
+		return 1
+	fi
+	# Hyprlock background
+	if ! lockscreen_wallpaper=$(get_lockscreen_wallpaper $hyprPath/hyprlock.conf); then
+		report_error "ERROR" "save_theme" "Could not retreive lockscreen background."
+		return 1
+	fi
+    # Hyprland borders
+    if ! focused_app_color=$(get_app_focused_color $hyprPath/configs/hyprland/style.conf); then
+		report_error "ERROR" "save_theme" "Could not retreive application focused border color."
+		return 1
+	fi
+    if ! unfocused_app_color=$(get_app_unfocused_color $hyprPath/configs/hyprland/style.conf); then
+		report_error "ERROR" "save_theme" "Could not get application unfocused border color."
+		return 1
+	fi	
+    # Waybar borders
+    if ! focused_waybar_color=$(get_waybar_focused_color $hyprPath/configs/waybar/colors.conf); then
+		report_error "ERROR" "save_theme" "Could not retreive waybar focused border color."
+		return 1
+	fi
+    if ! unfocused_waybar_color=$(get_waybar_unfocused_color $hyprPath/configs/waybar/colors.conf); then
+		report_error "ERROR" "save_theme" "Could not retreive waybar unfocused border color."
+		return 1
+	fi	
+    # Wofi
+    if ! wofi_primary_color=$(get_wofi_primary_color $hyprPath/configs/wofi/style.css); then
+		report_error "ERROR" "save_theme" "Could not retreive wofi primary color."
+		return 1
+	fi
+    if ! wofi_secondary_color=$(get_wofi_secondary_color $hyprPath/configs/wofi/style.css); then
+		report_error "ERROR" "save_theme" "Could not retreive wofi secondary color."
+		return 1
+	fi
+    # Dunst
+    if ! dunst_primary_color=$(get_dunst_primary_color $hyprPath/configs/dunst/dunstrc); then
+		report_error "ERROR" "save_theme" "Could not retreive dunst primary color."
+		return 1
+	fi
+    if ! dunst_secondary_color=$(get_dunst_secondary_color $hyprPath/configs/dunst/dunstrc); then
+		report_error "ERROR" "save_theme" "Could not retreive dunst secondary color."
+		return 1
+	fi
+
+	# Creating theme folder
+	if ! mkdir $folderPath; then
+		report_error "ERROR" "save_theme" "$folderPath is an invalid theme path."
+		return 1
+	fi
+
+	# Saving every datas in the folder theme
+	# Desktop wallpaper
+	cp $desktop_wallpaper $folderPath/desktop_wallpaper
+	# Lockscreen background
+	cp $lockscreen_wallpaper $folderPath/lockscreen_wallpaper
+	# Hyprland borders
+	echo "focused=$focused_app_color" >> $folderPath/hyprland.theme
+	echo "unfocused=$unfocused_app_color" >> $folderPath/hyprland.theme
+	# Waybars colors
+	echo "focused=$focused_waybar_color" >> $folderPath/waybar.theme
+	echo "unfocused=$unfocused_waybar_color" >> $folderPath/waybar.theme
+	# Wofi
+	echo "primary=$wofi_primary_color" >> $folderPath/wofi.theme
+	echo "secondary=$wofi_secondary_color" >> $folderPath/wofi.theme
+	# Dunst
+	echo "primary=$dunst_primary_color" >> $folderPath/dunst.theme
+	echo "secondary=$dunst_secondary_color" >> $folderPath/dunst.theme
+
+    # Done
+    return 0
+}
+
+
+
+# func : load_theme
+# desc : load a previously saved theme
+# arg1 : path to the theme folder to load
+# outp : none
+# rtrn : 0 if no error, else 1
+load_theme()
+{
+    local folderPath="$1"
+	folderPath=$(realpath $folderPath)
+
+	local desktop_wallpaper
+	local lockscreen_wallpaper
+	local focused_app_color
+	local unfocused_app_color
+	local focused_waybar_color
+	local unfocused_waybar_color
+	local wofi_primary_color
+	local wofi_secondary_color
+	local dunst_primary_color
+	local dunst_secondary_color
+
+	# Is the theme valid ?
+	if [ ! -d $folderPath ]; then
+		report_error "ERROR" "load_theme" "$folderPath is an invalid theme path."
+		return 1
+	fi
+
+	# Theme files presence verification
+	# desktop_wallpaper
+    if ! identify $folderPath/desktop_wallpaper > /dev/null; then
+		report_error "ERROR" "load_theme" "Could not retreive desktop wallpaper."
+		return 1
+	fi
+	# lockscreen_wallpaper
+	if ! identify $folderPath/lockscreen_wallpaper > /dev/null; then
+		report_error "ERROR" "load_theme" "Could not retreive lockscreen background."
+		return 1
+	fi
+	# hyprland.theme
+	if [ ! -f $folderPath/hyprland.theme ]; then
+		report_error "ERROR" "load_theme" "Could not retreive hyprland theme config."
+		return 1
+	fi
+	# waybar.theme
+	if [ ! -f $folderPath/waybar.theme ]; then
+		report_error "ERROR" "load_theme" "Could not retreive waybar theme config."
+		return 1
+	fi
+	# wofi.theme
+	if [ ! -f $folderPath/wofi.theme ]; then
+		report_error "ERROR" "load_theme" "Could not retreive wofi theme config."
+		return 1
+	fi
+	# dunst.theme
+	if [ ! -f $folderPath/dunst.theme ]; then
+		report_error "ERROR" "load_theme" "Could not retreive dunst theme config."
+		return 1
+	fi
+
+	# Retreiving datas
+	# Wallpapers
+	desktop_wallpaper=$folderPath/desktop_wallpaper
+	lockscreen_wallpaper=$folderPath/lockscreen_wallpaper
+
+	# Hyprland focused color
+	if ! cat $folderPath/hyprland.theme | grep -q "^focused=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive hyprland focused border color option."
+		return 1
+	fi; focused_app_color=$(cat $folderPath/hyprland.theme | head -n 1 | sed "s/focused=#//")
+    # Hyprland unfocused color
+	if ! cat $folderPath/hyprland.theme | grep -q "^unfocused=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive hyprland unfocused border color option."
+		return 1
+	fi; unfocused_app_color=$(cat $folderPath/hyprland.theme | tail -n 1 | sed "s/unfocused=#//")
+	# Waybar focused color
+	if ! cat $folderPath/waybar.theme | grep -q "^focused=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive waybar focused border color option."
+		return 1
+	fi; focused_waybar_color=$(cat $folderPath/waybar.theme | head -n 1 | sed "s/focused=#//")
+    # Waybar unfocused color
+	if ! cat $folderPath/waybar.theme | grep -q "^unfocused=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive waybar unfocused border color option."
+		return 1
+	fi; unfocused_waybar_color=$(cat $folderPath/waybar.theme | tail -n 1 | sed "s/unfocused=#//")
+	# Wofi primary color
+	if ! cat $folderPath/wofi.theme | grep -q "^primary=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive wofi primary color option."
+		return 1
+	fi; wofi_primary_color=$(cat $folderPath/wofi.theme | head -n 1 | sed "s/primary=#//")
+    # Wofi secondary color
+	if ! cat $folderPath/wofi.theme | grep -q "^secondary=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive wofi secondary color option."
+		return 1
+	fi; wofi_secondary_color=$(cat $folderPath/wofi.theme | tail -n 1 | sed "s/secondary=#//")
+	# Dunst primary color
+	if ! cat $folderPath/dunst.theme | grep -q "^primary=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive dunst primary color option."
+		return 1
+	fi; dunst_primary_color=$(cat $folderPath/dunst.theme | head -n 1 | sed "s/primary=#//")
+    # Dunst secondary color
+	if ! cat $folderPath/dunst.theme | grep -q "^secondary=#......"; then
+		report_error "ERROR" "load_theme" "Could not retreive dunst secondary color option."
+		return 1
+	fi; dunst_secondary_color=$(cat $folderPath/dunst.theme | tail -n 1 | sed "s/secondary=#//")
+
+	# We need to verify the gathered datas before we apply the loaded theme.
+	if ! is_hexvalue_valid $focused_app_color; then
+		report_error "ERROR" "load_theme" "Hyprland focused border color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $unfocused_app_color; then
+		report_error "ERROR" "load_theme" "Hyprland unfocused border color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $focused_waybar_color; then
+		report_error "ERROR" "load_theme" "Waybar focused border color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $unfocused_waybar_color; then
+		report_error "ERROR" "load_theme" "Waybar unfocused border color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $wofi_primary_color; then
+		report_error "ERROR" "load_theme" "Wofi primary color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $wofi_secondary_color; then
+		report_error "ERROR" "load_theme" "Wofi secondary color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $dunst_primary_color; then
+		report_error "ERROR" "load_theme" "Dunst primary color option is invalid."
+		return 1
+	fi
+	if ! is_hexvalue_valid $dunst_secondary_color; then
+		report_error "ERROR" "load_theme" "Dunst secondary color option is invalid."
+		return 1
+	fi
+	
+	# All datas collected are valid, we can load in our saved theme.
+    # Changing wallpaper with swww
+    if ! set_desktop_wallpaper $desktop_wallpaper; then
+		report_error "ERROR" "load_theme" "Could not set $desktop_wallpaper as wallpaper."
+		return 1
+	fi
+	# Hyprlock background
+	if ! set_lockscreen_wallpaper $hyprPath/hyprlock.conf $lockscreen_wallpaper; then
+		report_error "ERROR" "load_theme" "Could not set $lockscreen_wallpaper as lockscreen background."
+		return 1
+	fi
+    # Hyprland borders
+    if ! set_app_focused_color $hyprPath/configs/hyprland/style.conf $focused_app_color; then
+		report_error "ERROR" "load_theme" "Could not set application focused border color."
+		return 1
+	fi
+    if ! set_app_unfocused_color $hyprPath/configs/hyprland/style.conf $unfocused_app_color; then
+		report_error "ERROR" "load_theme" "Could not set application unfocused border color."
+		return 1
+	fi	
+    # Waybar borders
+    if ! set_waybar_focused_color $hyprPath/configs/waybar/colors.conf $focused_waybar_color; then
+		report_error "ERROR" "load_theme" "Could not set waybar focused border color."
+		return 1
+	fi
+    if ! set_waybar_unfocused_color $hyprPath/configs/waybar/colors.conf $unfocused_waybar_color; then
+		report_error "ERROR" "load_theme" "Could not set waybar unfocused border color."
+		return 1
+	fi	
+    # Wofi
+    if ! set_wofi_primary_color $hyprPath/configs/wofi/style.css $wofi_primary_color; then
+		report_error "ERROR" "load_theme" "Could not set wofi primary color."
+		return 1
+	fi
+    if ! set_wofi_secondary_color $hyprPath/configs/wofi/style.css $wofi_secondary_color; then
+		report_error "ERROR" "load_theme" "Could not set wofi secondary color."
+		return 1
+	fi
+    # Dunst
+    if ! set_dunst_primary_color $hyprPath/configs/dunst/dunstrc $dunst_primary_color; then
+		report_error "ERROR" "load_theme" "Could not set dunst primary color."
+		return 1
+	fi
+    if ! set_dunst_secondary_color $hyprPath/configs/dunst/dunstrc $dunst_secondary_color; then
+		report_error "ERROR" "load_theme" "Could not set dunst secondary color."
+		return 1
+	fi
+
+	# Done
+	return 0
+}
+
+
+
+# func : set_app_focused_color
+# desc : will change the hyprland focused app color
+# arg1 : path the the hyprland style config path
+# arg2 : new color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_app_focused_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_app_focused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_app_focused_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "col.active_border = rgba(.*)" $configPath; then
+      	report_error "ERROR" "set_app_focused_color" "Could not find option for focused color."
+      	return 1
+    fi
+
+    sed -i "s/col.active_border = rgba(.*)/col.active_border = rgba(${hexValue}ff)/" $configPath
+    return 0
+}
+
+
+
+# func : get_app_focused_color
+# desc : will print the current hyprland focused border color
+# arg1 : path the the hyprland style config path
+# outp : current app focused border color in hexadecimal
+# rtrn : 0 if no error, else 1
+get_app_focused_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_app_focused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "col.active_border" $configPath); then
+		report_error "ERROR" "get_app_focused_color" "Could not find active border color in $configPath."
+		return 1
+    fi
+
+    echo $line | sed "s/col.active_border = rgba(\(.*\))/#\1/" | sed "s/ff$//g"
+    return 0
+}
+
+
+
+
+# func : set_app_unfocused_color
+# desc : will change the hyprland unfocused app color
+# arg1 : path the hyprland style config path
+# arg2 : new color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_app_unfocused_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_app_unfocused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_app_unfocused_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "col.inactive_border = rgba(.*)" $configPath; then
+      	report_error "ERROR" "set_app_unfocused_color" "Could not find option for unfocused color."
+      	return 1
+    fi
+
+    sed -i "s/col.inactive_border = rgba(.*)/col.inactive_border = rgba(${hexValue}ff)/" $configPath
+    return 0
+}
+
+
+
+# func : get_app_unfocused_color
+# desc : will print the current hyprland unfocused border color
+# arg1 : path the hyprland style config path
+# outp : current app unfocused border color in hexadecimal
+# rtrn : 0 if no error, else 1
+get_app_unfocused_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_app_unfocused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "col.inactive_border" $configPath); then
+		report_error "ERROR" "get_app_unfocused_color" "Could not find active border color in $configPath."
+		return 1
+    fi
+
+    echo $line | sed "s/col.inactive_border = rgba(\(.*\))/#\1/" | sed "s/ff$//g"
+    return 0
+}
+
+
+
+# func : set_waybar_focused_color
+# desc : will change the waybar focused border color
+# arg1 : path the waybar colors config file
+# arg2 : new color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_waybar_focused_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_waybar_focused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_waybar_focused_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "^focused=#" $configPath; then
+      	report_error "ERROR" "set_waybar_focused_color" "Could not find option for focused color."
+      	return 1
+    fi
+
+    sed -i "s/^focused=#.*$/focused=#${hexValue}/" $configPath
+    return 0
+}
+
+
+
+# func : get_waybar_focused_color
+# desc : will print the waybar focused border color
+# arg1 : path the waybar colors config file
+# outp : waybar focused border color
+# rtrn : 0 if no error, else 1
+get_waybar_focused_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_waybar_focused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "^focused=#.*" $configPath); then
+		report_error "ERROR" "get_waybar_focused_color" "Could not find active border color in $configPath."
+		return 1
+    fi
+
+    echo $line | sed "s/^focused=#\(.*\)$/#\1/"
+    return 0
+}
+
+
+
+# func : set_waybar_unfocused_color
+# desc : will change the waybar unfocused border color
+# arg1 : path the waybar colors config file
+# arg2 : new color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_waybar_unfocused_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_waybar_unfocused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_waybar_focused_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "^unfocused=#" $configPath; then
+      	report_error "ERROR" "set_waybar_unfocused_color" "Could not find option for unfocused color."
+      	return 1
+    fi
+
+    sed -i "s/^unfocused=#.*$/unfocused=#${hexValue}/" $configPath
+    return 0
+}
+
+
+
+# func : get_waybar_focused_color
+# desc : will print the waybar unfocused border color
+# arg1 : path the waybar colors config file
+# outp : waybar focused border color
+# rtrn : 0 if no error, else 1
+get_waybar_unfocused_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_waybar_unfocused_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "^unfocused=#.*" $configPath); then
+		report_error "ERROR" "get_waybar_unfocused_color" "Could not find active border color in $file."
+		return 1
+    fi
+
+    echo $line | sed "s/^unfocused=#\(.*\)$/#\1/"
+    return 0
+}
+
+
+
+# func : set_desktop_wallpaper
+# desc : will set the new desktop wallpaper
+# arg1 : path to the wallpaper
+# outp : none
+# rtrn : 0 if no error, else 1
+set_desktop_wallpaper()
+{
+	local wallpaper="$1"
+	if ! identify $wallpaper > /dev/null; then
+		report_error "ERROR" "set_desktop_wallpaper" "$wallpaper is not an image."
+		return 1
+    fi
+	if ! swww img $wallpaper; then
+		report_error "ERROR" "set_desktop_wallpaper" "Could not apply wallpaper."
+		return 1
+	fi
+	return 0
+}
+
+
+
+# func : get_desktop_wallpaper
+# desc : will print current desktop wallpaper path
+# outp : path to desktop wallpaper
+# rtrn : 0 if no error, else 1
+get_desktop_wallpaper()
+{
+	if ! line=$(swww query | head -n 1); then
+		report_error "ERROR" "get_desktop_wallpaper" "Could not retreive current wallpaper."
+		return 1
+	fi
+	echo $line | sed "s/.*image: //"
+	return 0
+}
+
+
+
+# func : set_lockscreen_wallpaper
+# desc : will set the new lockscreen wallpaper
+# arg1 : path to the hyprlock config file
+# arg2 : path to the wallpaper
+# outp : none
+# rtrn : 0 if no error, else 1
+set_lockscreen_wallpaper()
+{
+	local hyprlockConf="$1"
+	local wallpaper="$2"
+	wallpaper=$(realpath $wallpaper)
+
+	if ! is_file_valid $hyprlockConf; then
+		report_error "ERROR" "set_lockscreen_wallpaper" "$hyprlockConf is not a valid file."
+		return 1
+    fi
+	if ! identify $wallpaper > /dev/null; then
+		report_error "ERROR" "set_lockscreen_wallpaper" "$wallpaper is not an image."
+		return 1
+    fi
+	if ! grep -q "path = .* #lockscreen_wallpaper" $hyprlockConf; then
+		report_error "ERROR" "set_lockscreen_wallpaper" "Could not find option where to change the wallpaper."
+		return 1
+	fi
+
+	sed -i "s|path = .* #lockscreen_wallpaper|path = ${wallpaper} #lockscreen_wallpaper|" $hyprlockConf
+	return 0
+}
+
+
+
+# func : get_lockscreen_wallpaper
+# desc : will print current desktop wallpaper path
+# arg1 : path to the hyprlock config file 
+# outp : path to lockscreen wallpaper
+# rtrn : 0 if no error, else 1
+get_lockscreen_wallpaper()
+{
+	local hyprlockConf="$1"
+	if ! is_file_valid $hyprlockConf; then
+		report_error "ERROR" "get_lockscreen_wallpaper" "$hyprlockConf is not a valid file."
+		return 1
+    fi
+	if ! line=$(grep "path = .* #lockscreen_wallpaper" $hyprlockConf); then
+		report_error "ERROR" "get_lockscreen_wallpaper" "Could not find option where wallpaper path is stored."
+		return 1
+	fi
+	echo $line | sed "s|path = \(.*\) #lockscreen_wallpaper|\1|"
+	return 0
+}
+
+
+
+# func : set_wofi_primary_color
+# desc : will change the wofi border/font color
+# arg1 : path the wofi config path
+# arg2 : new primary color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_wofi_primary_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_wofi_primary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_wofi_primary_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "themingctl:primary" $configPath; then
+      	report_error "ERROR" "set_wofi_primary_color" "Could not find option for primary color."
+      	return 1
+    fi
+
+    sed -i "s/.*border.*primary.*/    border-color:#${hexValue}; \/\*themingctl:primary\*\//g" "$configPath"
+    sed -i "s/.*background.*primary.*/    background-color:#${hexValue}; \/\*themingctl:primary\*\//g" "$configPath"
+
+    return 0
+}
+
+
+
+# func : get_wofi_primary_color
+# desc : will print the current wofi primary color
+# arg1 : path the wofi css file
+# outp : wofi primary color in hexadecimal
+# rtrn : 0 if no error, else 1
+get_wofi_primary_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_wofi_primary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "themingctl:primary" $configPath | head -n 1); then
+		report_error "ERROR" "get_wofi_primary_color" "Could not find active border color in $configPath."
+		return 1
+    fi
+
+    echo $line | sed "s/.*#\(.*\);.*/#\1/"
+    return 0
+}
+
+
+
+# func : set_wofi_secondary_color
+# desc : will change the wofi border/font color
+# arg1 : path the wofi config path
+# arg2 : new secondary color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_wofi_secondary_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_wofi_secondary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_wofi_secondary_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "themingctl:secondary" $configPath; then
+      	report_error "ERROR" "set_wofi_secondary_color" "Could not find option for secondary color."
+      	return 1
+    fi
+
+    sed -i "s/.*border.*secondary.*/    border-color:#${hexValue}; \/\*themingctl:secondary\*\//g" "$configPath"
+    sed -i "s/.*background.*secondary.*/    background-color:#${hexValue}; \/\*themingctl:secondary\*\//g" "$configPath"
+
+    return 0
+}
+
+
+
+# func : get_wofi_secondary_color
+# desc : will print the current wofi secondary color
+# arg1 : path to the wofi css file
+# outp : wofi secondary color in hexadecimal
+# rtrn : 0 if no error, else 1
+get_wofi_secondary_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_wofi_secondary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "themingctl:secondary" $configPath | head -n 1); then
+		report_error "ERROR" "get_wofi_secondary_color" "Could not find active border color in $configPath."
+		return 1
+    fi
+
+    echo $line | sed "s/.*#\(.*\);.*/#\1/"
+    return 0
+}
+
+
+
+# func : set_dunst_primary_color
+# desc : will change the dunst border/font color
+# arg1 : path the dunst config path
+# arg2 : new primary color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_dunst_primary_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_dunst_primary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_dunst_primary_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "foreground = \".*\" #themingctl" $configPath; then
+      	report_error "ERROR" "set_dunst_primary_color" "Could not find option for primary color."
+      	return 1
+    fi
+
+    if ! grep -q "frame_color = \".*\" #themingctl" $configPath; then
+      	report_error "ERROR" "set_dunst_primary_color" "Could not find option for primary color."
+      	return 1
+    fi
+
+    sed -i "s/foreground = \".*\" #themingctl/foreground = \"#${hexValue}\" #themingctl/g" "$configPath"
+	sed -i "s/frame_color = \".*\" #themingctl/frame_color = \"#${hexValue}\" #themingctl/g" "$configPath"
+	pkill dunst && dunst -conf "$configPath" &
+    return 0
+}
+
+
+
+# func : get_dunst_primary_color
+# desc : will print the current dunst primary color
+# arg1 : path to the dunst config file
+# outp : dunst primary color in hexadecimal
+# rtrn : 0 if no error, else 1
+get_dunst_primary_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_dunst_primary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "foreground = \".*\" #themingctl" $configPath | head -n 1); then
+      	report_error "ERROR" "get_dunst_primary_color" "Could not find option for primary color."
+      	return 1
+    fi
+
+    echo $line | sed "s/foreground = \"#\(.*\)\" #themingctl/#\1/"
+    return 0
+}
+
+
+
+# func : set_dunst_secondary_color
+# desc : will change the dunst border/font color
+# arg1 : path the dunst config path
+# arg2 : new secondary color in hexadecimal
+# outp : none
+# rtrn : 0 if no error, else 1
+set_dunst_secondary_color()
+{
+    local configPath="$1"
+    local hexValue="$2"
+    # In case the given value start with '#' we remove it
+    hexValue=$(echo $hexValue | sed "s/^#//g")
+
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "set_dunst_secondary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! is_hexvalue_valid $hexValue; then
+		report_error "ERROR" "set_dunst_secondary_color" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+
+    if ! grep -q "background = \".*\" #themingctl" $configPath; then
+      	report_error "ERROR" "set_dunst_secondary_color" "Could not find option for secondary color."
+      	return 1
+    fi
+
+    sed -i "s/background = \".*\" #themingctl/background = \"#${hexValue}\" #themingctl/g" "$configPath"
+	pkill dunst && dunst -conf "$configPath" &
+    return 0
+}
+
+
+
+# func : get_dunst_secondary_color
+# desc : will print the current dunst secondary color
+# arg1 : path to the dunst config file
+# outp : dunst secondary color in hexadecimal
+# rtrn : 0 if no error, else 1
+get_dunst_secondary_color()
+{
+    local configPath="$1"
+    if ! is_file_valid $configPath; then
+		report_error "ERROR" "get_dunst_secondary_color" "$configPath is not a valid file."
+		return 1
+    fi
+
+    if ! line=$(grep "background = \".*\" #themingctl" $configPath | head -n 1); then
+      	report_error "ERROR" "get_dunst_secondary_color" "Could not find option for secondary color."
+      	return 1
+    fi
+
+    echo $line | sed "s/background = \"#\(.*\)\" #themingctl/#\1/"
+    return 0
+}
+
+
+
+# func : launch_option
+# desc : test if enough args if is good launch the given option fllowed by given args
+# arg1 : required number of arguments for the option to be launched
+# arg2 : option to launch
+# arg3 : option arguments
+# rtrn : 0 if no error, else 1
+launch_option()
+{
+    local required_arg_count="$1"
+    local option_name="$2"
+    shift 2
+
+    arguments_check "$option_name" $required_arg_count $# || return 1
+    if ! $option_name $@; then
+        report_error "ERROR" "$option_name $@" "An error occured."
+        return 1
+    fi
+    return 0
+}
+
+
+
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    if [ $# -eq 0 ]; then
+        report_error "FATAL" "$0" "No given arguments."
+        return 1
+    fi
+
+	option="$1"
+	shift 1
+	
+	case $option in
+
+		--auto-theming) launch_option 1 auto_theming $@;;
+        --save-theme) launch_option 1 save_theme $@;;
+        --load-theme) launch_option 1 load_theme $@;;
+
+        --set-app-focused-color) launch_option 2 set_app_focused_color $@;;
+        --get-app-focused-color) launch_option 1 get_app_focused_color $@;;
+        --set-app-unfocused-color) launch_option 2 set_app_unfocused_color $@;;
+        --get-app-unfocused-color) launch_option 1 get_app_unfocused_color $@;;
+
+        --set-waybar-focused-color) launch_option 2 set_waybar_focused_color $@;;
+        --get-waybar-focused-color) launch_option 1 get_waybar_focused_color $@;;
+        --set-waybar-unfocused-color) launch_option 2 set_waybar_unfocused_color $@;;
+        --get-waybar-unfocused-color) launch_option 1 get_waybar_unfocused_color $@;;
+
+        --set-desktop-wallpaper) launch_option 1 set_desktop_wallpaper $@;;
+        --get-desktop-wallpaper) launch_option 0 get_desktop_wallpaper $@;;
+        --set-lockscreen-wallpaper) launch_option 2 set_lockscreen_wallpaper $@;;
+        --get-lockscreen-wallpaper) launch_option 1 get_lockscreen_wallpaper $@;;
+
+        --set-wofi-primary-color) launch_option 2 set_wofi_primary_color $@;;
+        --get-wofi-primary-color) launch_option 1 get_wofi_primary_color $@;;
+        --set-wofi-secondary-color) launch_option 2 set_wofi_secondary_color $@;;
+        --get-wofi-secondary-color) launch_option 1 get_wofi_secondary_color $@;;
+
+        --set-dunst-primary-color) launch_option 2 set_dunst_primary_color $@;;
+        --get-dunst-primary-color) launch_option 1 get_dunst_primary_color $@;;
+        --set-dunst-secondary-color) launch_option 2 set_dunst_secondary_color $@;;
+        --get-dunst-secondary-color) launch_option 1 get_dunst_secondary_color $@;;
+
+		-h|--help) show_help ;;
+        *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;
+	esac
+    return $?
+}
+
+
+
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
+    exit 1
+else
+    exit 0
+fi
