@@ -48,8 +48,8 @@ show_help()
 	echo "     _________                                                               "
 	echo "   _/ General \_____________________________________________________________ "
     echo "  | --auto-theming [path/to/wallpaper]                                      |"
-    echo "  | --save-theme [save/at/themeName]                                        | TODO"
-    echo "  | --load-theme [path/to/theme/folder]                                     | TODO"
+    echo "  | --save-theme [save/at/themeName]                                        |"
+    echo "  | --load-theme [path/to/theme/folder]                                     |"
 	echo "  |=========================================================================|"
 	echo "  | --set-global-primary-color [hexvalue]                                   |"
 	echo "  | --set-global-primary-color-gui                                          |"
@@ -58,7 +58,7 @@ show_help()
 	echo "  | --set-global-font [font]                                                |"
 	echo "  | --set-global-border-radius [int]                        NOT IMPLEMENTED |"
 	echo "  | --set-outside-gaps [int]                                                |"
-	echo "  | --set-inside-gaps [int]                                     NOT WORKING |"
+	echo "  | --set-inside-gaps [int]                                                 |"
 	echo "  | --set-border-width [int]                                NOT IMPLEMENTED |"
 	echo "  | --pick-color-from-menu                                                  |"
 	echo "  | --pick-color-from-monitor                                               |"
@@ -735,7 +735,7 @@ pick_color_from_menu()
 		report_error "ERROR" "pick_color_from_menu" "The RGB value is invalid."
 		return 1
 	fi
-	rgb_to_hex $color
+	rgb_to_hex $color | sed "s/#//"
 }
 
 
