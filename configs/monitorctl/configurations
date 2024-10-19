@@ -8,8 +8,8 @@ main(on)=DP-1
 [CONFIGURATION]        
 id=eDP-1,DP-1
 name=eDP-1,DP-1-config
-order=eDP-1:1,DP-1:1
-waybars(on)=on,on
+order=eDP-1:2,DP-1:1
+waybars(on)=off,on
 main(on)=eDP-1
 
 [CONFIGURATION]        

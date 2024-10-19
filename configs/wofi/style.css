@@ -1,3 +1,6 @@
+@define-color primary #e2b3b8;
+@define-color secondary #97576E;
+
 *
 {
     font:JetBrains Mono;
@@ -7,10 +10,10 @@
 window
 {
     
-    background-color:#2B2A28; /*themingctl:secondary*/
+    background-color:@secondary;
     border-style:solid;
     border-width:2px;
-    border-color:#C77813; /*themingctl:primary*/
+    border-color:@primary;
     border-radius:10px;
     opacity:0.88;
 }
@@ -28,7 +31,7 @@ window
     background-color:rgba(44,44,44,0.4);
     border-style:solid;
     border-width:2px;
-    border-color:#2B2A28; /*themingctl:secondary*/
+    border-color:@secondary;
     border-bottom:solid 0px red;
     padding-top:2px;
 }
@@ -54,7 +57,7 @@ window
     background-color:rgba(44,44,44,0.4);
     border-style:solid;
     border-width:2px;
-    border-color:#2B2A28; /*themingctl:secondary*/
+    border-color:@secondary;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
     border-top:solid 0px rgba(0,0,0,0);
@@ -70,7 +73,7 @@ window
 
 #entry:selected
 {
-    background-color:#C77813; /*themingctl:primary*/
+    background-color:@primary;
     border-color: rgba(0,0,0,0);
     border-radius:10px;
 }
@@ -88,4 +91,3 @@ window
     font-weight:bold;
     text-decoration:underline;
 }
-

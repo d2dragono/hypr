@@ -1,17 +1,18 @@
 *
 {
     /* `otf-font-awesome` is required to be installed for icons */
-    /*font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
-    font-family: Jetbrains Mono;
+    /*font-family:JetBrains Mono;*/
+    font-family:JetBrains Mono;
     font-size: 16px;
+    opacity:1; /*themingctl*/
 }
 
 window#waybar
 { 
     border-style:solid;
-    border-width:2px;
-    border-color:#C77813;
-    border-radius:10px;
+    border-width:3px; /*themingctl*/
+    border-color:#e2b3b8;
+    border-radius:6px; /*themingctl*/
 
     background-color:rgba(15,15,15,0.4);
 
@@ -147,7 +148,7 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 2 2px;
+    margin: 2px 2px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

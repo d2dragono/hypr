@@ -330,7 +330,6 @@ update_workspaces()
 	local main_status
 	local main_monitor
 	
-    echo main=$main
 	main_status=$(echo "$main" | sed "s/main(\(.*\))=.*/\1/g")
 	main_monitor=$(echo "$main" | sed "s/.*=//g")
 	
@@ -346,7 +345,6 @@ update_workspaces()
         echo "$monitor = $main_monitor"
 		if [ "$monitor" = "$main_monitor" ]; then
             for ((i=1; i<11; i++)); do
-            echo yessir
 			    echo "workspace = $i, monitor:$monitor" >> "$hyprPath"/configs/hyprland/workspaces.conf
             done
 		else
@@ -431,6 +429,25 @@ TAG
 
 
 
+# func : update_desktop_wallpaper
+# desc : refresh every wallpaper so new plugged monitors follow the last set wallpaper
+# outp : none
+# rtrn : 0 if no error, else 1
+update_desktop_wallpapers()
+{
+    if ! wallpaper=$(swww query | head -n 1 | sed "s/.*image: //g"); then
+		report_error "ERROR" "update_desktop_wallpapers" "Could not retreive current wallpaper."
+		return 1
+    fi
+    if ! swww img $wallpaper; then
+        report_error "ERROR" "update_desktop_wallpapers" "Could not set new wallpaper."
+		return 1
+    fi
+    return 0
+}
+
+
+
 # func : update
 # desc : from the config file and based of plugged monitors will apply the selected configuration settings to the system
 # arg1 : path to the config file
@@ -475,6 +492,7 @@ update()
     update_order "$order"
     update_waybars "$waybars" "$id"
     update_workspaces "$main" "$id"
+    update_desktop_wallpapers
     return 0
 }
 
@@ -544,11 +562,36 @@ current()
 is_int_valid()
 {
     local value="$1"
-    if [[ -n ${time//[0-9]/} ]]; then
+    if [[ -n ${value//[0-9]/} ]]; then
         report_error "ERROR" "is_int_valid" "'$value' is not a valid integer."
         return 1 
     fi
     return 0
+}
+
+
+
+reload_waybar()
+{
+    local configPath="$1"
+	local waybars=$(current $configPath | tail -n 2 | head -n 1)
+	local monitors=$(get_plugged_monitors)
+    local waybars_status_only
+	local waybars_status_monitors_list
+    local monitors_on
+	# Creating waybar config for each monitors (if not existing already).
+	create_waybars_configs $monitors
+    # Retreiving list
+    waybars_status_only=$(echo $waybars | sed "s/.*=//g")
+	waybars_status_monitors_list=$(get_waybars_status_monitors_list $waybars_status_only $monitors)
+    monitors_on=$(echo $waybars_status_monitors_list | sed "s/.*:off//g" | sed "s/:on//g") # Clearing monitors off
+	# Killing every waybars and launching ones that are "on"
+	pidof waybar && pkill waybar
+    # Launching waybars
+	for monitor in $(echo $monitors_on); do
+        waybar -c $hyprPath/configs/waybar/waybars/$monitor/config.jsonc -s $hyprPath/configs/waybar/waybars/$monitor/style.css &
+    done
+	return 0
 }
 
 
@@ -562,22 +605,73 @@ is_int_valid()
 refresh_waybars_style()
 {
     local current_focus="$1"
-    local waybarColorsPath="$2"
-    local activeBorderColor
-    local inactiveBorderColor
+    local waybarConfigPath="$2"
+    local configPath="$3"
 
-    # Does the color file exist ?
-    if ! is_file_valid $waybarColorsPath; then
-		report_error "ERROR" "refresh_waybars_style" "$waybarColorsPath is not a valid color file."
+    local activeBorderColor=$(cat $waybarConfigPath | grep "^focused_color" | sed "s/^focused_color=#//")
+    local inactiveBorderColor=$(cat $waybarConfigPath | grep "^unfocused_color" | sed "s/^unfocused_color=#//")
+    local focusedOpacity=$(cat $waybarConfigPath | grep "^focused_opacity" | sed "s/^focused_opacity=//")
+    local unfocusedOpacity=$(cat $waybarConfigPath | grep "^unfocused_opacity" | sed "s/^unfocused_opacity=//")
+    local focusedBorderOpacity=$(cat $waybarConfigPath | grep "^focused_border_opacity" | sed "s/^focused_border_opacity=//")
+    local unfocusedBorderOpacity=$(cat $waybarConfigPath | grep "^unfocused_border_opacity" | sed "s/^unfocused_border_opacity=//")
+    local position=$(cat $waybarConfigPath | grep "^position" | sed "s/^position=//")
+    local currentPosition=$(cat $hyprPath/configs/waybar/waybars/$current_focus/config.jsonc | grep "\"position\": \".*\",.*" | sed "s@.*\"position\": \"\(.*\)\",.*@\1@")
+    local borderRadius=$(cat $waybarConfigPath | grep "^border_radius" | sed "s/^border_radius=//")
+    local borderWidth=$(cat $waybarConfigPath | grep "^border_width" | sed "s/^border_width=//")
+    local font_family=$(cat $waybarConfigPath | grep "^font_family" | sed "s/^font_family=//")
+    local font_color=$(cat $waybarConfigPath | grep "^font_color" | sed "s/^font_color=//")
+    local margins=$(cat $waybarConfigPath | grep "^margins" | sed "s/^margins=//")
+    local margin_bottom=$(cat $waybarConfigPath | grep "^margin_bottom" | sed "s/^margin_bottom=//")
+
+    # echo
+    # echo
+    # echo active_border_color=$activeBorderColor # IMPLEMENTED
+    # echo inactive_border_color=$inactiveBorderColor # IMPLEMENTED
+    # echo focused_opacity=$focusedOpacity # IMPLEMENTED
+    # echo unfocused_opacity=$unfocusedOpacity # IMPLEMENTED
+    # echo focused_border_opacity=$focusedBorderOpacity
+    # echo unfocused_border_opacity=$unfocusedBorderOpacity 
+    # echo position=$position; echo current_position=$currentPosition # IMPLEMENTED
+    # echo border_radius=$borderRadius # IMPLEMENTED
+    # echo border_width=$borderWidth # IMPLEMENTED
+    # echo font_family=$font_family # IMPLEMENTED
+    # echo font_color=$font_color
+
+    # Does the config file exist ?
+    if ! is_file_valid $waybarConfigPath; then
+		report_error "ERROR" "refresh_waybars_style" "$waybarConfigPath is not a valid color file."
 		return 1
     fi
 
-	activeBorderColor=$(cat $waybarColorsPath | grep "^focused" | sed "s/^focused=#//")
-	inactiveBorderColor=$(cat $waybarColorsPath | grep "^unfocused" | sed "s/^unfocused=#//")
-
+    # Editing style
+    # inactive border color
 	sed -i "s/    border-color:.*/    border-color:#${inactiveBorderColor};/g" "$hyprPath"/configs/waybar/waybars/*/style.css
+    # unfocused opacity
+    sed -i "s/    opacity:.*; \/\*themingctl\*\//    opacity:${unfocusedOpacity}; \/\*themingctl\*\//" "$hyprPath"/configs/waybar/waybars/*/style.css
+    # unfocused border opacity
+    # position
+    sed -i "s@\"position\": \".*\",\(.*\)@\"position\": \"${position}\",\1@" $hyprPath/configs/waybar/waybars/*/config.jsonc
+    # outside gaps
+    sed -i "s@\"margin-\(.*\)\": .*,@\"margin-\1\": ${margins},@" $hyprPath/configs/waybar/waybars/*/config.jsonc
+    # inside gaps
+    sed -i "s@\"margin-bottom\": .*,@\"margin-bottom\": ${margin_bottom},@" $hyprPath/configs/waybar/waybars/*/config.jsonc
+    # font family
+    sed -i "s/font-family:.*;/font-family:${font_family};/" "$hyprPath"/configs/waybar/waybars/*/style.css
+    # border width
+    sed -i "s/border-width:.*px; \/\*themingctl\*\//border-width:${borderWidth}px; \/\*themingctl\*\//" "$hyprPath"/configs/waybar/waybars/*/style.css
+    # border radius
+    sed -i "s/border-radius:.*px; \/\*themingctl\*\//border-radius:${borderRadius}px; \/\*themingctl\*\//" "$hyprPath"/configs/waybar/waybars/*/style.css
     if [ ! "$current_focus" = "none" ]; then
+        # active border color
         sed -i "s/    border-color:.*/    border-color:#${activeBorderColor};/g" "$hyprPath"/configs/waybar/waybars/"$current_focus"/style.css
+        # focused opacity
+        sed -i "s/    opacity:.*; \/\*themingctl\*\//    opacity:${focusedOpacity}; \/\*themingctl\*\//" "$hyprPath"/configs/waybar/waybars/"$current_focus"/style.css
+        # focused border opacity
+    fi
+
+    # Restart waybar
+    if [ $(pull_waybar_reload $waybarConfigPath) = "yes" ];then
+        reload_waybar $configPath
     fi
     return 0
 }
@@ -601,6 +695,40 @@ get_current_waybars_status()
 
 
 
+# func : pull_waybar_refresh
+# desc : return yes if we need a refresh of waybars style
+# outp : refresh state
+# rtrn : 0 if no error, else 1
+pull_waybar_refresh()
+{
+    local waybarConfigPath="$1"
+    refresh=$(grep "refresh" $waybarConfigPath | sed "s/refresh=//")
+    if [ "$refresh" = "yes" ]; then
+        sed -i "s/^refresh=yes/refresh=no/" $waybarConfigPath
+    fi
+    echo $refresh
+    return 0
+}
+
+
+
+# func : pull_waybar_reload
+# desc : return yes if we need a reload of waybars
+# outp : reload state
+# rtrn : 0 if no error, else 1
+pull_waybar_reload()
+{
+    local waybarConfigPath="$1"
+    reload=$(grep "reload" $waybarConfigPath | sed "s/reload=//")
+    if [ "$reload" = "yes" ]; then
+        sed -i "s/^reload=yes/reload=no/" $waybarConfigPath
+    fi
+    echo $reload
+    return 0
+}
+
+
+
 # func : waybar_daemon
 # desc : will launch a daemon that update the waybar border color if it is on the focused app monitor or not
 # arg1 : path to the configuration file
@@ -611,7 +739,7 @@ get_current_waybars_status()
 waybar_daemon()
 {
     local configPath="$1"
-    local waybarColorsPath="$2"
+    local waybarConfigPath="$2"
     local time="$3"
     local last_monitors
     local current_monitors
@@ -619,6 +747,7 @@ waybar_daemon()
     local current_focus
     local last_status
     local current_status
+    local require_style_refresh
 
     # Does the given config file exist ?
     if ! is_file_valid $configPath; then
@@ -626,8 +755,8 @@ waybar_daemon()
 		return 1
     fi
     # Does the color file exist ?
-    if ! is_file_valid $waybarColorsPath; then
-		report_error "ERROR" "waybar_daemon" "$waybarColorsPath is not a valid color file."
+    if ! is_file_valid $waybarConfigPath; then
+		report_error "ERROR" "waybar_daemon" "$waybarConfigPath is not a valid color file."
 		return 1
     fi
     # Is the given time a valid integer ?
@@ -643,12 +772,15 @@ waybar_daemon()
     while true; do 
     	# Focused monitor, for waybar recoloring
 		current_focus=$(get_focused_app_monitor)
-    	if [ ! "$current_focus" = "$last_focus" ]; then
-			if ! refresh_waybars_style $current_focus $waybarColorsPath; then
-                report_error "ERROR" "waybar_daemon" "Could not update the waybars colors."
+        # In case themingctl changed waybar styling
+        require_style_refresh=$(pull_waybar_refresh $waybarConfigPath)
+    	if [ ! "$current_focus" = "$last_focus" ] || [ "$require_style_refresh" = "yes" ]; then
+			if ! refresh_waybars_style $current_focus $waybarConfigPath $configPath; then
+                report_error "ERROR" "waybar_daemon" "Could not update the waybars style."
                 return 1
             fi
 			last_focus=$current_focus
+            require_style_refresh="no"
     	fi
 
         # If waybars status changed, updating the waybars
@@ -663,7 +795,6 @@ waybar_daemon()
             last_monitors=$current_monitors
     	fi
 
-        echo test
         sleep "$time"
     done
     return 0

@@ -1,0 +1,17 @@
+refresh=no
+reload=no
+focused_color=#e2b3b8
+unfocused_color=#97576E
+focused_opacity=1
+unfocused_opacity=0.95
+focused_border_opacity=1
+unfocused_border_opacity=1
+position=top
+border_radius=6
+border_width=3
+font_family=JetBrains Mono
+font_color=#ff0000
+waybar_mode=island
+margins=20
+margin_bottom=-10
+

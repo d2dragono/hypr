@@ -9,9 +9,9 @@
 window#waybar
 { 
     border-style:solid;
-    border-width:2px;
+    border-width:2px; /*themingctl*/
     border-color:#c0da96;
-    border-radius:10px;
+    border-radius:10px; /*themingctl*/
 
     background-color:rgba(15,15,15,0.4);
 
@@ -147,7 +147,7 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 2 2px;
+    margin: 2px 2px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

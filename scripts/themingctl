@@ -7,55 +7,214 @@
 #                                     |___/            
 # by DRAGONO
 
+##########################
+### Configs files path ###
+##########################
+hyprland_config="$hyprPath/configs/hyprland/style.conf" #HYPRLAND_CONFIG
+waybar_config="$hyprPath/configs/waybar/configurations" #WAYBAR_CONFIG
+hyprlock_config="$hyprPath/hyprlock.conf" #HYPRLOCK_CONFIG
+wofi_config="$hyprPath/configs/wofi/style.css" #WOFI_CONFIG
+dunst_config="$hyprPath/configs/dunst/dunstrc" #DUNST_CONFIG
+kitty_config="$hyprPath/configs/kitty/kitty.conf" #KITTY_CONFIG
+########## DONE ##########
+
 # func : show_help
 # desc : will display to the user how to use themingctl
 # outp : The help message/usage of the script
 # rtrn : 0
 show_help()
 {
-    echo
+	echo
     echo "Usage: $0 [option]" 
     echo "Options:"
+	echo "     _______                                                                 "
+	echo "   _/ Setup \_______________________________________________________________ "
+	echo "  | --set-hyprland-config [path/to/config/file]                             |"
+	echo "  | --set-waybar-config-file [path/to/config/file]                          |"
+	echo "  | --set-hyprlock-config-file [path/to/config/file]                        |"
+	echo "  | --set-wofi-config-file [path/to/config/file]                            |"
+	echo "  | --set-dunst-config-file [path/to/config/file]                           |"
+	echo "  | --set-kitty-config-file [path/to/config/file]                           |"
+	echo "  |=========================================================================|"
+	echo "  | --get-hyprland-config                                                   |"
+	echo "  | --get-waybar-config-file                                                |"
+	echo "  | --get-hyprlock-config-file                                              |"
+	echo "  | --get-wofi-config-file                                                  |"
+	echo "  | --get-dunst-config-file                                                 |"
+	echo "  | --get-kitty-config-file                                                 |"
+	echo "  | --get-themingctl-configs                                                |"
+	echo "  |_________________________________________________________________________|"
+	echo
+	echo "     _________                                                               "
+	echo "   _/ General \_____________________________________________________________ "
+    echo "  | --auto-theming [path/to/wallpaper]                                      |"
+    echo "  | --save-theme [save/at/themeName]                                        | TODO"
+    echo "  | --load-theme [path/to/theme/folder]                                     | TODO"
+	echo "  |=========================================================================|"
+	echo "  | --set-global-primary-color [hexvalue]                                   |"
+	echo "  | --set-global-primary-color-gui                                          |"
+	echo "  | --set-global-secondary-color [hexvalue]                                 |"
+	echo "  | --set-global-secondary-color-gui                                        |"
+	echo "  | --set-global-font [font]                                                |"
+	echo "  | --set-global-border-radius [int]                        NOT IMPLEMENTED |"
+	echo "  | --set-outside-gaps [int]                                                |"
+	echo "  | --set-inside-gaps [int]                                     NOT WORKING |"
+	echo "  | --set-border-width [int]                                NOT IMPLEMENTED |"
+	echo "  | --pick-color-from-menu                                                  |"
+	echo "  | --pick-color-from-monitor                                               |"
+	echo "  |=========================================================================|"
+	echo "  | --get-outside-gaps                                                      |"
+	echo "  | --get-inside-gaps                                                       |"
+    echo "  |_________________________________________________________________________|"
+	echo
+	echo "     __________                                                              "
+	echo "   _/ Hyprland \____________________________________________________________ "
+    echo "  | --set-app-focused-color [hexvalue]                                      |"
+    echo "  | --set-app-unfocused-color [hexvalue]                                    |"
+	echo "  | --set-app-focused-opacity [range{0-1.0}]                                |"
+	echo "  | --set-app-unfocused-opacity [range{0-1.0}]                              |"
+	echo "  | --set-app-focused-border-opacity [range{0-1.0}]                         |"
+	echo "  | --set-app-unfocused-border-opacity [range{0-1.0}]                       |"
+	echo "  | --set-app-border-radius [int]                                           |"
+	echo "  | --set-app-border-width [int]                                            |"
+	echo "  |=========================================================================|"
+  	echo "  | --get-app-focused-color                                                 |"
+    echo "  | --get-app-unfocused-color                                               |"
+	echo "  | --get-app-focused-opacity                                               |"
+	echo "  | --get-app-unfocused-opacity                                             |"
+	echo "  | --get-app-focused-border-opacity                                        |"
+	echo "  | --get-app-unfocused-border-opacity                                      |"
+	echo "  | --get-app-border-radius                                                 |"
+	echo "  | --get-app-border-width                                                  |"
+    echo "  |_________________________________________________________________________|"
+	echo
+	echo "     ________                                                                "
+	echo "   _/ Waybar \______________________________________________________________ "
+    echo "  | --set-waybar-focused-color [hexvalue]                                   |"
+    echo "  | --set-waybar-unfocused-color [hexvalue]                                 |"
+	echo "  | --set-waybar-focused-opacity [range{0-1.0}]                             |"
+	echo "  | --set-waybar-unfocused-opacity [range{0-1.0}]                           |"
+	echo "  | --set-waybar-focused-border-opacity [range{0-1.0}]      NOT IMPLEMENTED |"
+	echo "  | --set-waybar-unfocused-border-opacity [range{0-1.0}]    NOT IMPLEMENTED |"
+	echo "  | --set-waybar-position [top|right|bottom|left]           NOT IMPLEMENTED |"
+	echo "  | --set-waybar-border-radius [int]                                        |"
+	echo "  | --set-waybar-border-width [int]                                         |"
+	echo "  | --set-waybar-font [font]                                                |"
+	echo "  | --set-waybar-font-color [hexvalue]                      NOT IMPLEMENTED |"
+	echo "  | --toggle-waybar-island-mode                             NOT IMPLEMENTED |"
+	echo "  | --toggle-waybar-magnet-mode                             NOT IMPLEMENTED |"
+	echo "  | --toggle-waybar-isles-mode                              NOT IMPLEMENTED |"
+	echo "  |=========================================================================|"
+    echo "  | --get-waybar-focused-color                                              |"
+    echo "  | --get-waybar-unfocused-color                                            |"
+	echo "  | --get-waybar-focused-opacity                                            |"
+	echo "  | --get-waybar-unfocused-opacity                                          |"
+	echo "  | --get-waybar-focused-border-opacity                                     |"
+	echo "  | --get-waybar-unfocused-border-opacity                                   |"
+	echo "  | --get-waybar-position                                                   |"
+	echo "  | --get-waybar-border-radius                                              |"
+	echo "  | --get-waybar-border-width                                               |"
+	echo "  | --get-waybar-font                                                       |"
+	echo "  | --get-waybar-font-color                                                 |"
+	echo "  | --get-waybar-mode                                                       |"
+	echo "  |_________________________________________________________________________|"
     echo
-    echo "    --auto-theming [path/to/wallpaper]"
-    echo "    --save-theme [save/at/themeName]"
-    echo "    --load-theme [path/to/theme/folder]"
+	echo "     ___________                                                             "
+	echo "   _/ Wallpaper \___________________________________________________________ "
+    echo "  | --set-desktop-wallpaper [path/to/wallpaper]                             |"
+	echo "  |=========================================================================|"
+    echo "  | --get-desktop-wallpaper                                                 |"
+    echo "  |_________________________________________________________________________|"
+	echo
+	echo "     __________                                                              "
+	echo "   _/ Hyprlock \____________________________________________________________ "
+    echo "  | --set-lockscreen-wallpaper [path/to/wallpaper]                          |"
+	echo "  | --set-lockscreen-scale [scale]                          NOT IMPLEMENTED |"
+	echo "  | --set-lockscreen-user-avatar [path/to/avatar]           NOT IMPLEMENTED |"
+	echo "  | --set-lockscreen-font [font]                                            |"
+	echo "  |=========================================================================|"
+    echo "  | --get-lockscreen-wallpaper                                              |"
+	echo "  | --get-lockscreen-scale                                  NOT IMPLEMENTED |"
+	echo "  | --get-lockscreenuser-avatar                             NOT IMPLEMENTED |"
+	echo "  | --get-lockscreen-font                                                   |"
+    echo "  |_________________________________________________________________________|"
+	echo
+	echo "     ______                                                                  "
+	echo "   _/ Wofi \________________________________________________________________ "
+    echo "  | --set-wofi-primary-color [hexvalue]                                     |"
+    echo "  | --set-wofi-secondary-color [hexvalue]                                   |"
+	echo "  | --set-wofi-border-radius [int]                          NOT IMPLEMENTED |"
+	echo "  | --set-wofi-opacity [range{0-1.0}]                       NOT IMPLEMENTED |"
+	echo "  | --set-wofi-border-width [int]                           NOT IMPLEMENTED |"
+	echo "  | --set-wofi-font [font]                                                  |"
+	echo "  |=========================================================================|"
+    echo "  | --get-wofi-primary-color                                                |"
+    echo "  | --get-wofi-secondary-color                                              |"
+	echo "  | --get-wofi-border-radius                                NOT IMPLEMENTED |"
+	echo "  | --get-wofi-opacity                                      NOT IMPLEMENTED |"
+	echo "  | --get-wofi-border-width                                 NOT IMPLEMENTED |"
+	echo "  | --get-wofi-font                                                         |"
+	echo "  |_________________________________________________________________________|"
     echo
-    echo "    --set-app-focused-color [path/to/style.conf] [hexvalue]"
-    echo "    --get-app-focused-color [path/to/style.conf]"
-    echo
-    echo "    --set-app-unfocused-color [path/to/style.conf] [hexvalue]"
-    echo "    --get-app-unfocused-color [path/to/style.conf]"
-    echo
-    echo "    --set-waybar-focused-color [path/to/waybar/style.css] [hexvalue]"
-    echo "    --get-waybar-focused-color [path/to/waybar/style.css]"
-    echo
-    echo "    --set-waybar-unfocused-color [path/to/waybar/style.css] [hexvalue]"
-    echo "    --get-waybar-unfocused-color [path/to/waybar/style.css]"
-    echo
-    echo "    --set-desktop-wallpaper [path/to/wallpaper]"
-    echo "    --get-desktop-wallpaper"
-    echo
-    echo "    --set-lockscreen-wallpaper [path/to/hyprlock.conf] [path/to/wallpaper]"
-    echo "    --get-lockscreen-wallpaper [path/to/hyprlock.conf]"
-    echo
-    echo "    --set-wofi-primary-color [path/to/wofi/config] [hexvalue]"
-    echo "    --get-wofi-primary-color [path/to/wofi/config]"
-    echo
-    echo "    --set-wofi-secondary-color [path/to/wofi/config] [hexvalue]"
-    echo "    --get-wofi-secondary-color [path/to/wofi/config]"
-    echo
-    echo "    --set-dunst-primary-color [path/to/dunst/config] [hexvalue]"
-    echo "    --get-dunst-primary-color [path/to/dunst/config]"
-    echo
-    echo "    --set-dunst-secondary-color [path/to/dunst/config] [hexvalue]"
-    echo "    --get-dunst-secondary-color [path/to/dunst/config]"
-    echo
-    echo "    -h, --help    Show help."
+	echo "     _______                                                                 "
+	echo "   _/ Dunst \_______________________________________________________________ "
+    echo "  | --set-dunst-primary-color [hexvalue]                                    |"
+    echo "  | --set-dunst-secondary-color [hexvalue]                                  |"
+    echo "  | --set-dunst-border-color [hexvalue]                                     |"
+	echo "  | --set-dunst-border-radius [int]                                         |"
+	echo "  | --set-dunst-border-width [int]                                          |"
+	echo "  | --set-dunst-font                                                        |"
+	echo "  |=========================================================================|"
+    echo "  | --get-dunst-primary-color                                               |"  
+    echo "  | --get-dunst-secondary-color                                             |"
+    echo "  | --set-dunst-border-color                                                |"
+	echo "  | --get-dunst-border-radius                                               |"
+	echo "  | --get-dunst-border-width                                                |"
+	echo "  | --get-dunst-font                                                        |"
+	echo "  |_________________________________________________________________________|"
+	echo
+	echo "     _______                                                                 "
+	echo "   _/ Kitty \_______________________________________________________________ "
+	echo "  | --set-kitty-font-color [hexvalue]                                       |"
+	echo "  | --set-kitty-background-color [hexvalue]                                 |"
+	echo "  | --set-kitty-cursor-color [hexvalue]                                     |"
+	echo "  | --set-kitty-cursor-text-color [hexvalue]                                |"
+	echo "  | --set-kitty-url-color [hexvalue]                                        |"
+	echo "  | --set-kitty-color[range{0-7}] [hexvalue]                                |"
+	echo "  | --set-kitty-opacity [range{0-1.0}]                                      |"
+	echo "  | --set-kitty-font [font]                                                 |"
+	echo "  | --set-kitty-font-size [int]                                             |"
+	echo "  | --set-kitty-colors-from-wallpaper [path/to/wallpaper]                   |"
+	echo "  | ========================================================================|"
+	echo "  | --get-kitty-font-color                                                  |"
+	echo "  | --get-kitty-background-color                                            |"
+	echo "  | --get-kitty-cursor-color                                                |"
+	echo "  | --get-kitty-cursor-text-color                                           |"
+	echo "  | --get-kitty-url-color                                                   |"
+	echo "  | --get-kitty-color[range{0-7}]                                           |"
+	echo "  | --get-kitty-colors-all                                                  |"
+	echo "  | --get-kitty-opacity                                                     |"
+	echo "  | --get-kitty-font                                                        |"
+	echo "  | --get-kitty-font-size                                                   |"
+	echo "  |_________________________________________________________________________|"
+	echo
+    echo "   -h, --help   Show help."
     return 0
 }
 
 
+
+
+
+
+
+
+
+
+
+# =========================
+# === UTILITY FUNCTIONS ===
+# =========================
 
 # func : report_error
 # desc : will echo a given message to stderr
@@ -130,373 +289,199 @@ is_hexvalue_valid()
 
 
 
+# func : is_range_valid
+# desc : will test if the given value is between 0 and 1. Accept floating point numbers
+# arg1 : value to test
+# outp : none
+# rtrn : 0 if no error, else 1
+is_range_valid()
+{
+	local value="$1"
+	if ! echo "$value" | awk '{exit !($value >= 0 && $value <= 1)}'; then
+		report_error "ERROR" "is_range_valid" "'$value' is not a valid range."
+		return 1
+	fi
+	return 0
+}
+
+
+
+# func : range_to_hexadecimal
+# desc : transform a range (between 0 and 1.0) into an hexadecimal value between 0 and 255
+# arg1 : range to transform
+# outp : none
+# rtrn : 0 if no error, else 1
+range_to_hexadecimal()
+{
+	local range="$1"
+	local hexValue
+
+	if ! is_range_valid $range; then
+		report_error "ERROR" "range_to_hexadecimal" "'$range' is not a valid range."
+		return 1
+	fi
+	
+	hexValue=$(awk "BEGIN {print 255*$range}")
+	hexValue=$(echo $hexValue | sed "s/\..*//" ) # Removing eventual .xx
+	hexValue=$(printf '%02x' "$hexValue") # Convert to hexadecimal
+	echo "$hexValue"
+}
+
+
+
+# func : hexadecimal_to_range
+# desc : transform a hexadecimal value (between 00 and ff) into a range (between 0 and 1.0)
+# arg1 : hexadecimal value to transform
+# outp : none
+# rtrn : 0 if no error, else 1
+hexadecimal_to_range()
+{
+    local hexValue="$1"    
+    if ! echo "$hexValue" | grep -qE '^[0-9a-fA-F]{2}$'; then
+		report_error "ERROR" "is_hexvalue_valid" "'$hexValue' is not a valid hexadecimal color."
+		return 1
+    fi
+	# Convert hex to decimal
+	range=$(( 16#$hexValue ))
+	# Normalize to range [0, 1.0]
+	range=$(awk "BEGIN {print $range / 255}")
+	echo "$range"
+}
+
+
+
+# func : is_valid_int
+# desc : will test if the given value is an int or not
+# arg1 : given value to test
+# outp : none
+# rtrn : 0 if no error, else 1
+is_valid_int()
+{
+    local value="$1"
+    if [[ -n ${value//[0-9]/} ]]; then
+        report_error "ERROR" "is_int_valid" "'$value' is not a valid integer."
+        return 1 
+    fi
+    return 0
+}
+
+
+
+# func : push_waybar_refresh
+# desc : will turn refresh from no to yes, saying to the waybar daemon that a style refresh is needed
+# outp : none
+# rtrn : 0 if no error, else 1
+push_waybar_refresh()
+{
+	sed -i "s/^refresh=no/refresh=yes/" $waybar_config
+	return 0
+}
+
+
+
+# func : push_waybar_reload
+# desc : will turn reload from no to yes, saying to the waybar daemon that a waybar reloading is required
+# outp : none
+# rtrn : 0 if no error, else 1
+push_waybar_reload()
+{
+	sed -i "s/^reload=no/reload=yes/" $waybar_config
+	return 0
+}
+
+
+
+valid_rgb()
+{
+    local rgbvalue="$1"
+    local numbers
+    local digits
+    
+    # Do we have 3 values ?
+    numbers=$(echo "$rgbvalue" | sed "s/,/ /g" | wc -w)
+    if [ ! "$numbers" -eq 3 ]; then
+			report_error "ERROR" "valid_rgb" "The RGB value is invalid."
+			return 1
+    fi
+    
+    for value in ${rgbvalue//,/ }; do
+        digits=${#value}
+        if [ "$digits" -gt 3 ]; then
+			report_error "ERROR" "valid_rgb" "The RGB value is invalid."
+			return 1
+        fi
+        
+		if ((value < 0 || value > 255)); then
+			report_error "ERROR" "valid_rgb" "The RGB value is invalid."
+			return 1
+		fi
+    done
+    
+    # Valid number
+    return 0
+}
+
+
+
+rgb_to_hex()
+{
+    local rgbvalue="$1"
+    if ! valid_rgb "$rgbvalue"; then
+		report_error "ERROR" "rgb_to_hex" "The RGB value is invalid."
+		return 1
+    fi
+    
+    # Conversion
+    r=$(echo "$rgbvalue" | cut -d, -f1)
+    g=$(echo "$rgbvalue" | cut -d, -f2)
+    b=$(echo "$rgbvalue" | cut -d, -f3)
+    printf '#%02x%02x%02x\n' "$r" "$g" "$b"
+}
+
+
+
+
+
+# ============================
+# === FUNCTIONAL FUNCTIONS ===
+# ============================
+
 # func : auto_theming
-# desc : from a given wallpaper will create a matching system theme
-# arg1 : wallpaper path
+# desc : will apply a coherent theme over the whole system following new wallpaper colors
+# arg1 : path to new wallpaper
 # outp : none
 # rtrn : 0 if no error, else 1
 auto_theming()
 {
-    local imagePath="$1"
-	imagePath=$(realpath $imagePath)
-	local primaryColor
-	local secondaryColor
-
-    # Is the given argument a valid image ?
-    if ! identify "$imagePath"; then
-		zenity --warning --text="[FATAL]: The given path does not lead to a valid image.\nUsage: hyprtheming {path/to/wallpaper}"
+	local wallpaper="$1"
+	local primary
+	local secondary
+	if ! identify $wallpaper; then 
+		report_error "ERROR" "auto_theming" "'$wallpaper' is not a valid wallpaper."
 		return 1
 	fi
 
-    # First retreiving few datas for proper theming
-    wal -i "$imagePath" # This create and apply the new color scheme
-    # The new color scheme is created. We can extract a few datas from it
-    primaryColor=$(cat "$HOME"/.cache/wal/colors | head -n 8 | tail -n 1 | sed 's/#//g')
-    secondaryColor=$(cat "$HOME"/.cache/wal/colors | head -n 2 | tail -n 1 | sed 's/#//g')
-
-    # Changing wallpaper with swww
-    if ! set_desktop_wallpaper $imagePath; then
-		report_error "ERROR" "auto_theming" "Could not set $imagePath as wallpaper."
+	# Updating wal colors cache
+	if ! wal -i $wallpaper; then
+		report_error "ERROR" "auto_theming" "Could not update wal colors cache."
 		return 1
 	fi
 
-	# Hyprlock background
-	if ! set_lockscreen_wallpaper $hyprPath/hyprlock.conf $imagePath; then
-		report_error "ERROR" "auto_theming" "Could not set $imagePath as lockscreen background."
-		return 1
-	fi
-
-    # Hyprland borders
-    if ! set_app_focused_color $hyprPath/configs/hyprland/style.conf $primaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set application focused border color."
-		return 1
-	fi
-    if ! set_app_unfocused_color $hyprPath/configs/hyprland/style.conf $secondaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set application unfocused border color."
-		return 1
-	fi	
-
-    # Waybar borders
-    if ! set_waybar_focused_color $hyprPath/configs/waybar/colors.conf $primaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set waybar focused border color."
-		return 1
-	fi
-    if ! set_waybar_unfocused_color $hyprPath/configs/waybar/colors.conf $secondaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set waybar unfocused border color."
-		return 1
-	fi	
-
-    # Wofi
-    if ! set_wofi_primary_color $hyprPath/configs/wofi/style.css $primaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set wofi primary color."
-		return 1
-	fi
-    if ! set_wofi_secondary_color $hyprPath/configs/wofi/style.css $secondaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set wofi secondary color."
-		return 1
-	fi
-
-    # Dunst
-    if ! set_dunst_primary_color $hyprPath/configs/dunst/dunstrc $primaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set dunst primary color."
-		return 1
-	fi
-    if ! set_dunst_secondary_color $hyprPath/configs/dunst/dunstrc $secondaryColor; then
-		report_error "ERROR" "auto_theming" "Could not set dunst secondary color."
-		return 1
-	fi
-
-    # Done
-    return 0
-}
+	# Retreiving primary color
+	primary=$(sed -n "8p" $HOME/.cache/wal/colors | sed "s/#//")
+	secondary=$(sed -n "2p" $HOME/.cache/wal/colors | sed "s/#//")
 
 
-
-# func : save_theme
-# desc : save current theme into a folder that can be loaded later.
-# arg1 : path to the folder where we will save the theme
-# outp : none
-# rtrn : 0 if no error, else 1
-save_theme()
-{
-    local folderPath="$1"
-	folderPath=$(realpath $folderPath)
-
-	local desktop_wallpaper
-	local lockscreen_wallpaper
-	local focused_app_color
-	local unfocused_app_color
-	local focused_waybar_color
-	local unfocused_waybar_color
-	local wofi_primary_color
-	local wofi_secondary_color
-	local dunst_primary_color
-	local dunst_secondary_color
-
-    # 1 - Retreiving every datas to save in our theme folder
-    # Current desktop wallpaper
-    if ! desktop_wallpaper=$(get_desktop_wallpaper); then
-		report_error "ERROR" "save_theme" "Could not retreive desktop wallpaper."
-		return 1
-	fi
-	# Hyprlock background
-	if ! lockscreen_wallpaper=$(get_lockscreen_wallpaper $hyprPath/hyprlock.conf); then
-		report_error "ERROR" "save_theme" "Could not retreive lockscreen background."
-		return 1
-	fi
-    # Hyprland borders
-    if ! focused_app_color=$(get_app_focused_color $hyprPath/configs/hyprland/style.conf); then
-		report_error "ERROR" "save_theme" "Could not retreive application focused border color."
-		return 1
-	fi
-    if ! unfocused_app_color=$(get_app_unfocused_color $hyprPath/configs/hyprland/style.conf); then
-		report_error "ERROR" "save_theme" "Could not get application unfocused border color."
-		return 1
-	fi	
-    # Waybar borders
-    if ! focused_waybar_color=$(get_waybar_focused_color $hyprPath/configs/waybar/colors.conf); then
-		report_error "ERROR" "save_theme" "Could not retreive waybar focused border color."
-		return 1
-	fi
-    if ! unfocused_waybar_color=$(get_waybar_unfocused_color $hyprPath/configs/waybar/colors.conf); then
-		report_error "ERROR" "save_theme" "Could not retreive waybar unfocused border color."
-		return 1
-	fi	
-    # Wofi
-    if ! wofi_primary_color=$(get_wofi_primary_color $hyprPath/configs/wofi/style.css); then
-		report_error "ERROR" "save_theme" "Could not retreive wofi primary color."
-		return 1
-	fi
-    if ! wofi_secondary_color=$(get_wofi_secondary_color $hyprPath/configs/wofi/style.css); then
-		report_error "ERROR" "save_theme" "Could not retreive wofi secondary color."
-		return 1
-	fi
-    # Dunst
-    if ! dunst_primary_color=$(get_dunst_primary_color $hyprPath/configs/dunst/dunstrc); then
-		report_error "ERROR" "save_theme" "Could not retreive dunst primary color."
-		return 1
-	fi
-    if ! dunst_secondary_color=$(get_dunst_secondary_color $hyprPath/configs/dunst/dunstrc); then
-		report_error "ERROR" "save_theme" "Could not retreive dunst secondary color."
-		return 1
-	fi
-
-	# Creating theme folder
-	if ! mkdir $folderPath; then
-		report_error "ERROR" "save_theme" "$folderPath is an invalid theme path."
-		return 1
-	fi
-
-	# Saving every datas in the folder theme
-	# Desktop wallpaper
-	cp $desktop_wallpaper $folderPath/desktop_wallpaper
-	# Lockscreen background
-	cp $lockscreen_wallpaper $folderPath/lockscreen_wallpaper
-	# Hyprland borders
-	echo "focused=$focused_app_color" >> $folderPath/hyprland.theme
-	echo "unfocused=$unfocused_app_color" >> $folderPath/hyprland.theme
-	# Waybars colors
-	echo "focused=$focused_waybar_color" >> $folderPath/waybar.theme
-	echo "unfocused=$unfocused_waybar_color" >> $folderPath/waybar.theme
-	# Wofi
-	echo "primary=$wofi_primary_color" >> $folderPath/wofi.theme
-	echo "secondary=$wofi_secondary_color" >> $folderPath/wofi.theme
-	# Dunst
-	echo "primary=$dunst_primary_color" >> $folderPath/dunst.theme
-	echo "secondary=$dunst_secondary_color" >> $folderPath/dunst.theme
-
-    # Done
-    return 0
-}
-
-
-
-# func : load_theme
-# desc : load a previously saved theme
-# arg1 : path to the theme folder to load
-# outp : none
-# rtrn : 0 if no error, else 1
-load_theme()
-{
-    local folderPath="$1"
-	folderPath=$(realpath $folderPath)
-
-	local desktop_wallpaper
-	local lockscreen_wallpaper
-	local focused_app_color
-	local unfocused_app_color
-	local focused_waybar_color
-	local unfocused_waybar_color
-	local wofi_primary_color
-	local wofi_secondary_color
-	local dunst_primary_color
-	local dunst_secondary_color
-
-	# Is the theme valid ?
-	if [ ! -d $folderPath ]; then
-		report_error "ERROR" "load_theme" "$folderPath is an invalid theme path."
-		return 1
-	fi
-
-	# Theme files presence verification
-	# desktop_wallpaper
-    if ! identify $folderPath/desktop_wallpaper > /dev/null; then
-		report_error "ERROR" "load_theme" "Could not retreive desktop wallpaper."
-		return 1
-	fi
-	# lockscreen_wallpaper
-	if ! identify $folderPath/lockscreen_wallpaper > /dev/null; then
-		report_error "ERROR" "load_theme" "Could not retreive lockscreen background."
-		return 1
-	fi
-	# hyprland.theme
-	if [ ! -f $folderPath/hyprland.theme ]; then
-		report_error "ERROR" "load_theme" "Could not retreive hyprland theme config."
-		return 1
-	fi
-	# waybar.theme
-	if [ ! -f $folderPath/waybar.theme ]; then
-		report_error "ERROR" "load_theme" "Could not retreive waybar theme config."
-		return 1
-	fi
-	# wofi.theme
-	if [ ! -f $folderPath/wofi.theme ]; then
-		report_error "ERROR" "load_theme" "Could not retreive wofi theme config."
-		return 1
-	fi
-	# dunst.theme
-	if [ ! -f $folderPath/dunst.theme ]; then
-		report_error "ERROR" "load_theme" "Could not retreive dunst theme config."
-		return 1
-	fi
-
-	# Retreiving datas
 	# Wallpapers
-	desktop_wallpaper=$folderPath/desktop_wallpaper
-	lockscreen_wallpaper=$folderPath/lockscreen_wallpaper
+	launch_option 1 set_desktop_wallpaper $wallpaper || return 1
+	launch_option 6 set_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|' $wallpaper image  || return 1
 
-	# Hyprland focused color
-	if ! cat $folderPath/hyprland.theme | grep -q "^focused=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive hyprland focused border color option."
-		return 1
-	fi; focused_app_color=$(cat $folderPath/hyprland.theme | head -n 1 | sed "s/focused=#//")
-    # Hyprland unfocused color
-	if ! cat $folderPath/hyprland.theme | grep -q "^unfocused=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive hyprland unfocused border color option."
-		return 1
-	fi; unfocused_app_color=$(cat $folderPath/hyprland.theme | tail -n 1 | sed "s/unfocused=#//")
-	# Waybar focused color
-	if ! cat $folderPath/waybar.theme | grep -q "^focused=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive waybar focused border color option."
-		return 1
-	fi; focused_waybar_color=$(cat $folderPath/waybar.theme | head -n 1 | sed "s/focused=#//")
-    # Waybar unfocused color
-	if ! cat $folderPath/waybar.theme | grep -q "^unfocused=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive waybar unfocused border color option."
-		return 1
-	fi; unfocused_waybar_color=$(cat $folderPath/waybar.theme | tail -n 1 | sed "s/unfocused=#//")
-	# Wofi primary color
-	if ! cat $folderPath/wofi.theme | grep -q "^primary=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive wofi primary color option."
-		return 1
-	fi; wofi_primary_color=$(cat $folderPath/wofi.theme | head -n 1 | sed "s/primary=#//")
-    # Wofi secondary color
-	if ! cat $folderPath/wofi.theme | grep -q "^secondary=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive wofi secondary color option."
-		return 1
-	fi; wofi_secondary_color=$(cat $folderPath/wofi.theme | tail -n 1 | sed "s/secondary=#//")
-	# Dunst primary color
-	if ! cat $folderPath/dunst.theme | grep -q "^primary=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive dunst primary color option."
-		return 1
-	fi; dunst_primary_color=$(cat $folderPath/dunst.theme | head -n 1 | sed "s/primary=#//")
-    # Dunst secondary color
-	if ! cat $folderPath/dunst.theme | grep -q "^secondary=#......"; then
-		report_error "ERROR" "load_theme" "Could not retreive dunst secondary color option."
-		return 1
-	fi; dunst_secondary_color=$(cat $folderPath/dunst.theme | tail -n 1 | sed "s/secondary=#//")
+	# Global colors from differents apps
+	set_global_primary_color $primary
+	set_global_secondary_color $secondary
 
-	# We need to verify the gathered datas before we apply the loaded theme.
-	if ! is_hexvalue_valid $focused_app_color; then
-		report_error "ERROR" "load_theme" "Hyprland focused border color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $unfocused_app_color; then
-		report_error "ERROR" "load_theme" "Hyprland unfocused border color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $focused_waybar_color; then
-		report_error "ERROR" "load_theme" "Waybar focused border color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $unfocused_waybar_color; then
-		report_error "ERROR" "load_theme" "Waybar unfocused border color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $wofi_primary_color; then
-		report_error "ERROR" "load_theme" "Wofi primary color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $wofi_secondary_color; then
-		report_error "ERROR" "load_theme" "Wofi secondary color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $dunst_primary_color; then
-		report_error "ERROR" "load_theme" "Dunst primary color option is invalid."
-		return 1
-	fi
-	if ! is_hexvalue_valid $dunst_secondary_color; then
-		report_error "ERROR" "load_theme" "Dunst secondary color option is invalid."
-		return 1
-	fi
-	
-	# All datas collected are valid, we can load in our saved theme.
-    # Changing wallpaper with swww
-    if ! set_desktop_wallpaper $desktop_wallpaper; then
-		report_error "ERROR" "load_theme" "Could not set $desktop_wallpaper as wallpaper."
-		return 1
-	fi
-	# Hyprlock background
-	if ! set_lockscreen_wallpaper $hyprPath/hyprlock.conf $lockscreen_wallpaper; then
-		report_error "ERROR" "load_theme" "Could not set $lockscreen_wallpaper as lockscreen background."
-		return 1
-	fi
-    # Hyprland borders
-    if ! set_app_focused_color $hyprPath/configs/hyprland/style.conf $focused_app_color; then
-		report_error "ERROR" "load_theme" "Could not set application focused border color."
-		return 1
-	fi
-    if ! set_app_unfocused_color $hyprPath/configs/hyprland/style.conf $unfocused_app_color; then
-		report_error "ERROR" "load_theme" "Could not set application unfocused border color."
-		return 1
-	fi	
-    # Waybar borders
-    if ! set_waybar_focused_color $hyprPath/configs/waybar/colors.conf $focused_waybar_color; then
-		report_error "ERROR" "load_theme" "Could not set waybar focused border color."
-		return 1
-	fi
-    if ! set_waybar_unfocused_color $hyprPath/configs/waybar/colors.conf $unfocused_waybar_color; then
-		report_error "ERROR" "load_theme" "Could not set waybar unfocused border color."
-		return 1
-	fi	
-    # Wofi
-    if ! set_wofi_primary_color $hyprPath/configs/wofi/style.css $wofi_primary_color; then
-		report_error "ERROR" "load_theme" "Could not set wofi primary color."
-		return 1
-	fi
-    if ! set_wofi_secondary_color $hyprPath/configs/wofi/style.css $wofi_secondary_color; then
-		report_error "ERROR" "load_theme" "Could not set wofi secondary color."
-		return 1
-	fi
-    # Dunst
-    if ! set_dunst_primary_color $hyprPath/configs/dunst/dunstrc $dunst_primary_color; then
-		report_error "ERROR" "load_theme" "Could not set dunst primary color."
-		return 1
-	fi
-    if ! set_dunst_secondary_color $hyprPath/configs/dunst/dunstrc $dunst_secondary_color; then
-		report_error "ERROR" "load_theme" "Could not set dunst secondary color."
-		return 1
-	fi
+	# Kitty
+	launch_option 1 set_kitty_colors_from_wallpaper $wallpaper || return 1
 
 	# Done
 	return 0
@@ -504,235 +489,292 @@ load_theme()
 
 
 
-# func : set_app_focused_color
-# desc : will change the hyprland focused app color
-# arg1 : path the the hyprland style config path
-# arg2 : new color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_app_focused_color()
+save_theme()
 {
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_app_focused_color" "$configPath is not a valid file."
+	local folderPath="$1"
+	if ! mkdir $folderPath; then
+		report_error "ERROR" "save_theme" "Could not create theme folder at '$folderPath'."
 		return 1
-    fi
+	fi
+	folderPath=$(realpath $folderPath)
 
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_app_focused_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
+	# Creating an instruction list to load later
+	# Hyprland
+	echo "\$hyprPath/scripts/themingctl --set-app-focused-color "$(launch_option 4 get_option_value $hyprland_config "col.active_border" "col.active_border = rgba(|.*|..)" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-unfocused-color "$(launch_option 4 get_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(|.*|..)" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-focused-opacity "$(launch_option 4 get_option_value $hyprland_config "active_opacity" "active_opacity = |.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-unfocused-opacity "$(launch_option 4 get_option_value $hyprland_config "inactive_opacity" "inactive_opacity = |.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-focused-border-opacity "$(hexadecimal_to_range $(launch_option 4 get_option_value $hyprland_config "col.active_border" "col.active_border = rgba(......|.*|)" '|')) >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-unfocused-border-opacity "$(hexadecimal_to_range $(launch_option 4 get_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(......|.*|)" '|')) >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-border-radius "$(launch_option 4 get_option_value $hyprland_config "rounding" "rounding = |.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-app-border-width "$(launch_option 4 get_option_value $hyprland_config "border_size" "border_size = |.*|" '|') >> $folderPath/config.theme
+    # Waybar
+	echo "\$hyprPath/scripts/themingctl --set-waybar-focused-color "$(launch_option 4 get_option_value $waybar_config "focused_color" "focused_color=#|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-unfocused-color "$(launch_option 4 get_option_value $waybar_config "unfocused_color" "unfocused_color=#|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-focused-opacity "$(launch_option 4 get_option_value $waybar_config "focused_opacity" "focused_opacity=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-unfocused-opacity "$(launch_option 4 get_option_value $waybar_config "unfocused_opacity" "unfocused_opacity=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-focused-border-opacity "$(launch_option 4 get_option_value $waybar_config "focused_border_opacity" "focused_border_opacity=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-unfocused-border-opacity "$(launch_option 4 get_option_value $waybar_config "unfocused_border_opacity" "unfocused_border_opacity=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-position "$(launch_option 4 get_option_value $waybar_config "position" "position=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-border-radius "$(launch_option 4 get_option_value $waybar_config "border_radius" "border_radius=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-border-width "$(launch_option 4 get_option_value $waybar_config "border_width" "border_width=|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-font \""$(launch_option 4 get_option_value $waybar_config "font_family" "font_family=|.*|" '|')\" >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-waybar-font-color "$(launch_option 4 get_option_value $waybar_config "font_color" "font_color=#|.*|" '|') >> $folderPath/config.theme
+	# Desktop
+	cp $(launch_option 0 get_desktop_wallpaper) $folderPath/desktop_wallpaper
+	# Hyprlock
+	cp $(launch_option 4 get_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|') $folderPath/lockscreen_wallpaper
+	echo "\$hyprPath/scripts/themingctl --set-lockscreen-font \""$(launch_option 4 get_option_value $hyprlock_config "font_family" "font_family = |.*|" '|')\" >> $folderPath/config.theme
+	# Wofi
+	echo "\$hyprPath/scripts/themingctl --set-wofi-primary-color "$(launch_option 4 get_option_value $wofi_config "@define-color primary" "@define-color primary #|.*|;" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-wofi-secondary-color "$(launch_option 4 get_option_value $wofi_config "@define-color secondary" "@define-color secondary #|.*|;" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-wofi-font \""$(launch_option 4 get_option_value $wofi_config "font:" "font:|.*|;" '|')\" >> $folderPath/config.theme
+	# Dunst
+	echo "\$hyprPath/scripts/themingctl --set-dunst-primary-color "$(launch_option 4 get_option_value $dunst_config "foreground" "foreground = \"#|.*|\"" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-dunst-secondary-color "$(launch_option 4 get_option_value $dunst_config "background" "background = \"#|.*|\"" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-dunst-border-color "$(launch_option 4 get_option_value $dunst_config "frame_color" "frame_color = \"#|.*|\"" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-dunst-border-radius "$(launch_option 4 get_option_value $dunst_config "corner_radius" "corner_radius = |.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-dunst-border-width "$(launch_option 4 get_option_value $dunst_config "frame_width" "frame_width = |.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-dunst-font \""$(launch_option 4 get_option_value $dunst_config "font" "font = |.*|" '|')\" >> $folderPath/config.theme
+	# Kitty
+	echo "\$hyprPath/scripts/themingctl --set-kitty-font-color "$(launch_option 4 get_option_value $kitty_config "foreground" "foreground #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-background-color "$(launch_option 4 get_option_value $kitty_config "background " "background #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-cursor-color "$(launch_option 4 get_option_value $kitty_config "cursor " "cursor #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-cursor-text-color "$(launch_option 4 get_option_value $kitty_config "cursor_text_color" "cursor_text_color #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-url-color "$(launch_option 4 get_option_value $kitty_config "url_color" "url_color #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color0 "$(launch_option 4 get_option_value $kitty_config "color0" "color0 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color1 "$(launch_option 4 get_option_value $kitty_config "color1 " "color1 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color2 "$(launch_option 4 get_option_value $kitty_config "color2" "color2 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color3 "$(launch_option 4 get_option_value $kitty_config "color3" "color3 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color4 "$(launch_option 4 get_option_value $kitty_config "color4" "color4 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color5 "$(launch_option 4 get_option_value $kitty_config "color5" "color5 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color6 "$(launch_option 4 get_option_value $kitty_config "color6" "color6 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-color7 "$(launch_option 4 get_option_value $kitty_config "color7" "color7 #|.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-opacity "$(launch_option 4 get_option_value $kitty_config "background_opacity" "background_opacity |.*|" '|') >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-font \""$(launch_option 4 get_option_value $kitty_config "font_family" "font_family |.*|" '|')\" >> $folderPath/config.theme
+	echo "\$hyprPath/scripts/themingctl --set-kitty-font-size "$(launch_option 4 get_option_value $kitty_config "font_size" "font_size |.*|" '|') >> $folderPath/config.theme
+	# Done
 
-    if ! grep -q "col.active_border = rgba(.*)" $configPath; then
-      	report_error "ERROR" "set_app_focused_color" "Could not find option for focused color."
-      	return 1
-    fi
-
-    sed -i "s/col.active_border = rgba(.*)/col.active_border = rgba(${hexValue}ff)/" $configPath
-    return 0
+	return 0
 }
 
 
 
-# func : get_app_focused_color
-# desc : will print the current hyprland focused border color
-# arg1 : path the the hyprland style config path
-# outp : current app focused border color in hexadecimal
-# rtrn : 0 if no error, else 1
-get_app_focused_color()
+load_theme()
 {
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_app_focused_color" "$configPath is not a valid file."
+	local themeFolder="$1"
+	local themeConfig
+	if [ ! -d $themeFolder ]; then
+		report_error "ERROR" "load_theme" "'$themeFolder' is not a valid theme."
 		return 1
-    fi
-
-    if ! line=$(grep "col.active_border" $configPath); then
-		report_error "ERROR" "get_app_focused_color" "Could not find active border color in $configPath."
+	fi
+	if [ ! -f "$themeFolder/config.theme" ]; then
+		report_error "ERROR" "load_theme" "No config file in the theme folder."
 		return 1
-    fi
-
-    echo $line | sed "s/col.active_border = rgba(\(.*\))/#\1/" | sed "s/ff$//g"
-    return 0
+	fi
+	# Specify the file containing the commands
+	themeConfig="$themeFolder/config.theme"
+	# Read the file line by line
+	while IFS= read -r line; do
+		# Execute the command
+		if ! eval "$line"; then
+			report_error "ERROR" "load_theme" "Could not execute '$line'."
+			return 1
+		fi
+	done < "$themeConfig"
+	# Loading wallpapers
+	launch_option 6 set_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|' $themeFolder/lockscreen_wallpaper image
+	swww img $themeFolder/desktop_wallpaper
+	# Reloading waybars
+	push_waybar_refresh
+	push_waybar_reload
+	# Done
+	return 0
 }
 
 
 
-
-# func : set_app_unfocused_color
-# desc : will change the hyprland unfocused app color
-# arg1 : path the hyprland style config path
-# arg2 : new color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_app_unfocused_color()
+set_global_primary_color()
 {
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_app_unfocused_color" "$configPath is not a valid file."
+	local primary="$1"
+	if ! is_hexvalue_valid $primary; then
+		report_error "ERROR" "set_global_primary_value" "'$primary' is not a valid hexadecimal value."
 		return 1
-    fi
-
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_app_unfocused_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "col.inactive_border = rgba(.*)" $configPath; then
-      	report_error "ERROR" "set_app_unfocused_color" "Could not find option for unfocused color."
-      	return 1
-    fi
-
-    sed -i "s/col.inactive_border = rgba(.*)/col.inactive_border = rgba(${hexValue}ff)/" $configPath
-    return 0
+	fi
+	
+	launch_option 6 set_option_value $hyprland_config "col.active_border" "col.active_border = rgba(|.*|..)" '|' $primary hexadecimal || return 1
+	launch_option 6 set_option_value $waybar_config "focused_color" "focused_color=#|.*|" '|' $primary hexadecimal  || return 1; push_waybar_refresh
+	launch_option 6 set_option_value $wofi_config "@define-color primary" "@define-color primary #|.*|;" '|' $primary hexadecimal  || return 1
+	launch_option 6 set_option_value $dunst_config "foreground" "foreground = \"#|.*|\"" '|' $primary hexadecimal || return 1
+	launch_option 6 set_option_value $dunst_config "frame_color" "frame_color = \"#|.*|\"" '|' $primary hexadecimal || return 1
+	pkill dunst; dunst -conf $dunst_config & # Restarting dunst for the theme to apply
+	return 0
 }
 
 
 
-# func : get_app_unfocused_color
-# desc : will print the current hyprland unfocused border color
-# arg1 : path the hyprland style config path
-# outp : current app unfocused border color in hexadecimal
-# rtrn : 0 if no error, else 1
-get_app_unfocused_color()
+set_global_secondary_color()
 {
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_app_unfocused_color" "$configPath is not a valid file."
+	local secondary="$1"
+	if ! is_hexvalue_valid $secondary; then
+		report_error "ERROR" "set_global_secondary_color" "'$secondary' is not a valid hexadecimal value."
 		return 1
-    fi
-
-    if ! line=$(grep "col.inactive_border" $configPath); then
-		report_error "ERROR" "get_app_unfocused_color" "Could not find active border color in $configPath."
-		return 1
-    fi
-
-    echo $line | sed "s/col.inactive_border = rgba(\(.*\))/#\1/" | sed "s/ff$//g"
-    return 0
+	fi
+	
+	launch_option 6 set_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(|.*|..)" '|' $secondary hexadecimal || return 1
+	launch_option 6 set_option_value $waybar_config "unfocused_color" "unfocused_color=#|.*|" '|' $secondary hexadecimal  || return 1; push_waybar_refresh
+	launch_option 6 set_option_value $wofi_config "@define-color secondary" "@define-color secondary #|.*|;" '|' $secondary hexadecimal  || return 1
+	launch_option 6 set_option_value $dunst_config "background" "background = \"#|.*|\"" '|' $secondary hexadecimal || return 1
+	pkill dunst; dunst -conf $dunst_config & # Restarting dunst for the theme to apply
+	return 0
 }
 
 
 
-# func : set_waybar_focused_color
-# desc : will change the waybar focused border color
-# arg1 : path the waybar colors config file
-# arg2 : new color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_waybar_focused_color()
+set_global_primary_color_gui()
 {
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_waybar_focused_color" "$configPath is not a valid file."
+	if ! set_global_primary_color $(pick_color_from_menu | sed "s/#//"); then
+		report_error "ERROR" "set_global_primary_color_gui" "Could not edit the primary color."
 		return 1
-    fi
-
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_waybar_focused_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "^focused=#" $configPath; then
-      	report_error "ERROR" "set_waybar_focused_color" "Could not find option for focused color."
-      	return 1
-    fi
-
-    sed -i "s/^focused=#.*$/focused=#${hexValue}/" $configPath
-    return 0
+	fi
+	return 0
 }
 
 
 
-# func : get_waybar_focused_color
-# desc : will print the waybar focused border color
-# arg1 : path the waybar colors config file
-# outp : waybar focused border color
-# rtrn : 0 if no error, else 1
-get_waybar_focused_color()
+set_global_secondary_color_gui()
 {
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_waybar_focused_color" "$configPath is not a valid file."
+	if ! set_global_secondary_color $(pick_color_from_menu | sed "s/#//"); then
+		report_error "ERROR" "set_global_secondary_color_gui" "Could not edit the secondary color."
 		return 1
-    fi
-
-    if ! line=$(grep "^focused=#.*" $configPath); then
-		report_error "ERROR" "get_waybar_focused_color" "Could not find active border color in $configPath."
-		return 1
-    fi
-
-    echo $line | sed "s/^focused=#\(.*\)$/#\1/"
-    return 0
+	fi
+	return 0
 }
 
 
 
-# func : set_waybar_unfocused_color
-# desc : will change the waybar unfocused border color
-# arg1 : path the waybar colors config file
-# arg2 : new color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_waybar_unfocused_color()
+set_global_font()
 {
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_waybar_unfocused_color" "$configPath is not a valid file."
-		return 1
-    fi
-
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_waybar_focused_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "^unfocused=#" $configPath; then
-      	report_error "ERROR" "set_waybar_unfocused_color" "Could not find option for unfocused color."
-      	return 1
-    fi
-
-    sed -i "s/^unfocused=#.*$/unfocused=#${hexValue}/" $configPath
-    return 0
+	local font="$1"
+	launch_option 6 set_option_value $waybar_config "font_family" "font_family=|.*|" '|' "$1" string || return 1; push_waybar_refresh
+	launch_option 6 set_option_value $hyprlock_config "font_family" "font_family = |.*|" '|' "$1" string || return 1
+	launch_option 6 set_option_value $wofi_config "font:" "font:|.*|;" '|' "$1" string || return 1
+	launch_option 6 set_option_value $dunst_config "font" "font = |.*|" '|' "$1" string || return 1
+	launch_option 6 set_option_value $kitty_config "font_family" "font_family |.*|" '|' "$1" string || return 1
+	pkill dunst; dunst -conf $dunst_config & # Restarting dunst for the theme to apply
+	return 0
 }
 
 
 
-# func : get_waybar_focused_color
-# desc : will print the waybar unfocused border color
-# arg1 : path the waybar colors config file
-# outp : waybar focused border color
-# rtrn : 0 if no error, else 1
-get_waybar_unfocused_color()
+set_outside_gaps()
 {
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_waybar_unfocused_color" "$configPath is not a valid file."
+	local value="$1"
+	if ! is_valid_int $value; then
+		report_error "ERROR" "set_ouside_gaps" "'$value' is not a valid integer."
 		return 1
-    fi
-
-    if ! line=$(grep "^unfocused=#.*" $configPath); then
-		report_error "ERROR" "get_waybar_unfocused_color" "Could not find active border color in $file."
+	fi
+	# Hyprland
+	if ! grep -q "gaps_out" $hyprland_config; then
+		report_error "ERROR" "set_ouside_gaps" "Could not find option for outside margins for Hyprland."
 		return 1
-    fi
+	fi
+	sed -i "s/gaps_out = .*/gaps_out = ${value}/" $hyprland_config
+	# Waybar
+	if ! grep -q "^margins" $waybar_config; then
+		report_error "ERROR" "set_ouside_gaps" "Could not find option for outside margins for Waybar."
+		return 1
+	fi
+	sed -i "s/^margins=.*/margins=${value}/" $waybar_config
+	push_waybar_refresh; push_waybar_reload
 
-    echo $line | sed "s/^unfocused=#\(.*\)$/#\1/"
-    return 0
+	# Need inside gaps recalculation
+	set_inside_gaps $(get_inside_gaps)
+	return 0
+}
+
+
+
+set_inside_gaps()
+{
+	local value="$1"
+	local outsideGaps=$(cat $waybar_config | grep "^margins=" | sed "s/margins=//")
+	local waybarValue=$((-1*outsideGaps+value*2))
+	if ! is_valid_int $value; then
+		report_error "ERROR" "set_inside_gaps" "'$value' is not a valid integer."
+		return 1
+	fi
+	# Hyprland
+	if ! grep -q "gaps_in" $hyprland_config; then
+		report_error "ERROR" "set_inside_gaps" "Could not find option for inside margins for Hyprland."
+		return 1
+	fi
+	sed -i "s/gaps_in = .*/gaps_in = ${value}/" $hyprland_config
+	# Waybar
+	if ! grep -q "^margin_bottom" $waybar_config; then
+		report_error "ERROR" "set_inside_gaps" "Could not find option for inside margins for Waybar."
+		return 1
+	fi
+	sed -i "s/^margin_bottom=.*/margin_bottom=${waybarValue}/" $waybar_config
+	push_waybar_refresh; push_waybar_reload
+	return 0
+}
+
+
+
+pick_color_from_menu()
+{
+	local color
+	if ! color=$(zenity --color-selection --show-palette); then
+		report_error "ERROR" "pick_color_from_menu" "Could not pick a color."
+		return 1
+	fi
+	
+	color=$(echo $color | sed "s/rgb(//" | sed "s/)//")
+	if ! valid_rgb $color; then
+		report_error "ERROR" "pick_color_from_menu" "The RGB value is invalid."
+		return 1
+	fi
+	rgb_to_hex $color
+}
+
+
+
+get_outside_gaps()
+{
+	if ! line=$(grep "gaps_out" $hyprland_config); then
+		report_error "ERROR" "get_ouside_gaps" "Could not find option for outside margins for Hyprland."
+		return 1
+	fi
+	echo $line | sed "s/gaps_out =//"
+	return 0
+}
+
+
+
+get_inside_gaps()
+{
+	if ! line=$(grep "gaps_in" $hyprland_config); then
+		report_error "ERROR" "get_inside_gaps" "Could not find option for inside margins for Hyprland."
+		return 1
+	fi
+	echo $line | sed "s/gaps_in =//"
+	return 0
+}
+
+
+
+# func : get_themingctl_configs
+# desc : get the configs file for every app that themingctl can edit
+# outp : list of apps and their respective configuration
+# rtrn : 0 if no error, else 1
+get_themingctl_configs()
+{
+	if ! grep ".*_config=\".*\"" $0; then
+		report_error "ERROR" "get_themingctl_configs" "Could not retreive a single option."
+		return 1
+	fi
+	return 0
 }
 
 
@@ -774,308 +816,235 @@ get_desktop_wallpaper()
 
 
 
-# func : set_lockscreen_wallpaper
-# desc : will set the new lockscreen wallpaper
-# arg1 : path to the hyprlock config file
-# arg2 : path to the wallpaper
+# func : set_kitty_colors_from_wallpaper
+# desc : will apply wal generated shcema from given wallpaper to kitty config file
+# arg1 : path to wallpaper which to get colors from
 # outp : none
 # rtrn : 0 if no error, else 1
-set_lockscreen_wallpaper()
+set_kitty_colors_from_wallpaper()
 {
-	local hyprlockConf="$1"
-	local wallpaper="$2"
-	wallpaper=$(realpath $wallpaper)
-
-	if ! is_file_valid $hyprlockConf; then
-		report_error "ERROR" "set_lockscreen_wallpaper" "$hyprlockConf is not a valid file."
-		return 1
-    fi
+	local wallpaper="$1"
+	local walColor
+	local plusOne
+	local shiftNumber
 	if ! identify $wallpaper > /dev/null; then
-		report_error "ERROR" "set_lockscreen_wallpaper" "$wallpaper is not an image."
-		return 1
-    fi
-	if ! grep -q "path = .* #lockscreen_wallpaper" $hyprlockConf; then
-		report_error "ERROR" "set_lockscreen_wallpaper" "Could not find option where to change the wallpaper."
+		report_error "ERROR" "set_kitty_colors_from_wallpaper" "'$wallpaper' is not a valid image."
 		return 1
 	fi
 
-	sed -i "s|path = .* #lockscreen_wallpaper|path = ${wallpaper} #lockscreen_wallpaper|" $hyprlockConf
+	# Generating colors scheme
+	if ! wal -i $wallpaper > /dev/null; then
+		report_error "ERROR" "set_kitty_colors_from_wallpaper" "An error occured during wal colors scheme generation."
+		return 1
+	fi
+
+	# First settings all 15 colors
+	for((i=0; i<8; i++)); do
+		plusOne=$((i+1))
+		walColor=$(sed -n "${plusOne}p" $HOME/.cache/wal/colors)
+
+		shiftNumber=$((i+8))
+		sed -i "s/color${i} #....../color${i} ${walColor}/" $kitty_config
+		sed -i "s/color${shiftNumber} #....../color${shiftNumber} ${walColor}/" $kitty_config
+	done
+
+	# Changing special kitty values
+	walColor=$(sed -n "8p" $HOME/.cache/wal/colors) # Color 7
+	sed -i "s/foreground #....../foreground ${walColor}/" $kitty_config
+	sed -i "s/cursor #....../cursor ${walColor}/" $kitty_config
+	walColor=$(sed -n "1p" $HOME/.cache/wal/colors) # Color 0
+	sed -i "s/background #....../background ${walColor}/" $kitty_config
 	return 0
 }
 
 
 
-# func : get_lockscreen_wallpaper
-# desc : will print current desktop wallpaper path
-# arg1 : path to the hyprlock config file 
-# outp : path to lockscreen wallpaper
-# rtrn : 0 if no error, else 1
-get_lockscreen_wallpaper()
+get_kitty_colors_all()
 {
-	local hyprlockConf="$1"
-	if ! is_file_valid $hyprlockConf; then
-		report_error "ERROR" "get_lockscreen_wallpaper" "$hyprlockConf is not a valid file."
-		return 1
-    fi
-	if ! line=$(grep "path = .* #lockscreen_wallpaper" $hyprlockConf); then
-		report_error "ERROR" "get_lockscreen_wallpaper" "Could not find option where wallpaper path is stored."
-		return 1
-	fi
-	echo $line | sed "s|path = \(.*\) #lockscreen_wallpaper|\1|"
+	# Loop through colors
+	for i in {0..7}; do
+		echo -e "color${i}: \e[48;5;${i}m FONT \e[0m"
+	done
+	# Reset color
+	echo -e "\e[0m"
 	return 0
 }
 
 
 
-# func : set_wofi_primary_color
-# desc : will change the wofi border/font color
-# arg1 : path the wofi config path
-# arg2 : new primary color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_wofi_primary_color()
+
+
+
+
+
+# ========================
+# === GLOBAL FUNCTIONS ===
+# ========================
+
+set_option_value()
 {
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
+	local configPath="$1"
+	local option="$2"
+	local pattern="$3"
+	local delimiter="$4"
+	local value="$5"
+	local valueType="$6"
 
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_wofi_primary_color" "$configPath is not a valid file."
-		return 1
+	local stringBeforeValue
+	local stringAfterValue
+
+	# Test config file validity
+	if ! is_file_valid $configPath; then
+      	report_error "ERROR" "set_option_value" "$configPath is not a valid config file."
+      	return 1
+	fi
+
+	# Testing option presence in config file
+    if ! line=$(grep "$option" $configPath); then
+      	report_error "ERROR" "set_option_value" "Could not find option '$option' in '$configPath'."
+      	return 1
     fi
+	line=$(echo "$line" | sed 's/^[[:space:]]*//' | uniq)
+	line=$(echo "$line" | grep "^${option}") # case when we have like 'inactive' and 'active'
 
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_wofi_primary_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "themingctl:primary" $configPath; then
-      	report_error "ERROR" "set_wofi_primary_color" "Could not find option for primary color."
+	# Testing delimiters presence in pattern
+    if ! echo $pattern | grep -q ".*${delimiter}.*${delimiter}.*"; then
+      	report_error "ERROR" "set_option_value" "Could not find delimiters '$delimiter' in '$pattern'."
       	return 1
     fi
 
-    sed -i "s/.*border.*primary.*/    border-color:#${hexValue}; \/\*themingctl:primary\*\//g" "$configPath"
-    sed -i "s/.*background.*primary.*/    background-color:#${hexValue}; \/\*themingctl:primary\*\//g" "$configPath"
+	# Test given value validity
+	case $valueType in
+		int)
+			if ! is_valid_int $value; then
+				report_error "ERROR" "set_option_value" "'$value' is not a valid integer."
+				return 1
+			fi
+		;;
 
-    return 0
+		hexadecimal)
+			if ! is_hexvalue_valid $value; then
+				report_error "ERROR" "set_option_value" "'$value' is not a valid hexadecimal value."
+				return 1
+			fi
+		;;
+
+		range)
+			if ! is_range_valid $value; then
+				report_error "ERROR" "set_option_value" "'$value' is not a valid range."
+				return 1
+			fi
+		;;	
+
+		rangeToHex)
+			if ! value=$(range_to_hexadecimal $value); then
+				report_error "ERROR" "set_option_value" "Could not transform range '$value' in hexadecimal value."
+				return 1
+			fi
+		;;
+
+		image)
+			if ! identify $value > /dev/null; then
+				report_error "ERROR" "set_option_value" "'$value' is not a valid image."
+				return 1
+			fi
+			value=$(realpath $value)
+		;;
+
+		file)
+			if ! is_file_valid $value; then
+				report_error "ERROR" "set_option_value" "'$value' is not a valid file."
+				return 1
+			fi
+			value=$(realpath $value)
+		;;
+
+		string);;
+
+		*)
+			report_error "ERROR" "set_option_value" "Unknown type '$value'."
+			return 1
+		;;
+	esac
+
+	# Replacing
+	stringBeforeValue=$(echo $pattern | sed "s!${delimiter}.*!!")
+	stringBeforeValue=$(echo $line | sed "s!\(^${stringBeforeValue}\).*!\1!")
+	stringAfterValue=$(echo $pattern | sed "s!.*${delimiter}.*${delimiter}!!")
+	stringAfterValue=$(echo $line | sed "s!.*\(${stringAfterValue}$\)!\1!")
+	sed -i "s!\(^[[:space:]]*\)${stringBeforeValue}.*${stringAfterValue}!\1${stringBeforeValue}${value}${stringAfterValue}!g" $configPath
+
+	# # DEBUG
+	# echo "line = $line"
+	# echo "before = $stringBeforeValue"
+	# echo "after = $stringAfterValue"
+	# echo "result = $stringBeforeValue$value$stringAfterValue"
+	return 0
 }
 
 
 
-# func : get_wofi_primary_color
-# desc : will print the current wofi primary color
-# arg1 : path the wofi css file
-# outp : wofi primary color in hexadecimal
-# rtrn : 0 if no error, else 1
-get_wofi_primary_color()
+get_option_value()
 {
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_wofi_primary_color" "$configPath is not a valid file."
-		return 1
+	local configPath="$1"
+	local option="$2"
+	local pattern="$3"
+	local delimiter="$4"
+
+	local stringBeforeValue
+	local stringAfterValue
+
+	# Test config file validity
+	if ! is_file_valid $configPath; then
+      	report_error "ERROR" "set_option_value" "$configPath is not a valid config file."
+      	return 1
+	fi
+
+	# Testing option presence in config file
+    if ! line=$(grep "$option" "$configPath"); then
+      	report_error "ERROR" "set_option_value" "Could not find option '$option' in '$configPath'."
+      	return 1
     fi
+	# Removing eventual spaces at the start of $line
+	line=$(echo "$line" | sed 's/^[[:space:]]*//')
+	line=$(echo "$line" | grep "^${option}" | uniq)  # case when we have like 'inactive' and 'active'
 
-    if ! line=$(grep "themingctl:primary" $configPath | head -n 1); then
-		report_error "ERROR" "get_wofi_primary_color" "Could not find active border color in $configPath."
-		return 1
-    fi
-
-    echo $line | sed "s/.*#\(.*\);.*/#\1/"
-    return 0
-}
-
-
-
-# func : set_wofi_secondary_color
-# desc : will change the wofi border/font color
-# arg1 : path the wofi config path
-# arg2 : new secondary color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_wofi_secondary_color()
-{
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_wofi_secondary_color" "$configPath is not a valid file."
-		return 1
-    fi
-
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_wofi_secondary_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "themingctl:secondary" $configPath; then
-      	report_error "ERROR" "set_wofi_secondary_color" "Could not find option for secondary color."
+	# Testing delimiters presence in pattern
+    if ! echo $pattern | grep -q ".*${delimiter}.*${delimiter}.*"; then
+      	report_error "ERROR" "set_option_value" "Could not find delimiters '$delimiter' in '$pattern'."
       	return 1
     fi
 
-    sed -i "s/.*border.*secondary.*/    border-color:#${hexValue}; \/\*themingctl:secondary\*\//g" "$configPath"
-    sed -i "s/.*background.*secondary.*/    background-color:#${hexValue}; \/\*themingctl:secondary\*\//g" "$configPath"
+	
 
-    return 0
+	# Getting
+	stringBeforeValue=$(echo $pattern | sed "s/${delimiter}.*//")
+	stringBeforeValue=$(echo $line | sed "s/\(^${stringBeforeValue}\).*/\1/")
+	stringAfterValue=$(echo $pattern | sed "s/.*${delimiter}.*${delimiter}//")
+	stringAfterValue=$(echo $line | sed "s/.*\(${stringAfterValue}$\)/\1/")
+	echo $line | sed "s/${stringBeforeValue}\(.*\)${stringAfterValue}/\1/"
+	return 0
 }
 
 
 
-# func : get_wofi_secondary_color
-# desc : will print the current wofi secondary color
-# arg1 : path to the wofi css file
-# outp : wofi secondary color in hexadecimal
-# rtrn : 0 if no error, else 1
-get_wofi_secondary_color()
-{
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_wofi_secondary_color" "$configPath is not a valid file."
-		return 1
-    fi
-
-    if ! line=$(grep "themingctl:secondary" $configPath | head -n 1); then
-		report_error "ERROR" "get_wofi_secondary_color" "Could not find active border color in $configPath."
-		return 1
-    fi
-
-    echo $line | sed "s/.*#\(.*\);.*/#\1/"
-    return 0
-}
 
 
 
-# func : set_dunst_primary_color
-# desc : will change the dunst border/font color
-# arg1 : path the dunst config path
-# arg2 : new primary color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_dunst_primary_color()
-{
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_dunst_primary_color" "$configPath is not a valid file."
-		return 1
-    fi
-
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_dunst_primary_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "foreground = \".*\" #themingctl" $configPath; then
-      	report_error "ERROR" "set_dunst_primary_color" "Could not find option for primary color."
-      	return 1
-    fi
-
-    if ! grep -q "frame_color = \".*\" #themingctl" $configPath; then
-      	report_error "ERROR" "set_dunst_primary_color" "Could not find option for primary color."
-      	return 1
-    fi
-
-    sed -i "s/foreground = \".*\" #themingctl/foreground = \"#${hexValue}\" #themingctl/g" "$configPath"
-	sed -i "s/frame_color = \".*\" #themingctl/frame_color = \"#${hexValue}\" #themingctl/g" "$configPath"
-	pkill dunst && dunst -conf "$configPath" &
-    return 0
-}
 
 
 
-# func : get_dunst_primary_color
-# desc : will print the current dunst primary color
-# arg1 : path to the dunst config file
-# outp : dunst primary color in hexadecimal
-# rtrn : 0 if no error, else 1
-get_dunst_primary_color()
-{
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_dunst_primary_color" "$configPath is not a valid file."
-		return 1
-    fi
 
-    if ! line=$(grep "foreground = \".*\" #themingctl" $configPath | head -n 1); then
-      	report_error "ERROR" "get_dunst_primary_color" "Could not find option for primary color."
-      	return 1
-    fi
-
-    echo $line | sed "s/foreground = \"#\(.*\)\" #themingctl/#\1/"
-    return 0
-}
-
-
-
-# func : set_dunst_secondary_color
-# desc : will change the dunst border/font color
-# arg1 : path the dunst config path
-# arg2 : new secondary color in hexadecimal
-# outp : none
-# rtrn : 0 if no error, else 1
-set_dunst_secondary_color()
-{
-    local configPath="$1"
-    local hexValue="$2"
-    # In case the given value start with '#' we remove it
-    hexValue=$(echo $hexValue | sed "s/^#//g")
-
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "set_dunst_secondary_color" "$configPath is not a valid file."
-		return 1
-    fi
-
-    if ! is_hexvalue_valid $hexValue; then
-		report_error "ERROR" "set_dunst_secondary_color" "'$hexValue' is not a valid hexadecimal color."
-		return 1
-    fi
-
-    if ! grep -q "background = \".*\" #themingctl" $configPath; then
-      	report_error "ERROR" "set_dunst_secondary_color" "Could not find option for secondary color."
-      	return 1
-    fi
-
-    sed -i "s/background = \".*\" #themingctl/background = \"#${hexValue}\" #themingctl/g" "$configPath"
-	pkill dunst && dunst -conf "$configPath" &
-    return 0
-}
-
-
-
-# func : get_dunst_secondary_color
-# desc : will print the current dunst secondary color
-# arg1 : path to the dunst config file
-# outp : dunst secondary color in hexadecimal
-# rtrn : 0 if no error, else 1
-get_dunst_secondary_color()
-{
-    local configPath="$1"
-    if ! is_file_valid $configPath; then
-		report_error "ERROR" "get_dunst_secondary_color" "$configPath is not a valid file."
-		return 1
-    fi
-
-    if ! line=$(grep "background = \".*\" #themingctl" $configPath | head -n 1); then
-      	report_error "ERROR" "get_dunst_secondary_color" "Could not find option for secondary color."
-      	return 1
-    fi
-
-    echo $line | sed "s/background = \"#\(.*\)\" #themingctl/#\1/"
-    return 0
-}
-
-
+# ==========================
+# === STARTING FUNCTIONS ===
+# ==========================
 
 # func : launch_option
 # desc : test if enough args if is good launch the given option fllowed by given args
 # arg1 : required number of arguments for the option to be launched
 # arg2 : option to launch
 # arg3 : option arguments
+# outp : none
 # rtrn : 0 if no error, else 1
 launch_option()
 {
@@ -1084,7 +1053,7 @@ launch_option()
     shift 2
 
     arguments_check "$option_name" $required_arg_count $# || return 1
-    if ! $option_name $@; then
+    if ! $option_name "$@"; then
         report_error "ERROR" "$option_name $@" "An error occured."
         return 1
     fi
@@ -1110,34 +1079,154 @@ main()
 	
 	case $option in
 
+		# Setup
+		--set-hyprland-config) launch_option 6 set_option_value $0 "hyprland_config" "hyprland_config=\"|.*|\" #HYPRLAND_CONFIG" '|' "$1" string ;;
+		--set-waybar-config) launch_option 6 set_option_value $0 "waybar_config" "waybar_config=\"|.*|\" #WAYBAR_CONFIG" '|' "$1" string ;;
+		--set-hyprlock-config) launch_option 6 set_option_value $0 "hyprlock_config" "hyprlock_config=\"|.*|\" #HYPRLOCK_CONFIG" '|' "$1" string ;;
+		--set-wofi-config) launch_option 6 set_option_value $0 "wofi_config" "wofi_config=\"|.*|\" #WOFI_CONFIG" '|' "$1" string ;;
+		--set-dunst-config) launch_option 6 set_option_value $0 "dunst_config" "dunst_config=\"|.*|\" #DUNST_CONFIG" '|' "$1" string ;;
+		--set-kitty-config) launch_option 6 set_option_value $0 "kitty_config" "kitty_config=\"|.*|\" #KITTY_CONFIG" '|' "$1" string ;;
+		--get-hyprland-config) launch_option 4 get_option_value $0 "hyprland_config" "hyprland_config=\"|.*|\" #HYPRLAND_CONFIG" '|';; 
+		--get-waybar-config) launch_option 4 set_option_value $0 "waybar_config" "waybar_config=\"|.*|\" #WAYBAR_CONFIG" '|';;
+		--get-hyprlock-config) launch_option 4 set_option_value $0 "hyprlock_config" "hyprlock_config=\"|.*|\" #HYPRLOCK_CONFIG" '|';;
+		--get-wofi-config) launch_option 4 set_option_value $0 "wofi_config" "wofi_config=\"|.*|\" #WOFI_CONFIG" '|';;
+		--get-dunst-config) launch_option 4 set_option_value $0 "dunst_config" "dunst_config=\"|.*|\" #DUNST_CONFIG" '|';;
+		--get-kitty-config) launch_option 4 set_option_value $0 "kitty_config" "kitty_config=\"|.*|\" #KITTY_CONFIG" '|';;
+		--get-themingctl-configs) launch_option 0 get_themingctl_configs;;
+
+		# General
 		--auto-theming) launch_option 1 auto_theming $@;;
         --save-theme) launch_option 1 save_theme $@;;
         --load-theme) launch_option 1 load_theme $@;;
+		--set-global-primary-color) launch_option 1 set_global_primary_color $1;;
+		--set-global-primary-color-gui) launch_option 0 set_global_primary_color_gui;;
+		--set-global-secondary-color) launch_option 1 set_global_secondary_color $1;;
+		--set-global-secondary-color-gui) launch_option 0 set_global_secondary_color_gui;;
+		--set-global-font) launch_option 1 set_global_font "$1";;
+		--set-outside-gaps) launch_option 1 set_outside_gaps "$1";;
+		--set-inside-gaps) launch_option 1 set_inside_gaps "$1";;
+		--pick-color-from-menu) launch_option 0 pick_color_from_menu;;
+		--pick-color-from-monitor) hyprpicker ;;
+		--get-outside-gaps) launch_option 0 get_outside_gaps;;
+		--get-inside-gaps) launch_option 0 get_inside_gaps;;
 
-        --set-app-focused-color) launch_option 2 set_app_focused_color $@;;
-        --get-app-focused-color) launch_option 1 get_app_focused_color $@;;
-        --set-app-unfocused-color) launch_option 2 set_app_unfocused_color $@;;
-        --get-app-unfocused-color) launch_option 1 get_app_unfocused_color $@;;
+		# Hyprland
+		--set-app-focused-color) launch_option 6 set_option_value $hyprland_config "col.active_border" "col.active_border = rgba(|.*|..)" '|' $1 hexadecimal ;;
+		--set-app-unfocused-color) launch_option 6 set_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(|.*|..)" '|' $1 hexadecimal ;;
+		--set-app-focused-opacity) launch_option 6 set_option_value $hyprland_config "active_opacity" "active_opacity = |.*|" '|' $1 range ;;
+		--set-app-unfocused-opacity) launch_option 6 set_option_value $hyprland_config "inactive_opacity" "inactive_opacity = |.*|" '|' $1 range ;;
+		--set-app-focused-border-opacity) launch_option 6 set_option_value $hyprland_config "col.active_border" "col.active_border = rgba(......|.*|)" '|' $1 rangeToHex ;;
+		--set-app-unfocused-border-opacity) launch_option 6 set_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(......|.*|)" '|' $1 rangeToHex ;;
+		--set-app-border-radius) launch_option 6 set_option_value $hyprland_config "rounding" "rounding = |.*|" '|' $1 int ;;
+		--set-app-border-width) launch_option 6 set_option_value $hyprland_config "border_size" "border_size = |.*|" '|' $1 int ;;
+		--get-app-focused-color) launch_option 4 get_option_value $hyprland_config "col.active_border" "col.active_border = rgba(|.*|..)" '|' ;;
+		--get-app-unfocused-color) launch_option 4 get_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(|.*|..)" '|';;
+		--get-app-focused-opacity) launch_option 4 get_option_value $hyprland_config "active_opacity" "active_opacity = |.*|" '|';;
+		--get-app-unfocused-opacity) launch_option 4 get_option_value $hyprland_config "inactive_opacity" "inactive_opacity = |.*|" '|';;
+		--get-app-focused-border-opacity) launch_option 4 get_option_value $hyprland_config "col.active_border" "col.active_border = rgba(......|.*|)" '|';;
+		--get-app-unfocused-border-opacity) launch_option 4 get_option_value $hyprland_config "col.inactive_border" "col.inactive_border = rgba(......|.*|)" '|';;
+		--get-app-border-radius) launch_option 4 get_option_value $hyprland_config "rounding" "rounding = |.*|" '|';;
+		--get-app-border-width) launch_option 4 get_option_value $hyprland_config "border_size" "border_size = |.*|" '|';;
 
-        --set-waybar-focused-color) launch_option 2 set_waybar_focused_color $@;;
-        --get-waybar-focused-color) launch_option 1 get_waybar_focused_color $@;;
-        --set-waybar-unfocused-color) launch_option 2 set_waybar_unfocused_color $@;;
-        --get-waybar-unfocused-color) launch_option 1 get_waybar_unfocused_color $@;;
+		# Waybar
+        --set-waybar-focused-color) launch_option 6 set_option_value $waybar_config "focused_color" "focused_color=#|.*|" '|' $1 hexadecimal; push_waybar_refresh;;
+        --set-waybar-unfocused-color) launch_option 6 set_option_value $waybar_config "unfocused_color" "unfocused_color=#|.*|" '|' $1 hexadecimal; push_waybar_refresh;;
+		--set-waybar-focused-opacity) launch_option 6 set_option_value $waybar_config "focused_opacity" "focused_opacity=|.*|" '|' $1 range; push_waybar_refresh;;
+		--set-waybar-unfocused-opacity) launch_option 6 set_option_value $waybar_config "unfocused_opacity" "unfocused_opacity=|.*|" '|' $1 range; push_waybar_refresh;;
+		--set-waybar-focused-border-opacity) launch_option 6 set_option_value $waybar_config "focused_border_opacity" "focused_border_opacity=|.*|" '|' $1 range; push_waybar_refresh;;
+		--set-waybar-unfocused-border-opacity) launch_option 6 set_option_value $waybar_config "unfocused_border_opacity" "unfocused_border_opacity=|.*|" '|' $1 range; push_waybar_refresh;;
+		--set-waybar-position) launch_option 6 set_option_value $waybar_config "position" "position=|.*|" '|' "$1" string; push_waybar_refresh; push_waybar_reload;;
+		--set-waybar-focused-opacity) launch_option 6 set_option_value $waybar_config "focused_opacity" "focused_opacity=|.*|" '|' $1 range; push_waybar_refresh;;
+		--set-waybar-unfocused-opacity) launch_option 6 set_option_value $waybar_config "focused_opacity" "focused_opacity=|.*|" '|' $1 range; push_waybar_refresh;;
+		--set-waybar-border-radius) launch_option 6 set_option_value $waybar_config "border_radius" "border_radius=|.*|" '|' $1 int; push_waybar_refresh;;
+		--set-waybar-border-width) launch_option 6 set_option_value $waybar_config "border_width" "border_width=|.*|" '|' $1 int; push_waybar_refresh;;
+		--set-waybar-font) launch_option 6 set_option_value $waybar_config "font_family" "font_family=|.*|" '|' "$1" string; push_waybar_refresh;;
+		--set-waybar-font-color) launch_option 6 set_option_value $waybar_config "font_color" "font_color=#|.*|" '|' "$1" hexadecimal; push_waybar_refresh;;
+		--toggle-waybar-island-mode) launch_option 6 set_option_value $waybar_config "waybar_mode" "waybar_mode=|.*|" '|' "island" string; push_waybar_refresh;;
+		--toggle-waybar-magnet-mode) launch_option 6 set_option_value $waybar_config "waybar_mode" "waybar_mode=|.*|" '|' "magnet" string; push_waybar_refresh;;
+		--toggle-waybar-isles-mode) launch_option 6 set_option_value $waybar_config "waybar_mode" "waybar_mode=|.*|" '|' "isles" string; push_waybar_refresh;;
+        --get-waybar-focused-color) launch_option 4 get_option_value $waybar_config "focused_color" "focused_color=#|.*|" '|';;
+        --get-waybar-unfocused-color) launch_option 4 get_option_value $waybar_config "unfocused_color" "unfocused_color=#|.*|" '|';;
+		--get-waybar-focused-opacity) launch_option 4 get_option_value $waybar_config "focused_opacity" "focused_opacity=|.*|" '|';;
+		--get-waybar-unfocused-opacity) launch_option 4 get_option_value $waybar_config "unfocused_opacity" "unfocused_opacity=|.*|" '|';;
+		--get-waybar-focused-border-opacity) launch_option 4 get_option_value $waybar_config "focused_border_opacity" "focused_border_opacity=|.*|" '|';;
+		--get-waybar-unfocused-border-opacity) launch_option 4 get_option_value $waybar_config "unfocused_border_opacity" "unfocused_border_opacity=|.*|" '|';;
+		--get-waybar-position) launch_option 4 get_option_value $waybar_config "focused_color" "focused_color=#|.*|" '|';;
+		--get-waybar-focused-opacity) launch_option 4 get_option_value $waybar_config "focused_opacity" "focused_opacity=#|.*|" '|';;
+		--get-waybar-unfocused-opacity) launch_option 4 get_option_value $waybar_config "focused_opacity" "focused_opacity=#|.*|" '|';;
+		--get-waybar-border-radius) launch_option 4 get_option_value $waybar_config "border_radius" "border_radius=|.*|" '|';;
+		--get-waybar-border-width) launch_option 4 get_option_value $waybar_config "border_width" "border_width=|.*|" '|';;
+		--get-waybar-font) launch_option 4 get_option_value $waybar_config "font_family" "font_family=|.*|" '|';;
+		--get-waybar-font-color) launch_option 4 get_option_value $waybar_config "font_color" "font_color=#|.*|" '|';;
+		--get-waybar-mode) launch_option 4 get_option_value $waybar_config "waybar_mode" "waybar_mode=|.*|" '|';;
 
+		# Desktop
         --set-desktop-wallpaper) launch_option 1 set_desktop_wallpaper $@;;
-        --get-desktop-wallpaper) launch_option 0 get_desktop_wallpaper $@;;
-        --set-lockscreen-wallpaper) launch_option 2 set_lockscreen_wallpaper $@;;
-        --get-lockscreen-wallpaper) launch_option 1 get_lockscreen_wallpaper $@;;
+		--get-desktop-wallpaper) launch_option 0 get_desktop_wallpaper;;
 
-        --set-wofi-primary-color) launch_option 2 set_wofi_primary_color $@;;
-        --get-wofi-primary-color) launch_option 1 get_wofi_primary_color $@;;
-        --set-wofi-secondary-color) launch_option 2 set_wofi_secondary_color $@;;
-        --get-wofi-secondary-color) launch_option 1 get_wofi_secondary_color $@;;
+		# Hyprlock
+        --set-lockscreen-wallpaper) launch_option 6 set_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|' $1 image;;
+		--set-lockscreen-font) launch_option 6 set_option_value $hyprlock_config "font_family" "font_family = |.*|" '|' "$1" string;;
+        --get-lockscreen-wallpaper) launch_option 4 get_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|';;
+		--get-lockscreen-font) launch_option 4 get_option_value $hyprlock_config "font_family" "font_family = |.*|" '|';;
 
-        --set-dunst-primary-color) launch_option 2 set_dunst_primary_color $@;;
-        --get-dunst-primary-color) launch_option 1 get_dunst_primary_color $@;;
-        --set-dunst-secondary-color) launch_option 2 set_dunst_secondary_color $@;;
-        --get-dunst-secondary-color) launch_option 1 get_dunst_secondary_color $@;;
+		# Wofi
+        --set-wofi-primary-color) launch_option 6 set_option_value $wofi_config "@define-color primary" "@define-color primary #|.*|;" '|' $1 hexadecimal;;
+		--set-wofi-secondary-color) launch_option 6 set_option_value $wofi_config "@define-color secondary" "@define-color secondary #|.*|;" '|' $1 hexadecimal;;
+		--set-wofi-font) launch_option 6 set_option_value $wofi_config "font:" "font:|.*|;" '|' "$1" string;;
+        --get-wofi-primary-color) launch_option 4 get_option_value $wofi_config "@define-color primary" "@define-color primary #|.*|;" '|';;
+		--get-wofi-secondary-color) launch_option 4 get_option_value $wofi_config "@define-color secondary" "@define-color secondary #|.*|;" '|';;
+		--get-wofi-font) launch_option 4 get_option_value $wofi_config "font:" "font:|.*|;" '|';;
+
+		# Dunst
+        --set-dunst-primary-color) launch_option 6 set_option_value $dunst_config "foreground" "foreground = \"#|.*|\"" '|' $1 hexadecimal;;
+		--set-dunst-secondary-color) launch_option 6 set_option_value $dunst_config "background" "background = \"#|.*|\"" '|' $1 hexadecimal;;
+		--set-dunst-border-color) launch_option 6 set_option_value $dunst_config "frame_color" "frame_color = \"#|.*|\"" '|' $1 hexadecimal;;
+		--set-dunst-border-radius) launch_option 6 set_option_value $dunst_config "corner_radius" "corner_radius = |.*|" '|' $1 int;;
+		--set-dunst-border-width) launch_option 6 set_option_value $dunst_config "frame_width" "frame_width = |.*|" '|' $1 int;;
+		--set-dunst-font) launch_option 6 set_option_value $dunst_config "font" "font = |.*|" '|' "$1" string;;
+        --get-dunst-primary-color) launch_option 4 get_option_value $dunst_config "foreground" "foreground = \"#|.*|\"" '|';;
+		--get-dunst-secondary-color) launch_option 4 get_option_value $dunst_config "background" "background = \"#|.*|\"" '|';;
+		--get-dunst-border-color) launch_option 4 get_option_value $dunst_config "frame_color" "frame_color = \"#|.*|\"" '|';;
+		--get-dunst-border-radius) launch_option 4 get_option_value $dunst_config "corner_radius" "corner_radius = |.*|" '|';;
+		--get-dunst-border-width) launch_option 4 get_option_value $dunst_config "frame_width" "frame_width = |.*|" '|';;
+		--get-dunst-font) launch_option 4 get_option_value $dunst_config "font" "font = |.*|" '|';;
+
+		# Kitty
+		--set-kitty-font-color) launch_option 6 set_option_value $kitty_config "foreground" "foreground #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-background-color) launch_option 6 set_option_value $kitty_config "background " "background #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-cursor-color) launch_option 6 set_option_value $kitty_config "cursor" "cursor #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-cursor-text-color) launch_option 6 set_option_value $kitty_config "cursor_text_color" "cursor_text_color #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-url-color) launch_option 6 set_option_value $kitty_config "url_color" "url_color #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color0) launch_option 6 set_option_value $kitty_config "color0" "color0 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color1) launch_option 6 set_option_value $kitty_config "color1 " "color1 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color2) launch_option 6 set_option_value $kitty_config "color2" "color2 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color3) launch_option 6 set_option_value $kitty_config "color3" "color3 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color4) launch_option 6 set_option_value $kitty_config "color4" "color4 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color5) launch_option 6 set_option_value $kitty_config "color5" "color5 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color6) launch_option 6 set_option_value $kitty_config "color6" "color6 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-color7) launch_option 6 set_option_value $kitty_config "color7" "color7 #|.*|" '|' $1 hexadecimal;;
+		--set-kitty-opacity) launch_option 6 set_option_value $kitty_config "background_opacity" "background_opacity |.*|" '|' $1 range;;
+		--set-kitty-font) launch_option 6 set_option_value $kitty_config "font_family" "font_family |.*|" '|' "$1" string;;
+		--set-kitty-font-size) launch_option 6 set_option_value $kitty_config "font_size" "font_size |.*|" '|' $1 int;;
+		--set-kitty-colors-from-wallpaper) launch_option 1 set_kitty_colors_from_wallpaper $@;;
+		--get-kitty-font-color) launch_option 4 get_option_value $kitty_config "foreground" "foreground #|.*|" '|';;
+		--get-kitty-background-color) launch_option 4 get_option_value $kitty_config "background " "background #|.*|" '|';;
+		--get-kitty-cursor-color) launch_option 4 get_option_value $kitty_config "cursor " "cursor #|.*|" '|';;
+		--get-kitty-cursor-text-color) launch_option 4 get_option_value $kitty_config "cursor_text_color" "cursor_text_color #|.*|" '|';;
+		--get-kitty-url-color) launch_option 4 get_option_value $kitty_config "url_color" "url_color #|.*|" '|';;
+		--get-kitty-color0) launch_option 4 get_option_value $kitty_config "color0" "color0 #|.*|" '|';;
+		--get-kitty-color1) launch_option 4 get_option_value $kitty_config "color1 " "color1 #|.*|" '|';;
+		--get-kitty-color2) launch_option 4 get_option_value $kitty_config "color2" "color2 #|.*|" '|';;
+		--get-kitty-color3) launch_option 4 get_option_value $kitty_config "color3" "color3 #|.*|" '|';;
+		--get-kitty-color4) launch_option 4 get_option_value $kitty_config "color4" "color4 #|.*|" '|';;
+		--get-kitty-color5) launch_option 4 get_option_value $kitty_config "color5" "color5 #|.*|" '|';;
+		--get-kitty-color4) launch_option 4 get_option_value $kitty_config "color6" "color6 #|.*|" '|';;
+		--get-kitty-color7) launch_option 4 get_option_value $kitty_config "color7" "color7 #|.*|" '|';;
+		--get-kitty-colors-all) launch_option 0 get_kitty_colors_all;;
+		--get-kitty-opacity) launch_option 4 get_option_value $kitty_config "background_opacity" "background_opacity |.*|" '|';;
+		--get-kitty-font) launch_option 4 get_option_value $kitty_config "font_family" "font_family |.*|" '|';;
+		--get-kitty-font-size) launch_option 4 get_option_value $kitty_config "font_size" "font_size |.*|" '|';;
 
 		-h|--help) show_help ;;
         *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;
