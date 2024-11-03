@@ -194,12 +194,12 @@ TAG
 show_config()
 {
     clear
-    kitten icat --place "12x12@0x0" --scale-up $user_config/formatted_avatar
+    kitten icat --place "14x14@0x0" --scale-up $user_config/formatted_avatar
     # Récupérer le texte de figlet
     figlet_text=$(figlet -f slant "Hyprland")
 
     # Définir le nombre d'espaces de décalage
-    spaces="              "
+    spaces="                "
 
     # Afficher chaque ligne avec le décalage
     while IFS= read -r line; do
