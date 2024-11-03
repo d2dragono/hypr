@@ -196,7 +196,7 @@ show_config()
     clear
     kitten icat --place "12x12@0x0" --scale-up $user_config/formatted_avatar
     # Récupérer le texte de figlet
-    figlet_text=$(figlet "$USER")
+    figlet_text=$(figlet -f slant "Hyprland")
 
     # Définir le nombre d'espaces de décalage
     spaces="              "
@@ -205,6 +205,7 @@ show_config()
     while IFS= read -r line; do
         echo "${spaces}${line}"
     done <<< "$figlet_text"
+    echo
     echo "Welcome to Hyprland, $USER !"
 }
 
