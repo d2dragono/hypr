@@ -483,6 +483,9 @@ auto_theming()
 	# Kitty
 	launch_option 1 set_kitty_colors_from_wallpaper $wallpaper || return 1
 
+	# Avatar style
+	$hyprPath/scripts/userctl --reload-style
+
 	# Done
 	return 0
 }
@@ -523,7 +526,7 @@ save_theme()
 	# Desktop
 	cp $(launch_option 0 get_desktop_wallpaper) $folderPath/desktop_wallpaper
 	# Hyprlock
-	cp $(launch_option 4 get_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|') $folderPath/lockscreen_wallpaper
+	cp $(launch_option 0 get_lockscreen_wallpaper) $folderPath/lockscreen_wallpaper
 	echo "\$hyprPath/scripts/themingctl --set-lockscreen-font \""$(launch_option 4 get_option_value $hyprlock_config "font_family" "font_family = |.*|" '|')\" >> $folderPath/config.theme
 	# Wofi
 	echo "\$hyprPath/scripts/themingctl --set-wofi-primary-color "$(launch_option 4 get_option_value $wofi_config "@define-color primary" "@define-color primary #|.*|;" '|') >> $folderPath/config.theme
@@ -574,6 +577,9 @@ load_theme()
 	fi
 	# Specify the file containing the commands
 	themeConfig="$themeFolder/config.theme"
+	# Loading wallpapers
+	launch_option 1 set_lockscreen_wallpaper $themeFolder/lockscreen_wallpaper
+	swww img $themeFolder/desktop_wallpaper
 	# Read the file line by line
 	while IFS= read -r line; do
 		# Execute the command
@@ -582,9 +588,6 @@ load_theme()
 			return 1
 		fi
 	done < "$themeConfig"
-	# Loading wallpapers
-	launch_option 6 set_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|' $themeFolder/lockscreen_wallpaper image
-	swww img $themeFolder/desktop_wallpaper
 	# Reloading waybars
 	push_waybar_refresh
 	push_waybar_reload
@@ -816,6 +819,45 @@ get_desktop_wallpaper()
 
 
 
+# func : set_lockscreen_wallpaper
+# desc : will set the new lockscreen wallpaper
+# arg1 : path to the wallpaper
+# outp : none
+# rtrn : 0 if no error, else 1
+set_lockscreen_wallpaper()
+{
+	local wallpaper="$1"
+	if ! identify $wallpaper > /dev/null; then
+		report_error "ERROR" "set_desktop_wallpaper" "$wallpaper is not an image."
+		return 1
+    fi
+	wallpaper=$(realpath $wallpaper)
+	if ! grep -q "path = .* #lockscreen_wallpaper" $hyprlock_config; then
+		report_error "ERROR" "set_lockscreen_wallpaper" "Could not find wallpaper option."
+		return 1
+	fi
+	sed -i "s!path = .* #lockscreen_wallpaper!path = $wallpaper #lockscreen_wallpaper!" $hyprlock_config
+	return 0
+}
+
+
+
+# func : get_lockscreen_wallpaper
+# desc : will print current lockscreen wallpaper path
+# outp : path to lockscreen wallpaper
+# rtrn : 0 if no error, else 1
+get_lockscreen_wallpaper()
+{
+	if ! line=$(grep "path = .* #lockscreen_wallpaper" $hyprlock_config); then
+		report_error "ERROR" "get_lockscreen_wallpaper" "Could not find wallpaper option."
+		return 1
+	fi
+	echo $line | sed "s!path = !!" | sed "s!#.*!!"
+	return 0
+}
+
+
+
 # func : set_kitty_colors_from_wallpaper
 # desc : will apply wal generated shcema from given wallpaper to kitty config file
 # arg1 : path to wallpaper which to get colors from
@@ -1022,7 +1064,7 @@ get_option_value()
 	stringBeforeValue=$(echo $line | sed "s/\(^${stringBeforeValue}\).*/\1/")
 	stringAfterValue=$(echo $pattern | sed "s/.*${delimiter}.*${delimiter}//")
 	stringAfterValue=$(echo $line | sed "s/.*\(${stringAfterValue}$\)/\1/")
-	echo $line | sed "s/${stringBeforeValue}\(.*\)${stringAfterValue}/\1/"
+	echo $line | sed "s!${stringBeforeValue}\(.*\)${stringAfterValue}!\1!"
 	return 0
 }
 
@@ -1165,9 +1207,9 @@ main()
 		--get-desktop-wallpaper) launch_option 0 get_desktop_wallpaper;;
 
 		# Hyprlock
-        --set-lockscreen-wallpaper) launch_option 6 set_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|' $1 image;;
+		--set-lockscreen-wallpaper) launch_option 1 set_lockscreen_wallpaper $@;;
 		--set-lockscreen-font) launch_option 6 set_option_value $hyprlock_config "font_family" "font_family = |.*|" '|' "$1" string;;
-        --get-lockscreen-wallpaper) launch_option 4 get_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|';;
+		--get-lockscreen-wallpaper) launch_option 0 get_lockscreen_wallpaper;;
 		--get-lockscreen-font) launch_option 4 get_option_value $hyprlock_config "font_family" "font_family = |.*|" '|';;
 
 		# Wofi
@@ -1228,7 +1270,7 @@ main()
 		--get-kitty-font) launch_option 4 get_option_value $kitty_config "font_family" "font_family |.*|" '|';;
 		--get-kitty-font-size) launch_option 4 get_option_value $kitty_config "font_size" "font_size |.*|" '|';;
 
-		-h|--help) show_help ;;
+		-h|--help) show_help | less;;
         *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;
 	esac
     return $?

@@ -1,0 +1,280 @@
+#!/bin/bash
+#                          _   _ 
+#  _   _ ___  ___ _ __ ___| |_| |
+# | | | / __|/ _ \ '__/ __| __| |
+# | |_| \__ \  __/ | | (__| |_| |
+#  \__,_|___/\___|_|  \___|\__|_|
+#                  
+# by DRAGONO                                      
+
+##########################
+### Configs files path ###
+##########################
+user_config="$hyprPath/configs/user/" #USER_CONFIG
+########## DONE ##########
+
+# func : show_help
+# desc : will display to the user how to use userctl
+# outp : The help message/usage of the script
+# rtrn : 0
+show_help()
+{
+    echo
+    echo "Usage: $0 [option]" 
+    echo "Options:"
+    echo
+    echo "    [SHOW CONFIG]"
+    echo "    -s, --show-config                         Show user config. Will clear the terminal."
+    echo 
+    echo "    [AVATARS]"
+    echo "    -a, --set-avatar [path/to/avatar]         Change user avatar."
+    echo "    -b, --set-border-width [int]              Change avatar border width."
+    echo "    -i, --set-border-radius [int]             Change avatar border radius."
+    echo "    -c, --set-border-color [hexvalue]         Change avatar border color."
+    echo "    -p, --reload-style                        Reload avatar style to follow system theming."
+    echo
+    echo "    [USER DATA]"
+    echo "    -u, --set-username [username]             WIP Change username."
+    echo "    -p, --set-password                        WIP Change user password."
+    echo
+    echo "    [GROUPS]"
+    echo "    -t, --add-user-to-group [group_name]      WIP Add an user to a group. Will create the group if it does not exist."
+    echo "    -r, --rm-user-from-group [groupe_name]    WIP Remove an user from a group."
+    echo "    -d, --get-user-groups                     WIP Print groups the user is currently in."
+    echo
+    echo "    -h, --help                                Show help."
+    return 0
+}
+
+
+
+# func : report_error
+# desc : will echo a given message to stderr
+# arg1 : the error type : fatal, error, ... This is just and indication and do nothing much.
+# arg2 : title of the error, basically where the error occured
+# arg3 : the error message
+# outp : An error message to stderr
+# rtrn : 0
+report_error()
+{
+    local error_type="$1"
+    local error_title="$2"
+    local error_message="$3"
+    >&2 echo "[${error_type}]: ${error_title}: ${error_message}"
+    return 0
+}
+
+
+
+# func : arguments_check
+# desc : will check if enough arguments are being given to an option
+# arg1 : the option being checked
+# arg2 : required number of arguments
+# arg3 : current number of arguments
+# outp : an error message if there is not enough arguments
+# rtrn : 0 if no error, else 1
+arguments_check()
+{
+    local checked_option="$1"
+    local required_arg_number="$2"
+    local current_arg_number="$3"
+    if ((current_arg_number < required_arg_number)); then
+        report_error "FATAL" "$checked_option" "Not enough arguments."
+        return 1
+    fi
+    return 0
+}
+
+
+
+set_border_width()
+{
+    local width="$1"
+    sed -i "s/border_width=.*/border_width=${width}/" $user_config/avatar.conf
+    apply_style
+    return 0
+}
+
+
+
+set_border_color()
+{
+    local color="$1"
+    sed -i "s/^border_color=.*$/border_color=${color}/" $user_config/avatar.conf
+    rapply_style
+    return 0
+}
+
+
+
+set_border_radius()
+{
+    local radius="$1"
+    sed -i "s/^border_radius=.*$/border_radius=${radius}/" $user_config/avatar.conf
+    apply_style
+    return 0
+}
+
+
+
+reload_style()
+{
+    # Reset of avatar config file
+    cat << TAG > $user_config/avatar.conf
+border_width=$($hyprPath/scripts/themingctl --get-app-border-width)
+border_radius=$($hyprPath/scripts/themingctl --get-app-border-radius)
+border_color=$($hyprPath/scripts/themingctl --get-app-focused-color)
+TAG
+    apply_style
+    return 0
+}
+
+
+
+apply_style()
+{
+    local width=$(grep "border_width" $user_config/avatar.conf | sed "s/^border_width=//")
+    local radius=$(grep "border_radius" $user_config/avatar.conf | sed "s/^border_radius=//")
+    local color=$(grep "border_color" $user_config/avatar.conf | sed "s/^border_color=//")
+
+    width=$((width+16))
+
+    # Reset custom avatar
+    cp $user_config/original_avatar $user_config/formatted_avatar
+
+    # Border width + color
+    if ! magick "$user_config/formatted_avatar" -bordercolor "#$color" -border "${width}x${width}" $user_config/formatted_avatar; then
+        report_error "ERROR" "reload_style" "Could not apply style to avatar."
+        return 1
+    fi
+    # Border radius
+    # convert -size 256x256 xc:none -draw "roundrectangle 0,0,255,255,$radius,$radius" $user_config/mask.png
+    # convert $user_config/formatted_avatar -matte $user_config/mask.png -compose DstIn -composite $user_config/formatted_avatar
+    return 0
+}
+
+
+
+set_avatar()
+{
+    local avatarPath="$1"
+    if ! identify $avatarPath; then
+        report_error "ERROR" "set_avatar" "The given avatar is not a valid image."
+        return 1
+    fi
+
+    # Copying avatar to user config file
+    cp -f $avatarPath $user_config/original_avatar
+
+    # Reset of avatar config file
+    cat << TAG > $user_config/avatar.conf
+border_width=$($hyprPath/scripts/themingctl --get-app-border-width)
+border_radius=$($hyprPath/scripts/themingctl --get-app-border-radius)
+border_color=$($hyprPath/scripts/themingctl --get-app-focused-color)
+TAG
+
+    # Editing avatar size
+    if ! magick $user_config/original_avatar -resize 256x256! $user_config/formatted_avatar; then
+        report_error "ERROR" "set_avatar" "Could not resize given avatar."
+        return 1
+    fi
+
+    # Reloading style
+    if ! apply_style; then
+        report_error "ERROR" "set_avatar" "Could not reload avatar theming."
+        return 1
+    fi
+
+    # Done
+    return 0
+}
+
+
+
+show_config()
+{
+    clear
+    kitten icat --place "12x12@0x0" --scale-up $user_config/formatted_avatar
+    # Récupérer le texte de figlet
+    figlet_text=$(figlet "$USER")
+
+    # Définir le nombre d'espaces de décalage
+    spaces="              "
+
+    # Afficher chaque ligne avec le décalage
+    while IFS= read -r line; do
+        echo "${spaces}${line}"
+    done <<< "$figlet_text"
+    echo "Welcome to Hyprland, $USER !"
+}
+
+
+
+
+
+# func : launch_option
+# desc : test if enough args if is good launch the given option fllowed by given args
+# arg1 : required number of arguments for the option to be launched
+# arg2 : option to launch
+# arg3 : option arguments
+# rtrn : 0 if no error, else 1
+launch_option()
+{
+    local required_arg_count="$1"
+    local option_name="$2"
+    shift 2
+
+    arguments_check "$option_name" $required_arg_count $# || return 1
+    if ! $option_name $@; then
+        report_error "ERROR" "$option_name $@" "An error occured."
+        return 1
+    fi
+    return 0
+}
+
+
+
+# func : main
+# desc : the core of the script. Will mostly read options and launch appropriate functions
+# args : every args given to the script
+# outp : none
+# rtrn : 0 if no error, else 1
+main()
+{
+    if [ $# -eq 0 ]; then
+        report_error "FATAL" "$0" "No given arguments."
+        return 1
+    fi
+
+    option="$1"
+    shift 1
+
+    case $option in
+        -s|--show-config) launch_option 0 show_config;;
+        -a|--set-avatar) launch_option 1 set_avatar $@;;
+        -b|--set-border-width) launch_option 1 set_border_width $@;;
+        -i|--set-border-radius) launch_option 1 set_border_radius $@;;
+        -c|--set-border-color) launch_option 1 set_border_color;;
+        -p|--reload-style) launch_option 0 reload_style;;
+        -u|--set-username) launch_option 1 set_username $@;;
+        -p|--set-password) launch_option 0 set_password;;
+        -t|--add-user-to-group) launch_option 1 add_user_to_group $@;;
+        -r|--rm-user-from-group) launch_option 1 rm_user_grom_group $@;;
+        -d|--get-user-groups) launch_option 0 get_user_groups;;
+        -h|--help) show_help;;
+        *) report_error "ERROR" "$option" "Unknown option. Use --help to see usage." && return 1;;
+    esac
+    return $?
+}
+
+
+
+# |======================|
+# |======== MAIN ========|
+# |======================|
+if ! main "$@"; then
+    report_error "FATAL" "$0" "An error occurred during $0 execution."
+    exit 1
+else
+    exit 0
+fi
