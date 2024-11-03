@@ -474,7 +474,7 @@ auto_theming()
 
 	# Wallpapers
 	launch_option 1 set_desktop_wallpaper $wallpaper || return 1
-	launch_option 6 set_option_value $hyprlock_config "path" "path = |.*| #lockscreen_wallpaper" '|' $wallpaper image  || return 1
+	launch_option 1 set_lockscreen_wallpaper $wallpaper  || return 1
 
 	# Global colors from differents apps
 	set_global_primary_color $primary
@@ -591,6 +591,8 @@ load_theme()
 	# Reloading waybars
 	push_waybar_refresh
 	push_waybar_reload
+	# Reloading avatar frame
+	$hyprPath/scripts/userctl --reload-style
 	# Done
 	return 0
 }
