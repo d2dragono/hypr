@@ -27,12 +27,13 @@
 
 
     "modules-center": [
-        "hyprland/window"
+        "clock"
+        //"hyprland/window"
     ],
 
 
     "modules-right": [
-	    "custom/caffeine",
+	    
         //"mpd",
         //"idle_inhibitor",
         "pulseaudio",
@@ -46,7 +47,7 @@
         //"hyprland/language",
         "battery",
         "battery#bat2",
-        "clock",
+        "custom/caffeine",
         "tray",
         "custom/power"
     ],
@@ -71,16 +72,17 @@
      
 	 //"format": "w{name}",
          "format-icons": {
-             "1": " 󰲡 ",
-             "2": " 󰲣 ",
-             "3": " 󰲥 ",
-             "4": " 󰲧 ",
-             "5": " 󰲩 ",
-             "6": " 󰲫 ",
-             "7": " 󰲭 ",
-             "8": " 󰲯 ",
-             "9": " 󰲱 ",
-             "active": "  "
+             "1": " 󰲡",
+             "2": " 󰲣",
+             "3": " 󰲥",
+             "4": " 󰲧",
+             "5": " 󰲩",
+             "6": " 󰲫",
+             "7": " 󰲭",
+             "8": " 󰲯",
+             "9": " 󰲱",
+             "active": " ",
+             "default" : ""
          }         
     },
 
@@ -203,7 +205,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%H:%M}",
+        "format": "{:%B %d %Y, %H:%M}"
     },
 
 
@@ -292,10 +295,10 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": " {volume}% {icon}{format_source}",
-        "format-bluetooth": " {volume}% {icon}{format_source}",
-        "format-bluetooth-muted": "󰂲{icon}{format_source}",
-        "format-muted": "󰝟{format_source}",
+        "format": " {volume}% {icon}",
+        "format-bluetooth": " {volume}% {icon}",
+        "format-bluetooth-muted": "󰂲{icon}",
+        "format-muted": "󰝟",
         "format-source": " {volume}% ",
         "format-source-muted": "",
         "format-icons": {

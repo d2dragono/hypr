@@ -1,0 +1,9 @@
+#!/bin/bash
+if pidof hypridle; then
+    hyprlock
+else
+    hypridle &
+    hyprlock
+    pkill hypidle
+fi
+exit 0

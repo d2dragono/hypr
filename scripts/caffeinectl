@@ -1,0 +1,11 @@
+#!/bin/bash
+if pidof hypridle; then
+    pkill hypridle
+    dunstify "System" "Caffeine has been enabled." -r 33
+    sed -i "s!\/\* caffeine \*\/ color:white;!\/\* caffeine \*\/ color:green;!" $hyprPath/configs/waybar/waybars/*/style.css
+else
+    hypridle &
+    dunstify "System" "Caffeine has been disabled." -r 33
+    sed -i "s!\/\* caffeine \*\/ color:green;!\/\* caffeine \*\/ color:white;!" $hyprPath/configs/waybar/waybars/*/style.css
+fi
+exit 0
