@@ -1,7 +1,7 @@
 refresh=no
 reload=no
-focused_color=#e2b3b8
-unfocused_color=#97576E
+focused_color=#e598ce
+unfocused_color=#E83072
 focused_opacity=1
 unfocused_opacity=0.95
 focused_border_opacity=1

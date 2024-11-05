@@ -4,14 +4,13 @@
     /*font-family:JetBrains Mono;*/
     font-family:JetBrains Mono;
     font-size: 16px;
-    opacity:1; /*themingctl*/
 }
 
 window#waybar
 { 
     border-style:solid;
     border-width:3px; /*themingctl*/
-    border-color:#e2b3b8;
+    border-color:#e598ce;
     border-radius:6px; /*themingctl*/
 
     background-color:rgba(15,15,15,0.4);
@@ -258,7 +257,7 @@ label:focus {
 
 #backlight {
     /*background-color: #90b1b1;*/
-}
+}󰅶
 
 
 

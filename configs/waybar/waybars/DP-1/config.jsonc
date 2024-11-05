@@ -18,7 +18,8 @@
 
 
     "modules-left": [
-        "hyprland/workspaces"//,
+        "custom/os_button",
+        "hyprland/workspaces"
         // "hyprland/mode",
         // "hyprland/scratchpad",
         // "custom/media"
@@ -31,7 +32,7 @@
 
 
     "modules-right": [
-	"custom/caffeine",
+	    "custom/caffeine",
         //"mpd",
         //"idle_inhibitor",
         "pulseaudio",
@@ -66,20 +67,31 @@
 	 //"on-scroll-down": "hyprctl dispatch workspace e+1",
          //"warp-on-scroll": true,
          //"format": "{name}: {icon}",
-	 //"format": "{icon}",
-	 "format": "w{name}",
+	 "format": "<span font='20px'>{icon}</span>",
+     
+	 //"format": "w{name}",
          "format-icons": {
-             //"1": "",
-             //"2": "",
-             //"3": "",
-             //"4": "",
-             //"5": "",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
+             "1": " 󰲡 ",
+             "2": " 󰲣 ",
+             "3": " 󰲥 ",
+             "4": " 󰲧 ",
+             "5": " 󰲩 ",
+             "6": " 󰲫 ",
+             "7": " 󰲭 ",
+             "8": " 󰲯 ",
+             "9": " 󰲱 ",
+             "active": "  "
+         }         
     },
 
+    "custom/os_button": {
+        "format": "<span font='20px'>{icon}</span>",
+        "format-icons": {
+            "default" : "  "
+        },
+        "on-click": "wofi --style $hyprPath/configs/wofi/style.css --dmenu --allow-images --show drun",
+        "tooltip": false
+    },
 
     "hyprland/window": {
 	"separate-outputs": true
@@ -128,7 +140,7 @@
 
 
 
-
+/*
 
 
     "mpd": {
@@ -157,7 +169,7 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-
+*/
 
 
     "idle_inhibitor": {
@@ -177,10 +189,14 @@
 
    
     "custom/caffeine": {
-        "format" : "Caffeine",
-	   "tooltip": false,
+        "format": "<span font='20px'>{icon}</span>",
+        "format-icons": {
+            "activated": " 󰅶 ",
+            "deactivated": " 󰾪 ",
+            "default" : " 󰅶 "
+        },
+	   "tooltip": false
 	   //"menu": "on-click",
-	   "on-click": "$hyprPath/addons/caffeine/caffeine.sh"
     },
 
 
@@ -276,12 +292,12 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": " {volume}% {icon}{format_source}",
+        "format-bluetooth": " {volume}% {icon}{format_source}",
+        "format-bluetooth-muted": "󰂲{icon}{format_source}",
+        "format-muted": "󰝟{format_source}",
+        "format-source": " {volume}% ",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
