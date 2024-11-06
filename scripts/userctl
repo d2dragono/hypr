@@ -101,7 +101,7 @@ set_border_color()
 {
     local color="$1"
     sed -i "s/^border_color=.*$/border_color=${color}/" $user_config/avatar.conf
-    rapply_style
+    apply_style
     return 0
 }
 
@@ -123,7 +123,7 @@ reload_style()
     cat << TAG > $user_config/avatar.conf
 border_width=$($hyprPath/scripts/themingctl --get-app-border-width)
 border_radius=$($hyprPath/scripts/themingctl --get-app-border-radius)
-border_color=$($hyprPath/scripts/themingctl --get-app-focused-color)
+border_color=$($hyprPath/scripts/themingctl --get-app-unfocused-color)
 TAG
     apply_style
     return 0
@@ -255,7 +255,7 @@ main()
         -a|--set-avatar) launch_option 1 set_avatar $@;;
         -b|--set-border-width) launch_option 1 set_border_width $@;;
         -i|--set-border-radius) launch_option 1 set_border_radius $@;;
-        -c|--set-border-color) launch_option 1 set_border_color;;
+        -c|--set-border-color) launch_option 1 set_border_color $@;;
         -p|--reload-style) launch_option 0 reload_style;;
         -u|--set-username) launch_option 1 set_username $@;;
         -p|--set-password) launch_option 0 set_password;;

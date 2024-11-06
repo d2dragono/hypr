@@ -591,6 +591,8 @@ load_theme()
 	# Reloading waybars
 	push_waybar_refresh
 	push_waybar_reload
+	# Reloading dunst style
+	pkill dunst; dunst -conf $dunst_config &
 	# Reloading avatar frame
 	$hyprPath/scripts/userctl --reload-style
 	# Done
