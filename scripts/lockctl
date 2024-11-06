@@ -4,6 +4,6 @@ if pidof hypridle; then
 else
     hypridle &
     hyprlock
-    pkill hypidle
+    pkill hypridle
 fi
 exit 0
